@@ -1,0 +1,149 @@
+\documentclass{wongtreebook}
+\Title{Honors Multivariable Calculus}
+\Subtitle{Math 32A/BH, UCLA}
+\Author{Richard Wong}
+%\\Colophon{Released under the \LaTeX{} Public Project License 1.3c}
+\BibliographyFile{wongtreebook}
+\usepackage{fancyvrb}
+\usepackage{inconsolata}
+
+\input{./preamble.tex} 
+
+\begin{document}
+%\includegraphics[width=\textwidth]{willow-2.jpg}%
+\chapter{Preface}
+These lecture notes are written for Math 32A/BH, the honors multivariable calculus sequence at UCLA.  Multivariable calculus is the mathematical language that allows us to describe the geometry of the physical world around us, such as the motion of planets in orbit, the behavior of electromagnetic forces, or the path of steepest ascent through the hills of Los Angeles. 
+
+The honors sequence differs from Math 32A/B in that it explores the topics of multivariable calculus with more mathematical rigor.  In particular, in this course, you will explore not just the geometric meaning behind these definitions and theorems, but you will also learn why these definitions and theorems are true.  I also plan to help you develop the reasoning and questioning skills needed to explore these mathematical ideas.  Some questions you might see include the following:
+
+\begin{motivating}
+What changes, and what stays the same when we move from single variable calculus to multivariable calculus?  What does it mean to take a derivative of a multivariable function?
+\end{motivating}
+
+
+Moreover, this course builds the foundation for more advanced topics in mathematics, such as linear algebra, real analysis, complex analysis, and differential geometry.  This course is recommended for students interested in learning about advanced mathematics. 
+
+\begin{center}
+    ---
+\end{center}
+
+These lecture notes are intended to supplement the course lecture slides, and they will provide a mix of both computational and proof-based questions.  They draw on material from the following texts:
+\begin{itemize}
+    \item \textit{Calculus and Analysis in Euclidean Space,} by Shurman.
+    \item \textit{Vector Calculus, Linear Algebra, and Differential Forms: A Unified Approach}, by Hubbard and Hubbard.
+    \item \textit{Multivariable Calculus}, by Rogawski and Adams.
+\end{itemize}
+
+You might find it convenient to obtain copies of these books for reference.
+
+\begin{center}
+    ---
+\end{center}
+
+Please let me know if you notice any typos or errors, or if you have any comments or suggestions!
+
+ 
+\afterpreface
+
+
+\chapter{Linear Algebra on $\R^n$}
+\input{./chapters/1-LinearAlgebra/LinearAlgebra.tex}
+
+\chapter{Analysis on $\R^n$}
+
+\chapter{The Multivariable Derivative}
+
+\chapter{Integration on $\R^n$}
+
+\chapter{Integration on manifolds}
+
+\chapter{Divergence theorem}
+
+
+% \chapter{Definitions, Problems and Theorems}
+% \section{Definitions}
+% We can define a term like \emph{hamster}\define{hamster}, or say that the term hamster\SubIndex{hamster} appears again later.
+% \begin{Verbatim}[frame=leftline]
+% \chapter{Definitions, Problems and Theorems}
+% \section{Definitions}
+% We can define a term like \emph{hamster}\define{hamster}, 
+% or say that the term hamster\SubIndex{hamster} appears again later.
+% \end{Verbatim}
+% Compile, for a book called \verb!filename.tex!, with
+% \begin{Verbatim}[frame=leftline]
+% 	makeindex filename
+% \end{Verbatim}
+% We add notation like when we use a variable called \(\omega\),
+% we put it in the list of notation.%
+% \Notation{omega}{\omega}{A variable called $\omega$}
+% \begin{Verbatim}
+% We add notation like when we use a variable called \(\omega\),
+% we put it in the list of notation.%
+% \Notation{omega}{\omega}{A variable called $\omega$}
+% \end{Verbatim}
+% If you use notation, compile with
+% \begin{Verbatim}[frame=leftline]
+% 	makeindex -s notation.gst -o not.gls not.glo  
+% \end{Verbatim}
+
+% \section{Theorems}
+% You have the usual theorem environments, like \texttt{amsthm}.
+% \begin{theorem}[Pythagoras]
+% In any triangle with sides of lengths \(a,b,c\), \(a^2+b^2=c^2\) just when the angle opposite the side of length \(c\) is a right angle.
+% \end{theorem}
+% \begin{Verbatim}[frame=leftline]
+% \begin{theorem}[Pythagoras]
+% In any triangle with sides of lengths \(a,b,c\), 
+% \(a^2+b^2=c^2\) just when the angle opposite the 
+% side of length \(c\) is a right angle.
+% \end{theorem}
+% \end{Verbatim}
+
+
+
+
+
+
+% \chapter{Citations}
+% Our bibliography file looks like
+% \VerbatimInput[frame=leftline]{willowtreebook.bib}
+% We can cite works from the bibliography, like Homer~\cite{Homer:Iliad}, p. 12.
+% \begin{Verbatim}[frame=leftline]
+% We can cite works from the bibliography, like Homer~\cite{Homer:Iliad}, p. 12.
+% \end{Verbatim}
+% Compile with \verb!bibtex!.
+
+
+
+
+
+
+
+
+% \section{Preambles}
+% We can put some \LaTeX{} code before the hints:
+% \begin{Verbatim}[frame=leftline]
+% \RenewDocumentCommand\hintsPreamble{}{
+% \par\noindent{}
+% \textit{When you are describing, \\ 
+% A shape, or sound, or tint; \\ 
+% Don't state the matter plainly, \\ 
+% But put it in a hint; \\
+% And learn to look at all things, \\ 
+% With a sort of mental squint.}
+% \par\noindent{}---\ {Lewis Carroll}}
+% \end{Verbatim}
+
+% \RenewDocumentCommand\hintsPreamble{}{\par\noindent{}\textit{When you are describing, \\ A shape, or sound, or tint; \\ Don't state the matter plainly, \\ But put it in a hint; \\\ And learn to look at all things, \\ With a sort of mental squint.}\par\noindent{}---\ {Lewis Carroll}}
+% or before the bibliography:
+% \begin{Verbatim}[frame=leftline]
+% \RenewDocumentCommand\bibliographyPreamble{}{
+% \par\noindent
+% \textit{If those books are in agreement with the Quran, 
+% we have no need of them; 
+% and if these are opposed to the Quran, 
+% destroy them.}
+% \par\noindent{}---\ {Omar}}
+% \end{Verbatim}
+% \RenewDocumentCommand\bibliographyPreamble{}{\par\noindent\textit{If those books are in agreement with the Quran, we have no need of them; and if these are opposed to the Quran, destroy them.}\par\noindent{}---\ {Omar}}
+\end{document}

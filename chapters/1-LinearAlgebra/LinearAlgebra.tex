@@ -1,0 +1,2367 @@
+
+\begin{quote}
+    "Mathematics is the art of reducing any problem to linear algebra" - William Stein
+\end{quote}
+
+
+Linear algebra is one of the foundational concepts in mathematics, and is essential to properly understanding multivariable calculus.
+
+We will begin by studying certain properties of $\R^n$, and we will see how $\R^n$ and its properties can be generalized to vector spaces.  We will then study how vectors spaces can be compared to each other, through linear maps.
+
+%\fixthis{more intro}
+
+\section{An introduction to $\R^n$}
+
+\begin{definition}
+Given a positive integer $n$, \textbf{$n$-dimensional Euclidean space} (denoted $\R^n$) is the set of all ordered $n$-tuples of real numbers.  That is,
+$$\R^n := \{(x_1, \cdots ,x_n) \ | \ x_i \in \R\}$$
+\end{definition}
+
+\begin{example}
+    We are familiar with $\R^1$ (often described as the real line $\R$),
+    
+    \begin{center}
+        \begin{tikzpicture}[x=1cm, y=1cm, z=-0.6cm, scale=0.5]
+    % Axes
+    \draw [<->] (-4,0,0) -- (4,0,0) node [right] {};
+
+    % Ticks
+        \foreach \i in {-3,-2, -1, 0, 1,2,3}
+    {
+    \draw (\i,-0.1,0) -- ++ (0,0.2,0);
+    }
+
+\end{tikzpicture}
+    \end{center}
+    
+    as well as $\R^2$ (often described as the Euclidean plane), which has the $x$ and $y$ axes.
+    
+    \begin{center}
+            \begin{tikzpicture}[scale=0.5]
+\begin{axis}[xmin=-4, xmax=4,
+        ymin=-4,ymax=4,
+    axis lines=center,
+    axis equal image,
+    axis line style={latex-latex},
+    grid=both,
+    xtick={-4,-3,-2,-1,0,1,2,3,4},
+    ytick={-4,-3,-2,-1,0,1,2,3,4},
+     ]
+     \end{axis}
+\end{tikzpicture}
+        \end{center}
+    
+\end{example}
+
+\begin{example}
+    $\R^3$ is often described as Euclidean space, and has 3 axes (denoted the $x$, $y$, and $z$ axes).
+    
+    \begin{center}
+            \begin{tikzpicture}[x=1cm, y=1cm, z=-0.6cm, scale=0.5]
+            \pgfmathsetmacro{\cubex}{3}
+\pgfmathsetmacro{\cubey}{2.5}
+\pgfmathsetmacro{\cubez}{3.14}
+    % Axes
+    \draw [<->] (-4,0,0) -- (4,0,0) node [right] {$y$};
+    \draw [<->] (0,-4,0) -- (0,4,0) node [left] {$z$};
+    \draw [<->] (0,0,-4) -- (0,0,4) node [left] {$x$};
+
+    % Ticks
+        \foreach \i in {-3,-2, -1, 0, 1,2,3}
+    {
+    \draw (-0.1,\i,0) -- ++ (0.2,0,0);
+    \draw (\i,-0.1,0) -- ++ (0,0.2,0);
+    \draw (-0.1,0,\i) -- ++ (0.2,0,0);
+    }
+
+\end{tikzpicture}
+        \end{center}
+    
+\end{example}
+
+
+We can study and understand $n$-dimensional Euclidean space in many different ways by imposing different \textit{structures} on the set $\R^n$.  For example, we might wish to consider $\R^n$ geometrically (more precisely, as a topological space).
+
+Thinking geometrically, an element $\bm{x} = (x_1, \cdots ,x_n) \in \R^n$ can be thought of as describing \textit{coordinates} that tell us precisely where $\bm{x}$ is located inside of $\R^n$.  In this framework, we will call elements of $\R^n$ points.
+
+\begin{definition}
+A \textbf{point in $\R^n$} (often denoted $\bm{x} \in \R^n$) is an element of $\R^n$, considered as a topological space.  That is, 
+$$\bm{x} = (x_1, x_2, \cdots, x_n)$$
+
+We say that $x_1$ is the \textbf{first coordinate}, $x_2$ is the second coordinate, and so on, until $x_n$ (which is the $n$-th coordinate).
+\end{definition}
+
+\begin{example}
+    The point $O = (0, 0, \cdots, 0) \in \R^n$ is called the \textbf{origin} (in $\R^n$). 
+\end{example}
+
+\begin{example}
+We can also consider the point $P = (\pi, 3, 2.5) \in \R^3$.  
+
+The first coordinate tells us that along the $x$-axis, we are $\pi$ units in the positive direction from the origin; the second coordinate tells us we are 3 units in the positive direction along the $y$-axis, and the third coordinate tells us we are 2.5 units in the positive direction along the $z$-axis.
+
+We can visualize $P$ by drawing a box such that one corner is at the origin, the edges are aligned with the axes in $\R^3$, and the dimensions of the box correspond with the coordinates.  $P$ is then the corner of the box that is furthest from the origin.
+
+ \begin{center}
+            \begin{tikzpicture}[x=1cm, y=1cm, z=-0.6cm, scale=0.5]
+            \pgfmathsetmacro{\cubex}{3}
+\pgfmathsetmacro{\cubey}{2.5}
+\pgfmathsetmacro{\cubez}{3.14}
+    % Axes
+    \draw [->] (0,0,0) -- (4,0,0) node [right] {$y$};
+    \draw [->] (0,0,0) -- (0,4,0) node [left] {$z$};
+    \draw [->] (0,0,0) -- (0,0,4) node [left] {$x$};
+
+    \draw[megreen,dashed, thick] (0,0,0) -- (\cubex,0,0);
+    \draw[megreen,dashed, thick] (0,\cubey,0) -- (\cubex,\cubey,0);
+    \draw[megreen,dashed, thick] (0,0,\cubez) -- (\cubex,0,\cubez);
+    \draw[megreen,dashed, thick] (0,\cubey,\cubez) -- (\cubex,\cubey,\cubez);
+    
+    \draw[UCLAblue,dashed, thick] (0,0,0) -- (0,\cubey,0);
+    \draw[UCLAblue,dashed, thick] (\cubex,0,0) -- (\cubex,\cubey,0);
+    \draw[UCLAblue,dashed, thick] (0,0,\cubez) -- (0,\cubey,\cubez);
+    \draw[UCLAblue,dashed, thick] (\cubex,0,\cubez) -- (\cubex,\cubey,\cubez);
+    
+    \draw[red,dashed, thick] (0,0,0) -- (0,0,\cubez);
+    \draw[red,dashed, thick] (\cubex,0,0) -- (\cubex,0,\cubez);
+    \draw[red,dashed, thick] (0,\cubey,0) -- (0,\cubey,\cubez);
+    \draw[red,dashed, thick] (\cubex,\cubey,0) -- (\cubex,\cubey,\cubez);
+    
+    \filldraw[black] (\cubex,\cubey,\cubez) circle (2pt) node[anchor=west]{P};
+    % % Vectors
+    % \draw [->, thick] (0,0,0) -- (2,2,0);
+    % \draw [->, thick] (0,0,0) -- (2,0,1);
+    % Ticks
+        \foreach \i in {1,2,3}
+    {
+    \draw (-0.1,\i,0) -- ++ (0.2,0,0);
+    \draw (\i,-0.1,0) -- ++ (0,0.2,0);
+    \draw (-0.1,0,\i) -- ++ (0.2,0,0);
+    }
+
+\end{tikzpicture}
+        \end{center}
+\end{example}
+
+
+On the other hand, we are not required to think of $\R^n$ in this way.  Indeed, the structures that we impose on $\R^n$ should reflect how we want to think.
+
+For example, we can instead think of an element $\bm{v} = (v_1, \cdots, v_n) \in \R^n$ not as describing coordinates, but rather, as describing \textit{\textbf{displacement}}.  In other words, given a starting point $P$ and an ending point $Q$, we can measure the \textit{change} in each coordinate.  In this framework, we will call elements of $\R^n$ vectors:
+
+\begin{definition}
+A \textbf{vector in $\R^n$}\define{vector in $\R^n$} (often denoted $\bm{v} \in \R^n$) is an element of $\R^n$, considered as a vector space.  That is,
+$$\bm{v} = \langle v_1, \cdots, v_n \rangle$$
+
+We say that $v_1$ is the \textbf{first component}\define{vector component}, $v_2$ is the second component, and so on, until $v_n$ (which is the $n$-th component).
+\end{definition}
+
+
+
+\begin{example}
+Suppose that you started at the point $P = (3, 0, \pi) \in \R^3$, and ended up at the point $Q = (4, 3, e) \in \R^3$.  Then your total displacement along the $x$-axis is $4-3=1$ unit; $3-0=3$ units along the $y$-axis; and $e-\pi$ units along the $z$-axis.  Then your total displacement can be described as a vector
+$$\bm{PQ} = \langle 1, 3, e-\pi \rangle \in \R^3$$
+
+We can visualize the vector $\bm{PQ}$ as an arrow in $\R^3$, starting at $P$ and ending at $Q$:
+
+ \begin{center}
+            \begin{tikzpicture}[x=1cm, y=1cm, z=-0.6cm, scale=0.5]
+\pgfmathsetmacro{\cubex}{0}
+\pgfmathsetmacro{\cubey}{3.14}
+\pgfmathsetmacro{\cubez}{3}
+\pgfmathsetmacro{\cubexx}{3}
+\pgfmathsetmacro{\cubeyy}{2.72}
+\pgfmathsetmacro{\cubezz}{4}
+    % Axes
+    \draw [->] (0,0,0) -- (4,0,0) node [right] {$y$};
+    \draw [->] (0,0,0) -- (0,4,0) node [left] {$z$};
+    \draw [->] (0,0,0) -- (0,0,4) node [left] {$x$};
+    
+    \draw[UCLAblue, thick, ->] (\cubex,\cubey,\cubez) -- (\cubexx,\cubeyy,\cubezz);
+    
+    \filldraw[black] (\cubex,\cubey,\cubez) circle (2pt) node[anchor=west]{P};
+    \filldraw[black] (\cubexx,\cubeyy,\cubezz) circle (2pt) node[anchor=west]{Q};
+    % % Vectors
+    % \draw [->, thick] (0,0,0) -- (2,2,0);
+    % \draw [->, thick] (0,0,0) -- (2,0,1);
+    % Ticks
+        \foreach \i in {1,2,3}
+    {
+    \draw (-0.1,\i,0) -- ++ (0.2,0,0);
+    \draw (\i,-0.1,0) -- ++ (0,0.2,0);
+    \draw (-0.1,0,\i) -- ++ (0.2,0,0);
+    }
+
+\end{tikzpicture}
+        \end{center}
+
+We say that the terminal point $Q$ is the \textbf{head}\define{head} of the vector $\bm{PQ}$, and that the initial point $P$ is the \textbf{tail}\define{tail} of the vector $\bm{PQ}$
+
+\end{example}
+
+
+Given a vector $\bm{PQ}$, we can recover information about the relationship between the points $P$ and $Q$.  For example, we can calculate the distance between two points $P$ and $Q$ in $\R^3$ by iterating the Pythagorean theorem twice:
+
+\begin{example}
+    The distance between $P = (1,1,1)$ and $Q = (\pi, 3, 2.5)$  is $\sqrt{(\pi-1)^2+ (3-1)^2 + (2.5-1)^2}$
+    
+    \begin{center}
+            \begin{tikzpicture}[x=1cm, y=1cm, z=-0.6cm, scale=0.5]
+\pgfmathsetmacro{\cubex}{3}
+\pgfmathsetmacro{\cubey}{4}
+\pgfmathsetmacro{\cubez}{3.14}
+    % Axes
+    \draw [->] (0,0,0) -- (4,0,0) node [right] {$y$};
+    \draw [->] (0,0,0) -- (0,4,0) node [left] {$z$};
+    \draw [->] (0,0,0) -- (0,0,4) node [left] {$x$};
+    
+    \draw[red, thick] (1,1,1) -- (1,1,\cubez);
+    \draw[megreen, thick] (1,1,\cubez) -- (\cubex,1,\cubez);
+    \draw[UCLAblue, thick] (\cubex,1,\cubez) -- (\cubex,\cubey,\cubez);
+    
+    \draw[mepink,dashed, thick](1,1,1) -- (\cubex,1,\cubez);
+    \draw[UTorange,dashed, thick] (1,1,1) -- (\cubex,\cubey,\cubez);
+    
+    \filldraw[black] (\cubex,1,\cubez) circle (2pt) node[anchor=west]{$(\pi, 1, 2.5)$};
+    \filldraw[black] (\cubex,\cubey,\cubez) circle (2pt) node[anchor=west]{P};
+    \filldraw[black] (1,1,1) circle (2pt) node[anchor=east]{O};
+    % % Vectors
+    % \draw [->, thick] (0,0,0) -- (2,2,0);
+    % \draw [->, thick] (0,0,0) -- (2,0,1);
+    % Ticks
+        \foreach \i in {1,2,3}
+    {
+    \draw (-0.1,\i,0) -- ++ (0.2,0,0);
+    \draw (\i,-0.1,0) -- ++ (0,0.2,0);
+    \draw (-0.1,0,\i) -- ++ (0.2,0,0);
+    }
+
+\end{tikzpicture}
+        \end{center}
+
+Observe that the points $P$, $(\pi, 1, 1)$, and $(\pi, 1, 2.5)$ form a right triangle, whose hypotenuse has length $\sqrt{(\pi-1)^2+(2.5-1)^2}$. Similarly, the points $P$, $(\pi, 1, 2.5)$, and $Q$ also form a right triangle, where the length of the hypotenuse is precisely the distance between $P$ and $Q$.
+
+    
+\end{example}
+
+Observe that the distance between $P = (1,1,1)$ and $Q = (\pi, 3, 2.5)$  is precisely the square root of the sum of the squares of the components of the vector $\bm{PQ}$. That is, if we write the components of $\bm{PQ} = \langle \pi-1, 2, 1.5 \rangle = \langle v_1, v_2, v_3 \rangle$, then the distance between $P$ and $Q$ is $$\sqrt{v_1^2 + v_2^2 + v_3^2}$$  
+
+This observation generalizes to $\R^n$, as we would need to iterate the Pythagorean theorem $n-1$ times.  If we consider two points $P = (x_1, \cdots, x_n)$ and $Q = (y_1, \cdots, y_n)$,
+and write the components of the vector $\bm{PQ} = \langle x_1-y_1, \cdots, x_n-y_n \rangle = \langle v_1, \cdots, v_n \rangle$, we again find that the distance between $P$ and $Q$ is $$\sqrt{v_1^2 + \cdots + v_n^2}$$
+
+Thus, we should give this quantity a name:
+
+    \begin{definition}
+    Given a vector $\bm{v} = \langle v_1, \cdots, v_n \rangle$, its \textbf{magnitude}\define{magnitude} is given by $$||\bm{v}|| = \sqrt{\sum_{i=1}^n v_i^2}$$
+    \end{definition}
+
+    \begin{proposition}
+        The distance between two points $P = (x_1, \cdots, x_n)$ and $Q = (y_1, \cdots, y_n)$ is precisely $||\bm{PQ}||$.
+    \end{proposition}
+    
+    \begin{example}
+    The vector $\bm{PQ} = \langle 1, 3, e-\pi \rangle \in \R^3$ has magnitude $$||\bm{PQ}|| = \sqrt{1^2+3^2 + (e-\pi)^2}$$
+    \end{example}
+    
+
+    \begin{definition}
+    A \textbf{unit vector}\define{unit vector} in $\R^n$ is a vector $\bm{u} \in \R^n$ such that $||\bm{u}|| = 1$.
+    \end{definition}
+
+    \begin{example}
+        In $\R^3$, there are special unit vectors, called the \textbf{standard basis vectors} of $\R^3$:
+        
+        $$\bm{i} = \langle 1, 0, 0 \rangle$$
+        $$\bm{j} = \langle 0, 1, 0 \rangle$$
+        $$\bm{k} = \langle 0, 0, 1 \rangle$$
+        
+            \begin{center}
+            \begin{tikzpicture}[x=1cm, y=1cm, z=-0.6cm, scale=0.5]
+
+    % Axes
+    \draw [->] (0,0,0) -- (4,0,0) node [right] {$y$};
+    \draw [->] (0,0,0) -- (0,4,0) node [left] {$z$};
+    \draw [->] (0,0,0) -- (0,0,4) node [left] {$x$};
+    
+    \draw[red, thick, ->] (0,0,0) -- (0,0,1) node [left] {$i$};
+    \draw[megreen, thick, ->] (0,0,0) -- (0,1,0) node [right]{$k$};
+    \draw[UCLAblue, thick, ->] (0,0,0) -- (1,0,0) node [below] {$j$};
+    
+    % % Vectors
+    % \draw [->, thick] (0,0,0) -- (2,2,0);
+    % \draw [->, thick] (0,0,0) -- (2,0,1);
+    % Ticks
+        \foreach \i in {1,2,3}
+    {
+    \draw (-0.1,\i,0) -- ++ (0.2,0,0);
+    \draw (\i,-0.1,0) -- ++ (0,0.2,0);
+    \draw (-0.1,0,\i) -- ++ (0.2,0,0);
+    }
+
+\end{tikzpicture}
+        \end{center}
+        
+    \end{example}
+
+    \begin{example}
+    The vector $\bm{e_{PQ}} = \left\langle \frac{1}{\sqrt{(e-\pi)^2+10}}, \frac{3}{\sqrt{(e-\pi)^2+10}}, \frac{e-\pi}{\sqrt{(e-\pi)^2+10}} \right\rangle \in \R^3$ is a unit vector.
+    \end{example}
+
+
+
+
+
+
+
+\begin{motivating}
+What are the differences between the points perspective and the vectors perspective?
+\end{motivating}
+
+Though the two perspectives might seem similar, there are important differences:
+
+For example, from the points perspective, we should think of elements in $\R^n$ as being analogous to \textit{locations} on a map.  It \textbf{doesn't make sense} to add the location of Los Angeles, California (say, coordinates with latitude $34^\circ$ N, longitude $118^\circ$ W) to the location of Austin, Texas (say, coordinates $30^\circ$ N, $98^\circ$ W).
+
+On the other hand, from the vectors perspective, we should think of elements in $\R^n$ as being analogous to displacements.  In this case, let us consider two displacements:
+The displacement from Los Angeles to Austin means travelling $4^\circ$ south, and travelling $20^\circ$ east. Similarly, the displacement from Austin to New York City (coordinates $41^\circ$ N, $74^\circ$ W) means travelling $11^\circ$ north, and travelling $24^\circ$ east.
+
+It \textbf{does make sense} to add these two displacements together, which entails travelling a total of $7^\circ$ north, and $44^\circ$ east.  Observe that the result of this addition is the \textbf{total displacement} from Los Angeles to New York City (travelling $7^\circ$ north, and $44^\circ$ east).
+
+We can formulate this in terms of vectors as follows:
+
+\begin{definition}[Vector addition]
+
+\define{vector addition} Given two vectors $\bm{u} = \langle u_1, \cdots, u_n \rangle$, $\bm{v} = \langle v_1, \cdots, v_n \rangle$, we can add  two vectors together to form the sum $\bm{u+v} \in \R^n$.  In terms of components,
+$$\bm{u+v} = \langle u_1+v_1, \cdots, u_n+v_n \rangle$$
+
+\end{definition}
+
+\begin{example}
+    There is a nice geometric picture that accompanies vector addition:  Given two vectors $\bm{PQ}$ and $\bm{QR}$, then the sum of these two vectors is the vector $\bm{PR}$ (that is, the vector with tail $P$, and head $R$)
+    
+    \fixthis{add picture}
+\end{example}
+
+\begin{proposition}
+    Vector addition is commutative.  That is, the vectors $\bm{u+v}$ and $\bm{v+u}$ are the same vector.
+\end{proposition}
+
+
+Furthermore, it also makes sense to combine the points perspective with the vector perspective:  It makes sense to add the add the \textit{displacement} from Los Angeles to Austin to the \textit{location} New York City.  
+
+We should interpret this as saying to start at the coordinates $41^\circ$ N, $74^\circ$ W, and to then travel  $4^\circ$  south, and $20^\circ$ east.  The end result is a \textbf{location} with coordinates $37^\circ$ N, $54^\circ$ W (somewhere in the middle of the  Atlantic Ocean!).
+
+We can formulate this in terms of vectors as follows:
+
+\begin{definition}\label{pointvector}
+In terms of coordinates, given a point $P = (x_1, \cdots, x_n) \in \R^n$, and a vector $\bm{v} = \langle v_1, \cdots, v_n \rangle \in \R^n$, then we can define the \textbf{point} $P + \bm{v}$ to be the point with coordinates $$P + \bm{v} = (x_1 + v_1 , \cdots, x_n + v_n)$$
+\end{definition}
+
+Informally, the point  $P + \bm{v}$ is the tail of the vector that starts at $P$, and travels along the length of $\bm{v}$. We can also make this mathematically precise through vector addition:
+
+\begin{definition}
+A \textbf{position vector}\define{position vector} in $\R^n$ is a vector whose tail (or initial point) is the origin.
+
+If the head of the position vector is the point $P$, then we often denote the position vector as the vector $\bm{OP}$.
+\end{definition}
+
+
+\begin{proposition}
+Given a point $P \in \R^n$, and a vector $\bm{v}\in \R^n$, the point $P + \bm{v}$ has the same coordinates as the head (or terminal point) of the vector $\bm{OP} + \bm{v}$.    
+\end{proposition}
+
+
+We are now able to describe various vectors at different locations in $\R^n$.  We have seen cases where two vectors indeed start and end at the same point, but in definition \ref{pointvector}, we now see that it is possible for "the same vector" to have different starting points. This leads us to the following question:
+
+\begin{motivating}
+When are two vectors the same?
+\end{motivating}
+
+We first must define what we mean for two vectors to be the same:
+
+
+\begin{definition}
+
+    A vector $\bm{w} = \bm{AB}$ is said to be \textbf{equivalent}\define{equivalent vector} to a vector $\bm{v} = \bm{PQ}$ if the terminal point $B$ is the same as the point $A + \bm{v}$
+    
+    We sometimes also say that $\bm{w}$ is a \textbf{translation} of $\bm{v}$.
+    
+\end{definition}
+
+\begin{example}
+    Suppose that we have a vector $\bm{v} = PQ \in \R^n$, and suppose that the components of $\bm{v}$ are $\bm{v} = \langle v_1, \cdots, v_n \rangle$.
+    
+    Consider the point $P = (v_1, \cdots, v_n)$.  Then $\bm{v}$ is equivalent to the position vector $\bm{OP}$, which starts at the origin $O$, and ends at the point $P$.
+\end{example}
+
+
+The example above is the key idea of the proof of the following proposition:
+
+\begin{proposition}
+    Consider the points $A, B, P, Q \in \R^n$.  The vectors $\bm{AB}$ and $\bm{PQ}$ are equivalent if and only if they have the same components.
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+We now turn to a second way to distinguish vectors:
+
+
+
+\begin{definition}\label{scalar}
+A \textbf{scalar}\define{scalar} (often denoted $\lambda \in \R$) is an element of the field of real numbers, $\R$.
+\end{definition}
+
+    \begin{definition}
+    Given a vector $\bm{v} = \langle v_1, \cdots , v_n\rangle \in \R^n$ and a scalar $\lambda \in \R$, the \textbf{scalar multiple}\define{scalar multiple}  $\lambda \bm{v}$ is the vector $$\lambda \bm{v} = \langle \lambda v_1, \cdots, \lambda v_n \rangle$$
+    
+    That is, we multiply $\lambda$ with each component.
+  \end{definition}
+
+
+
+    \begin{example}
+    \fixthis{pictures}
+    \end{example}
+
+We can interpret this geometrically through the following calculation:
+
+\begin{proposition}
+  The magnitude of a scalar multiple $\lambda \bm{v}$ is the same as the magnitude of $\bm{v}$ times the absolute value of $\lambda$.  That is, $$||\lambda\bm{v}|| = |\lambda|(||\bm{v}||)$$
+\end{proposition}
+
+\begin{definition}
+Two vectors $\bm{v}, \bm{w} \in \R^n$ are said to be \textbf{parallel}\define{parallel vectors} if they are scalar multiples of each other.  That is, there exists a scalar $\lambda \in \R$ such that $$\bm{v} = \lambda \bm{w}$$
+\end{definition}
+
+\begin{example}
+
+    Consider the points $P = (3, -2, 1)$ and $Q = (2, -1, 1)$  in $\R^3$, and consider the vectors $\bm{u} = \langle -1, 1, 0 \rangle$, $\bm{v} = \langle -2, 2, 0 \rangle$, $\bm{w} = \langle 1, -1, 0 \rangle$,  $\bm{a} = \langle 1, -1, 1 \rangle$.
+    
+    \begin{itemize}
+        \item The vector $\bm{PQ}$ is equivalent to $\bm{u}$.
+        \item The vector $\bm{PQ}$ is parallel to $\bm{v}$, with $\lambda = 2$.
+        \item The vector $\bm{PQ}$ is parallel to $\bm{w}$, with $\lambda = -1$.
+        \item The vector $\bm{PQ}$ is \textbf{not} parallel to $\bm{a}$. That is, there is no $\lambda$ such that $\bm{PQ} = \lambda \bm{a}$.
+        
+        If such a $\lambda$, existed, that would require that the equations $-1 = \lambda 1$ and $0 = \lambda 1$ to both be true.  But that would be a contradiction, since $\lambda$ cannot be both $-1$ and $0$.
+    \end{itemize}
+    
+\end{example}
+
+
+Parallel vectors are so named because they give rise to parallel lines \fixthis{ref later}
+
+Observe that in the example above, we saw that two vectors can be parallel, yet point in different directions.  We can make this idea precise:
+
+    \begin{definition}
+    Given a non-zero vector $\bm{v} \in \R^n$, its \textbf{direction vector}\define{direction vector} $\bm{e_v}$ is the unit vector such that 
+    $$||\bm{v}||\bm{e_v} = \bm{v}$$
+    \end{definition}
+
+Note that we used the word "the" in the definition above - in order for this definition to make sense, we should make sure to prove that the direction vectors is \textit{unique}.
+
+\begin{proposition}
+    Given a non-zero vector $\bm{v} \in \R^n$, its \textbf{direction vector}\define{direction vector} $\bm{e_v}$ is unique.  That is, $$\bm{e_v} = \frac{1}{||\bm{v}||}\bm{v}$$
+\end{proposition}
+
+Thus, we can now algebraically explain the difference between the vectors $\bm{PQ}$ and $\bm{QP}$:
+
+\begin{definition}
+Suppose that the vector $\bm{w}$ is parallel to $\bm{v}$, with $\bm{v} = \lambda \bm{w}$.  If $\lambda > 0$, then we say $\bm{w}$ has the \textbf{same direction} as $\bm{v}$.  If $\lambda < 0$, then $\bm{w}$ has the \textbf{opposite direction} as $\bm{v}$.
+\end{definition}
+
+
+
+\begin{proposition}
+    Two vectors are equivalent if and only if they have the same magnitude and the same direction vector.
+\end{proposition}
+
+
+In other words, if two vectors have different magnitudes, then they must be different vectors.  Similarly, if two vectors have different direction vectors, then they must be different vectors.
+
+To summarize, we have learned the following:
+
+    \begin{example}
+    
+    A vector in $\R^n$ is determined equivalently by:
+    
+    \begin{enumerate}
+        \item an initial point and a terminal point. $$v = \bm{PQ}$$
+        \item its components. $$\bm{v} = \langle x_1, \cdots, x_n \rangle$$
+        \item a direction and magnitude. $$\bm{v} = ||\bm{v}||\bm{e_v}$$
+    \end{enumerate}
+    \end{example}
+
+
+
+
+
+
+
+
+
+
+% Thinking of elements in $\R^n$ as displacements has some advantages that will naturally leads us to the study of vector spaces and linear algebra.
+
+
+
+
+
+
+\subsection{Exercises}
+
+\begin{problem}{pointsandvectors}
+Explain the relationship between points and vectors.
+
+More concretely, given a point in $\R^n$, is there a natural way to obtain a vector in $\R^n$?  Conversely, given a vector in $\R^n$, is there a natural way to obtain a point in $\R^n$?
+\end{problem}
+
+\begin{answer}{pointsandvectors}
+Position vectors.
+\end{answer}
+
+\begin{problem}{componentsunit}
+    Sketch and find the components of the unit position vector in $\R^2$ that makes an angle of $30$ degrees counterclockwise from the positive $x$-axis.
+    
+\end{problem}
+
+\begin{problem}{sketchequiv}
+    Sketch and find the components of the unit position vector in $\R^2$  that makes an angle of $30$ degrees counterclockwise from the negative $x$-axis.
+    
+    \begin{subproblems}
+    \item Is this vector equivalent to the vector in exercise \ref{problem:componentsunit}?
+    \item Is this vector parallel to the vector in exercise \ref{problem:componentsunit}?
+    \end{subproblems}
+    
+\end{problem}
+
+\begin{problem}{componentsangle}
+    Find the components of the unit position vector in $\R^2$  that makes an angle of $\theta$ degrees counterclockwise from the negative $x$-axis.
+\end{problem}
+
+\begin{problem}{parallelvectors}
+    Are these vectors parallel?  Are they equivalent?
+\end{problem}
+
+\begin{problem}{addsubtractvectors}
+    Add, subtract vectors
+\end{problem}
+
+\begin{problem}{parallelogram}
+    Given four points, $A$, $B$, $C$, and $D$ in $\R^3$, we obtain a quadrilateral $ABCD$.  If $ABCD$ is a parallelogram, and the coordinates of the corners are $A = (1,0,1)$, $B = (3,3,2)$, and $C = (2,4, 5)$, then what are the coordinates of $D$?
+    
+    (\textbf{Hint:} Recall that $ABCD$ is given by a line from $A$ to $B$ to $C$ to $D$, and then back to $A$.  Use vectors to solve this problem!).
+\end{problem}
+
+In the following exercises, we will describe lines in $\R^n$.
+    
+    \begin{definition}\label{linesinrn}
+    The line $\mathscr{L}$ in $\R^n$, passing through the point $P = (x_1, \cdots x_n)$, in the direction of the vector $\bm{v} = \langle v_1,  \cdots v_n \rangle$, can be described by the vector-valued function $$\bm{r}(t) = \bm{r_0} + t\bm{v}$$
+    
+    where $\bm{r_0}$ is the vector $\bm{r_0} = \bm{OP} = \langle x_1, \cdots x_n\rangle$.
+    
+    We call $\bm{r}(t)$ the \textbf{vector parametrization of} $\mathscr{L}$.
+    
+    \end{definition}
+
+    Observe that by definition, the vector $\bm{r}(t)$ is a position vector for all $t$.  The tips of these position vectors are precisely the points on the line $\mathscr{L}$.
+
+\begin{problem}{linesinr2}
+    
+    Recall that we can describe a line in $\R^2$ as the set of points $L \{(x,y) \ | \ y = mx + b\}$.  Find a vector parametrization of the line $L$.
+    
+    \begin{subproblems}
+    \item What is the relationship between the constant $b$ and the vector $\bm{r_0}$?
+    \item What is the relationship between the slope $m$ and the direction vector $\bm{v}$?
+    \end{subproblems}
+    
+\end{problem}
+
+\begin{problem}{line2points}
+    Find the vector parametrization of the line that passes through the points $P = (1,0,2)$ and $Q = (2,5,-1)$.
+\end{problem}
+
+\begin{problem}{linequniqueness}
+    Given a point $P$ and a direction vector $\bm{v}$, is the vector parametrization $\bm{r}(t) = \bm{r_0} + t\bm{v}$ of a line $\mathscr{L}$ unique? 
+    
+    \begin{subproblems}
+    \item Is there a vector parametrization of $\mathscr{L}$ using the same direction vector $\bm{v}$ but a different starting point $Q$?  If so, find the coordinates of a possible $Q$.
+    \item Is there a vector parametrization of $\mathscr{L}$ using the same starting point $P$, but a different direction vector, $\bm{w}$?  If so, find the components of a possible $\bm{w}$.
+    \item Is there a vector parametrization of $\mathscr{L}$ using a different direction vector $\bm{w}$ and a different starting point $Q$?  If so, find a possible $Q$ and $\bm{w}$.
+    \end{subproblems}
+
+    
+\end{problem}
+
+\begin{problem}{parametrizationsparallel}
+    Suppose that $\bm{r_1}(t) = \bm{r_0} + t\bm{v}$ and $\bm{r_2}(s) = \bm{r_0} + s\bm{w}$ are two parametrizations of the same line.  What is the relationship between $\bm{v}$ and $\bm{w}$?
+\end{problem}
+
+\begin{problem}{parametrizationpoints}
+    When are $\bm{r_1}(t) = \bm{OP} + t\bm{v}$ and $\bm{r_2}(s) = \bm{OQ} + s\bm{v}$ are two parametrizations of the same line?
+\end{problem}
+
+\begin{definition}
+We say that two lines $\bm{r_1}(t)$ and $\bm{r_2}(s)$ \textbf{intersect} if there is a point $P$ lying on both lines. 
+\end{definition}
+
+
+
+\begin{problem}{intersect1}
+    Determine whether the following two lines intersect.  If they do, find the common point of intersection.
+    $$\bm{r_1}(t) =   \langle3,2,6\rangle + t\langle1,0,-1\rangle$$
+    $$\bm{r_2}(s) =   \langle4,12,24\rangle + s\langle-1,10,20\rangle$$
+\end{problem}
+
+\begin{problem}{intersect2}
+    Determine whether the following two lines intersect.  If they do, find the common point of intersection.
+    $$\bm{r_1}(t) =   \langle3,2,6\rangle + t\langle1,0,-1\rangle$$
+    $$\bm{r_2}(s) =   \langle4,5,1\rangle + s\langle-1,3,3\rangle$$
+\end{problem}
+
+
+\section{Vector spaces}
+
+\begin{motivating}
+How can we generalize and abstract these properties of $\R^n$?
+\end{motivating}
+
+In these lecture notes, we will only study vector spaces whose field of scalars is $\R$ - that is, we are only considering \textit{real} vector spaces\footnote{That is, scalars must be elements of the field $\R$ (as in definition \ref{scalar}).  In other classes, such as linear algebra, you will see that we can generalize by replacing the field $\R$ with any other field $\mathbb{F}$, and a lot of the theory of vector spaces and linear algebra still work over an arbitrary field $\mathbb{F}$.}.  So in these notes we will omit the adjective real and simply refer to them as vector spaces.
+
+    \begin{definition}\label{vspaceaxioms}
+    A \textbf{vector space}\define{vector space} $V$ is a set with a distinguished element $\bm{0} \in V$, together with two operations, $+ : V \times V \to V$, and $\cdot : \R \times V \to V$ satisfying the following axioms for all $\bm{u}, \bm{v}, \bm{w} \in V$, and for all $\lambda, \alpha \in \R$.
+    
+    
+     \begin{enumerate}[label=(\roman*)]
+        \item $\bm{u} + (\bm{v} + \bm{w}) = (\bm{u} + \bm{v}) + \bm{w} $ (Additive associativity)
+        \item $\bm{v} + \bm{0} = \bm{0} + \bm{v} = \bm{v}$ (Additive identity)
+        \item For all $\bm{v} \in V$, there exists $\bm{w} \in V$ such that $\bm{v} + \bm{w} = \bm{0}$ (Additive inverse)
+        \item $\bm{u} + \bm{v} = \bm{v} + \bm{u}$ (Additive commutativity)
+        \item $\lambda (\alpha \bm{v}) = (\lambda\alpha)\bm{v}$ (Scalar associativity)
+        \item $1\bm{v} = \bm{v}$ (Scalar identity)
+        \item $(\lambda+\alpha)\bm{u} = \lambda\bm{u} +  \alpha\bm{u}$ (Distribution over scalar addition)
+        \item $\lambda(\bm{u} + \bm{v}) = \lambda\bm{u} + \lambda\bm{v}$ (Distribution over vector addition)
+    \end{enumerate}
+    
+    The elements of $V$ are called vectors, and elements of $\R$ are called scalars\footnote{see footnote 1}.
+    \end{definition}
+    
+    
+When faced with an abstract definition like this, \fixthis{it's especially important to first find concrete examples that manifest}.  Luckily, from our discussion in the previous section, we have in fact checked most of these axioms:
+    
+    
+    \begin{example}
+    \vspace{-1em}
+    \begin{theorem}
+    $\R^n$ is a vector space.
+    \end{theorem}
+    \end{example}
+    
+    $\R^n$ is the prototypical example of a vector space\footnote{In fact, in a later exercise, you can show that any \textbf{finite dimensional} vector space is isomorphic to $\R^n$.}.  What this means is that whenever you are are trying to determine whether or not something is true about vector spaces, you should try to see if it is true for $\R^n$.  Then, you should try to translate the proof in the $\R^n$ case to the general case, purely using the axioms and properties of abstract vector spaces.
+    
+    However, you should also be careful not to trick yourself into thinking that every vector space behaves like $\R^n$!  Below is an example of a vector space that is quite different from $\R^n$: \fixthis{add problem references}
+    
+    \begin{example}
+    \vspace{-1em}
+    \begin{theorem}\label{functionsvspace}
+    The set of $\mathscr{F}(\R)$ of functions $f : \R \to \R$ is a vector space with pointwise addition and pointwise scalar multiplication.  $$(f + g)(x) := f(x) + g(x) \ \qquad \ (\lambda f)(x) := \lambda (f(x))$$
+    \end{theorem}
+    
+    \end{example}
+
+    With these examples in mind, we can now look back at the axioms of a vector space (definition \ref{vspaceaxioms}) and see \textit{why} these axioms are important.
+
+    Axioms $(i)$ through $(iv)$ describe how to \textit{add} vectors using the operation $+ : V \times V \to V$.  From previous experiences with addition, we should require that $+$ should be $(i)$ associative and $(iv)$ commutative.  Moreover, we also require that the zero vector $\bm{0} \in V$ should behave the way that $0 \in \R$ does, with regards to $(ii)$ adding zero, as well as $(iii)$ the existence of additive inverses (e.g. negative numbers in $\R$).
+
+    Axioms $(v)$ through $(vii)$ describe how to \textit{scalar multiply} vectors using the operation $\cdot : \R \times V \to V$.  The intuition for these axioms comes from our knowledge of multiplication for real numbers, which is $(v)$ associative and $(vii)$ distributes over addition of real numbers.  Moreover, the element $1 \in \R$ is the \textit{multiplicative identity} - that is, for any element $a \in \R$, we have that $1(a) = a$.  This property of $1\in \R$ is mirrored in axiom $(vi)$.
+
+    \begin{example}
+    \textbf{Warning:} It is important to note, however, that scalar multiplication is \textbf{not} multiplication of vectors.  Indeed, scalar multiplication is a function whose input is precisely one scalar and one vector, and whose output is a vector.  You will contrast this with multiplication in \fixthis{problem reference.}
+    
+    In later sections, we will discuss operations whose inputs are two vectors, and whose output is a vector.
+    \end{example}
+    
+    \subsection{Vector subspaces}
+    
+    Let us now turn to other examples of vector spaces.
+    
+    \begin{example}
+    Consider the set $$W = \{(x, 0, 0) \in \R^3 \}$$
+    
+    The first observation to make is that $W$ is a subset of $\R^3$ - that is, every element of $W$ is also contained inside of $\R^3$.  
+    
+    
+    Now, if we take any two elements in $(x_1,0,0), (x_2,0,0) \in W$, we can then add them together as elements of the vector space $\R^3$ to get the vector $(x_1 + x_2, 0,0) \in \R^3$.  Observe that the sum $(x_1 + x_2, 0,0)$ is still an element of $W$ - thus the vector addition in $\R^3$ naturally defines a vector addition on $W$.
+    
+    Furthermore, if we take an element $(x_1,0,0) \in W$ and a scalar $\lambda \in \R$, we can again treat $(x_1,0,0)$ as an element in $\R^3$, and form the scalar multiple $\lambda((x_1,0,0)) = (\lambda x_1,0,0)$.  Once again, the scalar multiple $\lambda((x_1,0,0))$ is still an element of $W$ - thus the scalar multiplication in $\R^3$ naturally defines a scalar multiplication on $W$.
+    
+    Thus, we have shown that if we define vector addition and scalar multiplication on $W$ as coming from $\R^3$, it then follows that $W$ satisfies the axioms a vector space.
+    \end{example}
+
+    We can now give a name to this phenomenon of a subset of a vector space turning out to be a vector space:
+    
+    \begin{definition}
+    A nonempty subset $W$ of a vector space $V$, is a \textbf{vector subspace}\define{vector subspace} of $V$ if for all $v, w \in W$ and for all $\lambda \in \R$, 
+    
+    \begin{enumerate}[label=(\roman*)]
+        \item $\bm{v} + \bm{w} \in W$ (closure under addition)
+        \item $\lambda (\bm{v}) \in W $ (closure under scalar multiplication)
+    \end{enumerate}
+    
+    \end{definition}
+    
+    Again, to keep ourselves from thinking only in terms of $\R^n$, here is another vector subspace example:
+    
+    \begin{example}
+    \vspace{-1em}
+    \begin{theorem}\label{continuousfunctionsvspace}
+    The set of $\mathscr{C}(\R)$ of \textit{continuous} functions $f : \R \to \R$ is a vector space with pointwise addition and pointwise scalar multiplication.  $$(f + g)(x) := f(x) + g(x) \ \qquad \ (\lambda f)(x) := \lambda (f(x))$$
+    \end{theorem}
+    
+    \begin{theorem}
+    $\mathscr{C}(\R)$ is a subspace of $\mathscr{F}(\R)$.
+    \end{theorem}
+    
+    \end{example}
+    
+    \textbf{Warning:} It is not true that every subset of a vector space is a vector space.  For a sophisticated example, see  exercise \ref{sumto1}.  For a more immediate example, consider the following:
+    
+    \begin{example}
+    The set of two elements $A = \{(1,0), (0,1)\}$ is a subset of $\R^2$, but is not a vector subspace of $\R^2$, as it fails to be closed under both addition and scalar multiplication.
+    \end{example}
+    
+    In fact, we can generalize this example:
+    
+    \begin{example}
+    \vspace{-1em}
+    \begin{proposition}
+    If $A$ is a finite set of elements in a vector space contains a non-zero vector, then $A$ cannot be a vector subspace\footnote{Remember, we are considering only real vector spaces in these notes.}.  
+    \end{proposition}
+    \end{example}
+    
+    \begin{proof}
+    One proof, using vector addition, is as follows:  Suppose that $A$ be a finite set of elements in a vector space with cardinality $|A|=n$, and suppose that $\bm{a} \in A$ is a non-zero vector.  Then consider the sums $\sum_{i=1}^j\bm{a}$ for $1 \leq j \leq n+1$.  Since $\bm{a}$ is non-zero, we have described $n+1$ different vectors, and so at least one of the sums $\sum_{i=1}^j\bm{a}$ cannot be contained in $A$.  Thus $A$ cannot be a vector subspace.  
+    
+    A variation on this proof can be phrased using scalar multiplication: Let $W$ be a vector subspace of $V$, and let $\bm{w} \in W$ be a non-zero vector.  Then since vector subspaces are closed under scalar multiplication, $W$ contains $\lambda \bm{w}$ for all $\lambda \in \R$.  Moreover, since $\bm{w}$ is non-zero, we have shown that $W$ must have at least as many elements as $\R$.  In other words, we have described an (uncountably) infinite number of elements in $W$, and so any finite set of vectors in a vector space containing a non-zero vector cannot be a vector subspace.
+        
+    \end{proof}
+    
+
+    To phrase this in another way, a vector subspace with finitely many elements must be the \textbf{zero} vector space. \fixthis{problem}.  However, one might wonder if we can fix this example in some way:
+
+    \begin{motivating}
+      Given a (finite) set of elements $A$ in a vector space $V$, can we produce a vector subspace?  Even better, can we produce the \textbf{smallest} vector space containing $A$ (that is, without including any extraneous vectors)?
+    \end{motivating}
+    
+    We see from our observations above to construct the smallest vector space containing $A$, we must first include all scalar multiples of elements in $A$.  Once we have done so, we then need to include any possible sum of scalar multiples.  This is called a \textbf{linear combination}:
+    
+    \begin{definition}
+    Let $V$ be a vector space.  A \textbf{linear combination}\define{linear combination} of vectors $\bm{v_1}, \cdots, \bm{v_k} \in V$ is a vector of the form 
+    $$\lambda_1\bm{v_1} + \cdots + \lambda_k\bm{v_k}$$ where the $\lambda_i$ are scalars.
+    \end{definition}
+    
+    Thus, we now have a candidate set for the smallest vector space containing $A$:  the set of all linear combinations of vectors in $A$.
+    
+    \begin{definition}
+    Let $V$ be a vector space, and let $A$ be a subset of vectors in $V$.  The set of all linear combinations of vectors in $A$ is called the \textbf{span} of A, and is written
+    $$\textnormal{span}(A)$$
+     
+\end{definition}
+    
+    We first must prove that $\textnormal{span}(A)$ is a vector subspace:
+    
+    \begin{theorem}
+    Let $V$ be a vector space, and let $A = \{\bm{v_1}, \cdots, \bm{v_n}\}$ be a set of vectors in $V$.  Then $\textnormal{span}\{\bm{v_1}, \cdots, \bm{v_k}\}$ is a vector subspace of $V$.
+    \end{theorem}
+    
+    \begin{proof}
+    We will first prove that $\textnormal{span}\{\bm{v_1}, \cdots, \bm{v_k}\}$ is closed under addition.  Let $\bm{w_1}, \bm{w_2} \in \textnormal{span}\{\bm{v_1}, \cdots, \bm{v_k}\}$.  Then by definition, $$\bm{w_1} = \lambda_1\bm{v_1} + \cdots + \lambda_k\bm{v_k} \qquad \textnormal{and} \qquad \bm{w_2} = \alpha_1\bm{v_1} + \cdots + \alpha_k\bm{v_k}$$
+    
+    Then by the vector space axioms, $$\bm{w_1} + \bm{w_2} = (\lambda_1+\alpha_1)\bm{v_1} + \cdots + (\lambda_k+\alpha_k)\bm{v_k},$$ Hence $\bm{w_1} + \bm{w_2} \in \textnormal{span}\{\bm{v_1}, \cdots, \bm{v_k}\}$.
+    
+    We now prove it is closed under scalar multiplication.  Suppose $\lambda$ is an arbitrary scalar.  Then by the vector space axioms, $$\lambda \bm{w_1} = (\lambda\lambda_1)\bm{v_1} + \cdots + (\lambda\lambda_k)\bm{v_k},$$ Hence  $\lambda\bm{w_1} \in \textnormal{span}\{\bm{v_1}, \cdots, \bm{v_k}\}$.
+    \end{proof}
+    
+    \begin{example}
+    \begin{proposition}
+        Fix a vector $\bm{v} \in V$.  Then $$\textnormal{span}\{\bm{v}\} = \{ \lambda \bm{v} \ | \ \lambda \in \R\}$$
+    \end{proposition}
+    
+    \begin{proof}
+    By definition, $\{ \lambda \bm{v} \ | \ \lambda \in \R\} \subseteq \textnormal{span}\{\bm{v}\}$.  On the other hand, since there is only one element in the set $\{\bm{v}\}$, the sum of any elements in $\{\bm{v}\}$ is again a scalar multiple of $\bm{v}$.  Thus we have that $\{ \lambda \bm{v} \ | \ \lambda \in \R\} \supseteq \textnormal{span}\{\bm{v}\}$.
+    \end{proof}
+    
+    
+    For example, if $\bm{v}$ is a non-zero element in $\R^n$, then by definition, $\textnormal{span}\{\bm{v}\}$ is a line passing through the origin.
+    \end{example}
+    
+    \begin{example}
+    Let $A = \{\langle 1,0 \rangle, \langle 0,1\rangle \}$ be a subset of $\R^2$.  Then $\textnormal{span}(A) = \R^2$.
+    
+    \begin{proof}
+    By definition, $\textnormal{span}(A) \subseteq \R^2$.  On the other hand, pick an arbitrary element $\langle x, y \rangle$ in $\R^2$. We see from the axioms that $x\langle 1,0 \rangle + y\langle 0,1 \rangle = \langle x, y \rangle$.  Thus $\textnormal{span}(A) \supseteq \R^2$.
+    \end{proof}
+    \end{example}
+    
+    
+    We can now prove that $\textnormal{span}(A)$ is the \textbf{smallest} vector subspace containing $A$.  
+    
+    \begin{theorem}
+    Let $V$ be a vector space, and let $A = \{\bm{v_1}, \cdots, \bm{v_n}\}$ be a set of vectors in $V$.  Suppose $W$ is a vector subspace containing $A$.  Then $W$ contains $\textnormal{span}(A)$.
+    \end{theorem}
+    
+    \begin{proof}
+    
+    \fixthis{proof}
+    \end{proof}
+    
+    \subsection{Bases}
+    
+    We have figured out how to construct a vector subspace $\textnormal{span}(A)$ from a given subset $A$.  One natural question to ask is the converse:
+    
+    \begin{motivating}
+     Given a vector subspace $W$, can we construct a subset $B$ such that $W = \textnormal{span}(B)$?  Moreover, is it possible to find a smallest such subset $B$?  
+    \end{motivating}
+    
+    Let us first consider an example:
+    
+    \begin{example}
+    Consider the vector subspace $$W = \{(x, y, 0) \in \R^3 \}$$
+    We can write $W$ as the span of several different subsets:
+    \begin{enumerate}[label=(\roman*)]
+        \item $W= \textnormal{span}\{(1,0,0), (0,1,0)\}$
+        \item $W= \textnormal{span}\{(1,0,0), (0,1,0), (2,0,0)\}$
+        \item $W= \textnormal{span}\{(1,0,0), (0,1,0),(1,1,0)\}$
+        \item $W= \textnormal{span}\{(1,0,0), (0,1,0), (0,0,0)\}$
+        \item $W= \textnormal{span}\{(1,0,0),(0,2,0)\}$
+        \item $W= \textnormal{span}\{(1,1,0),(1,2,0)\}$
+    \end{enumerate}
+    
+    \end{example}
+    
+    From this example, we can make a few observations: examples $(ii)$ to $(iv)$ \fixthis{should really be thought of as example} $(i)$, but containing extraneous information.  In other words, example $(ii)$ contains two vectors that are scalar multiples of each other; example $(iii)$ contains a vector that is a linear combination of the other two vectors.  Example $(iv)$ also contains a vector that is a linear combination of the other two vectors. \fixthis{reference zerolineardependent}
+    
+    We can make this idea of ``extraneous information" rigorous with the following definition:
+    
+     \begin{definition}
+    A set of vectors $A \subset V$ is said to be \textbf{linearly dependent}\define{linearly dependent} if for every nonempty finite subset of vectors $\{\bm{v_1}, \cdots, \bm{v_k}\} \subset A$, there exist scalars $a_i$, \underline{not all zero}, such that $$a_1\bm{v_1} + \cdots + a_k\bm{v_k} = 0$$ Otherwise, the set $A$ is said to be \textbf{linearly independent}\define{linearly independent}.
+    \end{definition}
+    
+    This condition is precisely the same as our linear combination criterion as discussed above. 
+    
+    \begin{proposition}
+     A set of vectors $A \subset V$ is linearly dependent if and only if one of the vectors is a linear combination of the others.
+    \end{proposition}
+    
+    In some sense, the notion of linear independence gives us a partial answer to finding a ``smallest subset" that spans $W$:
+    
+    \begin{definition}
+    An \underline{ordered} set of vectors $\mathcal{B} \subset V$ is said to be a \textbf{basis}\define{basis} of $V$ if 
+     \begin{itemize}
+        \item $\textnormal{span}(\mathcal{B}) = V$, and 
+        \item $\mathcal{B}$ is linearly independent.
+    \end{itemize}
+    
+    That is, a \textbf{basis} is a linearly independent spanning set.
+    \end{definition}
+    
+    \begin{example}
+    Consider the vector subspace $$W = \{(x, y, 0) \in \R^3 \}$$
+    The following subsets are bases of $W$:
+    
+    \begin{enumerate}[label=(\roman*)]
+        \item $\{(1,0,0), (0,1,0)\}$
+        \item $\{(0,1,0), (1,0,0)\}$
+        \item $\{(1,0,0),(0,2,0)\}$
+        \item $\{(1,1,0),(1,2,0)\}$
+    \end{enumerate}
+    \end{example}
+    
+    Observe that examples $(i)$ and $(ii)$ are different bases, because the vectors are listed are listed in a different order!
+    
+    Examples $(iii)$ and $(iv)$ demonstrate the reason that we used quotes in talking about the "smallest subset".  There is no meaningful relationship between these two examples and example $(i)$ - neither of these subsets contain the other.  This shows us that the set of bases of a subspace are not well-ordered - that is, there is no good notion of "smallest" when talking about bases.  So for an arbitrary vector space, there is no reason to prefer any of the bases over the other.
+    
+    However, specifically when talking about the vector space $\R^n$, there \textbf{is} a preferred basis, called the standard basis:
+    
+    \begin{definition}
+    The \textbf{standard basis}\define{standard basis} of $\R^n$ is the collection of vectors $$\{\bm{e_i} \ | \ i = 1, \cdots, n\},$$ where $\bm{e_i}$ denotes the vector with a 1 in the $i$-th coordinate and 0 elsewhere.
+    \end{definition}
+    
+    \begin{example}
+    For example, the standard basis of $\R^3$ is the ordered set $\{(1,0,0), (0,1,0), (0,0,1)\}$.
+    \end{example}
+    
+    \begin{motivating}
+    Why is having a basis for a vector space useful?
+    \end{motivating}
+    
+    
+    
+    \begin{theorem}\label{thm:basisunique}
+    Given a basis $\mathscr{B} = \{\bm{v_1}, \cdots, \bm{v_k}\}$ of $V$, the linear combination $\bm{v} = \sum c_i \bm{v_i}$ is \textbf{unique}.
+    \end{theorem}
+    
+    See
+    
+    \begin{definition}
+    Let $\mathscr{B} = \{\bm{v_1}, \cdots, \bm{v_k}\}$ be a basis of $V$.  The \textbf{coordinates of a vector}\define{coordinate vector} $\bm{v} = \sum c_i \bm{v_i}$ is defined as the ordered set
+    $$[\bm{v}]_\mathscr{B} := \{c_1, \cdots, c_n\}$$
+    \end{definition}
+
+    \begin{example}
+    Consider the vector $\bm{v} = \langle x, y,z \rangle \in \R^3$, and consider the standard basis in $\R^3$.  Then we can write $\bm{v}$ as
+    $$\bm{v} = x\bm{e_1} + y\bm{e_2} + z\bm{e_3}$$
+    
+    The coordinates of $\bm{v}$ in the standard basis is the ordered set $(x,y,z)$.
+    \end{example}
+    
+    \begin{example}
+    Consider the vector subspace $W = \{(x, y, 0) \in \R^3 \}$ with basis $\{(1,1,0),(1,2,0)\}$.  This 
+    
+    To find the coordinates of an arbitrary vector $\bm{v} = \langle x, y,0 \rangle \in W$, we first observe that $W$ is a two dimensional vector space, so the coordinates will be an ordered set of two elements, say $(a,b)$.
+    
+    We must solve the linear system of equations $$a(1,1,0) + b(1,2,0) = (x,y,0)$$
+    So we see have two equations, $a + b = x$, and $a+2b=y$, thus subtracting the first from the second, we see that $b = y-x$.  This in turn tells us that $a + (y-x) =x$, so $a = 2x-y$.
+    
+    Thus the coordinates for $\bm{v} = \langle x, y,0 \rangle \in W$ is the ordered set $(2x-y, y-x)$.
+    \end{example}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    The concept of a basis also helps us distinguish vector spaces.
+    
+    \begin{theorem}\label{thm:basis}
+    If $\{\bm{v_1}, \cdots, \bm{v_n}\}$ is a basis for $V$, then any other basis has cardinality $n$.
+    \end{theorem}
+    
+    \begin{lemma}
+    Suppose that the set $\{\bm{v_1}, \cdots, \bm{v_n}\}$ is a basis for a vector space $V$.  Then any subset of $V$ that contains more than $n$ vectors is linearly dependent.
+    \end{lemma}
+    
+    Theorem \ref{thm:basis} tells us that the dimension of a vector space $V$ is an invariant.  \fixthis{todo}
+    
+    \begin{definition}
+    If $V$ has a basis of $n$ elements, then the \textbf{dimension}\define{dimension} of $V$ is $n$.
+    \end{definition}
+    
+    \begin{example}
+    The dimension of $\R^n$ is $n$.
+    \end{example}
+    
+    \begin{corollary}
+    Let $V$ be a vector space of dimension $n$, and $W$ is a vector space of dimension $m$.   Then if $n \neq m$, then $V$ and $W$ cannot be the same vector space.
+    \end{corollary}
+    
+    
+    \begin{proposition}
+    Let $V$ be a vector space of dimension $n$.  Then any set of $n$ linearly independent vectors $\{\bm{x_1}, \cdots, \bm{x_n}\} \subset V$ forms a basis for $V$.
+    \end{proposition}
+    
+    \begin{proposition}
+    Let $V$ be a vector space of dimension $n$.  Then any set of $n$ vectors $\{\bm{y_1}, \cdots, \bm{y_k}\} \subset V$ that spans $V$ also forms a basis for $V$.
+    \end{proposition}
+    
+\subsection{Exercises}
+    
+    \begin{problem}
+    Let $\bm{u} = \frac{1}{\sqrt{2}}\langle 1, 1 \rangle$ and $\bm{v} = \frac{1}{\sqrt{2}}\langle 1, -1 \rangle$ be vectors in $\R^2$.  Write $\bm{w} = \langle 20, 4 \rangle \in \R^2$ as a linear combination of $\bm{u}$ and $\bm{v}$.
+    \end{problem}
+    
+    \begin{problem}{complexvectorspace}
+Consider the set of complex numbers $$\C := \{ a + bi \ | \ a, b \in \R\}$$ 
+
+\begin{subproblems}
+\item Show that $\C$ is a vector space with the usual addition and scalar multiplication.
+\item Find a basis for $\C$ as a vector space.
+\end{subproblems}
+
+\end{problem}
+
+\begin{problem}{zero vector unique}
+Prove that for any given vector space $V$, its distinguished element $\bm{0}$ must be unique.
+\end{problem}
+
+\begin{problem}{zero scalar multiple}
+Given a vector space $V$, prove that for any vector $\bm{v} \in V$, the scalar multiple of $0\bm{v}$ is the zero vector.  That is,
+$$0\bm{v} = \bm{0}$$
+\end{problem}
+
+\begin{problem}{zerovspace}
+Given a vector space $V$, prove that the set $\{\bm{0}\}$ is a vector subspace of $V$.
+\end{problem}
+
+\begin{problem}{spanzero}
+    What is the span of the set $\{\bm{0}\} \in \R^n$?
+\end{problem}
+
+
+\begin{problem}{sumto0}
+For a fixed vector $\langle a_1, \cdots, a_n \rangle \in \R^n$, is the set $W = \{(x_1, \dots, x_n) \in \R^n \ | \ \sum^n_i a_ix_i = 0 \}$ a subspace of $\R^n$?
+\end{problem}
+
+\begin{problem}{sumto1}
+For a fixed vector $\langle a_1, \cdots, a_n \rangle \in \R^n$, is the set $W = \{(x_1, \dots, x_n) \in \R^n \ | \ \sum^n_i a_ix_i = 1 \}$ a subspace of $\R^n$?
+\end{problem}
+
+\begin{problem}{sumsquared}
+    For a fixed vector $\langle a_1, \cdots, a_n \rangle \in \R^n$, is the set $$W = \{(x_1, \dots, x_n) \in \R^n \ | \ \sum^n_i a_i(x_i)^2 = 0 \}$$ a subspace of $\R^n$?
+\end{problem}
+
+\begin{problem}{intersections}
+    Suppose that $U_1$ and $U_2$ are subspaces of a vector space $V$.  Prove that their intersection, $$U_1 \cap U_2 := \{\bm{v} \in V \ | \ \bm{v} \in U_1 \textnormal{ and } \bm{v} \in U_2\}$$ is also a subspace of of $V$.
+\end{problem}
+
+\begin{problem}{basis1}
+Is the set $\{(1,0,1), (2,1,0) \}$ a basis of $\R^3$?
+\end{problem}
+
+\begin{problem}{basis2}
+Is the set $\{(1,0,1), (2,1,0), (1,1,-1) \}$ a basis of $\R^3$?
+\end{problem}
+
+\begin{problem}{basis3}
+Is the set $\{(1,0,1), (2,1,0), (1,1,1) \}$ a basis of $\R^3$?
+\end{problem}
+
+\begin{problem}{basis4}
+Is the set $\{(1,0,0), (0,1,0), (0,0,1), (0,0,0) \}$ a basis of $\R^3$?
+\end{problem}
+
+\begin{problem}{zerolineardependent}
+Prove that any subset of a vector space that contains the zero vector is linearly
+dependent.
+\end{problem}
+
+\begin{problem}{polynomialvspace}
+Show that the collection $P_n$ of all polynomials (with real coefficients) of degree less than or equal to $n$ is a \textbf{subspace} of the vector space $\mathscr{F}(\R)$, and that it has $\{1, x, x^2, \cdots, x^n\}$ as a basis.
+\end{problem}
+
+\begin{problem}{uniquenesslinearcombo}
+Given a basis $\mathscr{B} = \{\bm{v_1}, \cdots, \bm{v_k}\}$ of $V$, prove that the linear combination $\bm{v} = \sum c_i \bm{v_i}$ is unique.
+\end{problem}
+
+
+\section{Maps of vector spaces}
+
+Now that we have a good grasp on what vector spaces are, we can now study how they relate to each other.  In other words, we would like to study certain kinds of maps of vector spaces.  For example, in this section, we will see what it means for two vector spaces to be the same!  
+
+Let us first consider two examples of maps:
+
+\begin{example}
+Fix a vector $\bm{a} = \langle a, b, c \rangle$, and consider the map $f: \R^3 \to \R^3$ that sends a vector $\bm{v} = \langle x, y, z \rangle$ to the vector $\bm{v} + \bm{a} = \langle x +a, y+b, z + c \rangle$.
+
+Observe that the map $f$ satisfies the following properties:
+\begin{enumerate}[label=(\roman*)]
+        \item For any two vectors $\bm{u}, \bm{v} \in \R^3$, we have that $f(\bm{u}+ \bm{v}) = f(\bm{u}) + f(\bm{v})$.
+        \item For any scalar $\lambda \in \R$, and for any vector $\bm{v} \in V$, we have that $f(\lambda \bm{u}) = \lambda f(\bm{u}))$.
+    \end{enumerate}
+
+\end{example}
+
+\begin{example}
+Consider the function $g: \R^3 \to \R^3$ that sends a vector $\langle x, y, z \rangle$ to the vector $\langle x^2, y^2, z^2 \rangle$.
+
+Observe that the map $g$ satisfies neither of the two properties
+    \begin{enumerate}[label=(\roman*)]
+        \item For any two vectors $\bm{u}, \bm{v} \in \R^3$, we have that $f(\bm{u}+ \bm{v}) = f(\bm{u}) + f(\bm{v})$.
+        \item For any scalar $\lambda \in \R$, and for any vector $\bm{v} \in \R^3$, we have that $f(\lambda \bm{u}) = \lambda f(\bm{u}))$.
+    \end{enumerate}
+\end{example}
+
+See the problems \fixthis{scalarpreserving} for examples of maps that preserve one, but not the other.
+
+\begin{motivating}
+Why are properties $(i)$ and $(ii)$ important?
+\end{motivating}
+
+Observe that if a map $f$ satisfies properties $(i)$ and $(ii)$, then it preserves the vector space structure on $\R^n$.  That is, it preserves vector space addition and scalar multiplication.
+
+
+\begin{definition}\label{def:linearmap}
+A map of vector spaces $T : V \to W$ is called a \textbf{linear map}\define{linear map} if $$T \left(\sum_i^k \alpha_i x_i\right) = \sum_i^k \alpha_i T(x_i)$$
+for all $k \in \N$, for all $\alpha_i \in \R$, and all vectors $x_i \in V$.
+\end{definition}
+
+\begin{proposition}
+A map of vector spaces $f: V \to W$ is a linear map if and only if 
+
+\begin{enumerate}[label=(\roman*)]
+        \item For any two vectors $\bm{u}, \bm{v} \in V$, we have that $f(\bm{u}+ \bm{v}) = f(\bm{u}) + f(\bm{v})$.
+        \item For any scalar $\lambda \in \R$, and for any vector $\bm{v} \in V$, we have that $f(\lambda \bm{u}) = \lambda f(\bm{u}))$.
+    \end{enumerate}
+\end{proposition}
+
+    \begin{example}
+    Is the map $f : \R \to \R$ given by $f(x) = c$ linear? For what $c$?
+    
+    Is the map $f : \R \to \R$ given by $f(x) = bx + c$ linear? For what $b$ and $c$?
+    
+    Is the map $f : \R \to \R$ given by $f(x) = ax^2 +bx + c$ linear? For what $a$, $b$, and $c$?
+    \end{example}
+
+\begin{example}
+    Let $f: \R \to \R$ be the map that sends $x$ to $ax$. Observe that $f$ is linear.
+\end{example}
+
+\begin{example}
+Show that the map $i: \R^2 \to \R^3$ defined by $i(x,y) = (x,y,0)$ is linear.
+\end{example}
+
+\begin{example}
+Show that the map $p: \R^3 \to \R^2$ defined by $p(x,y,z) = (x,y)$ is linear.
+\end{example}
+
+We can prove a lot of properties about linear maps of vector spaces simply using definition \ref{def:linearmap}.  Just as when we studied vector spaces, whenever you are are trying to determine whether or not something is true about linear maps of vector spaces, you should try to see if it is true for linear maps in $\R^n$.  Then, you should try to translate the proof to the general case, purely using the definition of a linear map.
+
+\begin{proposition}
+Let $T: V \to W$ be a linear map.  Then $T$ sends the 0 object in $V$ to the 0 object in $W$.  That is, $$T(\bm{0}) = \bm{0}$$
+\end{proposition}
+
+
+\begin{proposition}
+Let $T_1, T_2: V \to W$ be two linear maps.  Prove that the sum of two linear maps $T_1 + T_2$ is a linear map.
+\end{proposition}
+
+\begin{proposition}
+Let $T: V \to W$ be a linear map.  Prove that for any scalar $\lambda \in \R$, the map $\lambda T$ is a linear map.
+\end{proposition}
+
+\begin{proposition}\label{propcomposite}
+    Given two linear maps $S: V \to W$ and $T : U \to V$, prove that the composite $S \circ T : U \to W$ is also linear.
+\end{proposition}
+
+
+
+\fixthis{more properties, abstractly}
+
+\begin{definition}
+    Let $f: V \to W$ be a map of vector spaces.  We say that $f$ is \textbf{injective}\define{injective} or \textbf{one-to-one}\define{one-to-one} (or sometimes, $f$ is an \textbf{injection}) if the following holds:
+    
+    \begin{center}
+        
+    For all $\bm{v_1}, \bm{v_2} \in V$, if $f(\bm{v_1}) = f(\bm{v_2})$, then $\bm{v_1} = \bm{v_2}$.
+    \end{center}
+    
+    That is, any element in the codomain of $f$ is the image of \textbf{at most} one element in its domain.  
+\end{definition}
+
+
+
+\begin{example}
+    Let $f: \R \to \R$ be the map that sends $x$ to $ax$. Show that $f$ is injective.
+\end{example}
+
+
+\begin{example}
+Show that the map $i: \R^2 \to \R^3$ defined by $i(x,y) = (x,y,0)$ is injective.
+\end{example}
+
+\begin{example}
+    Equivalently, the contrapositive statement of injectivity states that $f$ is \textbf{injective} (\textbf{one-to-one}) if the following holds:
+    
+    \begin{center}
+    For all $\bm{v_1}, \bm{v_2} \in V$, if $\bm{v_1} \neq \bm{v_2}$, then $f(\bm{v_1}) \neq f(\bm{v_2})$.
+        
+    \end{center}
+    
+\end{example}
+
+\begin{definition}
+    Let $f: V \to W$ be a map of vector spaces.  We say that $f$ is \textbf{surjective}\define{surjective} or \textbf{onto}\define{onto}  (or sometimes, $f$ is a \textbf{surjection}) if the following holds:
+    
+    \begin{center}
+        
+    For all $\bm{w} \in W$, there exists a $\bm{v} \in V$ such that $f(\bm{v}) = \bm{w}$.
+    \end{center}
+    
+    That is, any element in the codomain of $f$ is the image of \textbf{at least} one element in its domain.  
+\end{definition}
+
+\begin{example}
+Show that the map $p: \R^3 \to \R^2$ defined by $p(x,y,z) = (x,y)$ is surjective.
+\end{example}
+
+\begin{definition}
+    Let $f: V \to W$ be a map of vector spaces.  We say that $f$ is \textbf{bijective}\define{bijective} i  (or sometimes, $f$ is a \textbf{bijection})f $f$ is both injective and surjective.
+    
+    That is, any element in the codomain of $f$ is the image of \textbf{exactly} one element in its domain.  
+\end{definition}
+
+
+
+
+
+\subsection{Characterising linear maps}
+
+
+    
+\begin{motivating}
+What do graphs of linear maps from $\R^n \to \R^m$ look like?
+\end{motivating}
+
+
+\fixthis{graph}
+
+Observe that not every straight line graph is linear!
+    
+    \begin{center}
+            \begin{tikzpicture}[scale=0.75]
+\begin{axis}[xmin=-4, xmax=4,
+        ymin=-4,ymax=4,
+    axis lines=center,
+    axis equal image,
+    axis line style={latex-latex},
+    grid=both,
+    xtick={-4,-3,-2,-1,0,1,2,3,4},
+    ytick={-4,-3,-2,-1,0,1,2,3,4},
+     ]
+     \end{axis}
+\end{tikzpicture}
+        \end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{motivating}
+Can we describe characterize linear maps $T: \R^n \to \R^m$?
+\end{motivating}
+
+Let us first start with the simplest case, where $n = m = 1$.
+
+\begin{proposition}\label{proplinear1d}
+    Let $T: \R \to \R$ be a linear map. Observe that if $T(1) = a$, then $T(x) = ax$.
+\end{proposition}
+
+Thus we have shown that linear maps from $\R \to \R$ must take the form of multiplication by $a$. From previous examples, we saw that the converse holds as well.  Thus, we have classified all linear maps from $\R \to \R$
+
+\begin{theorem}\label{linear1d}
+    A map $T: \R \to \R$ is a linear map if and only if $$T(x) = ax$$ for some $a \in \R$.
+    \end{theorem}
+    
+    \begin{motivating}
+    How can we generalize this result?
+    \end{motivating}
+
+    Observe that the set $\{1\}$ is a basis for the vector space $\R$.  Proposition \ref{proplinear1d} tells us that a linear map $T: \R \to \R$ is determined completely by where $T$ sends the basis $1$.  
+    
+    Recall also that given a basis $\mathcal{B}$ of a vector space $V$, we can uniquely describe any vector $\bm{v} \in V$ as a linear combination of basis vectors (Theorem \ref{thm:basisunique}).  In other words, in terms of its coordinates\SubIndex{coordinates}.
+    
+    \begin{example}
+    Let us consider the vector space $\R^3$, with the standard basis.  Then, as we saw before, we can write the vector $\bm{v} = \langle x, y,z \rangle \in \R^3$ in the standard basis:
+    $$\bm{v} = x\bm{e_1} + y\bm{e_2} + z\bm{e_3}$$
+    
+    Let us consider a linear map $T : \R^3 \to W$, where $W$ is an arbitrary vector space.  Observe that using linearity, we have that
+    \begin{align*}
+        T(\bm{v}) &= T(x\bm{e_1} + y\bm{e_2} + z\bm{e_3}) \\
+        &= xT(\bm{e_1}) + yT(\bm{e_2}) + zT(\bm{e_3})
+    \end{align*}
+    
+    Thus, if we know how $T$ acts on the basis vectors $\bm{e_1}, \bm{e_2}, \bm{e_3}$, then we can calculate $T(\bm{v})$ for any vector $\bm{v} \in \R^3$.  
+    
+    \end{example}
+
+    This generalizes to the following theorem:
+    
+    \begin{theorem}
+    Let $V$ be a vector space with basis $\{\bm{v_1}, \cdots, \bm{v_n}\}$, and let $W$ be an arbitrary vector space.  A linear map $T: V \to W$ is determined by what it does on basis vectors.
+    \end{theorem}
+
+    \begin{example}
+    Let $T : \R^3 \to \R^3$ be the linear mapping such that $T\langle1,0,0\rangle = \langle1,0,1\rangle$, $T\langle0,1,0\rangle = \langle3,0,2\rangle$, and $T\langle0,0,1\rangle = \langle4,2,1\rangle$. 
+    
+    Compute $T(3, 3, 2)$.
+    \end{example}
+
+
+
+
+
+\subsection{Matrices}
+
+\begin{motivating}
+Is there a more efficient way to describe how a linear transformation acts on a basis?
+\end{motivating}
+
+Let us first set up some machinery:
+
+\begin{definition}
+    An $m \times n$ \textbf{(real) matrix}\define{matrix} $A$ is an array of elements $a_{i,j} \in \R$ with $m$ rows and $n$
+columns:
+\begin{equation*}
+A_{m,n} = 
+\begin{bmatrix}
+a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
+a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
+\vdots  & \vdots  & \ddots & \vdots  \\
+a_{m,1} & a_{m,2} & \cdots & a_{m,n} 
+\end{bmatrix}
+\end{equation*}
+
+The set of $m \times n$ (real) matrices is denoted $M_{m \times n}(\R)$.
+\vspace{1em}
+    \end{definition}
+
+\begin{theorem}
+The set $M_{m \times n}(\R)$, with entry-wise addition and scalar multiplication, is a vector space.
+\end{theorem}
+
+\begin{example}
+    
+    \begin{equation*}
+A_{m,1} = 
+\begin{bmatrix}
+a_{1,1} \\
+a_{2,1} \\
+\vdots   \\
+a_{m,1} 
+\end{bmatrix}
+\end{equation*}
+
+Observe that we can write vectors in $\R^m$ as $m \times 1$ matrices.
+
+    \end{example}
+
+An $m \times n$ matrix can act on a vector in $\R^m$ in the following way:
+
+\begin{definition}[Matrix by vector multiplication]
+    
+    Let $A \in M_{m \times n}(\R)$, and let $\bm{x}\in \R^n$.  The product $A\bm{x} \in \R^m$ is defined the vector whose i-th entry is sum $\sum_j a_{i,j}x_j$. That is, 
+    
+        \begin{equation*}
+A\bm{x} = 
+\begin{bmatrix}
+a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
+a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
+\vdots  & \vdots  & \ddots & \vdots  \\
+a_{m,1} & a_{m,2} & \cdots & a_{m,n} 
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+\vdots   \\
+x_n
+\end{bmatrix}
+%\pause
+= \begin{bmatrix}
+a_{1,1}x_1 + \cdots + a_{1,n}x_n\\
+a_{2,1}x_1 + \cdots + a_{2,n}x_n\\
+\vdots   \\
+a_{m,1}x_1 + \cdots + a_{m,n}x_n\\
+\end{bmatrix}
+\end{equation*}
+    
+\end{definition}
+
+\begin{example}
+    Compute $A\bm{x}$, where $\bm{x} = \langle 7, 8, 9\rangle$, and \begin{equation*}
+A = 
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+\end{bmatrix}
+\end{equation*}
+\end{example}
+
+\begin{proposition}
+    Observe that the matrix $A\in M_{m \times n}(\R)$ determines a map $T: \R^n \to \R^m$.
+\end{proposition}
+
+Thus $m \times n$ matrices are not the same as $n \times m$ matrices, unless $m=n$. If $m=n$, we call $A\in M_{n \times n}(\R)$ a \textbf{square matrix}.
+
+\begin{theorem}
+    Let $A \in M_{m \times n}(\R)$.  The map $T : \R^n \to \R^m$ defined by $T(\bm{x}) = A\bm{x}$ is linear.
+    \end{theorem}
+
+Now, we will show the converse:
+
+\begin{definition}
+    Given a basis $\mathcal{B} = \{\bm{e_1}, \cdot \bm{e_n}\}$ for $\R^n$, the \textbf{standard matrix}\define{standard matrix} $A$ of a linear map $T: \R^n \to \R^m$ is given by
+    \begin{equation*}
+[A] = 
+\begin{bmatrix}
+\vert & \vert & & \vert \\
+    T(\bm{e_1})   & T(\bm{e_2}) & \cdots & T(\bm{e_n})  \\
+    \vert & \vert & & \vert
+\end{bmatrix} \in M_{m \times n}(\R)
+\end{equation*}
+\end{definition}
+
+    Thus, we have precisely characterized the linear maps from $\R^n \to \R^m$ - they correspond exactly to $n \times m$ matrices!
+    
+    \begin{theorem}
+    \fixthis{phrasing}
+    A linear map $T: \R^n \to \R^m$ corresponds exactly to a matrix $A$ such that $$T(\bm{x}) = A\bm{x}$$  
+    We call $A$ the \textbf{standard matrix} of $T$.
+    \end{theorem}
+
+
+
+\begin{example}\label{coordinatematrix}
+    \begin{equation*}
+A_{1,n} = 
+\begin{bmatrix}
+a_{1,1} & a_{1,2} & \cdots & a_{1,n} 
+\end{bmatrix}
+\end{equation*}
+
+Observe that the coordinate vector in $\R^n$ is an $1 \times n$ matrix.
+    \end{example}
+
+
+\begin{definition}\label{transpose}
+If $A = [a_{i,j}]$, the \textbf{transpose matrix}\define{transpose matrix} is the matrix $A^T = [a_{j,i}]$.
+\end{definition}
+
+
+
+
+
+
+
+
+\begin{motivating}
+We previously saw in proposition \ref{propcomposite} that the composition of linear maps is again linear.  What is the standard matrix of the composite?
+\end{motivating}
+
+Let $S: \R^n \to \R^m$ and $T : \R^p \to \R^n$ be linear maps, with standard matrices $A \in M_{m \times n}(\R)$ and $B \in M_{n \times p}(\R)$.
+
+Then $S \circ T$ is a map from $\R^p \to \R^m$, and should have a standard matrix $C \in M_{m \times p}(\R)$
+
+\begin{definition}[Matrix multiplication]\define{matrix multiplication}
+    
+    Let $A \in M_{m \times n}(\R)$ and $B \in M_{n \times p}(\R)$ be two matrices.  Denote the columns of $B$ by the vectors $\bm{b_1}, \cdots, \bm{b_p}$.  Then the product of $A$ and $B$ is the matrix
+    
+    \begin{equation*}
+AB = 
+\begin{bmatrix}
+\vert & \vert & & \vert \\
+    A(\bm{b_1})   & A(\bm{b_2}) & \cdots & A(\bm{b_n})  \\
+    \vert & \vert & & \vert
+\end{bmatrix} \in M_{m \times p}(\R)
+\end{equation*}
+    
+    %\pause
+    
+    In terms of entries, if $A = [a_{i,j}]$ and $B = [b_{i,j}]$, then $$AB = \left[\sum_k a_{i,k}b_{k,j}\right]$$
+    
+\end{definition}
+
+\begin{example}
+    Find the matrix $AB$, where \begin{equation*}
+A = 
+\begin{bmatrix}
+1 & 0 \\
+2 & 1
+\end{bmatrix} \qquad \textnormal{and} \qquad B = 
+\begin{bmatrix}
+1 & 2 & -1 \\
+0 & 2 & 1
+\end{bmatrix}
+\end{equation*}
+\end{example}
+
+
+\begin{theorem}[Properties of matrix multiplication]
+    
+    \begin{enumerate}
+        \item $A(BC) = (AB)C$ for $A \in M_{m \times n}(\R)$, $B \in M_{n \times p}(\R)$, $C \in M_{p \times q}(\R)$ (associativity).
+        \item $A (B + C) = AB + AC$ for $A \in M_{m \times n}(\R)$, $B,C \in M_{n \times p}(\R)$ (distribution).
+        \item $(A + B) C = AC + BC$ for $A,B \in M_{m \times n}(\R)$, $C \in M_{n \times p}(\R)$ (distribution).
+        \item $\lambda(AB) = (\lambda A) B = A (\lambda B)$ (scalars).
+        
+    \end{enumerate}
+    
+    \end{theorem}
+
+\begin{example}
+    \textbf{Warning:}  Matrix multiplication is \textbf{not} commutative.
+\end{example}
+
+
+\begin{definition}\label{identitymatrix}
+    The $n \times n$ \textbf{identity matrix}\define{identity matrix} $I_n$ is the standard matrix of the identity transformation $id : \R^n \to \R^n$, which sends a vector $\bm{v}$ to itself.
+    
+    The $n \times n$identity matrix has the form $$I_n = \left[\delta_{ij}\right]$$
+    That is, the entry in the $i$-th row and $j$-th column is described by the \textbf{Kronecker delta}\define{Kornecker delta} function, which is defined as $$\delta_{ij} = \left\{
+		\begin{array}{ll}
+			1 & \text{ if } i = j \\
+			0 & \text{ if } i \neq j
+		\end{array}
+		\right.$$
+    
+\end{definition}
+
+\begin{example}
+    The $3 \times 3$ identity matrix is of the form  \begin{equation*}
+I_3 = 
+\begin{bmatrix}
+1 & 0  & 0 \\
+0 & 1  & 0 \\
+0 & 0  & 1
+\end{bmatrix}
+\end{equation*}
+\end{example}
+
+
+\begin{proposition}
+    The identity matrix $I_n \in M_{n \times n}(\R)$ satisfies the property that for all $A \in M_{m \times n}(\R)$, $$I_mA = A = AI_n$$
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{definition}
+    A matrix $A\in M_{n \times n}(\R)$ is \textbf{invertible} if there exists a matrix $B\in M_{n \times n}(\R)$ such that $AB = BA = I_n$.
+    
+    $B$ is called the \textbf{inverse} of $A$.
+    \end{definition}
+
+\begin{example}
+    Show that the matrix \begin{equation*}
+A = 
+\begin{bmatrix}
+1 & 1 \\
+2 & 1
+\end{bmatrix}
+\end{equation*}
+has inverse \begin{equation*}
+B = 
+\begin{bmatrix}
+-1 & 1 \\
+2 & -1
+\end{bmatrix}
+\end{equation*}
+\end{example}
+
+\begin{example}
+    The matrix  \begin{equation*}
+A = 
+\begin{bmatrix}
+0 & 0 \\
+1 & 0
+\end{bmatrix}
+\end{equation*} is \textbf{not} invertible. (\textbf{Hint:} use the fact that $A^2 = 0$ to obtain a contradiction)
+\end{example}
+
+\begin{motivating}
+What does invertibility look like for linear transformations?
+\end{motivating}
+
+\begin{definition}
+    A linear transformation $T: V \to W$ is \textbf{invertible}\define{invertible linear transformation} if there exists a linear transformation $S : W \to V$ such that $S \circ T = id_V$ and $T \circ S = id_W$.
+    
+    If this is true, we also call $T$ an \textbf{isomorphism of vector spaces}\define{isomorphism of vector spaces}, and $V$ and $W$ are \textbf{isomorphic}.
+    \end{definition}
+
+
+\begin{proposition}
+    If $T : V \to W$ is linear and invertible, then $T^{-1} : W \to V$ is also linear and invertible.
+    \end{proposition}
+
+\begin{example}
+    The map $[]_\mathcal{S} : \R^n \to M_{n \times 1}$ that sends a point to its coordinate vector (with respect to the standard basis) is an isomorphism.
+    \end{example}
+
+\begin{example}
+    The vector space $M_{m \times n}(\R)$ is isomorphic to the vector space $\R^{mn}$.
+
+    
+    \end{example}
+
+Note that an isomorphism of vector spaces does not preserve anything except the vector space structure.
+
+
+
+
+
+
+
+
+\begin{motivating}
+How do we determine when a linear map $T : \R^n \to \R^m$ is an isomorphism?  Equivalently, when is a matrix $A \in M_{m \times n}(\R)$ invertible?
+\end{motivating}
+
+From our discussion about dimension earlier,  the dimension of a vector space $V$ (that is, the cardinality of any basis of $V$) is an invariant of $V$.  For example, the dimension of $\R^n$ is $n$.  \textbf{Exercise: Show that an isomorphism of vector spaces must preserve dimension.}  
+
+Thus we restrict our attention to linear maps $T : \R^n \to \R^n$, or equivalently, square matrices $A \in M_{n \times n}(\R)$.  For a square matrix, we can develop the theory of \textbf{determinants}:
+
+\begin{definition}
+    The \textbf{determinant}\define{determinant} of a $2 \times 2$ matrix is denoted and defined as follows:
+\begin{equation*}
+\textnormal{det}(A) = 
+\begin{vmatrix}
+a & b \\
+c & d
+\end{vmatrix} = ad-bc
+\end{equation*}
+
+    \end{definition}
+
+\begin{example}
+    Find the determinant of the matrix \begin{equation*}
+A = 
+\begin{bmatrix}
+3 & 2 \\
+5 & 4
+\end{bmatrix}
+\end{equation*}
+\end{example}
+
+\begin{definition}
+    The \textbf{determinant}\SubIndex{determinant} of a $3 \times 3$ matrix is denoted and defined as follows:
+\begin{equation*}
+\textnormal{det}(A) = 
+\begin{vmatrix}
+a_1 & b_1 & c_1 \\
+a_2 & b_2 & c_2 \\
+a_3 & b_3 & c_3 \\
+\end{vmatrix} = a_1\begin{vmatrix}
+b_2 & c_2 \\
+b_3 & c_3
+\end{vmatrix} - b_1\begin{vmatrix}
+a_2 &  c_2 \\
+a_3 &  c_3
+\end{vmatrix} + c_1\begin{vmatrix}
+a_2 & b_2 \\
+a_3 & b_3 \\
+\end{vmatrix}
+\end{equation*}
+
+    \end{definition}
+
+\begin{example}\label{det3d}
+    Find the determinant of the matrix \begin{equation*}
+A = 
+\begin{bmatrix}
+1 & 3 & 2 \\
+6 & 5 & 4 \\
+2 & 2 & 2
+\end{bmatrix}
+\end{equation*}
+\end{example}
+
+To see what the determinant measures, see \fixthis{reference to operations}
+
+
+\begin{motivating}
+How can we generalize the determinant to $n \times n$ matrices?
+\end{motivating}
+
+\begin{theorem}[Expansion along the $i$-th row]
+    Let $A$ be an $n \times n$ matrix, and let $A_{ij}$ denote the $(n-1) \times (n-1)$ matrix obtained by deleting row $i$ and column $j$ from $A$.
+    $$\textnormal{det}(A) = (-1)^{i+1}a_{i,1}\textnormal{det}(A_{i1}) + \cdots +  (-1)^{i+n}a_{i,n}\textnormal{det}(A_{in})$$
+    
+    \end{theorem}
+
+Where does this formula come from? See \fixthis{problem reference}
+
+
+
+
+Properties of the determinant
+    
+    \begin{remark}
+    In general, $\textnormal{det}(A+B) \neq \textnormal{det}(A) + \textnormal{det}(B)$.
+    \end{remark}
+    
+    \begin{theorem}
+
+     $\textnormal{det}(AB) = \textnormal{det}(A)\textnormal{det}(B)$.
+     
+    \end{theorem}
+    
+    \begin{theorem}
+    A linear transformation $T: \R^n \to \R^n$ with standard matrix $A$ is an isomorphism if and only if $\textnormal{det}(A) \neq 0$.
+    \end{theorem}
+
+
+\begin{theorem}
+the determinant of the transpose matrix
+
+$\textnormal{det}(A^T) = \textnormal{det}(A)$
+\end{theorem}
+
+
+
+
+
+
+\fixthis{Bucketlist of injective, surjective}
+
+
+
+
+\subsection{Exercises}
+
+\begin{problem}{scalarpreserving}
+Consider the map $f: \R^2 \to \R$ defined by $$f(x,y) =
+\begin{cases}
+x,  & \text{if $y=0$ } \\
+y, & \text{if $y\neq 0$ }
+\end{cases}$$
+Show that $f$ preserves scalar multiplication, but not vector addition.
+\end{problem}
+
+\begin{problem}{linearmapcheck}
+Prove that a map of vector spaces $f: V \to W$ is a linear map if and only if for all vectors $\bm{v}, \bm{w} \in V$, and for any scalar $\lambda \in \R$, we have that
+$$f(\lambda \bm{u} + \bm{v}) = \lambda f(\bm{u}))+ f(\bm{v})$$
+
+\end{problem}
+
+\begin{problem}{linear composite}
+Given two linear maps $S: V \to W$ and $T : U \to V$, prove that the composite $S \circ T : U \to W$ is also linear.
+\end{problem}
+
+\begin{problem}{kernellinear}
+Let $T : V \to W$ be a linear map.  Is the set $$\textnormal{Ker}(T) := \{ \bm{v} \in V \ | \ T(\bm{v}) = \bm{0} \}$$ a subspace of $V$?
+\end{problem}
+
+\begin{problem}{imagelinear}
+Let $T : V \to W$ be a linear map.  Is the set $$\textnormal{Im}(T) := \{ T(\bm{v}) \ | \ \bm{v} \in V\}$$ a subspace of $W$?
+\end{problem}
+
+\begin{problem}{linearcomp1}
+    Let $T : \R^3 \to \R^3$ be the linear mapping such that $T\langle0,1,1\rangle = \langle1,0,1\rangle$, $T\langle1,0,1\rangle = \langle3,0,2\rangle$, and $T\langle1,1,0\rangle = \langle4,2,1\rangle$. 
+    
+    Compute $T(3, 3, 2)$.
+\end{problem}
+
+\begin{problem}{rotationmatrix}
+    
+    Show that the rotation matrix \begin{equation*}
+R_\theta = 
+\begin{pmatrix}
+\cos(\theta) & -\sin(\theta) \\
+\sin(\theta) & \cos(\theta)
+\end{pmatrix}
+\end{equation*}
+has inverse \begin{equation*}
+S_{\theta} = 
+\begin{pmatrix}
+\cos(\theta) & \sin(\theta) \\
+-\sin(\theta) & \cos(\theta)
+\end{pmatrix}
+\end{equation*}
+    
+\end{problem}
+
+\begin{problem}
+    Show that an isomorphism of vector spaces must preserve dimension.  That is, an isomorphism sends a basis of $n$ elements to a basis  of $n$ elements.
+\end{problem}
+
+\begin{problem}
+    Show that if $A$ is invertible, then $\textnormal{det}(A) \neq 0$.
+\end{problem}
+
+In this set of problems, we will see an abstract way to define the determinant map.  
+
+First, we need to define a property of maps of vector spaces:
+
+\begin{definition}
+    A map $M : V_1 \times \cdots \times V_k \to W$ is said to be \textbf{multilinear}\define{multilinear} if it is linear in each component.  That is, for all $1 \leq i \leq k$, and for any fixed $\bm{v_\ell} \in V_\ell, \ell \neq i$, the map $V_i \to W$ given by $$\bm{v} \mapsto M(\bm{v_1}, \cdots, \bm{v_{i-1}}, \bm{v}, \bm{v_{i+1}}, \cdots, \bm{v_k})$$ is linear.
+    
+    If $k=2$, then we say $M$ is \textbf{bilinear}\define{bilinear}, instead of multilinear.
+    \end{definition}
+
+\begin{problem}
+    Show that the map $\cdot : \R^n \times \R^n \to \R$ defined by $$\langle u_1, \cdots, u_n \rangle \cdot \langle v_1 , \cdots, v_n \rangle = \sum u_iv_i$$
+    is bilinear. 
+    
+    (This map is called the \textbf{dot product}, which we will discuss in the next section). 
+\end{problem}
+
+
+\begin{problem}{universal property of determinants}
+    
+    \
+    
+    
+    
+    \begin{example}
+    If we think of a matrix $A = [a_{i,j}] \in M_{m \times n}(\R)$ as an array of $n$ column vectors, then the determinant map for $2 \times 2$ and $3 \times 3$ matrices is multilinear.
+    \end{example}
+    
+    
+    
+    
+    
+    \begin{definition}
+    A multilinear map $M$ is said to be \textbf{alternating}\define{alternating} or \textbf{skew-symmetric} if 
+    $$M(\bm{v_1}, \cdots, \bm{v_i}, \cdots , \bm{v_j}, \cdots, \bm{v_k}) = -M(\bm{v_1}, \cdots, \bm{v_j}, \cdots , \bm{v_i}, \cdots, \bm{v_k}) $$
+    
+    for all $1 \leq i < j \leq k$ and for any $\bm{v_\ell} \in V_\ell$.
+    
+    \end{definition}
+    
+    \begin{example}
+    The determinant map for $2 \times 2$ and $3 \times 3$ matrices is alternating.
+    \end{example}
+    
+    \begin{example}
+    The dot product is \textbf{not} alternating.  It is instead symmetric (commutative).
+    \end{example}
+    
+    \begin{definition}[The determinant]
+There is exists a \textbf{unique} map, $\textnormal{det} : \R^n \times \cdots \times \R^n \to \R$ satisfying the following:
+\begin{enumerate}
+    \item $\textnormal{det}$ is multilinear
+    \item $\textnormal{det}$ is alternating (skew-symmetric)
+    \item $\textnormal{det}(\bm{e_1}, \cdots, \bm{e_n}) = 1$.
+\end{enumerate}
+
+
+\end{definition}
+    
+\end{problem}
+
+\section{Operations on vector spaces}
+
+So far, we have discussed vector spaces and maps of vector spaces. \fixthis{Certain operations with geometric interpretations in $\R^3$}
+
+\subsection{Dot product}
+
+\begin{definition}
+
+function $\cdot: \R^n \times \R^n \to \R$
+
+
+    Given two vectors $\bm{u} = \langle u_1, \cdots, u_n \rangle$ and $\bm{v}  = \langle v_1 , \cdots, v_n \rangle$ in $\R^n$, their (\textbf{dot product}) is the \underline{scalar} defined by $$\langle \bm{u}, \bm{v}\rangle = \bm{u} \cdot \bm{v} = \sum u_iv_i$$
+    \end{definition}
+
+Observe that we can identify $\bm{u} \cdot \bm{v}$ as the matrix product $\bm{u}^{T} \bm{v}$.
+
+\begin{theorem}[Axioms of the dot product]
+    
+    \begin{enumerate}
+        \item $\bm{u} \cdot \bm{v} = \bm{v} \cdot \bm{u}$ (commutativity).
+        \item $\lambda(\bm{u} \cdot \bm{v}) = (\lambda\bm{u}) \cdot \bm{v} = \bm{u} \cdot \lambda(\bm{v})$ (scalars).
+        \item $\bm{u} \cdot (\bm{v} + \bm{w}) = \bm{u} \cdot \bm{v} + \bm{u} \cdot \bm{w}$ (distribution).
+        \item $\bm{v} \cdot \bm{v} \geq 0$, with equality only when $\bm{v} = \bm{0}$. (positive definite).  
+    \end{enumerate}
+    
+    \end{theorem}
+
+
+
+
+    \begin{proposition}\label{dotproduniqueness}
+    \fixthis{Let $V$ be a vector space with inner product} $\langle - , - \rangle$.  If $\langle \bm{v}, \bm{w} \rangle = 0$ for all $\bm{w} \in V$, then $\bm{v} = \bm{0}$.
+    \end{proposition}
+    
+    
+    \begin{corollary}
+    If $ \bm{v} \cdot \bm{w} e = \bm{u} \cdot \bm{w}$ for all $\bm{w} \in V$, then $\bm{v} = \bm{u}$.
+    \end{corollary}
+
+
+Geometry
+
+
+\begin{proposition}
+    Observe that $\bm{v} \cdot \bm{v} = ||\bm{v}||^2$. 
+\end{proposition}
+    
+    We see that the dot product allows us to talk about the notion of \underline{distance} in $\R^n$.  Thus the dot product has a geometric interpretation!
+    
+
+
+
+\begin{proposition}\label{geometricdotproduct}
+    Let $\theta$ be the angle between two non-zero vectors $\bm{u}$ and $\bm{v}$ in $\R^n$.  Then  $$\cos(\theta) = \frac{\bm{u} \cdot \bm{v}}{||\bm{u}|| \ ||\bm{v}||}$$
+    \end{proposition}
+
+This follows from trigonometry and the Law of Cosines.  Thus, we can use the dot product in $\R^n$ to determine whether the angle between the vectors $\bm{u}$ and $\bm{v}$ is acute, obtuse, or if $\bm{u}$ and $\bm{v}$ are orthogonal (that is, if $\theta = \frac{\pi}{2}$).
+
+\fixthis{explicit, proof}
+
+
+\fixthis{define orthonormal}
+
+\begin{proposition}\label{coeffdotprod}
+    Recall that if $\mathscr{B} = \{\bm{v_1}, \bm{v_2}, \cdots, \bm{v_n}\}$ is an orthonormal basis of $V$, then for any $\bm{v} \in V$, $$\bm{v} = \langle \bm{v}, \bm{v_1} \rangle \bm{v_1} + \cdots \langle \bm{v}, \bm{v_n} \rangle \bm{v_n}$$ 
+    \end{proposition}
+
+
+\begin{theorem}[Properties of the dot product]
+    
+    \begin{enumerate}
+        \item Cauchy-Schwarz inequality: $|| \bm{u} \cdot \bm{v} || \leq  || \bm{u}|| \ || \bm{v} ||$
+        \item Triangle inequality: $|| \bm{u}+ \bm{v} || \leq  || \bm{u}|| +|| \bm{v} |$
+    \end{enumerate}
+    
+    \end{theorem}
+
+\fixthis{Geometric interpretation}
+
+
+Observe that the dot product on $\R^n$ is a function $\cdot: \R^n \times \R^n \to \R$.  Suppose we fix a vector $\bm{n} \in \R^n$.  We can then consider the function $$\cdot \bm{n} : \R^n\to \R$$ defined by $$\bm{v} \mapsto \bm{v} \cdot \bm{n}$$
+
+\fixthis{of "taking the dot product }
+
+\fixthis{Projection of vectors}
+
+\fixthis{orthogonal component}
+
+
+
+\begin{motivating}
+Given a vector $\bm{n} \in \R^n$, can we describe the set of vectors $\bm{v} \in \R^n$ such that $\bm{v} \cdot \bm{n} = \bm{0}$?
+\end{motivating}
+
+We know that $\bm{0}$ is always in this set.  We also know  from proposition \ref{geometricdotproduct} that this is equivalent to describing all of the non-zero vectors that are \textit{orthogonal} to $\bm{n}$. 
+
+Let us 
+
+\begin{example}
+    2D
+    
+    span
+\end{example}
+
+\begin{example}
+    3D 
+    
+    span
+\end{example}
+
+
+\begin{proposition}
+    Given a vector $\bm{n} \in \R^n$, the set $$\{\bm{v} \in \R^n \ | \ \bm{v} \cdot \bm{n} = \bm{0}\}$$ is a vector subspace of $\R^n$ of dimension $n-1$.
+\end{proposition}
+
+
+From the previous proposition, we can now generalize our examples from $\R^2$ and $\R^3$:
+
+\begin{definition}
+Let $\bm{n} \in V$, with $\bm{n} \neq \bm{0}$.  The \textbf{hyperplane} $W$ normal to $\bm{n}$ (passing through the origin) is the subspace $$W = \{ \bm{v} \in V \ | \ \bm{n} \cdot \bm{v}  = 0 \}$$
+We say that $\bm{n}$ is a normal vector of $W$.
+\end{definition}
+
+
+
+
+
+
+
+
+
+\subsection{Cross product}
+
+We saw previously that two non-zero vectors in $\R^3$ span a plane $P$ in $\R^3$.  Is there a way to determine the normal vector $\bm{n}$ associated to this plane?
+
+\begin{motivating}
+
+In other words, given two vectors $\bm{u}, \bm{v} \in \R^3$, can we construct a vector $\bm{w} \in \R^3$ that is orthogonal to both $\bm{u}$ and $\bm{v}$?
+\end{motivating} 
+
+The answer is yes!  \fixthis{We will define the cross product of two vectors in a}
+
+We will first define the cross product in terms of direction and magnitude.
+
+It turns out that in order to describe the direction of the cross product, we will need to make an arbitrary choice. This choice is called the right hand rule: 
+
+\begin{definition}
+    We say that an ordered list of three orthogonal vectors $\bm{u}$, $\bm{v}$ and $\bm{w}$ in $\R^3$ satisfy the \textbf{Right Hand Rule}\define{Right Hand Rule} if the following is true.
+    
+    \begin{enumerate}
+        \item Point the fingers of your right hand in the direction of $\bm{u}$
+        \item Curl your fingers towards $\bm{v}$ (maybe rotating your hand!)
+        \item If your thumb points in the direction of $\bm{w}$, then $\bm{u}$, $\bm{v}$ and $\bm{w}$ satisfy the right hand rule.
+    \end{enumerate}
+    
+    \end{definition}
+
+\textbf{Note that the order matters!} If the ordered list $\bm{u}$, $\bm{v}$ and $\bm{w}$ satisfies the right hand rule, then the ordered list $\bm{v}$, $\bm{u}$ and $\bm{w}$ does not satisfy the right hand rule.
+
+\begin{example}
+    For example, consider the standard basis vectors of $\R^3$:  $\bm{i} = \langle 1, 0 , 0 \rangle$, $\bm{j}= \langle 0,1 , 0 \rangle$, and $\bm{k}= \langle 0 , 0,1 \rangle$.
+
+    We see that the ordered list $\bm{i}$, $\bm{j}$, and $\bm{k}$ does satisfy the right hand rule, while the ordered list $\bm{i}$, $\bm{k}$, and $\bm{j}$ doesn't.
+\end{example}
+
+
+We can now define the cross product in terms of direction and magnitude.
+
+\begin{definition}[Magnitude and Direction]
+    Given two vectors $\bm{u}, \bm{v} \in \R^3$, with an angle $\theta$ between them, their \textbf{cross product}\define{cross product} is the \textnormal{unique} vector $\bm{u \times v} \in \R^3$ with the following properties:
+    \begin{enumerate}[label=(\roman*)]
+        \item $\bm{u \times v}$ is orthogonal to both $\bm{u}$ and $\bm{v}$.
+        \item $\bm{u}$, $\bm{v}$, and $\bm{u \times v}$ satisfies the Right Hand Rule. 
+        \item $||\bm{u \times v}|| = ||\bm{u}|| \ ||\bm{v}|| \sin(\theta)$
+    \end{enumerate}
+    \end{definition}
+
+
+
+Note that together, $(i)$ and $(ii)$ specify a unique direction for the cross product - in $\R^3$, the set of vectors orthogonal to both $\bm{u}$ and $\bm{v}$ spans a one-dimensional subspace (a.k.a. a line).  Thus, to specify one out of the two directions in this line, we must make an arbitrary choice via the right hand rule.  Specifying a magnitude via $(3)$ thus gives us a unique vector.  \fixthis{We will discuss later the choice of magnitude}
+
+\begin{example}
+    What is the cross product $\bm{i} \times \bm{j}$?
+\end{example}
+
+\begin{example}
+    What is the cross product $\bm{j} \times \bm{k}$?
+\end{example}
+
+\begin{motivating}
+How can we compute the cross product algebraically?  In other words, what are the components of the cross product?
+\end{motivating}
+
+We now give a second, algebraic definition of the cross product.  This will lead to a formula for the components of the cross product \fixthis{link}
+
+
+\begin{definition}[Algebraic characterization]
+    Given two vectors $\bm{u}, \bm{v} \in \R^3$, their \textbf{cross product} is the \textnormal{unique} vector $\bm{u \times v} \in \R^3$ defined by the property:
+    \begin{equation*}
+(\bm{u \times v}) \cdot \bm{w} = \textnormal{det}
+\begin{bmatrix}
+\bm{u}\\
+    \bm{v}  \\
+    \bm{w}
+\end{bmatrix} \qquad \textnormal{for all } \bm{w} \in \R^3
+\end{equation*}
+    
+    \end{definition}
+
+This is an interesting perspective on defining a vector in $\R^3$: it is determined by how it relates to all other vectors in $\R^3$.  This kind of idea shows up a lot in higher level mathematics!
+
+First of all, using this perspective, we can prove the following properties of the cross product: 
+
+\begin{theorem}[Properties of the cross product]
+    
+    \begin{enumerate}
+        \item $\bm{u} \times \bm{v} = - \bm{v} \times \bm{u}$ (anti-commutativity).
+        \item $\bm{u} \times \bm{v}$ is orthogonal to $\bm{u}$ and $\bm{v}$.
+        \item The cross product $\times : \R^3 \to \R^3 \to \R^3$ is bilinear.
+        \item $\bm{u} \times \bm{v} = \bm{0}$ if and only if $\bm{u}$ and $\bm{v}$ are parallel.
+    \end{enumerate}
+    
+    \end{theorem}
+
+Moreover, we can use the algebraic characterization of the cross product to find the components of the cross product.  
+
+Recall from proposition \ref{coeffdotprod}, if we consider the standard basis for $\R^3$, $\mathscr{B} = \{ \bm{e_1}, \bm{e_2},\bm{e_3}\}$, we have that 
+\begin{align*}
+        \bm{u \times v} &= \langle \bm{u \times v}, \bm{e_1} \rangle \bm{e_1} + \langle \bm{u \times v}, \bm{e_2} \rangle \bm{e_2} + \langle \bm{v \times w}, \bm{e_3} \rangle \bm{e_3} \\
+        &= \textnormal{det}
+\begin{bmatrix}
+\bm{u}\\
+    \bm{v}  \\
+    \bm{e_1}
+\end{bmatrix}\bm{e_1} + \textnormal{det}
+\begin{bmatrix}
+\bm{u}\\
+    \bm{v}  \\
+    \bm{e_2}
+\end{bmatrix}\bm{e_2} + \textnormal{det}
+\begin{bmatrix}
+\bm{u}\\
+    \bm{v}  \\
+    \bm{e_3}
+\end{bmatrix}\bm{e_3} \\
+    &= 
+    \left\langle\textnormal{det}
+\begin{bmatrix}
+\bm{u}\\
+    \bm{v}  \\
+    \bm{e_1}
+\end{bmatrix}, \  \textnormal{det}
+\begin{bmatrix}
+\bm{u}\\
+    \bm{v}  \\
+    \bm{e_2}
+\end{bmatrix}, \ \textnormal{det}
+\begin{bmatrix}
+\bm{u}\\
+    \bm{v}  \\
+    \bm{e_3}
+\end{bmatrix} \right\rangle
+    \end{align*}
+
+Thus, given the components of two vectors two vectors $\bm{u}, \bm{v} \in \R^3$, we can compute the components of the cross product $\bm{u \times v}$.
+
+\begin{theorem}\label{crossprodcomponents}
+    
+    Given two vectors $\bm{u} = \langle x_1, y_1, z_1 \rangle$ and $\bm{v}= \langle x_2, y_2, z_2 \rangle$, their cross product $\bm{u \times v}$ can described as:
+    \begin{align*} \bm{u \times v} &= 
+\left\langle \  \textnormal{det}\begin{bmatrix}
+y_1 & z_1 \\
+y_2 & z_2
+\end{bmatrix}, \  - \textnormal{det}\begin{bmatrix}
+x_1 & z_1 \\
+x_2 & z_2
+\end{bmatrix}, \ \textnormal{det}\begin{bmatrix}
+x_1 & y_1  \\
+x_2 & y_2  \\
+\end{bmatrix} \ \right\rangle \\
+&= 
+\langle y_1z_1 - y_2z_1, \ x_2z_1 - x_1z_2, \ x_1y_2-x_2y_1  \rangle \\
+\end{align*}
+    
+\end{theorem}
+
+
+We saw previously that two non-zero vectors in $\R^3$ span a plane $P$ in $\R^3$, and we can now determine the normal vector $\bm{n}$ associated to this plane:
+
+\begin{example}
+    Find the equation for the plane $P$ determined by the points $P = (1,0,-1)$, $Q = (2,2,1)$, $R = (4,1,2)$.
+    
+    
+\fixthis{do this}
+\end{example}
+
+
+
+\begin{motivating}
+How are these two definitions of the cross product related to each other?
+\end{motivating}
+
+In other words, (1) what does the right hand rule have to do with determinants?  (2) why did we choose the magnitude of $\bm{u \times v}$ to be $||\bm{u}|| \ ||\bm{v}|| \sin(\theta)$?
+
+More generally, what is the geometry of the determinant?
+
+    \begin{proposition}
+        The right hand rule corresponds to having a positive determinant.
+    \end{proposition}
+
+\fixthis{explain}
+
+\begin{proposition}
+        Given two vectors $\bm{u}, \bm{v} \in \R^3$, with an angle $\theta$ between them, then $$||\bm{u \times v}|| = ||\bm{u}|| \ ||\bm{v}|| \sin(\theta)$$
+    \end{proposition}
+    
+First, observe that if two non-parallel vectors (say, $\bm{u}, \bm{v} \in \R^3$) start at the same point, then they uniquely determine a triangle parallelogram.
+
+\fixthis{add picture}
+
+\begin{theorem}
+    Let $P$ be the parallelogram spanned by $\bm{u}$ and $\bm{v}$, and $T$ be the triangle spanned by $\bm{u}$ and $\bm{v}$. Then
+    $$\textnormal{area}(P) = ||\bm{u \times v}|| \qquad \textnormal{and} \qquad \textnormal{area}(T) = \frac{1}{2}||\bm{u \times v}||$$
+\end{theorem}
+
+Without loss of generality, we can rotate our vectors so that they lie in the $xy$-plane.  (Equivalently, we can choose a basis $\mathcal{B}$ so that the coordinates of $\bm{u} = \langle a, b, 0 \rangle$, and that $\bm{v} = \langle c, d, 0 \rangle$.
+
+Observe that \begin{equation*}
+        \Big|\textnormal{det}\begin{bmatrix}
+a & b \\
+c & d
+\end{bmatrix}\Big| = \textnormal{area}(P)
+    \end{equation*}
+    
+       That is, the absolute value of a $2 \times 2$
+determinant equals the area of the parallelograms spanned by the rows.
+
+\fixthis{picture}
+
+In other words, the determinant of a $2 \times 2$ matrix measures the are \fixthis{the matrix maps basis vectors to u and v}
+
+\begin{motivating}
+What is the volume of the parallelpiped spanned by three vectors $\bm{u}$, $\bm{v}$, and $\bm{w}$?
+\end{motivating}
+
+
+\fixthis{picture}
+
+
+\begin{theorem}
+    Let $D$ be the parallelpiped spanned by $\bm{u}$, $\bm{v}$, and $\bm{w}$, and let $\theta$ be the angle between $\bm{u}$ and $\bm{v \times w}$. Then $$\textnormal{volume}(D) = ||\bm{v \times w}|| \ ||\bm{u}|| \ |\cos(\theta)|$$
+    \end{theorem}
+
+Observe that we can write this formula in terms of a dot product.
+
+\begin{definition}
+        The scalar $\bm{u} \cdot (\bm{v \times w})$ is called the \textbf{scalar triple product}\define{scalar triple product}.
+\end{definition}
+
+\begin{example}
+Let $D$ be the parallelpiped spanned by $\bm{u} = \langle 1, 3, 2 \rangle$, $\bm{v} = \langle 6, 5, 4 \rangle$, and $\bm{w} = \langle 2, 2, 2 \rangle$.  Compute the volume of $D$.
+
+\end{example}
+
+This computation should seem familiar to you: see example \ref{det3d}
+
+\begin{theorem}
+    Let $D$ be the parallelpiped spanned by $\bm{u} = \langle u_1, u_2, u_3 \rangle$, $\bm{v} = \langle v_1, v_2, v_3 \rangle$, and $\bm{w} = \langle w_1, w_2, w_3 \rangle$.  Then
+    \begin{equation*}
+\textnormal{volume}(D) = |\bm{u} \cdot (\bm{v \times w})| = | \textnormal{det}
+\begin{bmatrix}
+\bm{u} \\
+\bm{v} \\
+\bm{w} \\
+\end{bmatrix}|
+\end{equation*}
+
+    \end{theorem}
+
+
+\begin{example}
+    Zero parallelpiped
+\end{example}
+
+
+
+\fixthis{again, basis, cube mapped to parallelpiped}
+
+
+\fixthis{Generalize to $\R^n$}
+
+    \begin{definition}
+    The \textbf{standard matrix} $A$ of a linear map $T: \R^n \to \R^n$ is given by
+    \begin{equation*}
+A = 
+\begin{bmatrix}
+\vert & \vert & & \vert \\
+    T(\bm{e_1})   & T(\bm{e_2}) & \cdots & T(\bm{e_n})  \\
+    \vert & \vert & & \vert
+\end{bmatrix} \in M_{n \times n}(\R)
+\end{equation*}
+\end{definition}
+
+In other words, the absolute value of $\textnormal{det}A$ is the factor by which $T$ magnifies volume; and $\textnormal{det}A$ is zero if and only if T is not invertible. 
+
+
+
+    \begin{quote}
+        ``The determinant is astonishing."       --- Jerry Shurman, \textnormal{Calculus and Analysis in Euclidean Space}.
+    \end{quote}
+
+
+
+
+
+
+
+
+\subsection{Inner products}
+
+\begin{motivating}
+How can we generalize the dot product in  $\R^n$ to an arbitrary vector space $V$?  
+\end{motivating}
+
+For $\R^n$, we saw that the dot product satisfies the property $\bm{v} \cdot \bm{v} = ||\bm{v}||^2$. Thus, our generalization should allow us to define a notion of \underline{distance} in an abstract vector space.
+
+\begin{definition}
+    
+    Given two vectors $\bm{u},\bm{v} \in V$, an \textbf{inner product}\define{inner product} on $V$ is a map $\langle - , - \rangle :  V \times V \to \R$ that is:
+    \vspace{1em}
+    
+    \begin{enumerate}
+        \item $\langle \bm{u}, \bm{v} \rangle = \langle \bm{v}, \bm{u} \rangle$ (symmetric).
+        \item $\langle - , - \rangle$ is bilinear.
+        \item $\langle \bm{v}, \bm{v} \rangle \geq 0$, with equality only when $\bm{v} = \bm{0}$. (positive definite).  
+    \end{enumerate}
+    
+    \end{definition}
+
+\begin{definition}
+    Given an innner product$\langle - , - \rangle$ on $V$, the \textbf{norm} (or \textbf{modulus}) of a vector $\bm{v} \in V$ is defined as $$||\bm{v}|| = \sqrt{\langle \bm{v}, \bm{v}\rangle}$$
+    \end{definition}
+    
+
+\begin{example}
+    Given two vectors $\bm{u} = \langle u_1, \cdots, u_n \rangle$ and $\bm{v}  = \langle v_1 , \cdots, v_n \rangle$ in $\R^n$, their \textbf{dot product} is an inner product. $$\bm{u} \cdot \bm{v} = \sum u_iv_i$$
+    \end{example}
+
+\begin{theorem}[Properties of an inner product]
+    
+    \begin{enumerate}
+        \item Cauchy-Schwarz inequality: $| \langle \bm{u},\bm{v} \rangle | \leq  | \bm{u}| \ | \bm{v} |$
+        \item Triangle inequality: $| \bm{u}+ \bm{v} | \leq  | \bm{u}| +| \bm{v} |$
+    \end{enumerate}
+    
+    \end{theorem}
+
+
+
+
+
+\begin{motivating}
+What is the geometric interpretation of the inner product for an arbitrary vector space?
+\end{motivating}
+
+\begin{definition}
+    A subset $S = \{\bm{v_1}, \bm{v_2}, \cdots, \bm{v_k}\} \subseteq V$ is said to be \textbf{orthogonal} if $\langle \bm{v_i}, \bm{v_j} \rangle = 0$ for all $i \neq j$.
+    
+    \vspace{1em}
+    
+    Furthermore, if $|\bm{v_i}| = 1$ for all $1 \leq i \leq k$, we say that the subset $S = \{\bm{v_1}, \bm{v_2}, \cdots, \bm{v_k}\} \subseteq V$ is \textbf{orthonormal}.
+\end{definition}
+    
+    \begin{proposition}
+        Equivalently, a set subset $S = \{\bm{v_1}, \bm{v_2}, \cdots, \bm{v_k}\} \subseteq V$ is orthonormal if $$\langle \bm{v_i}, \bm{v_j} \rangle = \delta_{ij}$$ 
+        where $\delta_{ij}$ is the \textbf{Kronecker delta}, which is the symbol $$\delta_{ij} = \left\{
+		\begin{array}{ll}
+			1 & \text{ if } i = j \\
+			0 & \text{ if } i \neq j
+		\end{array}
+		\right.$$
+    \end{proposition}
+
+
+\subsection{Exercises}
+
+\begin{problem}{orthogonal1}
+     Find all values of $b$ such that the vectors $\bm{u} = \langle b,3,2\rangle$ and $\bm{v} = \langle 1,b,1\rangle$ are orthogonal.
+\end{problem}
+
+\begin{problem}{axiomcalc}
+    Given that $||\bm{u}|| = 1$, $||\bm{v}|| = 3$, and $\bm{u} \cdot \bm{v} = 2$, evaluate the expression $2\bm{u} \cdot (3\bm{u} - \bm{v})$.
+\end{problem}
+
+
+\begin{problem}{Subspacenk}
+	
+    \begin{definition}
+    Let $A$ be a nonempty subset of an inner product space $V$.  The \textbf{orthogonal complement} of $A$ is the subspace
+    $$A^\bot := \{\bm{v} \in V \ | \ \langle \bm{a}, \bm{v} \rangle = 0 \ \text{for every } \bm{a} \in A \}$$
+    \end{definition}
+    
+    Prove that $A^\bot$ is a vector subspace.  
+    
+    
+    Let $A = \{\bm{u_1}, \cdots \bm{u_k}\}$ be $k$ linearly independent vectors in a vector space $V$ of dimension $n$. Prove that $A^\bot$ is a subspace of dimension $n-k$.
+    
+    Describe $A^\bot$ is the intersection of $k$ hyperplanes.
+    
+\end{problem}
+
+\begin{problem}{crossprodcalc}
+    Calculate the cross product of $\bm{u} = \langle 1,1,0\rangle$ and $\bm{v} = \langle 0,1,1\rangle$
+\end{problem}
