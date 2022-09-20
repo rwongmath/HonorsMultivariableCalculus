@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.20)  20 SEP 2022 11:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.20)  20 SEP 2022 15:34
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1768,26 +1768,14 @@ LaTeX Font Info:    Trying to load font information for T1+clm2j on input line
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/cfr-lm\t1clm2j.fd
 File: t1clm2j.fd 2010/05/25 Fontinst v1.933 font definitions for T1/clm2j.
 )
-(HonorsMultivariableCalculus.aux
-
-LaTeX Warning: Label `problem:S' multiply defined.
-
-
-LaTeX Warning: Label `problem:S@cref' multiply defined.
-
-
-LaTeX Warning: Label `problem:S' multiply defined.
-
-
-LaTeX Warning: Label `problem:S@cref' multiply defined.
-
-)
+(HonorsMultivariableCalculus.aux)
 \openout1 = `HonorsMultivariableCalculus.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/lmm/m/it on input line 12.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
 2.
- (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+
+(C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    ... okay on input line 12.
@@ -1950,23 +1938,23 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 2.
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Overfull \hbox (0.422pt too wide) detected at line 18
- \T1/clm2j/m/n/9 33
- []
-
-
-Overfull \hbox (0.27798pt too wide) detected at line 20
+Overfull \hbox (0.27798pt too wide) detected at line 19
  \T1/clm2j/m/n/9 35
  []
 
 
-Overfull \hbox (0.422pt too wide) detected at line 21
+Overfull \hbox (0.422pt too wide) detected at line 20
  \T1/clm2j/m/n/9 36
  []
 
 
-Overfull \hbox (0.422pt too wide) detected at line 23
+Overfull \hbox (0.422pt too wide) detected at line 22
  \T1/clm2j/m/n/9 38
+ []
+
+
+Overfull \hbox (0.422pt too wide) detected at line 23
+ \T1/clm2j/m/n/9 39
  []
 
 ) [4
@@ -2021,6 +2009,27 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
  []
 
 [4]
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ] in font nullfont!
+
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
@@ -2031,14 +2040,25 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
  []
 
 [6]
-\openout7 = `HonorsMultivariableCalculus.ans'.
-
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ] in font nullfont!
 
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
 [7]
+\openout7 = `HonorsMultivariableCalculus.ans'.
+
+
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
@@ -2049,17 +2069,13 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
  []
 
 [9]
-LaTeX Font Info:    Font shape `T1/clm2j/b/n' in size <8> not available
-(Font)              Font shape `T1/clm2j/bx/n' tried instead on input line 666.
-
-
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
 [10]
-
-LaTeX Warning: Reference `sumto1' on page 11 undefined on input line 733.
+LaTeX Font Info:    Font shape `T1/clm2j/b/n' in size <8> not available
+(Font)              Font shape `T1/clm2j/bx/n' tried instead on input line 763.
 
 
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
@@ -2067,7 +2083,16 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
  []
 
 [11]
-Overfull \hbox (6.07199pt too wide) in paragraph at lines 784--784
+
+LaTeX Warning: Reference `sumto1' on page 12 undefined on input line 830.
+
+
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[12]
+Overfull \hbox (6.07199pt too wide) in paragraph at lines 881--881
 []\T1/clm2j/m/n/10 (-10) We will first prove that $[]\OMS/lmsy/m/n/10 f\OML/lmm
 /b/it/10 v[]\OML/lmm/m/it/10 ; []  ; \OML/lmm/b/it/10 v[]\OMS/lmsy/m/n/10 g$ \T
 1/clm2j/m/n/10 (-10) is closed un-der ad-di-tion. Let $\OML/lmm/b/it/10 w[]\OML
@@ -2081,24 +2106,19 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[12]
-Overfull \hbox (78.0pt too wide) has occurred while \output is active
-[]
- []
-
 [13]
-
-Package microtype Warning: I cannot find a spacing list for font
-(microtype)                `TS1/clm2j/m/it/10' (context: `nonfrench'). Switchin
-g off
-(microtype)                spacing for this font on input line 867.
-
-
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
 [14]
+
+Package microtype Warning: I cannot find a spacing list for font
+(microtype)                `TS1/clm2j/m/it/10' (context: `nonfrench'). Switchin
+g off
+(microtype)                spacing for this font on input line 964.
+
+
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
@@ -2159,7 +2179,12 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
  []
 
 [26]
-Overfull \hbox (1.16055pt too wide) in paragraph at lines 1925--1926
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[27]
+Overfull \hbox (1.16055pt too wide) in paragraph at lines 2022--2023
 []\T1/clm2j/m/it/10 (-10) Cauchy-Schwarz in-equal-ity: $\OMS/lmsy/m/n/10 jj\OML
 /lmm/b/it/10 u \OMS/lmsy/m/n/10 ^^A \OML/lmm/b/it/10 v\OMS/lmsy/m/n/10 jj ^^T j
 j\OML/lmm/b/it/10 u\OMS/lmsy/m/n/10 jj jj\OML/lmm/b/it/10 v\OMS/lmsy/m/n/10 jj$
@@ -2167,11 +2192,6 @@ j\OML/lmm/b/it/10 u\OMS/lmsy/m/n/10 jj jj\OML/lmm/b/it/10 v\OMS/lmsy/m/n/10 jj$
  []
 
 
-Overfull \hbox (78.0pt too wide) has occurred while \output is active
-[]
- []
-
-[27]
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
@@ -2192,7 +2212,12 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
  []
 
 [31]
-Overfull \hbox (4.59824pt too wide) in paragraph at lines 2305--2306
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[32]
+Overfull \hbox (4.59824pt too wide) in paragraph at lines 2402--2403
 []\T1/clm2j/m/it/10 (-10) Cauchy-Schwarz in-equal-ity: $\OMS/lmsy/m/n/10 jh\OML
 /lmm/b/it/10 u\OML/lmm/m/it/10 ; \OML/lmm/b/it/10 v\OMS/lmsy/m/n/10 ij ^^T j\OM
 L/lmm/b/it/10 u\OMS/lmsy/m/n/10 j j\OML/lmm/b/it/10 v\OMS/lmsy/m/n/10 j$ 
@@ -2205,7 +2230,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2352     L
+l.2448     L
             et $A$ be a nonempty subset of an inner product space $V$.  The ...
 
 Try typing  <return>  to proceed.
@@ -2218,7 +2243,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2352     L
+l.2448     L
             et $A$ be a nonempty subset of an inner product space $V$.  The ...
 
 Try typing  <return>  to proceed.
@@ -2231,7 +2256,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2352     L
+l.2448     L
             et $A$ be a nonempty subset of an inner product space $V$.  The ...
 
 Try typing  <return>  to proceed.
@@ -2244,7 +2269,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2354     \end{definition}
+l.2450     \end{definition}
                            
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2254,7 +2279,7 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[32]
+[33]
 \mycount=\count434
 
 
@@ -2269,11 +2294,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 52.
 
-[33
+[34
 
 ]
 \mycount=\count435
- [34
+ [35
 
 ]
 \mycount=\count436
@@ -2290,22 +2315,22 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 56.
 
-[35
+[36
 
 ]
 \mycount=\count437
- [36
+ [37
 
 ]
 \mycount=\count438
- [37
+ [38
 
 ]
 \mycount=\count439
  (HonorsMultivariableCalculus.ans)
 No file HonorsMultivariableCalculus.bbl.
 No file HonorsMultivariableCalculus.ind.
-[38
+[39
 
 
 ]
@@ -2316,18 +2341,15 @@ No file HonorsMultivariableCalculus.ind.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `HonorsMultivariableCalculus.out' has not cha
 nged.
 (rerunfilecheck)             Checksum: AA2D7F7BD9D57F54AF048CDDADAE68B5;1202.
  ) 
 Here is how much of TeX's memory you used:
- 51004 strings out of 475389
- 1151521 string characters out of 2776056
- 1675583 words of memory out of 3000000
- 70728 multiletter control sequences out of 15000+600000
+ 51064 strings out of 475389
+ 1152718 string characters out of 2776056
+ 1677583 words of memory out of 3000000
+ 70775 multiletter control sequences out of 15000+600000
  642675 words of font info for 458 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  114i,16n,120p,1026b,2310s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -2371,9 +2393,9 @@ ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Us
 ers/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C
 :/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.pfb
 >
-Output written on HonorsMultivariableCalculus.pdf (42 pages, 713791 bytes).
+Output written on HonorsMultivariableCalculus.pdf (43 pages, 722023 bytes).
 PDF statistics:
- 795 PDF objects out of 1000 (max. 8388607)
- 295 named destinations out of 1000 (max. 500000)
+ 817 PDF objects out of 1000 (max. 8388607)
+ 308 named destinations out of 1000 (max. 500000)
  131149 words of extra memory for PDF output out of 154059 (max. 10000000)
 

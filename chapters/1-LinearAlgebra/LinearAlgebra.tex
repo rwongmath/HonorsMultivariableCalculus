@@ -337,15 +337,59 @@ $$\bm{u+v} = \langle u_1+v_1, \cdots, u_n+v_n \rangle$$
 \begin{example}
     There is a nice geometric picture that accompanies vector addition:  Given two vectors $\bm{PQ}$ and $\bm{QR}$, then the sum of these two vectors is the vector $\bm{PR}$ (that is, the vector with tail $P$, and head $R$)
     
-    \fixthis{add picture}
+    \begin{center}
+            \begin{tikzpicture}scale=0.5]
+            \pgfmathsetmacro{\cubex}{2}
+            \pgfmathsetmacro{\cubey}{3}
+
+    
+    
+    \draw[red, thick, -Latex] (0,0) -- (\cubex,1) node[midway,below right] {$\bm{PQ}$};
+    \draw[megreen, thick, -Latex] (\cubex,1) -- (\cubex,\cubey) node[midway, right] {$\bm{QR}$};
+    \draw[UCLAblue, thick, -Latex] (0,0) -- (\cubex,\cubey) node[midway,above left] {$\bm{PR}$};
+    
+    
+    \filldraw[black] (0,0) circle (2pt) node[anchor=east]{P};
+    \filldraw[black] (\cubex,1) circle (2pt) node[anchor=west]{Q};
+    \filldraw[black] (\cubex,\cubey) circle (2pt) node[anchor=west]{R};
+    
+    \end{tikzpicture}
+        \end{center}
+        
+    That is, we add vectors "tip to tail".
 \end{example}
+
 
 \begin{proposition}
     Vector addition is commutative.  That is, the vectors $\bm{u+v}$ and $\bm{v+u}$ are the same vector.
 \end{proposition}
 
+\begin{example}
+    This follows immediately from the definition in terms of components.  However, there is a nice geometric picture that accompanies this property:
+    
+    
+    \begin{center}
+            \begin{tikzpicture}scale=0.5]
+            \pgfmathsetmacro{\cubex}{2}
+            \pgfmathsetmacro{\cubey}{3}
 
-Furthermore, it also makes sense to combine the points perspective with the vector perspective:  It makes sense to add the add the \textit{displacement} from Los Angeles to Austin to the \textit{location} New York City.  
+    
+    
+    \draw[red, thick, -Latex] (0,0) -- (\cubex,1) node[midway,below right] {$\bm{u}$};
+    \draw[megreen, thick, -Latex] (\cubex,1) -- (\cubex,\cubey) node[midway, right] {$\bm{v}$};
+    \draw[UCLAblue, thick, -Latex] (0,0) -- (\cubex,\cubey) node[midway,above left] {$\bm{u+v}$};
+    \draw[megreen, thick, -Latex] (0,0) -- (0,\cubey-1) node[midway,left] {$\bm{v}$};
+    \draw[red, thick, -Latex] (0, \cubey-1) -- (\cubex,\cubey) node[midway,left] {$\bm{u}$};
+    
+    
+    
+    \end{tikzpicture}
+        \end{center}
+        
+    That is, if we move our vectors freely, the $\bm{u+v}$ is the diagonal of the parallelogram spanned by $\bm{u}$ and $\bm{v}$.
+\end{example}
+
+Let us be more precise about moving vectors freely:  we can combine the points perspective with the vector perspective.  Using our previous analogies, it makes sense to add the add the \textit{displacement} from Los Angeles to Austin to the \textit{location} New York City.  
 
 We should interpret this as saying to start at the coordinates $41^\circ$ N, $74^\circ$ W, and to then travel  $4^\circ$  south, and $20^\circ$ east.  The end result is a \textbf{location} with coordinates $37^\circ$ N, $54^\circ$ W (somewhere in the middle of the  Atlantic Ocean!).
 
@@ -424,16 +468,32 @@ A \textbf{scalar}\define{scalar} (often denoted $\lambda \in \R$) is an element 
   \end{definition}
 
 
-
-    \begin{example}
-    \fixthis{pictures}
-    \end{example}
-
-We can interpret this geometrically through the following calculation:
+We can interpret scalar multiples geometrically through the following calculation:
 
 \begin{proposition}
   The magnitude of a scalar multiple $\lambda \bm{v}$ is the same as the magnitude of $\bm{v}$ times the absolute value of $\lambda$.  That is, $$||\lambda\bm{v}|| = |\lambda|(||\bm{v}||)$$
 \end{proposition}
+
+ \begin{example}
+ This tells us that scalar multiplication changes the magnitude of a vector (that is, it \textit{scales} it by a factor of $|\lambda|$).  
+ 
+        \begin{center}
+            \begin{tikzpicture}scale=0.5]
+            \pgfmathsetmacro{\cubex}{1}
+            \pgfmathsetmacro{\cubey}{3}
+
+    
+    
+    \draw[red, thick, -Latex] (-1,0) -- (-1+\cubex,\cubex) node[midway, left] {$\bm{v}$};
+    \draw[megreen, thick, -Latex] (1,0) -- (2*\cubex+1,2*\cubex) node[midway, right] {$2\bm{v}$};
+    \draw[UCLAblue, thick, -Latex] (0,0) -- (-\cubex,-\cubex) node[midway, right] {$-\bm{v}$};
+    
+    
+    
+    \end{tikzpicture}
+        \end{center}
+    \end{example}
+
 
 \begin{definition}
 Two vectors $\bm{v}, \bm{w} \in \R^n$ are said to be \textbf{parallel}\define{parallel vectors} if they are scalar multiples of each other.  That is, there exists a scalar $\lambda \in \R$ such that $$\bm{v} = \lambda \bm{w}$$
@@ -455,7 +515,7 @@ Two vectors $\bm{v}, \bm{w} \in \R^n$ are said to be \textbf{parallel}\define{pa
 \end{example}
 
 
-Parallel vectors are so named because they give rise to parallel lines \fixthis{ref later}
+Parallel vectors are so named because they give rise to parallel lines.  See definition \ref{linesinrn} in the exercises to learn how we describe lines in $\R^n$, and exercise \ref{problem:parametrizationsparallel}.
 
 Observe that in the example above, we saw that two vectors can be parallel, yet point in different directions.  We can make this idea precise:
 
@@ -546,11 +606,25 @@ Position vectors.
 \end{problem}
 
 \begin{problem}{parallelvectors}
-    Are these vectors parallel?  Are they equivalent?
+    Are these vectors parallel to the vector $\bm{v} = \langle 2, -1, 1 \rangle$?  Are they equivalent?
+    
+    \begin{subproblems}
+    \item $\bm{PQ}$, where $P = (1,1,0)$, and $Q = (3, 0, 1)$.
+    \item $\bm{QP}$, where $P = (1,1,0)$, and $Q = (3, 0, 1)$.
+    \item $\bm{AB}$, where $A = (1,1,0)$, and $B = (5, -1, 2)$.
+    \item $\bm{PQ} + 2\bm{AB}$, where $\bm{PQ}$ and $\bm{AB}$ are as above.
+    \item $\bm{PQ} + 2\langle 1, 0 ,0 \rangle$, where $\bm{PQ}$ is as above.
+    \end{subproblems}
 \end{problem}
 
-\begin{problem}{addsubtractvectors}
-    Add, subtract vectors
+\begin{problem}{subtractvectors}
+    Let $\bm{u} = \langle 1, 1, 0 \rangle$, and let $\bm{v} = \langle 0, 0, 1 \rangle$. 
+    
+    \begin{subproblems}
+    \item Compute $\bm{u-v}$.
+    \item Sketch $\bm{u}$, $\bm{v}$, and $\bm{u-v}$.
+    \item In general, what is the relationship between  $\bm{u-v}$ and  $\bm{v-u}$?
+    \end{subproblems}
 \end{problem}
 
 \begin{problem}{parallelogram}
@@ -558,6 +632,13 @@ Position vectors.
     
     (\textbf{Hint:} Recall that $ABCD$ is given by a line from $A$ to $B$ to $C$ to $D$, and then back to $A$.  Use vectors to solve this problem!).
 \end{problem}
+
+\begin{problem}{parallelogramdiagonals}
+    Consider the parallelogram $ABCD$.  Prove that the diagonals $BC$ and $AD$ intersect each other at their midpoints.
+    
+    (\textbf{Hint}: Describe the diagonals as vectors).
+\end{problem}
+
 
 In the following exercises, we will describe lines in $\R^n$.
     
@@ -574,7 +655,7 @@ In the following exercises, we will describe lines in $\R^n$.
 
 \begin{problem}{linesinr2}
     
-    Recall that we can describe a line in $\R^2$ as the set of points $L \{(x,y) \ | \ y = mx + b\}$.  Find a vector parametrization of the line $L$.
+    Recall that we can describe a line in $\R^2$ as the set of points $L = \{(x,y) \ | \ y = mx + b\}$.  Find a vector parametrization of the line $L$.
     
     \begin{subproblems}
     \item What is the relationship between the constant $b$ and the vector $\bm{r_0}$?
@@ -617,12 +698,28 @@ We say that two lines $\bm{r_1}(t)$ and $\bm{r_2}(s)$ \textbf{intersect} if ther
     Determine whether the following two lines intersect.  If they do, find the common point of intersection.
     $$\bm{r_1}(t) =   \langle3,2,6\rangle + t\langle1,0,-1\rangle$$
     $$\bm{r_2}(s) =   \langle4,12,24\rangle + s\langle-1,10,20\rangle$$
+    
+    (\textbf{Hint:}  If a point lies on both lines, then that point must satisfy both equations).
 \end{problem}
 
 \begin{problem}{intersect2}
     Determine whether the following two lines intersect.  If they do, find the common point of intersection.
     $$\bm{r_1}(t) =   \langle3,2,6\rangle + t\langle1,0,-1\rangle$$
     $$\bm{r_2}(s) =   \langle4,5,1\rangle + s\langle-1,3,3\rangle$$
+\end{problem}
+
+\begin{problem}{intersectvscollidelines}
+    Suppose that you have two lines with parametrizations $\bm{r_1}(t)$ and $\bm{r_2}(s)$, respectively.  What is the difference between solving the vector equation $\bm{r_1}(t) = \bm{r_2}(s)$ versus solving the vector equation $\bm{r_1}(t) = \bm{r_2}(t)$?
+\end{problem}
+
+\begin{definition}
+    We say that two distinct lines are \textbf{skew}\define{skew lines}, if they do not intersect each other, and they are not parallel to each other.
+    \end{definition}
+
+\begin{problem}{skewlines}
+    
+    Write down parametrizations of two distinct lines that are skew to each other.  
+    
 \end{problem}
 
 
@@ -653,7 +750,7 @@ In these lecture notes, we will only study vector spaces whose field of scalars 
     \end{definition}
     
     
-When faced with an abstract definition like this, \fixthis{it's especially important to first find concrete examples that manifest}.  Luckily, from our discussion in the previous section, we have in fact checked most of these axioms:
+When faced with an abstract definition like this, it's especially important to first find a few concrete examples to keep in mind.  Luckily, from our discussion in the previous section, we have in fact checked most of these axioms:
     
     
     \begin{example}
@@ -1782,11 +1879,11 @@ S_{\theta} =
     
 \end{problem}
 
-\begin{problem}
+\begin{problem}{isopreservesdimension}
     Show that an isomorphism of vector spaces must preserve dimension.  That is, an isomorphism sends a basis of $n$ elements to a basis  of $n$ elements.
 \end{problem}
 
-\begin{problem}
+\begin{problem}{nonzerodet}
     Show that if $A$ is invertible, then $\textnormal{det}(A) \neq 0$.
 \end{problem}
 
@@ -2347,7 +2444,6 @@ What is the geometric interpretation of the inner product for an arbitrary vecto
 
 
 \begin{problem}{Subspacenk}
-	
     \begin{definition}
     Let $A$ be a nonempty subset of an inner product space $V$.  The \textbf{orthogonal complement} of $A$ is the subspace
     $$A^\bot := \{\bm{v} \in V \ | \ \langle \bm{a}, \bm{v} \rangle = 0 \ \text{for every } \bm{a} \in A \}$$
