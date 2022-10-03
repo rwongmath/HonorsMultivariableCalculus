@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.20)  20 SEP 2022 15:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.20)  2 OCT 2022 21:07
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1595,8 +1595,17 @@ LaTeX Info: Redefining \Vref on input line 2605.
 LaTeX Info: Redefining \vrefrange on input line 2605.
 LaTeX Info: Redefining \fullref on input line 2605.
 Package cleveref Info: `amsthm' support loaded on input line 3026.
-) (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+) (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count416
+\float@exts=\toks56
+\float@box=\box140
+\@float@everytoks=\toks57
+\@floatcapt=\box141
+)
+(C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
 \caption@tempdima=\dimen346
@@ -1614,11 +1623,12 @@ r.sto
 File: caption-memoir.sto 2022/03/02 v2.2b Adaption of the caption package to th
 e memoir document class (AR)
 ))
-\c@caption@flags=\count416
-\c@continuedfloat=\count417
+\c@caption@flags=\count417
+\c@continuedfloat=\count418
 Package caption Info: changepage package is loaded.
 \caption@adjustwidth@hsize=\dimen354
 \caption@adjustwidth@linewidth=\dimen355
+Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
 
@@ -1635,12 +1645,12 @@ Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
 ode.tex
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsco
 re.code.tex
-\t@pgfplots@toka=\toks56
-\t@pgfplots@tokb=\toks57
-\t@pgfplots@tokc=\toks58
+\t@pgfplots@toka=\toks58
+\t@pgfplots@tokb=\toks59
+\t@pgfplots@tokc=\toks60
 \pgfplots@tmpa=\dimen356
-\c@pgfplots@coordindex=\count418
-\c@pgfplots@scanlineindex=\count419
+\c@pgfplots@coordindex=\count419
+\c@pgfplots@scanlineindex=\count420
 
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfplo
 tssysgeneric.code.tex))
@@ -1658,14 +1668,14 @@ ure\pgfplotsliststructure.code.tex)
 ure\pgfplotsliststructureext.code.tex)
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststruct
 ure\pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count420
+\c@pgfplotsarray@tmp=\count421
 )
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststruct
 ure\pgfplotsmatrix.code.tex)
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\p
 gfplotstableshared.code.tex
-\c@pgfplotstable@counta=\count421
-\t@pgfplotstable@a=\toks59
+\c@pgfplotstable@counta=\count422
+\t@pgfplotstable@a=\toks61
 )
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststruct
 ure\pgfplotsdeque.code.tex)
@@ -1677,7 +1687,7 @@ otsbinary.data.code.tex))
 otsutil.verb.code.tex)
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgfli
 brarypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count422
+\c@pgfplotslibrarysurf@no=\count423
 
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflib
 rarypgfplots.surfshading.pgfsys-pdftex.def)))
@@ -1714,11 +1724,11 @@ ledecorations.code.tex
 \pgfdecoratedinputsegmentcompleteddistance=\dimen359
 \pgfdecoratedinputsegmentremainingdistance=\dimen360
 \pgf@decorate@distancetomove=\dimen361
-\pgf@decorate@repeatstate=\count423
+\pgf@decorate@repeatstate=\count424
 \pgfdecorationsegmentamplitude=\dimen362
 \pgfdecorationsegmentlength=\dimen363
 )
-\tikz@lib@dec@box=\box140
+\tikz@lib@dec@box=\box142
 )
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
 ikz/libraries\tikzlibrarydecorations.pathmorphing.code.tex
@@ -1730,7 +1740,7 @@ ikz/libraries\tikzlibrarydecorations.pathreplacing.code.tex
 ations\pgflibrarydecorations.pathreplacing.code.tex))
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzl
 ibrarypgfplots.contourlua.code.tex)
-\pgfplots@numplots=\count424
+\pgfplots@numplots=\count425
 \pgfplots@xmin@reg=\dimen364
 \pgfplots@xmax@reg=\dimen365
 \pgfplots@ymin@reg=\dimen366
@@ -1768,14 +1778,26 @@ LaTeX Font Info:    Trying to load font information for T1+clm2j on input line
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/cfr-lm\t1clm2j.fd
 File: t1clm2j.fd 2010/05/25 Fontinst v1.933 font definitions for T1/clm2j.
 )
-(HonorsMultivariableCalculus.aux)
+(HonorsMultivariableCalculus.aux
+
+LaTeX Warning: Label `problem:S' multiply defined.
+
+
+LaTeX Warning: Label `problem:S@cref' multiply defined.
+
+
+LaTeX Warning: Label `problem:parallelogram' multiply defined.
+
+
+LaTeX Warning: Label `problem:parallelogram@cref' multiply defined.
+
+)
 \openout1 = `HonorsMultivariableCalculus.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/lmm/m/it on input line 12.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
 2.
-
-(C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+ (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    ... okay on input line 12.
@@ -1850,17 +1872,17 @@ Package hyperref Info: Link coloring ON on input line 12.
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.
 mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count425
+\scratchcounter=\count426
 \scratchdimen=\dimen370
-\scratchbox=\box141
-\nofMPsegments=\count426
-\nofMParguments=\count427
-\everyMPshowfont=\toks60
-\MPscratchCnt=\count428
+\scratchbox=\box143
+\nofMPsegments=\count427
+\nofMParguments=\count428
+\everyMPshowfont=\toks62
+\MPscratchCnt=\count429
 \MPscratchDim=\dimen371
-\MPnumerator=\count429
-\makeMPintoPDFobject=\count430
-\everyMPtoPDFconversion=\toks61
+\MPnumerator=\count430
+\makeMPintoPDFobject=\count431
+\everyMPtoPDFconversion=\toks63
 )
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf
 -base.sty
@@ -1894,7 +1916,7 @@ Package caption Info: End \AtBeginDocument code.
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-\mycount=\count431
+\mycount=\count432
 LaTeX Font Info:    Trying to load font information for TS1+clm2j on input line
  32.
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/cfr-lm\ts1clm2j.fd
@@ -1910,7 +1932,7 @@ Package microtype Warning: I cannot find a spacing list for font
 
 
 ]
-\mycount=\count432
+\mycount=\count433
  (HonorsMultivariableCalculus.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 2.
@@ -1937,30 +1959,11 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 2.
 
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-Overfull \hbox (0.27798pt too wide) detected at line 19
- \T1/clm2j/m/n/9 35
- []
-
-
-Overfull \hbox (0.422pt too wide) detected at line 20
- \T1/clm2j/m/n/9 36
- []
-
-
-Overfull \hbox (0.422pt too wide) detected at line 22
- \T1/clm2j/m/n/9 38
- []
-
-
-Overfull \hbox (0.422pt too wide) detected at line 23
- \T1/clm2j/m/n/9 39
- []
-
-) [4
+))
+[4
 
 ]
-\mycount=\count433
+\mycount=\count434
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <12> on input line 49.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -2075,7 +2078,7 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
 
 [10]
 LaTeX Font Info:    Font shape `T1/clm2j/b/n' in size <8> not available
-(Font)              Font shape `T1/clm2j/bx/n' tried instead on input line 763.
+(Font)              Font shape `T1/clm2j/bx/n' tried instead on input line 761.
 
 
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
@@ -2084,7 +2087,8 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
 
 [11]
 
-LaTeX Warning: Reference `sumto1' on page 12 undefined on input line 830.
+LaTeX Warning: Reference `problemm:scalarmultvsmult' on page 12 undefined on in
+put line 780.
 
 
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
@@ -2092,7 +2096,16 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
  []
 
 [12]
-Overfull \hbox (6.07199pt too wide) in paragraph at lines 881--881
+
+LaTeX Warning: Reference `sumto1' on page 13 undefined on input line 828.
+
+
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[13]
+Overfull \hbox (6.07199pt too wide) in paragraph at lines 879--879
 []\T1/clm2j/m/n/10 (-10) We will first prove that $[]\OMS/lmsy/m/n/10 f\OML/lmm
 /b/it/10 v[]\OML/lmm/m/it/10 ; []  ; \OML/lmm/b/it/10 v[]\OMS/lmsy/m/n/10 g$ \T
 1/clm2j/m/n/10 (-10) is closed un-der ad-di-tion. Let $\OML/lmm/b/it/10 w[]\OML
@@ -2106,17 +2119,12 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[13]
-Overfull \hbox (78.0pt too wide) has occurred while \output is active
-[]
- []
-
 [14]
 
 Package microtype Warning: I cannot find a spacing list for font
 (microtype)                `TS1/clm2j/m/it/10' (context: `nonfrench'). Switchin
 g off
-(microtype)                spacing for this font on input line 964.
+(microtype)                spacing for this font on input line 967.
 
 
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
@@ -2184,14 +2192,6 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
  []
 
 [27]
-Overfull \hbox (1.16055pt too wide) in paragraph at lines 2022--2023
-[]\T1/clm2j/m/it/10 (-10) Cauchy-Schwarz in-equal-ity: $\OMS/lmsy/m/n/10 jj\OML
-/lmm/b/it/10 u \OMS/lmsy/m/n/10 ^^A \OML/lmm/b/it/10 v\OMS/lmsy/m/n/10 jj ^^T j
-j\OML/lmm/b/it/10 u\OMS/lmsy/m/n/10 jj jj\OML/lmm/b/it/10 v\OMS/lmsy/m/n/10 jj$
- 
- []
-
-
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
@@ -2217,70 +2217,70 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
  []
 
 [32]
-Overfull \hbox (4.59824pt too wide) in paragraph at lines 2402--2403
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[33]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[34]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[35]
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ] in font nullfont!
+<images/2x2detproof.png, id=588, 660.4675pt x 567.11874pt>
+File: images/2x2detproof.png Graphic file (type png)
+<use images/2x2detproof.png>
+Package pdftex.def Info: images/2x2detproof.png  used on input line 2693.
+(pdftex.def)             Requested size: 330.23294pt x 283.55867pt.
+
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[36]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[37 <./images/2x2detproof.png>]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[38]
+Overfull \hbox (4.71825pt too wide) in paragraph at lines 2854--2855
 []\T1/clm2j/m/it/10 (-10) Cauchy-Schwarz in-equal-ity: $\OMS/lmsy/m/n/10 jh\OML
 /lmm/b/it/10 u\OML/lmm/m/it/10 ; \OML/lmm/b/it/10 v\OMS/lmsy/m/n/10 ij ^^T j\OM
 L/lmm/b/it/10 u\OMS/lmsy/m/n/10 j j\OML/lmm/b/it/10 v\OMS/lmsy/m/n/10 j$ 
  []
 
 
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2448     L
-            et $A$ be a nonempty subset of an inner product space $V$.  The ...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2448     L
-            et $A$ be a nonempty subset of an inner product space $V$.  The ...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2448     L
-            et $A$ be a nonempty subset of an inner product space $V$.  The ...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2450     \end{definition}
-                           
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-)
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[33]
-\mycount=\count434
+[39])
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[40]
+\mycount=\count435
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -2294,14 +2294,14 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 52.
 
-[34
-
-]
-\mycount=\count435
- [35
+[41
 
 ]
 \mycount=\count436
+ [42
+
+]
+\mycount=\count437
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -2315,22 +2315,22 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 56.
 
-[36
-
-]
-\mycount=\count437
- [37
+[43
 
 ]
 \mycount=\count438
- [38
+ [44
 
 ]
 \mycount=\count439
+ [45
+
+]
+\mycount=\count440
  (HonorsMultivariableCalculus.ans)
 No file HonorsMultivariableCalculus.bbl.
 No file HonorsMultivariableCalculus.ind.
-[39
+[46
 
 
 ]
@@ -2341,25 +2341,28 @@ No file HonorsMultivariableCalculus.ind.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `HonorsMultivariableCalculus.out' has not cha
 nged.
-(rerunfilecheck)             Checksum: AA2D7F7BD9D57F54AF048CDDADAE68B5;1202.
+(rerunfilecheck)             Checksum: 376083FFA06BC8A76EDB8EF02492A99C;1202.
  ) 
 Here is how much of TeX's memory you used:
- 51064 strings out of 475389
- 1152718 string characters out of 2776056
- 1677583 words of memory out of 3000000
- 70775 multiletter control sequences out of 15000+600000
- 642675 words of font info for 458 fonts, out of 8000000 for 9000
+ 51368 strings out of 475389
+ 1154131 string characters out of 2776056
+ 1683875 words of memory out of 3000000
+ 70994 multiletter control sequences out of 15000+600000
+ 644328 words of font info for 476 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 114i,16n,120p,1026b,2310s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.
-enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cfr-lm/dotd
-igits-clm.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/l
-m/lm-ts1.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cf
-r-lm/t1-clm.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
-/lm/lm-rm.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/l
-m/lm-mathit.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
+ 114i,16n,120p,1026b,1379s stack positions out of 10000i,1000n,20000p,200000b,80000s
+{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cfr-lm/t1-clm
+.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-math
+sy.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ma
+thit.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cfr-lm
+/dotdigits-clm.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dv
+ips/lm/lm-ts1.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvi
+ps/lm/lm-rm.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
 /lm/lm-mathex.enc}<C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/lm/lmbsy10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type
 1/public/lm/lmbsy7.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/ty
@@ -2369,33 +2372,34 @@ type1/public/lm/lmbx7.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts
 s/type1/public/lm/lmbxi10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/lm/lmex10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX
 /fonts/type1/public/lm/lmmi10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Richard/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/Richard/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Richard/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/Richard/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/lm/lmmib7.pfb><C:/Users/Richard/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Richard/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Richard/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Richard/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Richard/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Richard/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Richard/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Richard/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Richard/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/lm/lmri7.pfb><C:/Users/Richard/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/Richard/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Richard/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Richard/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/lm/lmss9.pfb><C:/Users/Richard/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Richard/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/Richard/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Us
-ers/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C
-:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.pfb
->
-Output written on HonorsMultivariableCalculus.pdf (43 pages, 722023 bytes).
+eX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/Richard/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Richard/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/Richard/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Richard/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/Richard/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/lm/lmmib7.pfb><C:/Users/Richard/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Richard/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Richard/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Richard/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Richard/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Richard/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Richard/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Richard/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Richard/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/lm/lmri7.pfb><C:/Users/Richard/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/Richard/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Richard/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Richard/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss9.pfb><C:/Users/Richard/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Richard/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/Richard/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/U
+sers/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><
+C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.pf
+b>
+Output written on HonorsMultivariableCalculus.pdf (50 pages, 811255 bytes).
 PDF statistics:
- 817 PDF objects out of 1000 (max. 8388607)
- 308 named destinations out of 1000 (max. 500000)
- 131149 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 938 PDF objects out of 1000 (max. 8388607)
+ 362 named destinations out of 1000 (max. 500000)
+ 131154 words of extra memory for PDF output out of 154059 (max. 10000000)
 

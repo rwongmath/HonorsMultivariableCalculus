@@ -190,7 +190,7 @@ shrink=10]{microtype}
   \definecolor{UCLAgold}{RGB}{255, 209, 0}
   
   \definecolor{mered}{HTML}{882255}
-  \definecolor{megreen}{HTML}{117733}
+  \definecolor{megreen}{HTML}{004953}
   \definecolor{mepink}{HTML}{AA4499}
   \definecolor{rosequartz}{HTML}{F7CAC9}
   \definecolor{serenity}{HTML}{92A8D1}
