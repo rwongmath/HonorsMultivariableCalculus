@@ -280,9 +280,9 @@ Thus, we should give this quantity a name:
     \draw [->] (0,0,0) -- (0,4,0) node [left] {$z$};
     \draw [->] (0,0,0) -- (0,0,4) node [left] {$x$};
     
-    \draw[red, thick, ->] (0,0,0) -- (0,0,1) node [left] {$i$};
-    \draw[megreen, thick, ->] (0,0,0) -- (0,1,0) node [right]{$k$};
-    \draw[UCLAblue, thick, ->] (0,0,0) -- (1,0,0) node [below] {$j$};
+    \draw[red, ultra thick, ->] (0,0,0) -- (0,0,1) node [left] {$i$};
+    \draw[megreen,ultra thick, ->] (0,0,0) -- (0,1,0) node [right]{$k$};
+    \draw[UCLAblue,ultra thick, ->] (0,0,0) -- (1,0,0) node [below] {$j$};
     
     % % Vectors
     % \draw [->, thick] (0,0,0) -- (2,2,0);
@@ -336,7 +336,7 @@ $$\bm{u+v} = \langle u_1+v_1, \cdots, u_n+v_n \rangle$$
     There is a nice geometric picture that accompanies vector addition:  Given two vectors $\bm{PQ}$ and $\bm{QR}$, then the sum of these two vectors is the vector $\bm{PR}$ (that is, the vector with tail $P$, and head $R$)
     
     \begin{center}
-            \begin{tikzpicture}scale=0.5]
+            \begin{tikzpicture}[scale=0.7]
             \pgfmathsetmacro{\cubex}{2}
             \pgfmathsetmacro{\cubey}{3}
 
@@ -641,7 +641,7 @@ Position vectors.
 In the following exercises, we will describe lines in $\R^n$.
     
     \begin{definition}\label{linesinrn}
-    The line $\mathscr{L}$ in $\R^n$, passing through the point $P = (x_1, \cdots x_n)$, in the direction of the vector $\bm{v} = \langle v_1,  \cdots v_n \rangle$, can be described by the vector-valued function $$\bm{r}(t) = \bm{r_0} + t\bm{v}$$
+    The line $\mathscr{L}$ in $\R^n$, passing through the point $P = (x_1, \cdots x_n)$, in the direction of the vector $\bm{v} = \langle v_1,  \cdots v_n \rangle$, can be described by the vector-valued function $\bm{r}(t) : \R \to \R^n$ defined by $$\bm{r}(t) = \bm{r_0} + t\bm{v}$$
     
     where $\bm{r_0}$ is the vector $\bm{r_0} = \bm{OP} = \langle x_1, \cdots x_n\rangle$.
     
@@ -1132,15 +1132,15 @@ Given a vector space $V$, prove that the set $\{\bm{0}\}$ is a vector subspace o
 
 
 \begin{problem}{sumto0}
-For a fixed vector $\langle a_1, \cdots, a_n \rangle \in \R^n$, is the set $W = \{(x_1, \dots, x_n) \in \R^n \ | \ \sum^n_i a_ix_i = 0 \}$ a subspace of $\R^n$?
+For a fixed vector $\langle a_1, \cdots, a_n \rangle \in \R^n$, is the set $W = \{(x_1, \dots, x_n) \in \R^n \ | \ \sum^n_i a_ix_i = 0 \}$ always a subspace of $\R^n$?
 \end{problem}
 
 \begin{problem}{sumto1}
-For a fixed vector $\langle a_1, \cdots, a_n \rangle \in \R^n$, is the set $W = \{(x_1, \dots, x_n) \in \R^n \ | \ \sum^n_i a_ix_i = 1 \}$ a subspace of $\R^n$?
+For a fixed vector $\langle a_1, \cdots, a_n \rangle \in \R^n$, is the set $W = \{(x_1, \dots, x_n) \in \R^n \ | \ \sum^n_i a_ix_i = 1 \}$ always a subspace of $\R^n$?
 \end{problem}
 
 \begin{problem}{sumsquared}
-    For a fixed vector $\langle a_1, \cdots, a_n \rangle \in \R^n$, is the set $$W = \{(x_1, \dots, x_n) \in \R^n \ | \ \sum^n_i a_i(x_i)^2 = 0 \}$$ a subspace of $\R^n$?
+    For a fixed vector $\langle a_1, \cdots, a_n \rangle \in \R^n$, is the set $$W = \{(x_1, \dots, x_n) \in \R^n \ | \ \sum^n_i a_i(x_i)^2 = 0 \}$$ always a subspace of $\R^n$?
 \end{problem}
 
 \begin{problem}{intersections}
@@ -1400,13 +1400,7 @@ How can we geometrically think about linear maps $\R^n \to \R^m$?
 
 In other words, what do graphs of linear maps from $\R^n \to \R^m$ look like?
 
-By theorem \ref{linearbasisvectors}, we know that a linear map $\R^n \to \R^m$ is determined by what it does on basis vectors.  
-
-
-
-
-
-Now let us consider linear maps $\R^2 \to \R^2$.
+By theorem \ref{linearbasisvectors}, we know that a linear map $\R^n \to \R^m$ is determined by what it does on basis vectors.  Let us consider a few linear maps $\R^2 \to \R^2$.
 
 \begin{example}
     Consider the linear map $T_A$ sends the vector $\bm{e_1} = \langle 1, 0 \rangle$ to the vector $T_A(\bm{e_1}) =  \langle 2, 0 \rangle$, and the vector $\bm{e_2} = \langle 0, 1 \rangle$ to the vector $T_A(\bm{e_2}) = \langle 0, \frac{3}{4} \rangle$. Geometrically, the map looks like this:
@@ -1919,6 +1913,15 @@ How can we generalize the determinant to $n \times n$ matrices?
     
     \end{theorem}
 
+This theorem tells us that given an $n \times n$ matrix $A$, we can expand along \textbf{any row}, and reduce the problem to computing determinants of $(n-1) \times (n-1)$.  We can iterate this algorithm, and reduce computing the determinant of an $n \times n$ matrix to a problem of computing determinants of $2 \times 2$ matrices, which we know how to do.
+
+\begin{proposition}
+    Given a matrix $A$, swapping any two rows or any two columns changes the sign of the determinant.
+\end{proposition}
+
+
+
+
 Where does this formula come from? See \fixthis{problem reference}
 
 
@@ -2001,6 +2004,17 @@ Let $T : V \to W$ be a linear map.  Is the set $$\textnormal{Im}(T) := \{ T(\bm{
     Compute $T(3, 3, 2)$.
 \end{problem}
 
+\begin{problem}
+    Let $T : \R^3 \to \R$ be the linear mapping such that $T(0,1,1) = 1$, $T(1,0,1) = 2$, and $T(1,1,0) = 3$.  Find the standard matrix of $T$.
+\end{problem}
+
+\begin{problem}{convex}
+     A subset $A \subset \R^n$ is said to be a \textbf{convex subset of $\R^n$}\define{convex subset} if it contains the line segment joining any two points of $A$.  That is, for all $\bm{a}, \bm{b} \in A$, and for all $t \in [0,1]$, then $\bm{a} + t(\bm{b} -\bm{a}) \in A$.
+     
+     Let $U \subset \R^n$ be a convex subset of $\R^n$.  Show that if $T: \R^n \to \R^m$ is linear, then $T(U)$ is a convex subset.
+\end{problem}
+
+
 \begin{problem}{rotationmatrix}
     
     Show that the rotation matrix \begin{equation*}
@@ -2068,6 +2082,10 @@ A =
     Prove that if a map $T : V \to W$ is an isomorphism, then $T$ is injective.
 \end{problem}
 
+\begin{problem}{isoinj2}
+    Suppose that $S: \R^3 \to \R^3$ is a linear map such that $S(\bm{e_1}) = S(\bm{e_2})$.  Is $S$ an isomorphism?
+\end{problem}
+
 \begin{problem}{injsurj}
     If a map $T : \R^n \to \R^n$ is both surjective and injective (bijective), what is the standard matrix of $T^{-1}$?
 \end{problem}
@@ -2094,6 +2112,10 @@ A =
 \end{bmatrix}
 \end{equation*}
 Is the linear map associated to $A$ invertible?
+\end{problem}
+
+\begin{problem}{invertiblebasis}
+    Let $T : \R^3 \to \R^3$ be the linear mapping such that $T\langle0,1,1\rangle = \langle1,0,1\rangle$, $T\langle1,0,1\rangle = \langle3,0,2\rangle$, and $T\langle1,1,0\rangle = \langle4,2,1\rangle$.  Is $T$ invertible?
 \end{problem}
 
 
@@ -2201,30 +2223,61 @@ What is the geometric meaning behind the dot product in $\R^n$?
     
     We see that the dot product allows us to talk about the notion of \underline{distance} in $\R^n$.  Thus the dot product has a geometric interpretation!
     
-    \begin{definition}
-    Assume $\bm{v} \neq 0$.  The \textbf{projection of} $\bm{u}$ \textbf{along}\define{vector projection} $\bm{v}$ is the vector
-    $$\bm{u_{||v}} = \left(\frac{\bm{u} \cdot \bm{v}}{\bm{v} \cdot \bm{v}}\right)\bm{v} 
-    = \left(\frac{\bm{u} \cdot \bm{v}}{||\bm{v}||^2}\right)\bm{v} = \left(\frac{\bm{u} \cdot \bm{v}}{||\bm{v}||}\right)\bm{e_v}$$
-    This is sometimes denoted $\textnormal{proj}_{\bm{v}}\bm{u}$.  
-    
-    \vspace{1em}
-    
-    The scalar $\frac{\bm{u} \cdot \bm{v}}{||\bm{v}||}$ is called the \textbf{scalar component}\define{scalar component} of $\bm{u}$ \textbf{along} $\bm{v}$.
-    \end{definition}
-    
-    \begin{definition}
-    The \textbf{orthogonal projection} of $\bm{u}$ \textbf{along} $\bm{v}$ is the vector $$\bm{u_{\bot v}} = \bm{u} - \bm{u_{||v}}$$
-    \end{definition}
-    
-    \fixthis{picture}
-    
 \begin{proposition}\label{geometricdotproduct}
     Let $\theta$ be the angle between two non-zero position vectors $\bm{u}$ and $\bm{v}$ in $\R^n$.  Then  $$\cos(\theta) = \frac{\bm{u} \cdot \bm{v}}{||\bm{u}|| \ ||\bm{v}||}$$
     \end{proposition}
 
-This follows from trigonometry and the Law of Cosines.  Thus, we can use the dot product in $\R^n$ to determine whether the angle between the vectors $\bm{u}$ and $\bm{v}$ is acute, obtuse, or if $\bm{u}$ and $\bm{v}$ are orthogonal (that is, if $\theta = \frac{\pi}{2}$).
+\begin{proof}
 
-\fixthis{explicit, proof, picture}
+This proposition follows from the Law of cosines:  Given a triangle with side lengths $a, b, c$, where $\theta$ is the angle between the sides of length $a$ and $b$, we have that $$c^2 + a^2 + b^2 - 2ab\cos(\theta)$$
+
+Given two non-zero vectors $\bm{u}, \bm{v} \in \R^n$, we can apply the Law of cosines to the triangle \textbf{spanned by}\define{spanned by} $\bm{u}$ and $\bm{v}$ pictured below:
+
+
+\begin{center}
+            \begin{tikzpicture}
+            \begin{scope}
+                        \pgfmathsetmacro{\cubex}{2}
+            \pgfmathsetmacro{\cubey}{3}
+
+    
+    \draw (0.4,0.1) arc [start angle=0,end angle=35,radius=0.6] node[pos=0.7,right]{$\theta$};
+    \draw[red, thick] (0,0) -- (\cubex,0.5) node[midway,below right] {$a$};
+    \draw[megreen, thick] (\cubex,0.5) -- (\cubex,\cubey) node[midway, right] {$b$};
+    \draw[UCLAblue, thick] (0,0) -- (\cubex,\cubey) node[midway,above left] {$c$};
+    
+            \end{scope}
+            
+            \begin{scope}[xshift=4cm]
+                        \pgfmathsetmacro{\cubex}{2}
+            \pgfmathsetmacro{\cubey}{3}
+
+    
+    \draw (0.4,0.1) arc [start angle=0,end angle=35,radius=0.6] node[pos=0.7, right]{$\theta$};
+    \draw[red, thick, -Latex] (0,0) -- (\cubex,0.5) node[midway,below right] {$\bm{v}$};
+    \draw[megreen, thick, -Latex] (\cubex,0.5) -- (\cubex,\cubey) node[midway, right] {$\bm{u-v}$};
+    \draw[UCLAblue, thick, -Latex] (0,0) -- (\cubex,\cubey) node[midway,above left] {$\bm{u}$};
+    
+            \end{scope}
+    \end{tikzpicture}
+        \end{center}
+
+The law of cosines tells us that for this triangle, $$||\bm{u-v}||^2 = ||\bm{u}||^2+||\bm{v}||^2 -2||\bm{u}||\ ||\bm{v}||\cos(\theta)$$
+However, on the other hand, the properties of dot products tell us that
+\begin{align*}
+    ||\bm{u-v}||^2 &= (\bm{u-v}) \cdot (\bm{u-v}) \\
+    &= \bm{u} \cdot (\bm{u-v}) - \bm{v} \cdot (\bm{u-v}) \\
+    &= \bm{u} \cdot \bm{u} - \bm{u} \cdot \bm{v} - \bm{v} \cdot \bm{u} + \bm{v} \cdot \bm{v}  \\
+    &= ||\bm{u}||^2+||\bm{v}||^2 -2(\bm{u} \cdot \bm{v})
+\end{align*}
+
+Given these two ways of evaluating $||\bm{u-v}||^2$, we thus conclude that $$||\bm{u}||\ ||\bm{v}||\cos(\theta) = \bm{u} \cdot \bm{v}$$ as desired.
+
+\end{proof}
+
+
+Thus, we can use the dot product in $\R^n$ to determine whether the angle between the vectors $\bm{u}$ and $\bm{v}$ is acute, obtuse, or if $\bm{u}$ and $\bm{v}$ are orthogonal (that is, if $\theta = \frac{\pi}{2}$).
+
 
 \begin{proposition}
     The angle $\theta$ between two non-zero position vectors $\bm{u}$ and $\bm{v}$ in $\R^n$ is:
@@ -2239,7 +2292,6 @@ This follows from trigonometry and the Law of Cosines.  Thus, we can use the dot
 \begin{example}
     The standard basis vectors $\{\bm{e_i}\}$ in $\R^n$ are all orthogonal to each other.
 \end{example}
-
 
 
 \begin{definition}
@@ -2260,13 +2312,62 @@ This follows from trigonometry and the Law of Cosines.  Thus, we can use the dot
 		\right.$$
     \end{proposition}
 
+Orthonormal bases (such as the standard basis) are nice, because it turns out that we can compute the coordinate vectors\SubIndex{coordinates} for an orthonormal basis easily:
 
 \begin{proposition}\label{coeffdotprod}
     Recall that if $\mathscr{B} = \{\bm{b_1}, \bm{b_2}, \cdots, \bm{b_n}\}$ is an orthonormal basis of $V$, then for any $\bm{v} \in V$, $$\bm{v} = (\bm{v}\cdot \bm{b_1}) \bm{b_1} + \cdots (\bm{v}\cdot \bm{b_n})  \bm{b_n}$$ 
     \end{proposition}
 
-That is, the coordinates\SubIndex{coordinates} of a vector in an orthonormal basis $\{\bm{b_i}\}$ of $\R^n$ are exactly given by the dot products $\bm{v}\cdot \bm{b_1}$.
+That is, the coordinates of a vector in an orthonormal basis $\{\bm{b_i}\}$ of $\R^n$ are exactly given by the dot products $\bm{v}\cdot \bm{b_1}$.
 
+
+
+\begin{definition}
+    Assume $\bm{v} \neq 0$.  The \textbf{projection of} $\bm{u}$ \textbf{along}\define{vector projection} $\bm{v}$ is the vector
+    $$\bm{u_{||v}} = \left(\frac{\bm{u} \cdot \bm{v}}{\bm{v} \cdot \bm{v}}\right)\bm{v} 
+    = \left(\frac{\bm{u} \cdot \bm{v}}{||\bm{v}||^2}\right)\bm{v} = \left(\frac{\bm{u} \cdot \bm{v}}{||\bm{v}||}\right)\bm{e_v}$$
+    This is sometimes denoted $\textnormal{proj}_{\bm{v}}\bm{u}$.  
+    
+    \vspace{1em}
+    
+    The scalar $\frac{\bm{u} \cdot \bm{v}}{||\bm{v}||}$ is called the \textbf{scalar component}\define{scalar component} of $\bm{u}$ \textbf{along} $\bm{v}$.
+    \end{definition}
+    
+    \begin{center}
+            \begin{tikzpicture}scale=0.5]
+            \pgfmathsetmacro{\cubex}{2}
+            \pgfmathsetmacro{\cubey}{3}
+    
+    
+    \draw[megreen, dashed] (\cubex,\cubey) -- (2.72, 2.04);
+    \draw[red, thick, -Latex] (0,0) -- (4,3) node[below right] {$\bm{v}$};
+    \draw[mered, ultra thick, -Latex] (0,0) -- (2.72, 2.04) node[midway,below right] {$\bm{u_{||v}}$};
+    \draw[UCLAblue, thick, -Latex] (0,0) -- (\cubex,\cubey) node[midway,above left] {$\bm{u}$};
+    
+    
+    
+    \end{tikzpicture}
+        \end{center}    
+    
+    \begin{definition}
+    The \textbf{orthogonal projection} of $\bm{u}$ \textbf{along} $\bm{v}$ is the vector $$\bm{u_{\bot v}} = \bm{u} - \bm{u_{||v}}$$
+    \end{definition}
+    
+    \begin{center}
+            \begin{tikzpicture}scale=0.5]
+            \pgfmathsetmacro{\cubex}{2}
+            \pgfmathsetmacro{\cubey}{3}
+    
+    
+    \draw[megreen, ultra thick, -Latex] (2.72, 2.04) -- (\cubex,\cubey)  node[midway, right] {$\bm{u_{\bot v}}$};
+    \draw[red, thick, -Latex] (0,0) -- (4,3) node[below right] {$\bm{v}$};
+    \draw[mered, ultra thick, -Latex] (0,0) -- (2.72, 2.04) node[midway,below right] {$\bm{u_{||v}}$};
+    \draw[UCLAblue, thick, -Latex] (0,0) -- (\cubex,\cubey) node[midway,above left] {$\bm{u}$};
+    
+    
+    
+    \end{tikzpicture}
+        \end{center}    
 
 \begin{theorem}[Further properties of the dot product]
     
@@ -2286,7 +2387,7 @@ Observe that the dot product on $\R^n$ is a function $\cdot: \R^n \times \R^n \t
 
 
 \begin{motivating}
-Given a vector $\bm{n} \in \R^n$, can we describe the set of vectors $\bm{v} \in \R^n$ such that $\bm{v} \cdot \bm{n} = \bm{0}$?
+Given a vector $\bm{n} \in \R^n$, can we describe the set of vectors $\bm{v} \in \R^n$ such that $\bm{v} \cdot \bm{n} = 0$?
 \end{motivating}
 
 We know that $\bm{0}$ is always in this set.  We also know from proposition \ref{geometricdotproduct} that this is equivalent to describing all of the non-zero vectors that are \textit{orthogonal} to $\bm{n}$. 
@@ -2329,15 +2430,46 @@ Let us examine a few examples.
 
 Thus, we see that the subspace of vectors in $\R^2$ that are orthogonal to a vector $\bm{n} = \langle a, b \rangle$ is a line passing through the origin, in the direction of the vector $\langle -b, a \rangle$.
 
+In other words, 
+$$\{\bm{v} = \langle x, y \rangle \in \R^2 \ | \ ax+by = 0\} = \textnormal{span}\{\langle -b, a \rangle\}$$
+
+A vector parametrization of this line is $\bm{r}(t) = t\bm{v}$.
+
+
+
 \begin{example}
     Let us fix a vector $\bm{n} = \langle a, b, c\rangle \in \R^3$.  Then we can write the subspace $\{\bm{v} \in \R^3 \ | \ \bm{v} \cdot \bm{n} = 0\}$ as
-    $$\{\bm{v} = \langle x, y, z \rangle \in \R^2 \ | \ ax+by+cz = 0\}$$
+    $$\{\bm{v} = \langle x, y, z \rangle \in \R^3 \ | \ ax+by+cz = 0\}$$
     
     Let us take for example $\bm{n} = \langle 3, 2, 1\rangle \in \R^3$ in blue.
     
-\end{example}
+    
+    \begin{center}
+        \tdplotsetmaincoords{105}{-30}
+\begin{tikzpicture}[tdplot_main_coords,scale=.5]
+ \tdplotsetrotatedcoords{00}{30}{0}
+ \begin{scope}[tdplot_rotated_coords]
+  \begin{scope}[canvas is xy plane at z=0]
+   \fill[gray,fill opacity=0.3] (-2,-3) rectangle (2,3); 
+   \pgflowlevelsynccm
+  \end{scope} 
+  \draw[very thick,-Latex,color=UCLAdark] (0,0,0) coordinate (O) -- (0,0,3) node[right]{$\bm{n}$};
+ \end{scope}
+ \pgfmathsetmacro{\Radius}{1.5}
+ \draw[-stealth]  (O)-- (2.5*\Radius,0,0) node[pos=1.15] {$y$};
+ \draw[-stealth] (O) -- (0,3.5*\Radius,0) node[pos=1.15] {$x$};
+ \draw[-stealth] (O) -- (0,0,2.5*\Radius) node[pos=1.05] {$z$};
+\end{tikzpicture} 
+    \end{center}
 
-Similarly, we can use vector addition to describe arbitrary planes in $\R^3$ - that is, in order to define a plane $P$ in $\R^3$ (not necessarily passing through the origin), we simply need to describe a point on the plane $P$, and a normal vector $\bm{n} \in \R^3$.
+    We again observe that the following two subspaces are the same!
+    $$\{\bm{v} = \langle x, y, z\rangle \in \R^3 \ | \ 3x+2y+1z = 0\} = \textnormal{span}\{\langle 1, 0, -3 \rangle, \langle 0, 1, -2 \rangle\}$$
+    
+    That is, the subspace of vectors in $\R^3$ orthogonal to $\bm{n} = \langle a, b,c \rangle$ is a plane in $\R^3$ passing through the origin.
+    
+\end{example}
+ 
+In order to define a plane $P$ in $\R^3$ (not necessarily passing through the origin), we simply need to describe a point on the plane $P$, and a normal vector $\bm{n} \in \R^3$.
 
 \begin{definition}
     A plane $P$ in $\R^3$ is determined by a point $P_0 = (x_0, y_0, z_0)$ and a \textbf{normal vector} $\bm{n} = \langle a, b, c \rangle$.  
@@ -2418,7 +2550,7 @@ Similarly, we can use vector addition to describe arbitrary planes in $\R^3$ - t
 
 
 \begin{proposition}
-    Given a vector $\bm{n} \in \R^n$, the set $$\{\bm{v} \in \R^n \ | \ \bm{v} \cdot \bm{n} = \bm{0}\}$$ is a vector subspace of $\R^n$ of dimension $n-1$.
+    Given a vector $\bm{n} \in \R^n$, the set $$\{\bm{v} \in \R^n \ | \ \bm{v} \cdot \bm{n} = 0\}$$ is a vector subspace of $\R^n$ of dimension $n-1$.
 \end{proposition}
 
 
@@ -2430,9 +2562,29 @@ We say that $\bm{n}$ is a normal vector of $W$.
 \end{definition}
 
 
+Observe that we can also use vector addition to describe arbitrary planes in $\R^n$ - that is, in order to define a plane $P$ in $\R^n$ (not necessarily passing through the origin), we simply need to describe a point on the plane $P$, and two non-parallel vectors.  That is, we are describing planes as two-dimensional objects in the following way:
+
+\begin{definition}
+    The plane $\mathscr{P}$ through the point $P = (x_1, \cdots, x_n)$  and determined by two non-parallel vectors $\bm{u}, \bm{v} \in \R^n$, can be described by the vector function $\bm{r}(s,t) : \R^2 \to \R^n$ defined by 
+    $$\bm{r}(s,t) = \bm{r_0} + s\bm{u} + t\bm{v}$$
+    where $\bm{r_0}$ is the vector $\bm{r_0} = \bm{OP} = \langle x_1, \cdots, x_n\rangle$.
+    
+    We call $\bm{r}(s,t)$ the \textbf{parametrization of} $\mathscr{P}$.
+    
+    \end{definition}
+    
+    That is, the plane is the set of all linear combinations of $\bm{u}$ and $\bm{v}$ that originate from $P$.
+
+    \begin{remark}
+    In other words, we are describing a plane as the image of of a linear map, whereas we can also describe the plane as the kernel of a linear map.
+    \end{remark}
 
 
+\begin{motivating}
+How can we reconcile these two notions?
+\end{motivating}
 
+This leads us to the notion of the cross product of vectors in $\R^3$.
 
 
 
@@ -2980,6 +3132,26 @@ What is the geometric interpretation of the inner product for an arbitrary vecto
     
 \end{problem}
 
+\begin{problem}{parallelpiped2}
+    Find the volume of the parallelpiped in $\R^3$ spanned by the vectors $\bm{u} =\langle 1, 0,4 \rangle$, $\bm{v} = \langle 1, 3, 1 \rangle$, $\bm{w} = \langle -4, 2, 6 \rangle$.
+\end{problem}
+
+\begin{problem}{parallelpiped3}
+    Let $P$ be the parallelpiped contained in the first octant (that is, all points in $P$ satisfy $x \geq 0$, $y \geq 0$, $z \geq 0$) determined by the vertices $A= (2,4,1)$, $B= (5,2,5)$, $C= (1,2,4)$, and $D = (1,1,1)$. Find the point $X$ in the parallelpiped $P$ that is \textbf{furthest} from the origin. (\textbf{Hint:} Draw a picture).
+\end{problem}
+
 \begin{problem}{lineorplane}
     Do the points $P = (0,1,1)$, $Q = (1,1,2)$, $R = (3,3,3)$ determine a plane or a line?  Find the equation of either the plane or the line.
+\end{problem}
+
+\begin{problem}{planesandlines}
+    Let $P$ be the plane given by the equation $-3x - 4y+2z = -10$. The plane $P$ intersects the plane $z=0$ at some \textbf{acute} angle $\theta$.  Determine the value of $\cos(\theta)$.
+\end{problem}
+
+\begin{problem}{lineplane}
+    The intersection of the plane $-3x - 4y+2z = -10$ and the plane $z=0$ is a line $L$.  Find a vector parametrization of the line $L$.
+\end{problem}
+
+\begin{problem}{lineintersect}
+    The line $\bm{r}(t) = \langle 2, 2, 8 \rangle + t\langle 0,1,2\rangle$ intersects the sphere $x^2 + (y+3)^2 + (z+2)^2 = 9$ in two points.  Find these two points.
 \end{problem}

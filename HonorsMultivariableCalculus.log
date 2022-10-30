@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.20)  2 OCT 2022 21:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.20)  30 OCT 2022 16:38
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1791,6 +1791,12 @@ LaTeX Warning: Label `problem:parallelogram' multiply defined.
 
 LaTeX Warning: Label `problem:parallelogram@cref' multiply defined.
 
+
+LaTeX Warning: Label `problem:traces3' multiply defined.
+
+
+LaTeX Warning: Label `problem:traces3@cref' multiply defined.
+
 )
 \openout1 = `HonorsMultivariableCalculus.aux'.
 
@@ -1959,8 +1965,22 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 2.
 
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-))
-[4
+)
+Overfull \hbox (0.485pt too wide) detected at line 40
+ \T1/clm2j/m/n/9 60
+ []
+
+
+Overfull \hbox (0.332pt too wide) detected at line 42
+ \T1/clm2j/m/n/9 62
+ []
+
+
+Overfull \hbox (0.422pt too wide) detected at line 43
+ \T1/clm2j/m/n/9 63
+ []
+
+) [4
 
 ]
 \mycount=\count434
@@ -2022,16 +2042,6 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no 5 in font nullfont!
 Missing character: There is no ] in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no ] in font nullfont!
 
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
@@ -2081,13 +2091,8 @@ LaTeX Font Info:    Font shape `T1/clm2j/b/n' in size <8> not available
 (Font)              Font shape `T1/clm2j/bx/n' tried instead on input line 761.
 
 
-Overfull \hbox (78.0pt too wide) has occurred while \output is active
-[]
- []
 
-[11]
-
-LaTeX Warning: Reference `problemm:scalarmultvsmult' on page 12 undefined on in
+LaTeX Warning: Reference `problemm:scalarmultvsmult' on page 11 undefined on in
 put line 780.
 
 
@@ -2095,11 +2100,16 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
+[11]
+
+LaTeX Warning: Reference `sumto1' on page 12 undefined on input line 828.
+
+
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
 [12]
-
-LaTeX Warning: Reference `sumto1' on page 13 undefined on input line 828.
-
-
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
@@ -2212,11 +2222,100 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
  []
 
 [31]
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ] in font nullfont!
+
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
 [32]
+! Undefined control sequence.
+<recently read> \tdplotsetmaincoords 
+                                     
+l.2448         \tdplotsetmaincoords
+                                   {105}{-30}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! Package pgfkeys Error: I do not know the key '/tikz/tdplot_main_coords' and I
+ am going to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2449 ...ikzpicture}[tdplot_main_coords,scale=.5]
+                                                  
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
+
+! Undefined control sequence.
+\pgfutil@reserved@c ->\tikz@intersect@finish 
+                                             \afterassignment \tikz@lib@scop...
+l.2450  \tdplotsetrotatedcoords
+                               {00}{30}{0}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+
+! Package pgfkeys Error: I do not know the key '/tikz/tdplot_rotated_coords' an
+d I am going to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2451  \begin{scope}[tdplot_rotated_coords]
+                                            
+(That was another \errmessage.)
+
+
+! Package pgfkeys Error: I do not know the key '/tikz/canvas is xy plane at z',
+ to which you passed '0', and I am going to ignore it. Perhaps you misspelled i
+t.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2452   \begin{scope}[canvas is xy plane at z=0]
+                                                 
+(That was another \errmessage.)
+
+
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
@@ -2232,6 +2331,16 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
  []
 
 [35]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[36]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[37]
 Missing character: There is no s in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no a in font nullfont!
@@ -2242,28 +2351,28 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no 5 in font nullfont!
 Missing character: There is no ] in font nullfont!
-<images/2x2detproof.png, id=588, 660.4675pt x 567.11874pt>
+<images/2x2detproof.png, id=604, 660.4675pt x 567.11874pt>
 File: images/2x2detproof.png Graphic file (type png)
 <use images/2x2detproof.png>
-Package pdftex.def Info: images/2x2detproof.png  used on input line 2693.
+Package pdftex.def Info: images/2x2detproof.png  used on input line 2845.
 (pdftex.def)             Requested size: 330.23294pt x 283.55867pt.
 
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[36]
-Overfull \hbox (78.0pt too wide) has occurred while \output is active
-[]
- []
-
-[37 <./images/2x2detproof.png>]
-Overfull \hbox (78.0pt too wide) has occurred while \output is active
-[]
- []
-
 [38]
-Overfull \hbox (4.71825pt too wide) in paragraph at lines 2854--2855
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[39 <./images/2x2detproof.png>]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[40]
+Overfull \hbox (4.20825pt too wide) in paragraph at lines 3006--3007
 []\T1/clm2j/m/it/10 (-10) Cauchy-Schwarz in-equal-ity: $\OMS/lmsy/m/n/10 jh\OML
 /lmm/b/it/10 u\OML/lmm/m/it/10 ; \OML/lmm/b/it/10 v\OMS/lmsy/m/n/10 ij ^^T j\OM
 L/lmm/b/it/10 u\OMS/lmsy/m/n/10 j j\OML/lmm/b/it/10 v\OMS/lmsy/m/n/10 j$ 
@@ -2274,12 +2383,12 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[39])
+[41])
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[40]
+[42]
 \mycount=\count435
 
 
@@ -2294,43 +2403,123 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 52.
 
-[41
+(chapters/2-RealAnalysis/RealAnalysis.tex [43
 
 ]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[44]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[45]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[46]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[47]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[48]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[49]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[50]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[51]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[52]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[53]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[54]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[55]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[56]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[57]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[58])
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[59]
 \mycount=\count436
- [42
+ [60
 
 ]
 \mycount=\count437
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 56.
+(hyperref)                removing `math shift' on input line 57.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 56.
+(hyperref)                removing `superscript' on input line 57.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 56.
+(hyperref)                removing `math shift' on input line 57.
 
-[43
+[61
 
 ]
 \mycount=\count438
- [44
+ [62
 
 ]
 \mycount=\count439
- [45
+ [63
 
 ]
 \mycount=\count440
  (HonorsMultivariableCalculus.ans)
 No file HonorsMultivariableCalculus.bbl.
 No file HonorsMultivariableCalculus.ind.
-[46
+[64
 
 
 ]
@@ -2346,20 +2535,20 @@ LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `HonorsMultivariableCalculus.out' has not cha
 nged.
-(rerunfilecheck)             Checksum: 376083FFA06BC8A76EDB8EF02492A99C;1202.
+(rerunfilecheck)             Checksum: D9D83908EA0D005E4F6A6C9977FD1FF5;1202.
  ) 
 Here is how much of TeX's memory you used:
- 51368 strings out of 475389
- 1154131 string characters out of 2776056
- 1683875 words of memory out of 3000000
- 70994 multiletter control sequences out of 15000+600000
- 644328 words of font info for 476 fonts, out of 8000000 for 9000
+ 52195 strings out of 475389
+ 1173291 string characters out of 2776056
+ 1702986 words of memory out of 3000000
+ 71629 multiletter control sequences out of 15000+600000
+ 646094 words of font info for 497 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 114i,16n,120p,1026b,1379s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cfr-lm/t1-clm
-.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-math
-sy.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ma
-thit.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cfr-lm
+ 114i,16n,120p,1026b,2396s stack positions out of 10000i,1000n,20000p,200000b,80000s
+{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.
+enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cfr-lm/t1-c
+lm.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ma
+thsy.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cfr-lm
 /dotdigits-clm.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dv
 ips/lm/lm-ts1.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvi
 ps/lm/lm-rm.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
@@ -2377,29 +2566,30 @@ TeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Richard/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/Richard/AppData/Local/Programs/M
 iKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Richard/AppData/Local/Programs/
 MiKTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/Richard/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/lm/lmmib7.pfb><C:/Users/Richard/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Richard/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Richard/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Richard/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Richard/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Richard/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Richard/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Richard/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Richard/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/lm/lmri7.pfb><C:/Users/Richard/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/Richard/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Richard/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Richard/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss9.pfb><C:/Users/Richard/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Richard/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/Richard/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/U
-sers/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><
-C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.pf
-b>
-Output written on HonorsMultivariableCalculus.pdf (50 pages, 811255 bytes).
+ms/MiKTeX/fonts/type1/public/lm/lmmib5.pfb><C:/Users/Richard/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/lm/lmmib7.pfb><C:/Users/Richard/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Richard/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Richard/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Richard/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Richard/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Richard/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Richard/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Richard/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Richard/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/lm/lmri7.pfb><C:/Users/Richard/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/Richard/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Richard/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Richard/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss9.pfb><C:/Users/Richard/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Richard/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/Richard/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:
+/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb
+><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.
+pfb>
+Output written on HonorsMultivariableCalculus.pdf (68 pages, 949332 bytes).
 PDF statistics:
- 938 PDF objects out of 1000 (max. 8388607)
- 362 named destinations out of 1000 (max. 500000)
+ 1230 PDF objects out of 1440 (max. 8388607)
+ 521 named destinations out of 1000 (max. 500000)
  131154 words of extra memory for PDF output out of 154059 (max. 10000000)
 
