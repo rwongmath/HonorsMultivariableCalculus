@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.20)  30 OCT 2022 16:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.20)  19 NOV 2022 16:15
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2480,116 +2480,300 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[58])
+[58]
+
+LaTeX Warning: Reference `vecvalcomponents' on page 59 undefined on input line 
+1146.
+
+
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
 [59]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[60]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[61])
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[62]
 \mycount=\count436
- [60
+ (chapters/3-Derivatives/derivatives.tex [63
 
 ]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[64]
+
+! LaTeX Error: Environment question undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.171 \begin{question}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{document} ended by \end{question}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.173     \end{question}
+                        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[65]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[66]
+
+! LaTeX Error: Environment question undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.257 \begin{question}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{document} ended by \end{question}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.259     \end{question}
+                        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[67]
+Overfull \hbox (77.48218pt too wide) detected at line 387
+[] \OT1/lmr/m/n/10 = [] []
+ []
+
+
+Overfull \hbox (49.46814pt too wide) detected at line 410
+[] \OT1/lmr/m/n/10 = []  [] []
+ []
+
+
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[68]
+Runaway argument?
+{x_0) + t\bm {v}$$ Observe that the chain rule depends on the magnitu\ETC.
+! Paragraph ended before \bm was complete.
+<to be read again> 
+                   \par 
+l.451 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.451 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.451 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[69]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[70]
+! Undefined control sequence.
+<recently read> \nm 
+                    
+l.595 ...ional derivative in the direction of $\nm
+                                                  {u} = \langle 5, 12 \rangl...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[71])
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[72]
 \mycount=\count437
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 57.
+(hyperref)                removing `math shift' on input line 60.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 57.
+(hyperref)                removing `superscript' on input line 60.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 57.
+(hyperref)                removing `math shift' on input line 60.
 
-[61
+[73
 
 ]
 \mycount=\count438
- [62
+ [74
 
 ]
 \mycount=\count439
- [63
+ [75
 
 ]
 \mycount=\count440
  (HonorsMultivariableCalculus.ans)
 No file HonorsMultivariableCalculus.bbl.
 No file HonorsMultivariableCalculus.ind.
-[64
+[76
 
 
 ]
 \tf@toc=\write10
 \openout10 = `HonorsMultivariableCalculus.toc'.
 
- (HonorsMultivariableCalculus.aux)
+
+
+LaTeX Warning: Hook 'shipout/lastpage' executed on wrong page (68 not 80).
+               Rerun to correct this.
+
+(HonorsMultivariableCalculus.aux)
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `HonorsMultivariableCalculus.out' has not cha
-nged.
-(rerunfilecheck)             Checksum: D9D83908EA0D005E4F6A6C9977FD1FF5;1202.
+
+Package rerunfilecheck Warning: File `HonorsMultivariableCalculus.out' has chan
+ged.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `HonorsMultivariableCalculus.out':
+(rerunfilecheck)             Before: D9D83908EA0D005E4F6A6C9977FD1FF5;1202
+(rerunfilecheck)             After:  AA30BE5523DDB8F38CA2812D326778E6;1202.
  ) 
 Here is how much of TeX's memory you used:
- 52195 strings out of 475389
- 1173291 string characters out of 2776056
+ 52421 strings out of 475389
+ 1177309 string characters out of 2776056
  1702986 words of memory out of 3000000
- 71629 multiletter control sequences out of 15000+600000
- 646094 words of font info for 497 fonts, out of 8000000 for 9000
+ 71726 multiletter control sequences out of 15000+600000
+ 646402 words of font info for 500 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  114i,16n,120p,1026b,2396s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.
-enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cfr-lm/t1-c
-lm.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ma
-thsy.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cfr-lm
-/dotdigits-clm.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dv
-ips/lm/lm-ts1.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvi
-ps/lm/lm-rm.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
-/lm/lm-mathex.enc}<C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/lm/lmbsy10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/lm/lmbsy7.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/lm/lmbx10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/lm/lmbx7.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/lm/lmbx8.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/font
-s/type1/public/lm/lmbxi10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/lm/lmex10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/Richard/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Richard/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/Richard/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Richard/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/Richard/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/lm/lmmib5.pfb><C:/Users/Richard/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/lm/lmmib7.pfb><C:/Users/Richard/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Richard/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Richard/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Richard/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Richard/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Richard/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Richard/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Richard/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Richard/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/lm/lmri7.pfb><C:/Users/Richard/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/Richard/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Richard/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Richard/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss9.pfb><C:/Users/Richard/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Richard/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/Richard/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:
-/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb
-><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.
-pfb>
-Output written on HonorsMultivariableCalculus.pdf (68 pages, 949332 bytes).
+
+pdfTeX warning (dest): name{chapter*.32} has been referenced but does not exist
+, replaced by a fixed one
+
+{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.en
+c}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cfr-lm/t1-clm
+.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-math
+sy.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cfr-lm/d
+otdigits-clm.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvip
+s/lm/lm-ts1.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
+/lm/lm-rm.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/l
+m/lm-mathex.enc}<C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/lm/lmbsy10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/lm/lmbsy7.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/lm/lmbx10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/lm/lmbx7.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/lm/lmbx8.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/lm/lmbxi10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/lm/lmex10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/lm/lmmi10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/lm/lmmi5.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Richard/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/Richard/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Richard/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/Richard/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/lm/lmmib5.pfb><C:/Users/Richard/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/lm/lmmib7.pfb><C:/Users/Richard/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Richard/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Richard/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Richard/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Richard/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Richard/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Richard/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Richard/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Richard/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/lm/lmri7.pfb><C:/Users/Richard/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/Richard/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Richard/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Richard/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss9.pfb><C:/Users/Richard/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Richard/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/Richard/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/U
+sers/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><
+C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.pf
+b>
+Output written on HonorsMultivariableCalculus.pdf (80 pages, 1033095 bytes).
 PDF statistics:
- 1230 PDF objects out of 1440 (max. 8388607)
- 521 named destinations out of 1000 (max. 500000)
+ 1428 PDF objects out of 1440 (max. 8388607)
+ 641 named destinations out of 1000 (max. 500000)
  131154 words of extra memory for PDF output out of 154059 (max. 10000000)
 

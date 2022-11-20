@@ -1,15 +1,663 @@
-Now we can turn to defining the multivariable derivative
+Now that we have understood the notions of limits and continuity, we can turn to defining the notion of the multivariable derivative.
 
-\section{The Single-variable derivative}
+Let us first recall the notion of the derivative of a single-variable function:
+
+
+\begin{definition}
+    A function $f : D \subset \R \to \R$ is \textbf{differentiable} at a point $x_0 \in D$ if 
+
+    \begin{itemize}
+        \item There exists $\delta$ such that $B_\delta(x_0) \subseteq D$
+        \item The following limit exists:  $$\lim_{h \to 0} \frac{f(x_0+h) - f(x_0)}{h} = L$$
+    \end{itemize}
+
+    If $f$ is differentiable at $x_0$, we say that $L$ is \textbf{the derivative of $f$ at $x_0$}, and we write $$f'(x_0) := L$$
+    (sometimes written $\frac{df}{dx}(x_0) = L$)
+    \end{definition}
+
+The notion of the derivative in single-variable calculus has many interpretations:
+
+The derivative $f'(a)$ tells us the slope of the tangent line to the graph $y=f(x)$ at the point $x=a$.
+
+The derivative $f'(a)$ tells us the instantaneous rate of change of $f(x)$ at the point $x=a$.
+
+The derivative $\frac{d}{dx}$ is an operator, whose input is a differentiable function $f : \R \to \R$, and whose output is a function $f' : \R \to \R$.
+
+
+The derivative depends precisely on the local behavior of $f(x)$ near $x_0$.  That is, we look precisely at the behavior of $f(x)$ on $B_\varepsilon(x_0)$.
 
 \section{The Multivariable Derivative}
 
+Bad definition: 
+
+$$\lim_{\bm{h} \to \bm{0}} \frac{f(\bm{x_0+h})-f(\bm{x_0})}{||\bm{h}||}$$
+
+Bad example 1: $f(x,y) = x$.  Limit does not exist taking the sequences $(\frac{1}{n}, 0)$, $(-\frac{1}{n}, 0)$, and $(0, \frac{1}{n})$
+
+Bad example 2: Set $k=1$.  Does this agree with the usual definition of the limit?
+
+$$\lim_{h \to 0} \frac{f(x_0+h)-f(x_0)}{|h|}$$
+
+consider the function $f(x) = |x|$
+
+
+
+
+\begin{motivating}
+    Paradigm shift:
+\end{motivating}
+
+
+    The derivative of a single variable function $f(x)$ at a point $x_0$ is the \textbf{approximation} of $f(x)$ by a linear transformation at $x_0$.
+
+\begin{definition}
+    A single variable function is \textbf{differentiable at }$x_0$ if there exists a linear transformation $T: \R \to \R$ such that 
+    
+    $$\lim_{h \to 0} \bigg|\frac{f(x_0+h)-f(x_0)-T(h)}{h}\bigg| = 0$$
+    
+    Observe that by our characterization of linear transformations $T: \R \to \R$, $$T(x) = mx$$ for some $m$.  We define the derivative of $f$ at $x_0$ to be $m$. That is,    
+    $$f'(x_0) := m$$
+    \end{definition}
+
+
+
+Good definition:
+
+\begin{definition}
+    A multivariable function $f : A \subset R^m \to \R^n$ is \textbf{differentiable at} an interior point $\bm{x_0}$ of $A$  if there exists a linear transformation $T: \R^m \to \R^n$ such that 
+    
+    $$\lim_{\bm{h} \to \bm{0}} \frac{||f(\bm{x_0+h})-f(\bm{x_0})-T(\bm{h})||}{||\bm{h}||} = 0$$
+    
+    The \textbf{derivative} of $f$ at $x_0$ is the linear transformation $$Df(\bm{x_0}) := T$$
+    \end{definition}
+
+\begin{remark}
+    The derivative of a function $f : \R^m \to \R^n$ at a point $x_0$ is the \textbf{approximation} of $f$ by a \textbf{linear transformation} at $x_0$.
+    \end{remark}
+
+    \begin{proposition}[Uniqueness]
+    Suppose $f : A \subset \R^m \to \R^n$ is differentiable at $\bm{x_0}$.
+       
+    \vspace{1em}
+    Then the derivative $Df(\bm{x_0}) : \R^m \to \R^n$ is unique.
+    \end{proposition}
+
+    \begin{example}        
+The constant map $c: \R^m \to \R^n$ defined by $c(\bm{x}) = \bm{a}$ is differentiable everywhere, and $Dc(\bm{x_0}) = 0$.
+    \end{example}
+
+    \begin{example}
+    A linear map $T: \R^m \to \R^n$ is differentiable everywhere, and $DT(\bm{x_0}) = T$.
+    \end{example}
+
+    \begin{proposition}
+Suppose that $f, g : A \to \R^n$ are differentiable at $x_0  \in A^\circ$. Then $f+g$ and $\lambda f$ are differentiable at $x_0 \in A^\circ$.
+\end{proposition}
+
+    \begin{proposition}[Differentiability implies continuity]
+    Suppose $f : A \subset \R^m \to \R^n$ is differentiable at $\bm{x_0}$. 
+    
+    \vspace{1em}
+    Then $f$ is continuous at $\bm{x_0}$.
+    \end{proposition}
+
+    \begin{theorem}[The Chain rule]
+    Suppose that $g: \R^k \to \R^m$ is differentiable at $x_0 \in \R^k$, and $f : \R^m \to \R^n$ is differentiable at $g(\bm{x_0}) \in \R^m$.  
+    
+    \vspace{1em}
+    
+    Then $f \circ g : \R^k \to \R^n$ is differentiable at $x_0 \in \R^k$, and 
+    $$D(f \circ g)(\bm{x_0}) = D(f)(g(\bm{x_0})) \circ Dg(\bm{x_0})$$
+    
+    \end{theorem}
+
+
 \subsection{The derivative of a vector valued function}
 
-\subsection{Linear Approximation}
+\begin{theorem}
+    Let $\bm{r}(t) = \langle x_1(t), \cdots, x_n(t) \rangle$ be a vector-valued function.  
+    
+    The \textbf{derivative} of $\bm{r}(t) : \R \to \R^n$ at an interior point $\bm{t_0}$ is the linear transformation $T: \R \to \R^n$ given by 
+    $$T = 
+\begin{bmatrix}
+x_1'(t_0) \\
+\vdots \\
+x_n'(t_0) \\
+\end{bmatrix}$$
+We sometimes write this derivative as $\bm{r}'(t) : \R \to \R^n$.
+\end{theorem}
 
-\section{Optimizing Multivariable fucntions}
+
+\begin{theorem}
+    A vector-valued function $\bm{r}(t)= \langle x_1(t), \cdots, x_n(t) \rangle$ is differentiable if and only if the functions $x_i(t)$ are differentiable.
+     $$\bm{r}'(t) = \langle x_1'(t), \cdots, x_n'(t) \rangle$$
+\end{theorem}
+
+    We can think of the derivative $\bm{r}'(t)$ as a tangent vector to the parametric curve of $\bm{r}(t)$.
+
+
+\begin{definition}
+    The \textbf{tangent line} at $\bm{r}(t_0)$ is the line determined by the direction vector $\bm{r}'(t_0)$ and the point $\bm{r}(t_0)$.  That is, the line can be parametrized as 
+    $$\bm{L}(t) = \bm{r}(t_0) + t\bm{r}'(t_0)$$
+    \end{definition}
+
+\fixthis{picture}
+
+\begin{theorem}[Differentiation Rules]
+       Assume that $\bm{r}(t)$ and $\bm{s}(t)$ are differentiable vector-valued functions $\R \to \R^n$..
+       
+      \begin{enumerate}
+        \item $\frac{d}{dt}(\bm{r}(t) + \bm{s}(t)) = \bm{r}'(t) + \bm{s}'(t)$ 
+        \item \textbf{Scalar product rule}. For any differentiable scalar-valued function $f(t)$, 
+        $$\frac{d}{dt}(f(t)\bm{r}(t)) = f(t)\bm{r}'(t) + f'(t)\bm{r}(t)$$   
+        \vspace{-1em}
+        \item \textbf{Chain rule}. For any differentiable scalar-valued function $f(t)$, $$\frac{d}{dt}(\bm{r}(f(t))) =  \bm{r}'(f(t))f'(t)$$  
+    \end{enumerate}
+    \end{theorem}
+
+\begin{theorem}[Dot product rule]
+       Assume that $\bm{r}(t)$ and $\bm{s}(t)$ are differentiable vector-valued functions $\R \to \R^n$. Then
+       $$\frac{d}{dt}(\bm{r}(t) \cdot \bm{s}(t)) = \bm{r}'(t)\cdot\bm{s}(t) + \bm{r}(t)\cdot\bm{s}'(t)$$ 
+    \end{theorem}
+    
+       
+    \begin{theorem}[Cross product rule]
+       Assume that $\bm{r}(t)$ and $\bm{s}(t)$ are differentiable vector-valued functions $\R \to \R^3$. Then 
+       $$\frac{d}{dt}(\bm{r}(t) \times \bm{s}(t)) = \bm{r}'(t)\times \bm{s}(t) + \bm{r}(t)\times \bm{s}'(t)$$
+    \end{theorem}
+
+\subsection{The derivative of multivariable functions}
+
+\begin{question}
+    How should we think of the derivative of a multivariable function $f: \R^n \to \R$?
+    \end{question}
+
+Given a function $g: \R^n \to \R$, we can graph it as a surface $x_{n+1} = g(x_1, \cdots, x_n)$ in $\R^{n+1}$, which has points $$(x_1,\cdots, x_n, g(x_1, \cdots, x_n))$$
+    
+    
+    If $T$ is the derivative of a function $f: \R^n \to \R$, then $T : \R^n \to \R$ is a linear map, which corresponds to a $n \times 1$ matrix.
+    \begin{equation*}
+T(x_1, \cdots, x_n) = A\begin{bmatrix}
+x_1 \\
+\vdots\\
+x_n
+\end{bmatrix}
+=
+\begin{bmatrix}
+a_1 & \cdots & a_n
+\end{bmatrix}\begin{bmatrix}
+x_1 \\
+\vdots\\
+x_n
+\end{bmatrix}
+= \sum_i^n a_ix_i
+\end{equation*}
+
+\begin{proposition}
+The graph of $T : \R^n \to \R$ is the hyperplane $x_{n+1} = \sum_i^n a_ix_i$.
+\end{proposition}
+
+\begin{definition}
+    The \textbf{$i$-th partial derivative} $D_if$ of a multivariable function $f : A \subset \R^m \to \R$ for $\bm{x_0} \in A^\circ$ is defined as the limit
+    $$D_if(\bm{x_0}) =  \lim_{t \to 0} \frac{f(\bm{x_0}+t\bm{e_i})-f(\bm{x_0})}{t}, \qquad i = 1, \cdots, n$$
+    if it exists.
+    
+    \end{definition}
+
+    \begin{example}
+        Let $f: \R^2 \to \R$ be defined by $f(x,y) = xe^{xy}$.  Then the partial derivatives of $f$ are
+        $$\frac{\partial f}{\partial x} = xye^{xy} + e^{xy} \qquad \frac{\partial f}{\partial y} = x^2e^{xy}$$
+    \end{example}
+    
+
+\begin{proposition}
+    Given a graph of $z = f(x_1, \cdots, x_n)$, the tangent (hyperplane) in $\R^{n+1}$ is spanned by vectors of the form $\bm{e_i} + \frac{\partial f}{\partial x_i}\bm{e_{n+1}}$
+    \end{proposition}
+    
+    \fixthis{picture}
+    
+    \begin{proposition}
+    We can take the normal vector of the tangent hyperplane in $\R^{n+1}$ to the graph of a multivariable function $f : \R^n \to \R$ to be 
+    $$\bm{n} = \sum_{i}^n \left(\frac{\partial f}{\partial x_i}\bm{e_i}\right) -\bm{e_{n+1}} = \left\langle \frac{\partial f}{\partial x_1}, \cdots, \frac{\partial f}{\partial x_n}, -1\right\rangle $$
+    \end{proposition}
+
+    \begin{theorem}
+    Let $\bm{a} = \langle a_1, \cdots, a_n \rangle \in \R^n$.  The equation of the tangent hyperplane in $\R^{n+1}$ to the graph of a multivariable function $f(\bm{a}) : \R^n \to \R$ at a point $$\bm{\overline{a}} = (a_1, \cdots, a_n, f(\bm{a}))$$ is given by 
+    
+    %\pause
+    
+    $$\left\langle \frac{\partial f}{\partial x_1}, \cdots, \frac{\partial f}{\partial x_n}, -1 \right\rangle \cdot (\bm{x} - \bm{\overline{a}}) = 0$$
+
+    Equivalently, $$x_{n+1} = f(\bm{a}) + \begin{bmatrix}
+D_1f(\bm{a}) & D_2f(\bm{a}) & \cdots & D_nf(\bm{a})
+\end{bmatrix} (\bm{x} - \bm{a}) $$
+    \end{theorem}
+
+ We can use the multivariable derivative to approximate multivariable functions!
+
+ \begin{theorem}[Linear approximation]
+    
+    If $f : A \subset \R^m \to \R$ is \underline{differentiable} at a point $\bm{a} = (a_1, \cdots, a_n)$, and $\bm{x}= (x_1, \cdots, x_n)$ is close to $\bm{a}$, then 
+    \begin{align*}
+     f(\bm{x}) &\approx f(\bm{a}) + \begin{bmatrix}
+D_1f(\bm{a}) & D_2f(\bm{a}) & \cdots & D_nf(\bm{a})
+\end{bmatrix} (\bm{x} - \bm{a}) \\
+    &= f(\bm{a}) + \sum_{i}^n \left(\frac{\partial f}{\partial x_i}(\bm{a})\right)(x_i - a_i)   
+    \end{align*}
+    
+    \end{theorem}
+
+Equivalently, one can say that the change in $f$ near $\bm{a}$ can be approximated by the partial derivatives and the change in $x_i$.
+    
+    
+    $$\Delta f \approx \sum_{i}^n \left(\frac{\partial f}{\partial x_i}(\bm{a})\right)\Delta x_i$$
+
+\subsection{The multivariable derivative in coordinates}
+
+\begin{question}
+    How do we calculate the linear transformation $Df(\bm{x_0})$ for general multivariable functions $f : A \subset \R^m \to \R^n$?
+    \end{question}
+
+
+\begin{definition}
+    Let $f : A \subset \R^m \to \R^n$ be a multivariable function defined by $f_i  : A \subset \R^m \to \R$:
+    \begin{equation*}
+        f(\bm{x}) = \begin{bmatrix}
+f^1(\bm{x}) \\
+\vdots \\
+f^n(\bm{x})
+\end{bmatrix}
+    \end{equation*}
+    
+    The \textbf{Jacobian matrix} of $f$ at $\bm{x_0}$ is 
+    
+    \begin{equation*}
+        [J_f(\bm{x_0})] = \begin{bmatrix}
+D_1f^1(\bm{x_0}) & D_2f^1(\bm{x_0}) & \cdots & D_mf^1(\bm{x_0}) \\
+D_1f^2(\bm{x_0}) & D_2f^2(\bm{x_0}) & \cdots & D_mf^2(\bm{x_0}) \\
+\vdots & \vdots & \vdots & \vdots\\
+D_1f^n(\bm{x_0}) & D_2f^n(\bm{x_0}) & \cdots & D_mf^n\bm{x_0}) 
+\end{bmatrix}
+    \end{equation*}
+    
+    if the partial derivatives exist.
+    
+    \end{definition}
+
+\begin{theorem}[The derivative in coordinates]
+    Let  $f : A \subset \R^m \to \R^n$ be a multivariable function.  If $f$ is \textbf{differentiable at} $\bm{x_0}$, then all the partial derivatives $D_if^j\bm{x_0})$ exist, and the standard matrix of $Df(\bm{x_0})$ is $[J_f(\bm{x_0})]$.  That is,
+    $$Df(\bm{x_0})(\bm{h}) = [J_f(\bm{x_0})]\bm{h}$$
+    
+    \end{theorem}
+
+    \begin{example}
+    Consider the transformation from polar coordinates to rectangular coordinates, which is the function $f(r,\theta) : (0, \infty) \times [0, 2\pi) \subset \R^2 \to \R^2$ given by $$f(r, \theta) = \langle r\cos(\theta), r\sin(\theta) \rangle$$
+
+    Then the Jacobian of $f$ is the matrix
+
+\begin{equation*}
+        [J_f(r, \theta)] = \begin{bmatrix}
+\cos(\theta), -r\sin(\theta) \\
+\sin(\theta), r\cos(\theta)  
+\end{bmatrix}
+    \end{equation*}
+    
+    \end{example}
+    
+    
+    \begin{remark}
+    The converse does not hold - there exists functions $f$ such that all the partial derivatives exist at some point $\bm{x_0}$, but $f$ is \underline{not} differentiable at $\bm{x_0}$.
+    \end{remark}    
+
+\begin{example}
+    Consider the function $f(x,y) = \left\{
+		\begin{array}{ll}
+			\frac{xy}{x^2 + y^2} & \text{ if } (x,y) \neq (0,0) \\
+			0 & \text{ otherwise } 
+		\end{array}
+		\right.$
+
+  Then the partial derivatives of $f$ exist at $(0,0)$, but $f$ is not continuous at $(0,0)$!
+\end{example}
+
+\fixthis{picture}
+
+    \begin{example}
+    Consider the function  $f(x,y) = \left\{
+		\begin{array}{ll}
+			\frac{2xy(x+y)}{x^2+y^2} & \text{ if } (x,y) \neq (0,0) \\
+			0 & \text{ otherwise } 
+		\end{array}
+		\right.$
+
+    Then the partial derivatives exist at $(0,0)$, but $f$ is not differentiable at $(0,0)$.  You will prove this in the exercises below.
+\end{example}
+
+\fixthis{picture}
+
+However, if we strengthen the hypotheses, then we do have the following result:
+    
+    \begin{theorem}
+    Let  $f : A \subset \R^m \to \R^n$ be a multivariable function.  If all the partial derivatives $D_if^j\bm{x_0})$ \underline{exist and are continuous in some open ball} $B_\varepsilon(\bm{x_0})$, then $f$ is differentiable at $\bm{x_0}$.
+    \end{theorem}
+
+\subsection{The chain rule}
+
+Let us now revisit the previous theorems, now that we can compute general multivariable derivatives!
+
+\begin{theorem}[The Chain rule]
+    Let $f : \R^n \to \R^m$, and let $g: \R^m \to \R^k$ be multivariable functions such that $f$ is differentiable at $\bm{x_0} \in \R^n$, and $g$ is differentiable at $f(\bm{x_0}) \in \R^m$.
+    
+    \vspace{1em}
+    Then $g \circ f : \R^n \to \R^k$ is differentiable at $\bm{x_0} \in \R^n$, and 
+    
+    $$D(g \circ f)(\bm{x_0}) = Dg(f(\bm{x_0})) \circ Df(\bm{x_0})$$
+    
+    \end{theorem}
+
+We can prove this using the definition of derivative.
+
+However, since we know that the derivative can be computed in terms of the Jacobian, we equivalently have
+
+    \begin{theorem}[The Chain rule in coordinates]
+        Suppose that $f : \R^n \to \R^m$ is differentiable at $\bm{x_0} \in \R^n$, and $g: \R^m \to \R^k$ is differentiable at $f(\bm{x_0}) \in \R^m$.   Then
+    $$[J_{g\circ f}(\bm{x_0})] =\left[J_g(f(\bm{x_0}))\right][J_f(\bm{x_0})]$$
+    \end{theorem}
+
+We can spell this out in terms of coordinates:
+
+\begin{example}[The Chain rule in coordinates]
+    Suppose that $f : \R^n \to \R^m$ is differentiable at $\bm{x_0} \in \R^n$, and $g: \R^m \to \R^k$ is differentiable at $f(\bm{x_0}) \in \R^m$. Then
+    \begin{equation*}
+        \begin{bmatrix}
+D_1(g \circ f)^1(\bm{x_0}) & \cdots & D_n(g \circ f)^1(\bm{x_0}) \\
+\vdots & \vdots & \vdots\\
+D_1(g \circ f)^k(\bm{x_0}) & \cdots & D_n(g \circ f)^k(\bm{x_0}) \\
+\end{bmatrix} = 
+\begin{bmatrix}
+D_1g^1(f(\bm{x_0})) & \cdots & D_mg^1(f(\bm{x_0})) \\
+\vdots & \vdots & \vdots\\
+D_1g^k(f(\bm{x_0}))  & \cdots & D_mg^k(f(\bm{x_0})) 
+\end{bmatrix}
+\begin{bmatrix}
+D_1f^1(\bm{x_0}) & \cdots & D_nf^1(\bm{x_0}) \\
+\vdots & \vdots & \vdots\\
+D_1f^m(\bm{x_0})  & \cdots & D_nf^m(\bm{x_0}) 
+\end{bmatrix}
+    \end{equation*}
+    \end{example}
+    
+\begin{motivating}
+    How can we compute $D(g \circ f)(\bm{x_0})$?  Equivalently, what are the entries of the matrix $[J_{g\circ f}(\bm{x_0})]$?
+\end{motivating}
+
+To answer this question, let us look at the chain rule in a specific case:
+
+\begin{example}[The Chain rule for $\R^n \to \R^m \to \R$]
+    Suppose that $f : \R^n \to \R^m$ is differentiable at $\bm{x_0} \in \R^n$, and $g: \R^m \to \R$ is differentiable at $f(\bm{x_0}) \in \R^m$. Then
+    \begin{equation*}
+        \begin{bmatrix}
+D_1(g \circ f)(\bm{x_0}) & \cdots & D_n(g \circ f)(\bm{x_0}) 
+\end{bmatrix} = \\
+\begin{bmatrix}
+D_1g(f(\bm{x_0})) & \cdots & D_mg(f(\bm{x_0})) 
+\end{bmatrix}
+\begin{bmatrix}
+D_1f^1(\bm{x_0}) & \cdots & D_nf^1(\bm{x_0}) \\
+\vdots & \vdots & \vdots\\
+D_1f^m(\bm{x_0})  & \cdots & D_nf^m(\bm{x_0}) 
+\end{bmatrix}
+    \end{equation*}
+    Therefore,
+    $$\D_i(g \circ f) = \sum_k  D_i f^k \ D_k g$$
+    \end{example}
+
+\begin{corollary}
+    Suppose that $f : \R^n \to \R^m$ is differentiable at $\bm{x_0} \in \R^n$, and $g: \R^m \to \R$ is differentiable at $f(\bm{x_0}) \in \R^m$. Then
+$$\left[J_{g\circ f}(\bm{x_0})\right] = \left[D_i(g \circ f)^j\right] = \left[\sum_k  D_i f^k \ D_k g^j\right]$$
+\end{corollary} 
+
+\begin{example}
+    Let $f(x,y,z) = xy + z$.  Calculate $\frac{\partial f}{\partial s}$, where $x = s^2$, $y = st$, $z = t^2$.
+\end{example}
+
+
+Let us now turn to another specific case of the chain rule:  
+
+\begin{proposition}[Chain rule for paths]
+    Let $f(x_1, \cdots x_n) : \R^n \to \R$ be a differentiable function, and let $\bm{r}(t) = \langle x_1(t), \cdots, x_n(t) \rangle : \R \to \R^n$ be a vector-valued function.  Then $f(\bm{r}(t)) : \R \to \R$ is a single variable function, and 
+    \begin{align*}
+        \frac{d}{dt}f(\bm{r}(t_0)) &= \begin{bmatrix}
+\frac{\partial f}{\partial x_1}(\bm{r}(t_0)) & \cdots & \frac{\partial f}{\partial x_n}(\bm{r}(t_0))
+\end{bmatrix} \begin{bmatrix}
+x_1'(t_0) \\
+\vdots \\
+x_n'(t_0) \\
+\end{bmatrix} \\
+&= \sum_{i=1}^n
+\left(\frac{\partial f}{\partial x_i}(\bm{r}(t_0)) \right) x_i'(t_0)
+    \end{align*}
+    \end{proposition}
+
+
+This measures the rate of change of $f$ along the path $\bm{r}(t)$.
+
+\fixthis{PICTURE}
+
+
+
+\begin{example}
+    Consider the linear path through $\bm{x_0} \in \R^n$ in the direction of a vector $\bm{v}$, say $$\bm{r}(t) = \bm{x_0) + t\bm{v}$$  Observe that the chain rule depends on the magnitude of $\bm{v}$
+
+    
+\end{example}
+
+Let us make a definition that is independent of $||\bm{V}||$
+
+\begin{definition}
+    If $\bm{u} = \langle u_1, \cdots, u_n \rangle$ is a unit vector in $\R^n$, then the \textbf{directional derivative}\define{directional derivative}
+    in the direction of $\bm{u}$ at the point $\bm{x_0} \in \R^n$ is defined as
+    $$D_{\bm{u}} f(\bm{x_0}) = u_1\frac{\partial f}{\partial x_1}(\bm{x_0}) + \cdots + u_n\frac{\partial f}{\partial x_n}(\bm{x_0})$$
+    \end{definition}
+
+The directional derivative measures the rate of change of $f$ in the direction of $\bm{u}$.  That is, $$D_{\bm{u}} f(\bm{x_0}) = \frac{d}{dt}f(\bm{r}(0))$$ for $\bm{r}(t) = \bm{x_0} + t\bm{u}$.
+
+\fixthis{PICTURE}
+
+\begin{example}
+    
+\end{example}
+
+
+
+\subsection{The gradient}
+
+
+\begin{definition}
+    If $f(x_1,\cdots,x_n)$ is a function of $n$ variables, then the \textbf{gradient} of $f$ is the vector-valued function 
+    $$\nabla f = \langle \frac{\partial f}{\partial x_1} , \cdots, \frac{\partial f}{\partial x_n} \rangle$$
+    That is, $$\nabla f = [Df(\bm{x_0})]^\top$$
+    \end{definition}
+
+    \fixthis{transpose meaning}
+
+    
+    \begin{proposition}
+    The chain rule for paths can be rewritten as
+    $$\frac{d}{dt}f(\bm{r}(t_0))= \nabla f(\bm{r}(t_0)) \cdot \bm{r}'(t_0)$$
+    
+    \end{proposition}
+
+
+If $\bm{r}(t)$ parameterizes a level curve $f(x_1, \cdots, x_n) =k$, recall that means that for all $t$, $$f(\bm{r}(t)) = k$$
+    
+    
+    \begin{proposition}
+    The gradient $\nabla f$ is \textbf{orthogonal} to the (tangent lines of) the level curves.
+    \end{proposition}
+
+\begin{corollary}
+    Let $f(x_1,\cdots,x_n) : \R^n \to \R$ be a differentiable function at a point $\bm{a} = (a_1,\cdots, a_n)$.  Moreover, suppose that $f(a_1,\cdots,a_n) = k$.  
+    
+    Then $\nabla f = \bm{0}$, or $\nabla f$ is \textbf{orthogonal} to the surface $$f(x_1,\cdots,x_n) = k$$
+    \end{corollary}
+
+\begin{corollary}
+    The \textbf{tangent hyperplane} to the surface $f(x_1,\cdots,x_n) = k$ in $\R^n$ at the point $\bm{a} = (a_1,\cdots, a_n)$ is given by 
+    $$\nabla f(\bm{a}) \cdot (\bm{x - a}) = 0$$
+    \end{corollary}
+
+\begin{motivating}
+    How does this relate to previous notions of tangent hyperplane?
+\end{motivating}
+        
+    \begin{theorem}
+    The graph of a multivariable function $g(x_1, \cdots, x_n) : \R^n \to \R$ can be described as $$x_{n+1} = g(x_1, \cdots, x_n)$$ in $\R^{n+1}$.  The equation of the tangent hyperplane in $\R^{n+1}$ at a point $$\bm{\overline{a}} = (a_1, \cdots, a_n, g(a_1, \cdots, a_n))$$ is given by 
+    
+    
+    $$\left\langle \frac{\partial g}{\partial x_1}, \cdots, \frac{\partial g}{\partial x_n}, -1 \right\rangle \cdot (\bm{\overline{x}} - \bm{\overline{a}}) = 0$$
+    \end{theorem}
+
+    Observe that if we set $f(x_1, \cdots, x_{n+1}) = g(x_1, \cdots, x_n) - x_{n+1}$, then $$\nabla f = \left\langle \frac{\partial g}{\partial x_1}, \cdots, \frac{\partial g}{\partial x_n}, -1 \right\rangle$$
+
+\subsection{Exercises}
+
+
+
+\begin{problem}{notderivative1}
+
+
+    Find a function $f(x) : \R \to \R$ that shows that defining the derivative of a multivariable function as 
+    $$f'(\bm{x_0}) = \lim_{\bm{h} \to \bm{0}} \frac{f(\bm{x_0+h})-f(\bm{x_0})}{||\bm{h}||}$$ \textbf{does not} generalize the single variable derivative.
+
+
+    
+\end{problem}
+
+\begin{problem}{notderivative2}
+
+    Consider the function $f(x,y) = x$.  Show that  $$\lim_{\bm{h} \to \bm{0}} \frac{f(\bm{x_0+h})-f(\bm{x_0})}{||\bm{h}||}$$ does not exist at $(0,0)$.  (Hence, this is also not a good definition of the multivariable derivative).
+    
+\end{problem}
+
+
+\begin{problem}{approx1}
+    Use linear approximation to approximate $\frac{8.01}{\sqrt{(1.99)(2.01)}}$.
+\end{problem}
+
+\begin{problem}{approx2}
+    Use linear approximation to approximate $(2.92)^2\sqrt{4.08}$.
+\end{problem}
+
+\begin{problem}{partialnotcontinuous}
+    Consider the function $f(x,y) = \left\{
+		\begin{array}{ll}
+			\frac{xy}{x^2 + y^2} & \text{ if } (x,y) \neq (0,0) \\
+			0 & \text{ otherwise } 
+		\end{array}
+		\right.$  Use the limit definition of the partial derivative to compute $f_x(0,0)$ and $f_y(0,0)$.
+\end{problem}
+
+\begin{problem}{partialderiv1}
+    Consider the function $f(x,y) = \left\{
+		\begin{array}{ll}
+			\frac{x^3}{x^2 + y^2} & \text{ if } (x,y) \neq (0,0) \\
+			0 & \text{ otherwise } 
+		\end{array}
+		\right.$
+		
+		Use the limit definition of the partial derivative to compute $f_x(0,0)$ and $f_y(0,0)$.
+\end{problem}
+
+\begin{problem}{partialderiv2}
+    Let $f(u,v) = \tan(uv^3)$.  Find the partial derivatives $f_u(u,v)$ and $f_v(u,v)$.
+\end{problem}
+
+
+\begin{problem}{chainrule1}
+    Let $f(x,y,z) = xy + z$.  Calculate $\frac{\partial f}{\partial t}$, where $x = s^2$, $y = st$, $z = t^2$.
+\end{problem}
+
+\begin{problem}{chainrule2}
+    Let $f(x,y) = \tan(xy^2)$, and consider the path $\bm{r}(t) = \langle t, e^t \rangle$.  Compute $\frac{d}{dt}f(\bm{r}(t))$ at the point $(2,e^2)$.
+\end{problem}
+
+\begin{problem}
+    Calculate the gradient of $g(x,y,z) = x\ln(y+z)$.
+\end{problem}
+
+
+\begin{problem}
+    Find the maximum rate of change of $f(x,y) = e^{xy-y^2}$at the point $(1,1)$.
+\end{problem}
+
+\begin{problem}{directionalderiv01}
+    Let $f(x,y) = e^{xy-y^2}$. Compute the directional derivative in the direction of $\nm{u} = \langle 5, 12 \rangle$ at the point $P = (1,1)$.
+\end{problem}
+
+\begin{problem}{directionalderiv1}
+    Find the directional derivative of $g(x,y,z) = xy+z^2$ at the point $P = (3,2,-1)$, in the direction pointing to the origin.
+\end{problem}
+
+\begin{problem}{directionalderiv2}
+    Find the directional derivative of $g(x,y,z) = x\ln(y+z)$ in the direction of the vector $\bm{v} = \langle 2, -1, 1 \rangle$ at the point $P = (2,e,e)$.
+\end{problem}
+
+
+\begin{problem}{tangentplane1}
+    Find an equation of the plane tangent to the graph of $f(x,y) = xy^3 + x^2$ at the point $(2,-2,-12)$
+\end{problem}
+
+\section{Optimizing Multivariable functions}
 
 \subsection{Local optimization}
 
-\subsection{Constrainted Optimization}
+\subsection{Exercises}
+
+\begin{problem}
+    Consider the function $$f(x,y,z,w) = \frac{3x^2 + e^yz + x}{3y^2+2e^{w^2}}$$ 
+
+Compute the fourth order partial derivative $f_{wyzx}$.
+\end{problem}
+
+\begin{problem}{opt1}
+    Consider the function $$f(x,y) = x^3 - xy +  y^3 $$
+    
+    Find the critical points of $f$, and use the second derivative test to classify the critical points of $f$.
+\end{problem}
+
+\begin{problem}{opt2}
+    Consider the function $$f(x,y) = x^2 + y^3 - 2x - 6y$$
+    
+    Find the critical points of $f$, and use the second derivative test to classify the critical points of $f$.
+\end{problem}
+
+\begin{problem}
+    Consider the function $$f(x,y) = \ln(x) + 2\ln(y) -x - 4y$$
+    
+    Find the critical points of $f$, and use the second derivative test to classify the critical points of $f$.
+\end{problem}
+
+\subsection{Constrained Optimization}
+
+\begin{problem}{constrainedopt1}
+    Find the critical points of $f(x,y) = x^4 + y^4$ subject to the constraint $x^2+y^2=1$.  
+\end{problem}
+
+\begin{problem}{global1}
+    Determine the coordinates of the global maxima and minima of $f(x,y) = x^4 + y^4$ on the disk $D = \{ (x,y) \ | \ x^2 + y^2 \leq 1\}$.
+\end{problem}
+
+\begin{problem}{constrainedopt2}
+    Find the critical points of $f(x,y) = -x^2+2y^2+6x$ subject to the constraint $x^2+y^2=1$.  
+\end{problem}
+
+\begin{problem}{global2}
+    Determine the coordinates of the global maxima and minima of $f(x,y) = -x^2+2y^2+6x$ on the disk $D = \{ (x,y) \ | \ x^2 + y^2 \leq 1\}$.
+\end{problem}
+
+\begin{problem}{closest point on line}
+
+Find the point $(a,b)$ on the line $4x+9y=12$ that is closest to the origin.
+   
+\end{problem}

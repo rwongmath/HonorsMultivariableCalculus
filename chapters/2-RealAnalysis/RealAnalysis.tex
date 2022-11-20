@@ -822,11 +822,112 @@ Let $\{\bm{a_n}\}$ be a sequence of vectors in $\R^k$.  If $\{\bm{a_n}\}$ has a 
 
 \end{theorem}
 
+\subsection{Exercises}
+\begin{problem}{limitsdotprod}
+
+Let $\{\bm{a_n}\}$ and $\{\bm{b_n}\}$ be sequences in $\R^n$ that converge to $\bm{a}$ and $\bm{b}$, respectively.  Show that
+      \begin{enumerate}
+          \item $\lim_{n \to \infty}( \bm{a_n} \cdot \bm{b_n} ) = \bm{a} \cdot \bm{b}$
+          \item $\lim_{n \to \infty}(||\bm{a_n}||) = || \bm{a}||$
+      \end{enumerate}
+\end{problem}
+
+\begin{problem}{limitsmagnitude}
+
+Let $\{\bm{a_n}\}$ be a sequence in $\R^n$ that converges to $\bm{a}$.  Show that
+      \begin{enumerate}
+          \item $\lim_{n \to \infty}(||\bm{a_n}||) = || \bm{a}||$
+      \end{enumerate}
+
+\end{problem}
+
+\begin{problem}{prodquotient}
+
+Why don't we have product and quotient rules for limits of two sequences $\{\bm{a_n}\}$, $\{\bm{b_n}\}$ in $\R^n$?
+
+\end{problem}
+
+\begin{problem}{scalarprodquotient}
+Conjecture and prove product and quotient rules for a sequence $\{\bm{a_n}\}$ in $\R^n$ and a sequence $\{b_n\}$ in $\R$.
+\end{problem}
+
+\begin{problem}{alternating}
+Does the limit of the sequence $\{\frac{(-1)^n}{n}\}$ exist?  Prove your answer.
+\end{problem}
+
+\begin{problem}{limseqex1}
+Does the limit of the sequence $\{\frac{n}{n+1}\}$ exist?  Prove your answer.
+\end{problem}
+
+% \begin{problem}
+% Let $\{a_n\}$ and $\{b_n\}$ be sequences of real numbers.  
+% Prove that if $\$
+
+% there exists some $M$ such that  $a_m < b_m$ for all $m > M$
+% \end{problem}
+
+\begin{problem}{averages}
+
+Let $\{\bm{a_n}\}$ be a sequence of real numbers.  The sequence of averages is the sequence $\{b_n\}$ defined by $b_n = \frac{a_1 + \cdots + a_n}{n}$.
+
+Prove that if $\lim_{n \to \infty} a_n = 0$, then the sequence of averages $\{b_n\}$ satisfies $\lim_{n \to \infty} b_n = 0$.
+
+\end{problem}
+
+\begin{definition}
+Let $S$ be a non-empty subset of $\R$.  A real number $x$ is called an \textbf{upper bound}\define{upper bound} of $S$ if $x \geq s$ for all $s \in S$.
+\end{definition}
+
+\begin{definition}
+Let $S$ be a non-empty subset of $\R$.  A real number $x$ is called the \textbf{least upper bound}\define{least upper bound} (alternatively, \textbf{supremum}\define{supremum}) of $S$ if
+\begin{enumerate}
+    \item $x$ is an upper bound for $S$
+    \item If $y$ is an upper bound for $S$, then $x \leq y$
+\end{enumerate}
+
+We often write the least upper bound as $\textnormal{sup}(S)$
+\end{definition}
+
+It turns out that if $S$ is a non-empty subset of $\R$, then if $S$ has an upper bound, then S has a least upper bound.
+
+\begin{definition}
+Let $S$ be a non-empty subset of $\R$.  A real number $x$ is called a \textbf{lower bound}\define{lower bound} of $S$ if $x \leq s$ for all $s \in S$.
+\end{definition}
+
+\begin{definition}
+Let $S$ be a non-empty subset of $\R$.  A real number $x$ is called the \textbf{greatest lower bound}\define{greatest lower  bound} (alternatively, \textbf{infimum}\define{infimum}) of $S$ if
+\begin{enumerate}
+    \item $x$ is a lower bound for $S$
+    \item If $y$ is a lower bound for $S$, then $x \geq y$
+\end{enumerate}
+
+We often write the greatest lower  bound as $\textnormal{inf}(S)$
+\end{definition}
+
+It turns out that if $S$ is a non-empty subset of $\R$, then if $S$ has a lower bound, then S has a greatest lower bound.
 
 
+\begin{definition}
+    A sequence of real numbers $\{a_n\}$ is said to be \textbf{increasing} (resp. \textbf{decreasing}) if $a_n \leq a_{n+1}$ (resp. $a_n \geq a_{n+1}$) for all $n$.
+    \end{definition}
+    
+\begin{problem}{boundedincreasing}
+Prove that if a sequence of real numbers $\{a_n\}$ is increasing and bounded above, then $\lim_{n \to \infty} a_n = \textnormal{sup}(\{a_n\})$
+\end{problem}
 
+\begin{problem}{boundeddecreasing}
+Prove that if a sequence of real numbers $\{a_n\}$ is decreasing and bounded below, then $\lim_{n \to \infty} a_n = \textnormal{inf}(\{a_n\})$
+\end{problem}
 
+\begin{problem}{boundeddecreasing}
+Prove that if a sequence of real numbers $\{a_n\}$ is decreasing and bounded below, then $\lim_{n \to \infty} a_n = \textnormal{inf}(\{a_n\})$
+\end{problem}
 
+\begin{problem}{monotone}
+Prove the following theorem:
+
+Let $\{a_n\}$ be an increasing or a decreasing sequence.  Then $\{a_n\}$ converges if and only if $\{a_n\}$ is bounded.
+\end{problem}
 
 \section{Limits of functions}
 
@@ -874,7 +975,7 @@ Since $\R$ is a well-ordered field (in other words, since ), we can turn this in
     Let $f: \R^n \to \R^m$, and suppose $\lim_{\bm{x} \to \bm{a}}f(x) = \bm{b_1}$ and $\lim_{\bm{x} \to \bm{a}}f(x) = \bm{b_2}$.  Then $\bm{b_1} = \bm{b_2}$.
     \end{proposition}
 
-We will study this for the two different classes of functions (\hyperref[limvectorval]{vector-valued functions} $\R \to \R^n$ and \hyperref[limmulti]{multivariable functions} $\R^n \to \R$)  we've seen.
+We will study this for the two different classes of functions (\hyperref[limvectorval]{vector-valued functions} $\R \to \R^n$ and \hyperref[limmulti]{multivariable functions} $\R^n \to \R$)  we've seen.  This turns out to be enough, as we see in \fixthis{section}
 
 
 
@@ -895,12 +996,12 @@ We will study this for the two different classes of functions (\hyperref[limvect
     A function $f : \R \to \R^m$ has the \textbf{limit} $\bm{b}$ at $a$ if
     
     \vspace{1em}
-    For all $\varepsilon>0$, there exists $\delta > 0$ such that for all $x \in \R$, $$0 < |x-a| < \delta \qquad \textnormal{implies} \qquad ||f(\bm{x}) - \bm{b} || < \varepsilon$$
+    For all $\varepsilon>0$, there exists $\delta > 0$ such that for all $x \in \R$, $$0 < |x-a| < \delta \qquad \textnormal{implies} \qquad ||f(x) - \bm{b} || < \varepsilon$$
     
     \end{definition}
 
 
-\begin{theorem}[Limits of vector-valued functions are determined componentwise]
+\begin{theorem}[Limits of vector-valued functions are determined componentwise]\label{vecvalcomponents}
     For any vector valued function $\bm{r}(t) = \langle x_1(t), \cdots, x_n(t) \rangle$, $$\lim_{t \to a} \bm{r}(t) = \langle x_1, \cdots, x_n \rangle$$ if and only if for all $1 \leq i \leq n$, $$\lim_{t \to a} x_i(t) = x_i$$
     
     
@@ -957,12 +1058,21 @@ We will study this for the two different classes of functions (\hyperref[limvect
 This theorem allows us to reduce to studying limits of single-variable functions.
     
     \begin{example}
-Let $f(x,y) = x$.  Find $$\lim_{(x,y) \to (a,b)}f(x,y)$$
+Let $f(x,y) = x$.  Then $$\lim_{(x,y) \to (a,b)}f(x,y) = a$$
+
+\begin{proof}
+Let $\varepsilon > 0$.  We wish to show that there exists $\delta > 0$ such that if $0 < ||(x,y) - (a,b) || < \delta$, then $|x-a| < \varepsilon$.
+
+Observe that $$|x-a| = \sqrt{(x-a)^2} \leq \sqrt{(x-a)^2 +(y-b)^2} = ||(x,y) - (a,b) ||$$
+Therefore, choosing $\delta = \varepsilon$, we see that if $||(x,y) - (a,b) || < \varepsilon$, then $|x-a| < \varepsilon$.
+
+\end{proof}
+
 \end{example}    
 
 
 \begin{example}
-Let $f(x,y) = \frac{x\sin(y)}{e^x+1}$.  Find $$\lim_{(x,y) \to (a,b)}f(x,y)$$
+Let $f(x,y) = \frac{x\sin(y)}{e^x+1}$.  Then $$\lim_{(x,y) \to (a,b)}f(x,y) = \frac{a\sin(b)}{e^a+1}$$
 \end{example}  
     
     Observe that theorem \ref{limmultirules} allows us to evaluate the limits, except when we possibly divide by zero.
@@ -1002,7 +1112,7 @@ Let $f(x,y) = \frac{x\sin(y)}{e^x+1}$.  Find $$\lim_{(x,y) \to (a,b)}f(x,y)$$
     \begin{theorem}[Squeeze Theorem]
     Let $f(\bm{x})$, $g(\bm{x})$, and $h(\bm{x})$ be functions of $n$ variables such that $$\lim_{\bm{x} \to \bm{P}}f(\bm{x}) = L = \lim_{\bm{x} \to \bm{P}}h(\bm{x})$$
     
-    If there exists $\delta > 0$ such that for all $\bm{x} \in B_\delta(\bm{P})$, we have that $$f(\bm{x}) \leq g(\bm{x}) \leq h(\bm{x})$$ 
+    If there exists $\delta > 0$ such that for all $\bm{x} \in B_\delta(\bm{P}) - \{\bm{P}\}$, we have that $$f(\bm{x}) \leq g(\bm{x}) \leq h(\bm{x})$$ 
     Then $\lim_{\bm{x} \to \bm{P}}g(\bm{x}) = L$.
     \end{theorem}
     
@@ -1017,14 +1127,26 @@ Let $f(x,y) = \frac{x\sin(y)}{e^x+1}$.  Find $$\lim_{(x,y) \to (a,b)}f(x,y)$$
     
     
     
+
+\subsection{Limits of general multivariable functions}\label{limgenmulti}
     
+    Now that we have studied limits of both \hyperref[limvectorval]{vector-valued functions} $\R \to \R^n$ and \hyperref[limmulti]{multivariable functions} $\R^n \to \R$, this turns out to capture the behavior of limits of general multivariable functions $\R^n \to \R^m$!
     
+    The key idea is the following theorem:
     
+    \begin{theorem}[Limits of general multivariable functions are determined componentwise]
+    For any general multivariable function $f : \R^n \to \R^m$, defined by 
+$$f(x_1, \cdots, x_n) = \big\langle f_1(x_1, \cdots, x_n), f_2(x_1, \cdots, x_n), \cdots, f_m(x_1, \cdots, x_n) \big\rangle$$
+Then 
+$$\lim_{\bm{x} \to \bm{P}} f(\bm{x}) = \langle b_1, \cdots, b_n \rangle$$ if and only if for all $1 \leq i \leq m$, $$ \lim_{\bm{x} \to \bm{P}} f_i(\bm{x}) = b_i$$
+
+    \end{theorem}
     
+    \begin{proof}
+    The proof idea is exactly the same as theorem \ref{vecvalcomponents}.
+    \end{proof}
     
-    
-    
-    
+    Thus, it is indeed enough to study limits of multivariable functions $\R^n \to \R$.
     
     
     
@@ -1033,33 +1155,7 @@ Let $f(x,y) = \frac{x\sin(y)}{e^x+1}$.  Find $$\lim_{(x,y) \to (a,b)}f(x,y)$$
 
 \subsection{Exercises}
 
-\begin{problem}{limitsdotprod}
 
-Let $\{\bm{a_n}\}$ and $\{\bm{b_n}\}$ be sequences in $\R^n$ that converge to $\bm{a}$ and $\bm{b}$, respectively.  Show that
-      \begin{enumerate}
-          \item $\lim_{n \to \infty}( \bm{a_n} \cdot \bm{b_n} ) = \bm{a} \cdot \bm{b}$
-          \item $\lim_{n \to \infty}(||\bm{a_n}||) = || \bm{a}||$
-      \end{enumerate}
-\end{problem}
-
-\begin{problem}{limitsmagnitude}
-
-Let $\{\bm{a_n}\}$ be a sequence in $\R^n$ that converges to $\bm{a}$.  Show that
-      \begin{enumerate}
-          \item $\lim_{n \to \infty}(||\bm{a_n}||) = || \bm{a}||$
-      \end{enumerate}
-
-\end{problem}
-
-\begin{problem}{prodquotient}
-
-Why don't we have product and quotient rules for limits of two sequences $\{\bm{a_n}\}$, $\{\bm{b_n}\}$ in $\R^n$?
-
-\end{problem}
-
-\begin{problem}{scalarprodquotient}
-Conjecture and prove product and quotient rules for a sequence $\{\bm{a_n}\}$ in $\R^n$ and a sequence $\{b_n\}$ in $\R$.
-\end{problem}
 
 \begin{problem}{lim0}
 Show that $\lim_{(x,y) \to (0,0)} x\sin(\frac{1}{x^2 + y^2}) =0$.
@@ -1112,17 +1208,126 @@ Consider the function $f(x,y) = \left\{
 
 \section{Continuity}\label{sec:continuity}
 
+Let us now turn to continuity.  Let us first recall the notion of continuity fora single-variable functions:
+
+
+\begin{definition}
+    A function $f :\R \to \R$ is continuous at $a \in \R$ if $\lim_{x \to a}f(x) = f(a)$.
+    
+    \end{definition}
+
+That is, the limit of the function at $a$ is precisely the value of the function at $a$.
+
+\fixthis{picture}
+
+
+The idea for general multivariable functions is identical:
+
+\begin{definition}
+    A general multivariable function $f: \R^m \to \R^n$ is \textbf{continuous} at a point $\bm{P} \in \R^m$ if 
+    $$\lim_{\bm{x} \to \bm{P}} f(\bm{x}) = f(\bm{P})$$
+    
+    $f$ is said to be continuous on a subset $X \subset \R^m$ if it is continuous for every $\bm{P} \in X$.
+    
+    \end{definition}
+
+That is, the limit of the function at $\bm{P}$ is precisely the value of the function at $\bm{P}$.
+
+Thus, questions about continuity are really questions about limits:  To show that a function is continuous, you need to show that the limit exists, and then check that the limit matches the value of the function.
+
+Thus, all of our theorems about limits immediately yield theorems about continuity.
+
+\begin{theorem}
+    Suppose $f: \R^m \to \R^n$ and $g: \R^m \to \R^n$ are general multivariable functions that are \textbf{continuous} at a point $\bm{P}$. Then
+    
+    \begin{enumerate}
+        \item \textbf{Sum Law:} $f+g$ is continuous at $\bm{P}$.
+        \item \textbf{Scalar Multiple Law:} $\lambda f$ is continuous at $\bm{P}$.
+
+    \end{enumerate}
+    
+    
+    \end{theorem}
+
 \subsection{Vector-valued functions}
+
+\begin{proposition}
+   For any vector valued function $$\bm{r}(t) = \langle x_1(t), \cdots, x_n(t) \rangle$$ 
+   $\bm{r}(t)$ is continuous at $P$ if and only if for all $1 \leq i \leq n$, $x_i(t)$ is continuous at $P$.
+    \end{proposition}
+
 
 \subsection{Multivariable functions}
 
-$f : \R^m\to \R$
+\begin{theorem}[Properties of continuity of multivariable functions]
+     Let $f,g : \R^n \to \R$ be functions of $n$ variables. Suppose that $f(\bm{x})$ and $g(\bm{x})$ are continuous at $\bm{P}$.
+    
+    \begin{enumerate}
+        \item \textbf{Product Law:} $f(\bm{x})g(\bm{x})$ is continuous at $\bm{P}$.
+        \item \textbf{Quotient Law:} If $g(\bm{P})\neq 0$, $\frac{f(\bm{x})}{g(\bm{x})}$  is continuous at $\bm{P}$.
+    \end{enumerate}
+    
+    
+    \end{theorem}
 
-\subsection{General Multivariable functions}
+    \begin{example}
+    The function $f: \R^2 \to \R$ given below is continuous for all $(x,y) \in \R^2$. $$f(x,y) = \left\{
+		\begin{array}{ll}
+			\frac{xy^2}{x^2 + y^2} & \text{ if } (x,y) \neq \bm{0} \\
+			0 & \text{ if } (x,y) = \bm{0}
+		\end{array}
+		\right.$$
+		
+	\begin{proof}
+	By the quotient law, $f$ is continuous for all $(x,y) \neq 0$.  We thus only need to show that $\lim_{(x,y) \to (0,0)} \frac{xy^2}{x^2 + y^2} = 0$
+	
+	We will show this directly, but we could have also used the squeeze theorem, or the polar coordinates method.
+	
+	Let $\varepsilon > 0$.  We need to find $\delta > 0$ such that if $0 < ||\langle x, y \rangle|| < \delta$, then $$|\frac{xy^2}{x^2 + y^2} - 0| < \varepsilon$$
+	
+	Observe that since $x^2 > 0$, then $$|\frac{xy^2}{x^2 + y^2}| \leq |\frac{xy^2}{y^2}| = |x|$$
+	
+	Thus, if we choose $\delta = \varepsilon$, then we know that $|x| \leq ||\langle x, y \rangle|| < \varepsilon$.  Hence $|\frac{xy^2}{x^2 + y^2}| \leq |\frac{xy^2}{y^2}| = |x| < \varepsilon$, as desired.
+	
+	\end{proof}
+		
+    \end{example}
 
-$f : \R^m \to \R^n$
-
-
+    \begin{theorem}[The composition of continuous functions is continuous.]
+    Let $f : \R^n \to \R^m$, and let $g: \R^m \to \R^k$ be multivariable functions such that $f$ is continuous at $\bm{P} \in \R^n$, and $g$ is continuous at $f(\bm{P}) \in \R^m$.
+    
+    \vspace{1em}
+    Then $g \circ f : \R^n \to \R^k$ is continuous at at $\bm{P} \in \R^n$.
+    \end{theorem}
+    
+    \begin{proof}
+    \fixthis{do proof}
+    \end{proof}
+    
+    \begin{theorem}
+    $\det : M_{n \times n}(\R) \cong \R^{n^2} \to \R$ is continuous.
+    \end{theorem}
+    
+    \begin{corollary}
+    The cross product $\times : \R^3 \to \R^3 \to \R^3$ is continuous.
+    \end{corollary}
+    
+    
+    
+    \begin{theorem}
+    Let $T: \R^n \to \R^m$ be a linear map.  Then $T$ is continuous (in fact, $T$ is uniformly continuous).
+    \end{theorem}
+    
+    \begin{definition}
+    A multivariable function $f : \R^n \to \R^m$ is \textbf{uniformly continuous}\define{uniformly continuous} if 
+    
+    \vspace{1em}
+    For all $\varepsilon>0$, there exists $\delta > 0$ such that for all $\bm{a}, \bm{b} \in X$, $$0 < ||\bm{a} - \bm{b} || < \delta \qquad \textnormal{implies} \qquad ||f(\bm{a}) - f(\bm{b}) || < \varepsilon$$
+    
+    \end{definition}
+    
+    
+    
 \subsection{Exercises}
 
 \begin{problem}{cont0}
@@ -1216,3 +1421,14 @@ Consider the function  $g(x,y) = \left\{
 		
 		Either show that there is a $c$ that will make $g$ continuous at $(0,0)$, or show that $g$ will not be continuous for any choice of $c$.
 \end{problem}
+
+\begin{definition}
+A function $f : \R^n \to \R^m$ is said to be \textbf{Lipschitz} it there exists a constant $K \geq 0$ such that for all $\bm{x_1},\bm{x_2} \in \R^n$,  $$||f(\bm{x_1}) - f(\bm{x_2})|| \leq K ||\bm{x_1} - \bm{x_2}|| $$
+\end{definition}
+
+\begin{problem}{Lipschitz}
+
+    Prove that if a function $f : \R^m \to \R^n$ is Lipschitz, then $f$ is continuous.
+
+\end{problem}
+    
