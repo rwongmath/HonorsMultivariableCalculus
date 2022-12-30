@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.20)  19 NOV 2022 16:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.20)  30 DEC 2022 11:12
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1635,6 +1635,25 @@ Package caption Info: longtable package is loaded.
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 ))
+(C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/tikz-3dplot\tikz-3dpl
+ot.sty
+(C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
+ikz/libraries\tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
+ikz/libraries\tikzlibrary3d.code.tex
+File: tikzlibrary3d.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
+ikz/libraries\tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgfli
+braryarrows.code.tex
+File: pgflibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\arrowsize=\dimen356
+)))
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.sty
 
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.r
@@ -1648,7 +1667,7 @@ re.code.tex
 \t@pgfplots@toka=\toks58
 \t@pgfplots@tokb=\toks59
 \t@pgfplots@tokc=\toks60
-\pgfplots@tmpa=\dimen356
+\pgfplots@tmpa=\dimen357
 \c@pgfplots@coordindex=\count419
 \c@pgfplots@scanlineindex=\count420
 
@@ -1719,14 +1738,14 @@ aths.code.tex)
 ikz/libraries\tikzlibrarydecorations.code.tex
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodu
 ledecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen357
-\pgfdecoratedremainingdistance=\dimen358
-\pgfdecoratedinputsegmentcompleteddistance=\dimen359
-\pgfdecoratedinputsegmentremainingdistance=\dimen360
-\pgf@decorate@distancetomove=\dimen361
+\pgfdecoratedcompleteddistance=\dimen358
+\pgfdecoratedremainingdistance=\dimen359
+\pgfdecoratedinputsegmentcompleteddistance=\dimen360
+\pgfdecoratedinputsegmentremainingdistance=\dimen361
+\pgf@decorate@distancetomove=\dimen362
 \pgf@decorate@repeatstate=\count424
-\pgfdecorationsegmentamplitude=\dimen362
-\pgfdecorationsegmentlength=\dimen363
+\pgfdecorationsegmentamplitude=\dimen363
+\pgfdecorationsegmentlength=\dimen364
 )
 \tikz@lib@dec@box=\box142
 )
@@ -1741,12 +1760,12 @@ ations\pgflibrarydecorations.pathreplacing.code.tex))
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzl
 ibrarypgfplots.contourlua.code.tex)
 \pgfplots@numplots=\count425
-\pgfplots@xmin@reg=\dimen364
-\pgfplots@xmax@reg=\dimen365
-\pgfplots@ymin@reg=\dimen366
-\pgfplots@ymax@reg=\dimen367
-\pgfplots@zmin@reg=\dimen368
-\pgfplots@zmax@reg=\dimen369
+\pgfplots@xmin@reg=\dimen365
+\pgfplots@xmax@reg=\dimen366
+\pgfplots@ymin@reg=\dimen367
+\pgfplots@ymax@reg=\dimen368
+\pgfplots@zmin@reg=\dimen369
+\pgfplots@zmax@reg=\dimen370
 )
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
 ikz/libraries\tikzlibraryplotmarks.code.tex
@@ -1765,10 +1784,6 @@ ikz/libraries\tikzlibraryangles.code.tex
 File: tikzlibraryangles.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
-ikz/libraries\tikzlibrarycalc.code.tex
-File: tikzlibrarycalc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)
-(C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
 ikz/libraries\tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ))
@@ -1778,32 +1793,14 @@ LaTeX Font Info:    Trying to load font information for T1+clm2j on input line
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/cfr-lm\t1clm2j.fd
 File: t1clm2j.fd 2010/05/25 Fontinst v1.933 font definitions for T1/clm2j.
 )
-(HonorsMultivariableCalculus.aux
-
-LaTeX Warning: Label `problem:S' multiply defined.
-
-
-LaTeX Warning: Label `problem:S@cref' multiply defined.
-
-
-LaTeX Warning: Label `problem:parallelogram' multiply defined.
-
-
-LaTeX Warning: Label `problem:parallelogram@cref' multiply defined.
-
-
-LaTeX Warning: Label `problem:traces3' multiply defined.
-
-
-LaTeX Warning: Label `problem:traces3@cref' multiply defined.
-
-)
+(HonorsMultivariableCalculus.aux)
 \openout1 = `HonorsMultivariableCalculus.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/lmm/m/it on input line 12.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
 2.
- (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+
+(C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    ... okay on input line 12.
@@ -1879,13 +1876,13 @@ Package hyperref Info: Link coloring ON on input line 12.
 mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count426
-\scratchdimen=\dimen370
+\scratchdimen=\dimen371
 \scratchbox=\box143
 \nofMPsegments=\count427
 \nofMParguments=\count428
 \everyMPshowfont=\toks62
 \MPscratchCnt=\count429
-\MPscratchDim=\dimen371
+\MPscratchDim=\dimen372
 \MPnumerator=\count430
 \makeMPintoPDFobject=\count431
 \everyMPtoPDFconversion=\toks63
@@ -1924,7 +1921,7 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
 \mycount=\count432
 LaTeX Font Info:    Trying to load font information for TS1+clm2j on input line
- 32.
+ 50.
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/cfr-lm\ts1clm2j.fd
 File: ts1clm2j.fd 2008/02/13 Fontinst v1.928 font definitions for TS1/clm2j.
 )
@@ -1932,7 +1929,7 @@ File: ts1clm2j.fd 2008/02/13 Fontinst v1.928 font definitions for TS1/clm2j.
 Package microtype Warning: I cannot find a spacing list for font
 (microtype)                `TS1/clm2j/m/n/10' (context: `nonfrench'). Switching
  off
-(microtype)                spacing for this font on input line 32.
+(microtype)                spacing for this font on input line 50.
 
 [3
 
@@ -1966,18 +1963,23 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 2.
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Overfull \hbox (0.485pt too wide) detected at line 40
- \T1/clm2j/m/n/9 60
+Overfull \hbox (0.27798pt too wide) detected at line 60
+ \T1/clm2j/m/n/9 95
  []
 
 
-Overfull \hbox (0.332pt too wide) detected at line 42
- \T1/clm2j/m/n/9 62
+Overfull \hbox (4.07597pt too wide) detected at line 72
+ \T1/clm2j/m/n/9 105
  []
 
 
-Overfull \hbox (0.422pt too wide) detected at line 43
- \T1/clm2j/m/n/9 63
+Overfull \hbox (4.21999pt too wide) detected at line 73
+ \T1/clm2j/m/n/9 106
+ []
+
+
+Overfull \hbox (3.67097pt too wide) detected at line 74
+ \T1/clm2j/m/n/9 107
  []
 
 ) [4
@@ -1985,21 +1987,21 @@ Overfull \hbox (0.422pt too wide) detected at line 43
 ]
 \mycount=\count434
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 49.
+(Font)              <12> on input line 67.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 49.
+(Font)              <8> on input line 67.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 49.
+(hyperref)                removing `math shift' on input line 67.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 49.
+(hyperref)                removing `superscript' on input line 67.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 49.
+(hyperref)                removing `math shift' on input line 67.
 
 (chapters/1-LinearAlgebra/LinearAlgebra.tex
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -2013,70 +2015,133 @@ LaTeX Font Info:    Font shape `T1/clm2j/b/n' in size <10> not available
 LaTeX Font Info:    Font shape `T1/clm2j/b/it' in size <10> not available
 (Font)              Font shape `T1/clm2j/bx/it' tried instead on input line 16.
 
+<chapters/1-LinearAlgebra/figures/figures-r1.pdf, id=82, 120.8766pt x 6.66591pt
+>
+File: chapters/1-LinearAlgebra/figures/figures-r1.pdf Graphic file (type pdf)
+<use chapters/1-LinearAlgebra/figures/figures-r1.pdf>
+Package pdftex.def Info: chapters/1-LinearAlgebra/figures/figures-r1.pdf  used 
+on input line 23.
+(pdftex.def)             Requested size: 120.8763pt x 6.66588pt.
+<chapters/1-LinearAlgebra/figures/figures-r2.pdf, id=83, 110.96457pt x 110.9645
+7pt>
+File: chapters/1-LinearAlgebra/figures/figures-r2.pdf Graphic file (type pdf)
+<use chapters/1-LinearAlgebra/figures/figures-r2.pdf>
+Package pdftex.def Info: chapters/1-LinearAlgebra/figures/figures-r2.pdf  used 
+on input line 29.
+(pdftex.def)             Requested size: 110.96428pt x 110.96428pt.
+<chapters/1-LinearAlgebra/figures/figures-r3.pdf, id=84, 126.13824pt x 119.4964
+4pt>
+File: chapters/1-LinearAlgebra/figures/figures-r3.pdf Graphic file (type pdf)
+<use chapters/1-LinearAlgebra/figures/figures-r3.pdf>
+Package pdftex.def Info: chapters/1-LinearAlgebra/figures/figures-r3.pdf  used 
+on input line 38.
+(pdftex.def)             Requested size: 126.13792pt x 119.49614pt.
  [1
 
 
-]
-Overfull \hbox (78.0pt too wide) has occurred while \output is active
-[]
- []
-
-[2]
-Overfull \hbox (78.0pt too wide) has occurred while \output is active
-[]
- []
-
-[3]
-Overfull \hbox (78.0pt too wide) has occurred while \output is active
-[]
- []
-
-[4]
-Missing character: There is no s in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no ] in font nullfont!
+ <./chapters/1-LinearAlgebra/figures/figures-r1.pdf> <./chapters/1-LinearAlgebr
+a/figures/figures-r2.pdf>]
+<chapters/1-LinearAlgebra/figures/figures-cuber3.pdf, id=111, 115.75746pt x 102
+.02014pt>
+File: chapters/1-LinearAlgebra/figures/figures-cuber3.pdf Graphic file (type pd
+f)
+<use chapters/1-LinearAlgebra/figures/figures-cuber3.pdf>
+Package pdftex.def Info: chapters/1-LinearAlgebra/figures/figures-cuber3.pdf  u
+sed on input line 67.
+(pdftex.def)             Requested size: 115.75717pt x 102.01988pt.
 
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[5]
+[2 <./chapters/1-LinearAlgebra/figures/figures-r3.pdf> <./chapters/1-LinearAlge
+bra/figures/figures-cuber3.pdf>]
+<chapters/1-LinearAlgebra/figures/figures-vectorPQ.pdf, id=135, 115.75746pt x 1
+02.02014pt>
+File: chapters/1-LinearAlgebra/figures/figures-vectorPQ.pdf Graphic file (type 
+pdf)
+<use chapters/1-LinearAlgebra/figures/figures-vectorPQ.pdf>
+Package pdftex.def Info: chapters/1-LinearAlgebra/figures/figures-vectorPQ.pdf 
+ used on input line 92.
+(pdftex.def)             Requested size: 115.75717pt x 102.01988pt.
+<chapters/1-LinearAlgebra/figures/figures-distancePQ.pdf, id=136, 129.7367pt x 
+102.02014pt>
+File: chapters/1-LinearAlgebra/figures/figures-distancePQ.pdf Graphic file (typ
+e pdf)
+<use chapters/1-LinearAlgebra/figures/figures-distancePQ.pdf>
+Package pdftex.def Info: chapters/1-LinearAlgebra/figures/figures-distancePQ.pd
+f  used on input line 106.
+(pdftex.def)             Requested size: 129.73636pt x 102.01988pt.
+
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[6]
-Missing character: There is no s in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no ] in font nullfont!
+[3 <./chapters/1-LinearAlgebra/figures/figures-vectorPQ.pdf> <./chapters/1-Line
+arAlgebra/figures/figures-distancePQ.pdf>]
+<chapters/1-LinearAlgebra/figures/figures-standardbasis.pdf, id=164, 115.75746p
+t x 102.02014pt>
+File: chapters/1-LinearAlgebra/figures/figures-standardbasis.pdf Graphic file (
+type pdf)
+<use chapters/1-LinearAlgebra/figures/figures-standardbasis.pdf>
+Package pdftex.def Info: chapters/1-LinearAlgebra/figures/figures-standardbasis
+.pdf  used on input line 147.
+(pdftex.def)             Requested size: 115.75717pt x 102.01988pt.
 
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[7]
-\openout7 = `HonorsMultivariableCalculus.ans'.
+[4 <./chapters/1-LinearAlgebra/figures/figures-standardbasis.pdf>]
+<chapters/1-LinearAlgebra/figures/figures-vectoraddition.pdf, id=187, 78.02249p
+t x 73.30487pt>
+File: chapters/1-LinearAlgebra/figures/figures-vectoraddition.pdf Graphic file 
+(type pdf)
+<use chapters/1-LinearAlgebra/figures/figures-vectoraddition.pdf>
+Package pdftex.def Info: chapters/1-LinearAlgebra/figures/figures-vectoradditio
+n.pdf  used on input line 191.
+(pdftex.def)             Requested size: 78.0223pt x 73.30469pt.
+<chapters/1-LinearAlgebra/figures/figures-vectoradditioncommutative.pdf, id=188
+, 83.11151pt x 86.15788pt>
+File: chapters/1-LinearAlgebra/figures/figures-vectoradditioncommutative.pdf Gr
+aphic file (type pdf)
+<use chapters/1-LinearAlgebra/figures/figures-vectoradditioncommutative.pdf>
+Package pdftex.def Info: chapters/1-LinearAlgebra/figures/figures-vectoradditio
+ncommutative.pdf  used on input line 208.
+(pdftex.def)             Requested size: 83.1113pt x 86.15767pt.
 
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
 
+[5 <./chapters/1-LinearAlgebra/figures/figures-vectoraddition.pdf>]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[6 <./chapters/1-LinearAlgebra/figures/figures-vectoradditioncommutative.pdf>]
+<chapters/1-LinearAlgebra/figures/figures-scalarmultiples.pdf, id=229, 114.6111
+9pt x 86.15788pt>
+File: chapters/1-LinearAlgebra/figures/figures-scalarmultiples.pdf Graphic file
+ (type pdf)
+<use chapters/1-LinearAlgebra/figures/figures-scalarmultiples.pdf>
+Package pdftex.def Info: chapters/1-LinearAlgebra/figures/figures-scalarmultipl
+es.pdf  used on input line 304.
+(pdftex.def)             Requested size: 114.6109pt x 86.15767pt.
+
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[7 <./chapters/1-LinearAlgebra/figures/figures-scalarmultiples.pdf>]
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
 [8]
+\openout7 = `HonorsMultivariableCalculus.ans'.
+
+
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
@@ -2088,12 +2153,7 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
 
 [10]
 LaTeX Font Info:    Font shape `T1/clm2j/b/n' in size <8> not available
-(Font)              Font shape `T1/clm2j/bx/n' tried instead on input line 761.
-
-
-
-LaTeX Warning: Reference `problemm:scalarmultvsmult' on page 11 undefined on in
-put line 780.
+(Font)              Font shape `T1/clm2j/bx/n' tried instead on input line 612.
 
 
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
@@ -2101,10 +2161,6 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
  []
 
 [11]
-
-LaTeX Warning: Reference `sumto1' on page 12 undefined on input line 828.
-
-
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
@@ -2115,38 +2171,44 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
  []
 
 [13]
-Overfull \hbox (6.07199pt too wide) in paragraph at lines 879--879
-[]\T1/clm2j/m/n/10 (-10) We will first prove that $[]\OMS/lmsy/m/n/10 f\OML/lmm
-/b/it/10 v[]\OML/lmm/m/it/10 ; []  ; \OML/lmm/b/it/10 v[]\OMS/lmsy/m/n/10 g$ \T
-1/clm2j/m/n/10 (-10) is closed un-der ad-di-tion. Let $\OML/lmm/b/it/10 w[]\OML
-/lmm/m/it/10 ; \OML/lmm/b/it/10 w[] \OMS/lmsy/m/n/10 2 []f\OML/lmm/b/it/10 v[]\
-OML/lmm/m/it/10 ; []  ; \OML/lmm/b/it/10 v[]\OMS/lmsy/m/n/10 g$\T1/clm2j/m/n/10
- (-10) .
- []
-
+<chapters/1-LinearAlgebra/figures/figures-spanvr3.pdf, id=389, 108.23135pt x 92
+.9342pt>
+File: chapters/1-LinearAlgebra/figures/figures-spanvr3.pdf Graphic file (type p
+df)
+<use chapters/1-LinearAlgebra/figures/figures-spanvr3.pdf>
+Package pdftex.def Info: chapters/1-LinearAlgebra/figures/figures-spanvr3.pdf  
+used on input line 781.
+(pdftex.def)             Requested size: 108.23108pt x 92.93398pt.
 
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
 [14]
-
-Package microtype Warning: I cannot find a spacing list for font
-(microtype)                `TS1/clm2j/m/it/10' (context: `nonfrench'). Switchin
-g off
-(microtype)                spacing for this font on input line 967.
-
-
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[15]
+[15 <./chapters/1-LinearAlgebra/figures/figures-spanvr3.pdf>]
+
+Package microtype Warning: I cannot find a spacing list for font
+(microtype)                `TS1/clm2j/m/it/10' (context: `nonfrench'). Switchin
+g off
+(microtype)                spacing for this font on input line 862.
+
+
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
 [16]
+File: chapters/1-LinearAlgebra/figures/figures-standardbasis.pdf Graphic file (
+type pdf)
+<use chapters/1-LinearAlgebra/figures/figures-standardbasis.pdf>
+Package pdftex.def Info: chapters/1-LinearAlgebra/figures/figures-standardbasis
+.pdf  used on input line 898.
+(pdftex.def)             Requested size: 115.75717pt x 102.01988pt.
+
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
@@ -2177,21 +2239,47 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
  []
 
 [22]
+<chapters/1-LinearAlgebra/figures/figures-linearline.pdf, id=529, 110.96457pt x
+ 110.96457pt>
+File: chapters/1-LinearAlgebra/figures/figures-linearline.pdf Graphic file (typ
+e pdf)
+<use chapters/1-LinearAlgebra/figures/figures-linearline.pdf>
+Package pdftex.def Info: chapters/1-LinearAlgebra/figures/figures-linearline.pd
+f  used on input line 1310.
+(pdftex.def)             Requested size: 110.96428pt x 110.96428pt.
+
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[23]
+[23 <./chapters/1-LinearAlgebra/figures/figures-linearline.pdf>]
+<chapters/1-LinearAlgebra/figures/figures-lineartransform1.pdf, id=560, 277.411
+4pt x 110.96457pt>
+File: chapters/1-LinearAlgebra/figures/figures-lineartransform1.pdf Graphic fil
+e (type pdf)
+<use chapters/1-LinearAlgebra/figures/figures-lineartransform1.pdf>
+Package pdftex.def Info: chapters/1-LinearAlgebra/figures/figures-lineartransfo
+rm1.pdf  used on input line 1373.
+(pdftex.def)             Requested size: 277.41072pt x 110.96428pt.
+<chapters/1-LinearAlgebra/figures/figures-lineartransform2.pdf, id=561, 277.411
+4pt x 110.96457pt>
+File: chapters/1-LinearAlgebra/figures/figures-lineartransform2.pdf Graphic fil
+e (type pdf)
+<use chapters/1-LinearAlgebra/figures/figures-lineartransform2.pdf>
+Package pdftex.def Info: chapters/1-LinearAlgebra/figures/figures-lineartransfo
+rm2.pdf  used on input line 1385.
+(pdftex.def)             Requested size: 277.41072pt x 110.96428pt.
+
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[24]
+[24 <./chapters/1-LinearAlgebra/figures/figures-lineartransform1.pdf>]
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[25]
+[25 <./chapters/1-LinearAlgebra/figures/figures-lineartransform2.pdf>]
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
@@ -2222,190 +2310,152 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
  []
 
 [31]
-Missing character: There is no s in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no ] in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no ] in font nullfont!
-
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
 [32]
-! Undefined control sequence.
-<recently read> \tdplotsetmaincoords 
-                                     
-l.2448         \tdplotsetmaincoords
-                                   {105}{-30}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-! Package pgfkeys Error: I do not know the key '/tikz/tdplot_main_coords' and I
- am going to ignore it. Perhaps you misspelled it.
-
-See the pgfkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2449 ...ikzpicture}[tdplot_main_coords,scale=.5]
-                                                  
-This error message was generated by an \errmessage
-command, so I can't give any explicit help.
-Pretend that you're Hercule Poirot: Examine all clues,
-and deduce the truth by order and method.
-
-! Undefined control sequence.
-\pgfutil@reserved@c ->\tikz@intersect@finish 
-                                             \afterassignment \tikz@lib@scop...
-l.2450  \tdplotsetrotatedcoords
-                               {00}{30}{0}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 0 in font nullfont!
-
-! Package pgfkeys Error: I do not know the key '/tikz/tdplot_rotated_coords' an
-d I am going to ignore it. Perhaps you misspelled it.
-
-See the pgfkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2451  \begin{scope}[tdplot_rotated_coords]
-                                            
-(That was another \errmessage.)
-
-
-! Package pgfkeys Error: I do not know the key '/tikz/canvas is xy plane at z',
- to which you passed '0', and I am going to ignore it. Perhaps you misspelled i
-t.
-
-See the pgfkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2452   \begin{scope}[canvas is xy plane at z=0]
-                                                 
-(That was another \errmessage.)
-
-
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
 [33]
+<chapters/1-LinearAlgebra/figures/figures-triangleinequality.pdf, id=741, 204.4
+187pt x 90.15582pt>
+File: chapters/1-LinearAlgebra/figures/figures-triangleinequality.pdf Graphic f
+ile (type pdf)
+<use chapters/1-LinearAlgebra/figures/figures-triangleinequality.pdf>
+Package pdftex.def Info: chapters/1-LinearAlgebra/figures/figures-triangleinequ
+ality.pdf  used on input line 2127.
+(pdftex.def)             Requested size: 204.4182pt x 90.15558pt.
+
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[34]
+[34 <./chapters/1-LinearAlgebra/figures/figures-triangleinequality.pdf>]
+<chapters/1-LinearAlgebra/figures/figures-vectorprojection.pdf, id=764, 127.714
+14pt x 86.55838pt>
+File: chapters/1-LinearAlgebra/figures/figures-vectorprojection.pdf Graphic fil
+e (type pdf)
+<use chapters/1-LinearAlgebra/figures/figures-vectorprojection.pdf>
+Package pdftex.def Info: chapters/1-LinearAlgebra/figures/figures-vectorproject
+ion.pdf  used on input line 2202.
+(pdftex.def)             Requested size: 127.71382pt x 86.55817pt.
+<chapters/1-LinearAlgebra/figures/figures-vectororthogonal.pdf, id=765, 127.714
+14pt x 86.95787pt>
+File: chapters/1-LinearAlgebra/figures/figures-vectororthogonal.pdf Graphic fil
+e (type pdf)
+<use chapters/1-LinearAlgebra/figures/figures-vectororthogonal.pdf>
+Package pdftex.def Info: chapters/1-LinearAlgebra/figures/figures-vectororthogo
+nal.pdf  used on input line 2210.
+(pdftex.def)             Requested size: 127.71382pt x 86.95764pt.
+
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[35]
+[35 <./chapters/1-LinearAlgebra/figures/figures-vectorprojection.pdf> <./chapte
+rs/1-LinearAlgebra/figures/figures-vectororthogonal.pdf>]
+<chapters/1-LinearAlgebra/figures/figures-normalline.pdf, id=808, 110.96457pt x
+ 110.96457pt>
+File: chapters/1-LinearAlgebra/figures/figures-normalline.pdf Graphic file (typ
+e pdf)
+<use chapters/1-LinearAlgebra/figures/figures-normalline.pdf>
+Package pdftex.def Info: chapters/1-LinearAlgebra/figures/figures-normalline.pd
+f  used on input line 2253.
+(pdftex.def)             Requested size: 110.96428pt x 110.96428pt.
+<chapters/1-LinearAlgebra/figures/figures-normalplane.pdf, id=809, 108.23135pt 
+x 86.08461pt>
+File: chapters/1-LinearAlgebra/figures/figures-normalplane.pdf Graphic file (ty
+pe pdf)
+<use chapters/1-LinearAlgebra/figures/figures-normalplane.pdf>
+Package pdftex.def Info: chapters/1-LinearAlgebra/figures/figures-normalplane.p
+df  used on input line 2275.
+(pdftex.def)             Requested size: 108.23108pt x 86.0844pt.
+
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[36]
+[36 <./chapters/1-LinearAlgebra/figures/figures-normalline.pdf>]
+<chapters/1-LinearAlgebra/figures/figures-planenormalaffine.pdf, id=823, 113.29
+628pt x 132.93965pt>
+File: chapters/1-LinearAlgebra/figures/figures-planenormalaffine.pdf Graphic fi
+le (type pdf)
+<use chapters/1-LinearAlgebra/figures/figures-planenormalaffine.pdf>
+Package pdftex.def Info: chapters/1-LinearAlgebra/figures/figures-planenormalaf
+fine.pdf  used on input line 2296.
+(pdftex.def)             Requested size: 113.29599pt x 132.93932pt.
+
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[37]
-Missing character: There is no s in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no ] in font nullfont!
-<images/2x2detproof.png, id=604, 660.4675pt x 567.11874pt>
+[37 <./chapters/1-LinearAlgebra/figures/figures-normalplane.pdf> <./chapters/1-
+LinearAlgebra/figures/figures-planenormalaffine.pdf>]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[38]
+<chapters/1-LinearAlgebra/figures/figures-crossproduct.pdf, id=870, 90.60751pt 
+x 97.26839pt>
+File: chapters/1-LinearAlgebra/figures/figures-crossproduct.pdf Graphic file (t
+ype pdf)
+<use chapters/1-LinearAlgebra/figures/figures-crossproduct.pdf>
+Package pdftex.def Info: chapters/1-LinearAlgebra/figures/figures-crossproduct.
+pdf  used on input line 2406.
+(pdftex.def)             Requested size: 90.60728pt x 97.26814pt.
+
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[39 <./chapters/1-LinearAlgebra/figures/figures-crossproduct.pdf>]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[40]
+<chapters/1-LinearAlgebra/figures/figures-triangleparallelogram.pdf, id=910, 18
+4.21925pt x 85.95815pt>
+File: chapters/1-LinearAlgebra/figures/figures-triangleparallelogram.pdf Graphi
+c file (type pdf)
+<use chapters/1-LinearAlgebra/figures/figures-triangleparallelogram.pdf>
+Package pdftex.def Info: chapters/1-LinearAlgebra/figures/figures-triangleparal
+lelogram.pdf  used on input line 2562.
+(pdftex.def)             Requested size: 184.2188pt x 85.95793pt.
+<images/2x2detproof.png, id=911, 660.4675pt x 567.11874pt>
 File: images/2x2detproof.png Graphic file (type png)
 <use images/2x2detproof.png>
-Package pdftex.def Info: images/2x2detproof.png  used on input line 2845.
+Package pdftex.def Info: images/2x2detproof.png  used on input line 2576.
 (pdftex.def)             Requested size: 330.23294pt x 283.55867pt.
 
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[38]
-Overfull \hbox (78.0pt too wide) has occurred while \output is active
-[]
- []
-
-[39 <./images/2x2detproof.png>]
-Overfull \hbox (78.0pt too wide) has occurred while \output is active
-[]
- []
-
-[40]
-Overfull \hbox (4.20825pt too wide) in paragraph at lines 3006--3007
-[]\T1/clm2j/m/it/10 (-10) Cauchy-Schwarz in-equal-ity: $\OMS/lmsy/m/n/10 jh\OML
-/lmm/b/it/10 u\OML/lmm/m/it/10 ; \OML/lmm/b/it/10 v\OMS/lmsy/m/n/10 ij ^^T j\OM
-L/lmm/b/it/10 u\OMS/lmsy/m/n/10 j j\OML/lmm/b/it/10 v\OMS/lmsy/m/n/10 j$ 
- []
-
+[41 <./chapters/1-LinearAlgebra/figures/figures-triangleparallelogram.pdf>]
+<chapters/1-LinearAlgebra/figures/figures-parallelpiped.pdf, id=927, 149.63303p
+t x 92.12617pt>
+File: chapters/1-LinearAlgebra/figures/figures-parallelpiped.pdf Graphic file (
+type pdf)
+<use chapters/1-LinearAlgebra/figures/figures-parallelpiped.pdf>
+Package pdftex.def Info: chapters/1-LinearAlgebra/figures/figures-parallelpiped
+.pdf  used on input line 2606.
+(pdftex.def)             Requested size: 149.63264pt x 92.12595pt.
 
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[41])
+[42 <./images/2x2detproof.png>]
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[42]
-\mycount=\count435
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 52.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 52.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 52.
-
-(chapters/2-RealAnalysis/RealAnalysis.tex [43
-
-]
+[43 <./chapters/1-LinearAlgebra/figures/figures-parallelpiped.pdf>]
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
@@ -2415,32 +2465,121 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[45]
+[45])
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
 [46]
+\mycount=\count435
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 70.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 70.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 70.
+
+(chapters/2-RealAnalysis/RealAnalysis.tex
+<chapters/2-RealAnalysis/figures/figures-vectorval1.pdf, id=1018, 290.53845pt x
+ 175.43742pt>
+File: chapters/2-RealAnalysis/figures/figures-vectorval1.pdf Graphic file (type
+ pdf)
+<use chapters/2-RealAnalysis/figures/figures-vectorval1.pdf>
+Package pdftex.def Info: chapters/2-RealAnalysis/figures/figures-vectorval1.pdf
+  used on input line 25.
+(pdftex.def)             Requested size: 217.90329pt x 131.57773pt.
+ [47
+
+ <./chapters/2-RealAnalysis/figures/figures-vectorval1.pdf>]
+<chapters/2-RealAnalysis/figures/figures-vectorvalpoint.pdf, id=1045, 440.2046p
+t x 352.87032pt>
+File: chapters/2-RealAnalysis/figures/figures-vectorvalpoint.pdf Graphic file (
+type pdf)
+<use chapters/2-RealAnalysis/figures/figures-vectorvalpoint.pdf>
+Package pdftex.def Info: chapters/2-RealAnalysis/figures/figures-vectorvalpoint
+.pdf  used on input line 35.
+(pdftex.def)             Requested size: 330.15263pt x 264.65208pt.
+<chapters/2-RealAnalysis/figures/figures-vectorcircle.pdf, id=1046, 195.39499pt
+ x 162.39873pt>
+File: chapters/2-RealAnalysis/figures/figures-vectorcircle.pdf Graphic file (ty
+pe pdf)
+<use chapters/2-RealAnalysis/figures/figures-vectorcircle.pdf>
+Package pdftex.def Info: chapters/2-RealAnalysis/figures/figures-vectorcircle.p
+df  used on input line 49.
+(pdftex.def)             Requested size: 195.3945pt x 162.39832pt.
+<chapters/2-RealAnalysis/figures/figures-helix.pdf, id=1047, 247.95636pt x 252.
+06973pt>
+File: chapters/2-RealAnalysis/figures/figures-helix.pdf Graphic file (type pdf)
+
+<use chapters/2-RealAnalysis/figures/figures-helix.pdf>
+Package pdftex.def Info: chapters/2-RealAnalysis/figures/figures-helix.pdf  use
+d on input line 59.
+(pdftex.def)             Requested size: 185.9668pt x 189.05182pt.
+
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[47]
+[48 <./chapters/2-RealAnalysis/figures/figures-vectorvalpoint.pdf> <./chapters/
+2-RealAnalysis/figures/figures-vectorcircle.pdf>]
+<chapters/2-RealAnalysis/figures/figures-helix5x.pdf, id=1087, 247.95636pt x 25
+2.06973pt>
+File: chapters/2-RealAnalysis/figures/figures-helix5x.pdf Graphic file (type pd
+f)
+<use chapters/2-RealAnalysis/figures/figures-helix5x.pdf>
+Package pdftex.def Info: chapters/2-RealAnalysis/figures/figures-helix5x.pdf  u
+sed on input line 67.
+(pdftex.def)             Requested size: 185.9668pt x 189.05182pt.
+<chapters/2-RealAnalysis/figures/figures-parametriccircle.pdf, id=1090, 195.394
+99pt x 162.39873pt>
+File: chapters/2-RealAnalysis/figures/figures-parametriccircle.pdf Graphic file
+ (type pdf)
+<use chapters/2-RealAnalysis/figures/figures-parametriccircle.pdf>
+Package pdftex.def Info: chapters/2-RealAnalysis/figures/figures-parametriccirc
+le.pdf  used on input line 90.
+(pdftex.def)             Requested size: 195.3945pt x 162.39832pt.
+
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[48]
+[49 <./chapters/2-RealAnalysis/figures/figures-helix.pdf> <./chapters/2-RealAna
+lysis/figures/figures-helix5x.pdf>]
+<chapters/2-RealAnalysis/figures/figures-helixcurve.pdf, id=1125, 247.95636pt x
+ 252.06973pt>
+File: chapters/2-RealAnalysis/figures/figures-helixcurve.pdf Graphic file (type
+ pdf)
+<use chapters/2-RealAnalysis/figures/figures-helixcurve.pdf>
+Package pdftex.def Info: chapters/2-RealAnalysis/figures/figures-helixcurve.pdf
+  used on input line 107.
+(pdftex.def)             Requested size: 185.9668pt x 189.05182pt.
+
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[49]
-Overfull \hbox (78.0pt too wide) has occurred while \output is active
-[]
+[50 <./chapters/2-RealAnalysis/figures/figures-parametriccircle.pdf> <./chapter
+s/2-RealAnalysis/figures/figures-helixcurve.pdf>]
+<chapters/2-RealAnalysis/figures/figures-projections.pdf, id=1160, 422.97522pt 
+x 314.02016pt>
+File: chapters/2-RealAnalysis/figures/figures-projections.pdf Graphic file (typ
+e pdf)
+<use chapters/2-RealAnalysis/figures/figures-projections.pdf>
+Package pdftex.def Info: chapters/2-RealAnalysis/figures/figures-projections.pd
+f  used on input line 148.
+(pdftex.def)             Requested size: 422.97418pt x 314.0194pt.
+
+Overfull \hbox (11.22687pt too wide) in paragraph at lines 148--149
+ [] 
  []
 
-[50]
+
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
@@ -2450,17 +2589,35 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[52]
+[52 <./chapters/2-RealAnalysis/figures/figures-projections.pdf>]
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
 [53]
+<chapters/2-RealAnalysis/figures/figures-ellipticparaboloid.pdf, id=1198, 219.9
+6078pt x 180.34677pt>
+File: chapters/2-RealAnalysis/figures/figures-ellipticparaboloid.pdf Graphic fi
+le (type pdf)
+<use chapters/2-RealAnalysis/figures/figures-ellipticparaboloid.pdf>
+Package pdftex.def Info: chapters/2-RealAnalysis/figures/figures-ellipticparabo
+loid.pdf  used on input line 240.
+(pdftex.def)             Requested size: 219.96024pt x 180.34633pt.
+<chapters/2-RealAnalysis/figures/figures-hyperbolicparaboloid.pdf, id=1199, 232
+.7606pt x 177.56136pt>
+File: chapters/2-RealAnalysis/figures/figures-hyperbolicparaboloid.pdf Graphic 
+file (type pdf)
+<use chapters/2-RealAnalysis/figures/figures-hyperbolicparaboloid.pdf>
+Package pdftex.def Info: chapters/2-RealAnalysis/figures/figures-hyperbolicpara
+boloid.pdf  used on input line 244.
+(pdftex.def)             Requested size: 232.76003pt x 177.56091pt.
+
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[54]
+[54 <./chapters/2-RealAnalysis/figures/figures-ellipticparaboloid.pdf> <./chapt
+ers/2-RealAnalysis/figures/figures-hyperbolicparaboloid.pdf>]
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
@@ -2481,11 +2638,6 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
  []
 
 [58]
-
-LaTeX Warning: Reference `vecvalcomponents' on page 59 undefined on input line 
-1146.
-
-
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
@@ -2500,48 +2652,31 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[61])
+[61]
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
 [62]
-\mycount=\count436
- (chapters/3-Derivatives/derivatives.tex [63
+<chapters/2-RealAnalysis/figures/figures-sequencebounded.pdf, id=1343, 455.8048
+7pt x 351.59355pt>
+File: chapters/2-RealAnalysis/figures/figures-sequencebounded.pdf Graphic file 
+(type pdf)
+<use chapters/2-RealAnalysis/figures/figures-sequencebounded.pdf>
+Package pdftex.def Info: chapters/2-RealAnalysis/figures/figures-sequencebounde
+d.pdf  used on input line 851.
+(pdftex.def)             Requested size: 227.90187pt x 175.79634pt.
 
-]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[63 <./chapters/2-RealAnalysis/figures/figures-sequencebounded.pdf>]
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
 [64]
-
-! LaTeX Error: Environment question undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.171 \begin{question}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: \begin{document} ended by \end{question}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.173     \end{question}
-                        
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
@@ -2552,45 +2687,17 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
  []
 
 [66]
-
-! LaTeX Error: Environment question undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.257 \begin{question}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: \begin{document} ended by \end{question}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.259     \end{question}
-                        
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
 [67]
-Overfull \hbox (77.48218pt too wide) detected at line 387
-[] \OT1/lmr/m/n/10 = [] []
- []
-
-
-Overfull \hbox (49.46814pt too wide) detected at line 410
-[] \OT1/lmr/m/n/10 = []  [] []
+Underfull \hbox (badness 1231) in paragraph at lines 1203--1204
+[]\T1/clm2j/m/n/10 (+10) Observe that since both $\OMS/lmsy/m/n/10 j []\OT1/lmr
+/m/n/10 (\OML/lmm/m/it/10 ^^R\OT1/lmr/m/n/10 )\OMS/lmsy/m/n/10 j ^^T \OT1/lmr/m
+/n/10 1$ \T1/clm2j/m/n/10 (+10) and $\OMS/lmsy/m/n/10 j []\OT1/lmr/m/n/10 (\OML
+/lmm/m/it/10 ^^R\OT1/lmr/m/n/10 )\OMS/lmsy/m/n/10 j ^^T \OT1/lmr/m/n/10 1$\T1/c
+lm2j/m/n/10 (+10) , we can con-clude that
  []
 
 
@@ -2599,34 +2706,6 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
  []
 
 [68]
-Runaway argument?
-{x_0) + t\bm {v}$$ Observe that the chain rule depends on the magnitu\ETC.
-! Paragraph ended before \bm was complete.
-<to be read again> 
-                   \par 
-l.451 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.451 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Display math should end with $$.
-<to be read again> 
-                   \tex_par:D 
-l.451 
-      
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
@@ -2637,143 +2716,306 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
  []
 
 [70]
-! Undefined control sequence.
-<recently read> \nm 
-                    
-l.595 ...ional derivative in the direction of $\nm
-                                                  {u} = \langle 5, 12 \rangl...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[71])
+[71]
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[72]
+[72])
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[73]
+\mycount=\count436
+ (chapters/3-Derivatives/derivatives.tex [74
+
+]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[75]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[76]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[77]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[78]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[79]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[80]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[81]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[82]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[83]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[84]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[85]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[86]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[87]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[88]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[89]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[90]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[91]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[92]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[93])
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[94]
 \mycount=\count437
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 60.
+(hyperref)                removing `math shift' on input line 78.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 60.
+(hyperref)                removing `superscript' on input line 78.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 60.
+(hyperref)                removing `math shift' on input line 78.
 
-[73
+(chapters/4-IntegrationRn/integration.tex [95
 
 ]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[96]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[97]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[98]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[99]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[100]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[101]
+
+Package tcolorbox Warning: Using nobreak failed. Try to enlarge `lines before b
+reak' or set page breaks manually on input line 449.
+
+
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[102]
+
+LaTeX Warning: File `pictures/map.png' not found on input line 620.
+
+
+! Package pdftex.def Error: File `pictures/map.png' not found: using draft sett
+ing.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.620 ...udegraphics[scale=0.45]{pictures/map.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 62
+0.
+(C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/inconsolata\t1zi4.fd
+File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
+)
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 7.0pt on input line 620.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `zi4' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[103])
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[104]
 \mycount=\count438
- [74
+ [105
 
 ]
 \mycount=\count439
- [75
+ [106
 
 ]
 \mycount=\count440
  (HonorsMultivariableCalculus.ans)
 No file HonorsMultivariableCalculus.bbl.
 No file HonorsMultivariableCalculus.ind.
-[76
+[107
 
 
 ]
 \tf@toc=\write10
 \openout10 = `HonorsMultivariableCalculus.toc'.
 
-
-
-LaTeX Warning: Hook 'shipout/lastpage' executed on wrong page (68 not 80).
-               Rerun to correct this.
-
-(HonorsMultivariableCalculus.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-
-Package rerunfilecheck Warning: File `HonorsMultivariableCalculus.out' has chan
-ged.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `HonorsMultivariableCalculus.out':
-(rerunfilecheck)             Before: D9D83908EA0D005E4F6A6C9977FD1FF5;1202
-(rerunfilecheck)             After:  AA30BE5523DDB8F38CA2812D326778E6;1202.
+ (HonorsMultivariableCalculus.aux)
+Package rerunfilecheck Info: File `HonorsMultivariableCalculus.out' has not cha
+nged.
+(rerunfilecheck)             Checksum: CD92ABF6CC847C4B73FA03E142618A8A;1202.
  ) 
 Here is how much of TeX's memory you used:
- 52421 strings out of 475389
- 1177309 string characters out of 2776056
- 1702986 words of memory out of 3000000
- 71726 multiletter control sequences out of 15000+600000
- 646402 words of font info for 500 fonts, out of 8000000 for 9000
+ 53548 strings out of 475389
+ 1211801 string characters out of 2776056
+ 257934331 words of memory out of 259000000
+ 72531 multiletter control sequences out of 15000+600000
+ 646823 words of font info for 504 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 114i,16n,120p,1026b,2396s stack positions out of 10000i,1000n,20000p,200000b,80000s
-
-pdfTeX warning (dest): name{chapter*.32} has been referenced but does not exist
-, replaced by a fixed one
-
-{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.en
-c}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cfr-lm/t1-clm
-.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-math
-sy.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cfr-lm/d
-otdigits-clm.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvip
-s/lm/lm-ts1.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
-/lm/lm-rm.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/l
-m/lm-mathex.enc}<C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/lm/lmbsy10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/lm/lmbsy7.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/lm/lmbx10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/lm/lmbx7.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/lm/lmbx8.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/lm/lmbxi10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/lm/lmex10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/lm/lmmi10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/lm/lmmi5.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Richard/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/Richard/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Richard/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/Richard/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/lm/lmmib5.pfb><C:/Users/Richard/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/lm/lmmib7.pfb><C:/Users/Richard/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Richard/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Richard/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Richard/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Richard/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Richard/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Richard/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Richard/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Richard/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/lm/lmri7.pfb><C:/Users/Richard/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/Richard/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Richard/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Richard/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss9.pfb><C:/Users/Richard/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Richard/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/Richard/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/U
-sers/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><
-C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.pf
-b>
-Output written on HonorsMultivariableCalculus.pdf (80 pages, 1033095 bytes).
+ 114i,16n,120p,1026b,2488s stack positions out of 10000i,1000n,20000p,200000b,80000s
+{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i
+4-t1-0.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/l
+m-rm.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-
+mathit.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cfr-
+lm/t1-clm.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/l
+m/lm-mathsy.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
+/cfr-lm/dotdigits-clm.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts
+/enc/dvips/lm/lm-ts1.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/
+enc/dvips/lm/lm-mathex.enc}<C:/Users/Richard/AppData/Local/Programs/MiKTeX/font
+s/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/Richard/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Users/Richard/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/User
+s/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.
+pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbsy
+10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+bsy7.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
+lmbx10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
+m/lmbx7.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+lm/lmbx8.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/lm/lmbxi10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/lm/lmex10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/lm/lmmi10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/lm/lmmi5.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/lm/lmmi6.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/lm/lmmi7.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/lm/lmmi8.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/lm/lmmib10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/font
+s/type1/public/lm/lmmib5.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/lm/lmmib7.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/lm/lmr10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/lm/lmr12.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/lm/lmr5.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/lm/lmr6.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/lm/lmr7.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/lm/lmr8.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/lm/lmr9.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/lm/lmri10.pfb><C:/Users/Richard/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/lm/lmri7.pfb><C:/Users/Richard/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/Richard/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Richard/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Richard/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/lm/lmss9.pfb><C:/Users/Richard/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Richard/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/Richard/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Richard/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam7.pfb><C:/Users/Richard
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><
+C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symb
+ols/msbm7.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/rsfs/rsfs10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/rsfs/rsfs7.pfb>
+Output written on HonorsMultivariableCalculus.pdf (111 pages, 1620415 bytes).
 PDF statistics:
- 1428 PDF objects out of 1440 (max. 8388607)
- 641 named destinations out of 1000 (max. 500000)
- 131154 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 2353 PDF objects out of 2487 (max. 8388607)
+ 885 named destinations out of 1000 (max. 500000)
+ 131836 words of extra memory for PDF output out of 154059 (max. 10000000)
 

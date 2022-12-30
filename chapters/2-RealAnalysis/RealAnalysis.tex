@@ -21,13 +21,19 @@ We will begin by studying vector-valued functions.  That is, maps of the form $f
     \end{definition}
 
 In other words, vector-valued functions are precisely described by their component functions $x_i(t)$.  We will see that this will cause vector-valued functions $\bm{r}(t) : \R \to \R^n$ to behave extremely similarly to scalar functions $f : \R \to \R$.  In some sense, a vector-valued function $\bm{r}(t) : \R \to \R^n$ is simply a collection of $n$ single-variable scalar functions.
-
+ \begin{center}        
+        \includegraphics[scale=.75]{chapters/2-RealAnalysis/figures/figures-vectorval1.pdf}
+    \end{center}
 
 \begin{motivating}
 How should we geometrically interpret vector-valued functions?
 \end{motivating}
 
 We should think of a vector-valued function $\bm{r}(t)$ as describing the motion of a particle in $\R^n$.  For example, let us think of the units of $t$ as begin seconds.  Then we can interpret the vector $\bm{r}(0)$ as describing the position of a particle at time $t=0$.  We can then think of the vector $\bm{r}(1)$ as describing the position of the particle 1 second after $t=0$; and similarly, the vector $\bm{r}(-1)$ describes the position of the particle 1 second \textbf{before} $t=0$.  
+
+ \begin{center}        
+        \includegraphics[scale=.75]{chapters/2-RealAnalysis/figures/figures-vectorvalpoint.pdf}
+    \end{center}
 
 Let us turn to some examples:
 
@@ -38,15 +44,29 @@ A scalar function $f : \R \to \R$ is a vector-valued function for $n=1$.
 
 \begin{example}
 Sketch the vector-valued function $\bm{c}(t) = \langle  -\sin(t), \cos(t) \rangle$ in $\R^2$.
+
+ \begin{center}        
+        \includegraphics{chapters/2-RealAnalysis/figures/figures-vectorcircle.pdf}
+    \end{center}
+
 \end{example}
 
 
 \begin{example}\label{helix1}
 Sketch the vector-valued function $\bm{h}(t) = \langle -\sin(t), \cos(t), t \rangle$ in $\R^3$.
+
+ \begin{center}        
+        \includegraphics[scale=.75]{chapters/2-RealAnalysis/figures/figures-helix.pdf}
+    \end{center}
 \end{example}
 
 \begin{example}\label{helix2}
 Sketch the vector-valued function $\bm{r}(s) = \langle -\sin(5s), \cos(5s), 5s \rangle$ in $\R^3$.
+
+ \begin{center}        
+        \includegraphics[scale=.75]{chapters/2-RealAnalysis/figures/figures-helix5x.pdf}
+    \end{center}
+
 \end{example}
 
 \begin{motivating}
@@ -65,31 +85,26 @@ That is, we can geometrically interpret the parametric curve as being the path t
 The parametric curve of $\bm{c}(t) = \langle  -\sin(t), \cos(t) \rangle$ is the circle of radius 1, centered at the origin.
 
 That is, it is the set of points $\{(x,y) \ | \ x^2 + y^2=1 \}$
+
+ \begin{center}        
+        \includegraphics{chapters/2-RealAnalysis/figures/figures-parametriccircle.pdf}
+    \end{center}
+
 \end{example}
 
 
 \begin{remark}
 The two examples \hyperref[helix1]{$\bm{h}(t)$} and \hyperref[helix2]{$\bm{r}(s)$} show us that there are multiple possible parametrizations of the same curve.
+
+
 \end{remark}
 
 \begin{example}
 The parametric curve of $\bm{h}(t) = \langle -\sin(t), \cos(t), t \rangle$ and $\bm{r}(s) = \langle -\sin(5s), \cos(5s), 5s \rangle$ is called a helix.
 
-\begin{center}
-    \begin{tikzpicture}
-   \begin{axis}[view={60}{30},
-                axis lines=center,axis on top,
-                no marks,axis equal,
-                xmin=-2,xmax=2,ymin=-2,ymax=2,zmin=-1,zmax=2,
-                enlargelimits={upper=0.1}]
-     \addplot3[
-                UCLAblue,samples=100,
-                domain=-1:4,
-                y domain=0:0,
-                ]
-                ({cos(deg(2*pi*x))},{-1*sin(deg(2*pi*x))},{x});
-  \end{axis}
-\end{tikzpicture}    
+
+ \begin{center}        
+        \includegraphics[scale=.75]{chapters/2-RealAnalysis/figures/figures-helixcurve.pdf}
     \end{center}
 
 \end{example}
@@ -101,7 +116,7 @@ In other words, the parametrization describes how fast and in what direction you
 How can we sketch parametrizations and parametric curves?
 \end{motivating}
 
-Plotting points is something that a computer can do pretty easily; however, plotting points by hand is often a very inefficient way to study parametric curves.  We will discuss two tools that can help us more easily sketch and understand vector-valued functions in $\R^3$.
+Plotting points is something that a computer can do pretty easily\footnote{in fact, this is how all the graphics are plotted in these lecture notes!}; however, plotting points by hand is often a very inefficient way for humans to study parametric curves.  We will discuss two tools that can help us more easily sketch and understand vector-valued functions in $\R^3$.
 
 \subsubsection{Projections}
 
@@ -121,15 +136,17 @@ Given a vector-valued function $\bm{r}(t) = \langle x(t), y(t), z(t) \rangle$, w
 That is, we can think of these as shadows of the vector-valued function $\bm{r}(t)$.
 
 \begin{example}
-Consider the helix parametrization $\bm{h}(t) = \langle -\sin(t), \cos(t), t \rangle$ in $\R^3$.
+Consider the helix parametrization $\bm{h}(t) = \langle t, \cos(t), \sin(t) \rangle$ in $\R^3$.
 
-The projection onto the $xy$-plane corresponds to $\bm{r}(t) = \langle -\sin(t), \cos(t), 0 \rangle$.  This describes counterclockwise motion around the unit circle centered at the origin.  
+\begin{itemize}
+    \item The projection onto the $xy$-plane corresponds to $\bm{r}(t) = \langle t, \cos(t), 0 \rangle$.  This corresponds to a cosine curve in the $z=0$ plane, depicted on the bottom, in red.
+    \item The projection onto the $xz$-plane corresponds to $\bm{r}(t) = \langle t, 0, \sin(t)\rangle$.  This corresponds to a sine curve in the $x=0$ plane, depicted on the right in orange.
+    \item The projection onto the $yz$-plane corresponds to $\bm{r}(t) = \langle 0, \cos(t), \sin(t) \rangle$.  This describes counterclockwise motion around the unit circle centered at the origin, in the $yz$-plane, depicted on the left in green.  
+\end{itemize}
 
-The projection onto the $xz$-plane corresponds to $\bm{r}(t) = \langle -\sin(t), 0, t\rangle$.  This corresponds to a sine curve in the $xz$-plane.
-
-The projection onto the $yz$-plane corresponds to $\bm{r}(t) = \langle 0, \cos(t), t \rangle$.  This corresponds to a sine curve in the $yz$-plane.
-
-\fixthis{picture}
+\begin{center}
+    \includegraphics{chapters/2-RealAnalysis/figures/figures-projections.pdf}
+\end{center}
 
 \end{example}
 
@@ -176,7 +193,7 @@ We can use this technique in general to study the solutions to an arbitrary equa
 
 \begin{definition}
     The \textbf{trace in the plane $P$}\define{trace} of a subset $S \subset \R^3$ is the intersection of $S$ with $P$.  That is, 
-    $$S \cap P = \{\bm{x} \in \R^3 \ | \ \bm{x} \in S \textnormal{and} \bm{x} \in P\}$$
+    $$S \cap P = \{\bm{x} \in \R^3 \ | \ \bm{x} \in S \ \textnormal{and} \ \bm{x} \in P\}$$
     
     We typically study $x$-traces, $y$-traces, and $z$-traces - that is, traces in the planes $x=k$, $y=k$, and $z=k$ respectively.
     
@@ -219,10 +236,16 @@ Up to rotation and translation, there are 8 types of quadric surfaces:
 
 That is, given any quadric surface, corresponding to a quadratic equation $Ax^2 + By^2 + Cz^2 + Dxy + Exz + Fyz + ax + by + cz + d = 0$, one can rotate it and translate it so that the quadratic equation can be written in the standard form above.
 
+\begin{center}
+    \includegraphics{chapters/2-RealAnalysis/figures/figures-ellipticparaboloid.pdf}
+\end{center}
 
+\begin{center}
+    \includegraphics{chapters/2-RealAnalysis/figures/figures-hyperbolicparaboloid.pdf}
+\end{center}
 
 \begin{example}
-The unit sphere of radius 1 can be described as the set of vectors $\{\bm{v} \in \R^3 \ | \ ||\bm{v}|| = 1\}$.  Equivalently, the unit sphere is the set of points $$\{ (x, y, z) \ | x^2 + y^2 + z^2 =1\}$$
+The unit sphere of radius 1 in $\R^3$ can be described as the set of vectors $\{\bm{v} \in \R^3 \ | \ ||\bm{v}|| = 1\}$.  Equivalently, the unit sphere in $\R^3$ is the set of points $$\{ (x, y, z) \ | \ x^2 + y^2 + z^2 =1\}$$
 
 Thus, the unit sphere of radius 1 is an example of an ellipsoid!
 \end{example}
@@ -322,10 +345,11 @@ We can easily sketch and visualize graphs of functions with $2$ variables:
 How can we sketch the graph of a function of two variables?
 \end{motivating}
 
-To sketch graphs in $\R^3$, we can use traces!
+To sketch graphs in $\R^3$, we can again use traces!
 
 \begin{definition}
-    The \textbf{trace in the plane $P$}\define{trace} of a graph $\Gamma \subset \R^3$ is the intersection of $\Gamma$ with $P$.  
+    The \textbf{trace in the plane $P$}\define{trace} of a graph $\Gamma \subset \R^3$ is the intersection of $\Gamma$ with $P$.  That is, 
+    $$\Gamma \cap P = \{\bm{x} \in \R^3 \ | \ \bm{x} \in \Gamma \ \textnormal{and} \ \bm{x} \in P\}$$
     
     We typically study $x$-traces, $y$-traces, and $z$-traces - that is, traces in the planes $x=k$, $y=k$, and $z=k$ respectively.
     
@@ -496,7 +520,7 @@ Sketch traces of the function $f(x,y) = \frac{y}{x^2}$.
 Sketch traces of the function $f(x,y) = \frac{1}{x^2 + y^2 + 1}$.
 \end{problem}
 
-\begin{problem}{traces3}
+\begin{problem}{traces4}
 Sketch traces of the function $f(x,y) = \cos(x-y)$.
 \end{problem}
 
@@ -765,14 +789,14 @@ Do limits of sequences always exist?
 There are two main types of sequences that diverge:
 
     \begin{example}
-    The sequence $\{(-1)^n\}$ in $\R$ diverges.
+    The sequence $\{(-1)^n\} = \{-1, 1, -1, 1 \cdots \}$ in $\R$ diverges.
     \end{example}
     
     \begin{example}
-    The sequence $\{n\}$ in $\R$ diverges.
+    The sequence $\{n\} = \{1, 2, 3, 4, \cdots\}$ in $\R$ diverges.
     \end{example}
     
-    We will investigate the behavior of both of the sequences.
+    In this section, we will investigate the behavior of these sequences, and quantify why they don't converge.
 
 
 \begin{definition}
@@ -781,7 +805,7 @@ There are two main types of sequences that diverge:
     \end{definition}
 
     
-    \begin{theorem}
+    \begin{theorem}\label{subsequencediv}
     Let $\{\bm{a_n}\}$ be a sequence of vectors in $\R^k$ such that $\{\bm{a_n}\}$ has two different subsequences $\{\bm{a_{n_i}}\}$ and $\{\bm{a_{n_j}}\}$ that converge to two different limits.
     
     Then  $\{\bm{a_n}\}$ diverges.
@@ -789,8 +813,14 @@ There are two main types of sequences that diverge:
     
     
      \begin{example}
-    The sequence $\{(-1)^n\}$ has the subsequences $$\{(-1)^{2n}\} \textnormal{ and } \{(-1)^{2n+1}\}$$ which converge to $1$ and $-1$, hence $\{(-1)^n\}$ diverges.
+    The sequence $\{(-1)^n\}$ has the subsequences $$\{(-1)^{2n}\} = \{1, 1, 1, \cdots\}$$ and
+    
+    $$\{(-1)^{2n+1}\}= \{-1, -1, -1, \cdots\}$$ which converge to $1$ and $-1$, respectively.
+    
+    Hence $\{(-1)^n\}$ diverges by theorem $\ref{subsequencediv}$.
     \end{example}
+
+    \fixthis{Can also prove it fails to follow definition}.
 
 \begin{theorem}[Convergent sequences are bounded]
 
@@ -802,8 +832,26 @@ Then the sequence $\{\bm{a_n}\}$ is \textbf{bounded}.  That is, there exists a n
 \end{theorem}
     
     \begin{proof}
-    \fixthis{picture}
+    We would like to say that $A$ should be the largest value out of all the $||\bm{a_n}||$.  However, since the set $\{||\bm{a_n}||\}$ is an \textit{infinite} set, there does not necessarily exist a maximum.\footnote{The sequence $\{1-\frac{1}{n}\}$ has no maximal element, for example.  Nevertheless, it is still bounded!}
+
+    However, we can take the maximum of a finite set!  Since $\lim_{n \to \infty}\bm{a_n} = \bm{L}$, if we choose $\varepsilon = 1$, then by definition, there exists $M$ such that for all $m > M$, $$||\bm{a_m} - \bm{L}|| < 1$$
+
+    By the triangle inequality, this implies that $$||\bm{a_m}|| < ||\bm{L}|| + 1$$ for all $m > M$.
+
+    Observe that the set $\{||\bm{a_1}||, \cdots, ||\bm{a_M}||, ||\bm{L}|| + 1 \}$ is finite, and we can then choose
+    $$A = \textnormal{max}\{||\bm{a_1}||, \cdots, ||\bm{a_M}||, ||\bm{L}|| + 1 \}$$
+
+    By construction, $||\bm{a_n}|| \leq A$ for all $n$, as desired.
+    
     \end{proof}
+
+    The essence of the proof can be summed up in the following picture:
+
+    \begin{center}
+        \includegraphics[scale=.5]{chapters/2-RealAnalysis/figures/figures-sequencebounded.pdf}
+    \end{center}
+
+    All vectors $\bm{a_m}$ for $m > M$ satisfy the property that $||\bm{a_m}|| \leq ||\bm{L}|| + \varepsilon$.  that is, those vectors are contained inside the small ball.  Outside of this ball, there are finitely many vectors.  Thus, if we take $A = \textnormal{max}\{||\bm{a_1}||, \cdots, ||\bm{a_M}||, ||\bm{L}|| + \varepsilon \}$, then we have bounded all the vectors in the sequence.
     
     
     \begin{corollary}
@@ -816,6 +864,7 @@ Then the sequence $\{\bm{a_n}\}$ is \textbf{bounded}.  That is, there exists a n
 
 
 
+    It is not necessary that every term be unbounded - it's enough to find an unbounded subsequence!
 
 \begin{theorem}\label{divergencecriteria}
 Let $\{\bm{a_n}\}$ be a sequence of vectors in $\R^k$.  If $\{\bm{a_n}\}$ has a subsequence $\{\bm{a_{n_i}}\}$ that diverges, then $\{\bm{a_n}\}$ diverges.
@@ -868,7 +917,7 @@ Does the limit of the sequence $\{\frac{n}{n+1}\}$ exist?  Prove your answer.
 
 \begin{problem}{averages}
 
-Let $\{\bm{a_n}\}$ be a sequence of real numbers.  The sequence of averages is the sequence $\{b_n\}$ defined by $b_n = \frac{a_1 + \cdots + a_n}{n}$.
+Let $\{\bm{a_n}\}$ be a sequence of real numbers.  The sequence of averages is the sequence $\{b_n\}$ defined by $$b_n = \frac{a_1 + \cdots + a_n}{n}$$
 
 Prove that if $\lim_{n \to \infty} a_n = 0$, then the sequence of averages $\{b_n\}$ satisfies $\lim_{n \to \infty} b_n = 0$.
 
@@ -919,9 +968,6 @@ Prove that if a sequence of real numbers $\{a_n\}$ is increasing and bounded abo
 Prove that if a sequence of real numbers $\{a_n\}$ is decreasing and bounded below, then $\lim_{n \to \infty} a_n = \textnormal{inf}(\{a_n\})$
 \end{problem}
 
-\begin{problem}{boundeddecreasing}
-Prove that if a sequence of real numbers $\{a_n\}$ is decreasing and bounded below, then $\lim_{n \to \infty} a_n = \textnormal{inf}(\{a_n\})$
-\end{problem}
 
 \begin{problem}{monotone}
 Prove the following theorem:
@@ -975,7 +1021,7 @@ Since $\R$ is a well-ordered field (in other words, since ), we can turn this in
     Let $f: \R^n \to \R^m$, and suppose $\lim_{\bm{x} \to \bm{a}}f(x) = \bm{b_1}$ and $\lim_{\bm{x} \to \bm{a}}f(x) = \bm{b_2}$.  Then $\bm{b_1} = \bm{b_2}$.
     \end{proposition}
 
-We will study this for the two different classes of functions (\hyperref[limvectorval]{vector-valued functions} $\R \to \R^n$ and \hyperref[limmulti]{multivariable functions} $\R^n \to \R$)  we've seen.  This turns out to be enough, as we see in \fixthis{section}
+We will study this for the two different classes of functions (\hyperref[limvectorval]{vector-valued functions} $\R \to \R^n$ and \hyperref[limmulti]{multivariable functions} $\R^n \to \R$)  we've seen.  This turns out to be enough, as we see in section \ref{limgenmulti}.
 
 
 
@@ -1010,7 +1056,7 @@ We will study this for the two different classes of functions (\hyperref[limvect
     \begin{proof}
     The proof is essentially the same as the proof of theorem \ref{limseqcomponentwise}:
     
-    The key idea is again the following inequalities $|x_i(t) - x_i| \leq ||\bm{r}(t) - \langle x_1, \cdots, x_n \rangle|| \leq \sum_{i=1}^m |x_i(t) - x_i|$.
+    The key idea is again the following inequalities $$|x_i(t) - x_i| \leq ||\bm{r}(t) - \langle x_1, \cdots, x_n \rangle|| \leq \sum_{i=1}^m |x_i(t) - x_i|$$
     
     
     
@@ -1078,7 +1124,7 @@ Let $f(x,y) = \frac{x\sin(y)}{e^x+1}$.  Then $$\lim_{(x,y) \to (a,b)}f(x,y) = \f
     Observe that theorem \ref{limmultirules} allows us to evaluate the limits, except when we possibly divide by zero.
     
   \begin{motivating}
-  When do limits of multivariable functions not exist?
+  When do limits of multivariable functions \textbf{not} exist?
   \end{motivating}  
     
     \begin{definition}
@@ -1105,23 +1151,78 @@ Let $f(x,y) = \frac{x\sin(y)}{e^x+1}$.  Then $$\lim_{(x,y) \to (a,b)}f(x,y) = \f
     \end{example}
     
     
+    \begin{motivating}
+        What other tools can we use to prove limits exist?
+    \end{motivating}
     
-    
-    
-    
+    It's often difficult to use epsilon-delta arguments to prove that limits exist (especially limits involving non-polynomial functions like $\sin(x), \cos(x)$, $e^x$, etc.).  Thus, we would like other ways to prove that limits exist.
+
+    In these notes, we will discuss two tools that one can use:
+
+       
     \begin{theorem}[Squeeze Theorem]
     Let $f(\bm{x})$, $g(\bm{x})$, and $h(\bm{x})$ be functions of $n$ variables such that $$\lim_{\bm{x} \to \bm{P}}f(\bm{x}) = L = \lim_{\bm{x} \to \bm{P}}h(\bm{x})$$
     
     If there exists $\delta > 0$ such that for all $\bm{x} \in B_\delta(\bm{P}) - \{\bm{P}\}$, we have that $$f(\bm{x}) \leq g(\bm{x}) \leq h(\bm{x})$$ 
     Then $\lim_{\bm{x} \to \bm{P}}g(\bm{x}) = L$.
     \end{theorem}
+
+    
+
     
     \begin{example}
-    Determine if the following limit exists: $$\lim_{(x,y) \to (0,0)} x\sin(\frac{1}{x^2 + y^2})$$ 
+    Consider the limit $$\lim_{(x,y) \to (0,0)} x\sin(\frac{1}{x^2 + y^2})$$ 
+
+    Observe that for all $\theta$,  $|\sin(\theta)| \leq 1$.  Therefore, it follows that $|x\sin(\frac{1}{x^2 + y^2})| \leq |x|$.  Thus, 
+    $$-|x| \leq x\sin(\frac{1}{x^2 + y^2}) \leq |x|$$
+    Since we know that $\lim_{(x,y) \to (0,0)} -|x| = \lim_{(x,y) \to (0,0)} |x| = 0$, by the squeeze theorem it follows that $$\lim_{(x,y) \to (0,0)} x\sin(\frac{1}{x^2 + y^2}) = 0$$ 
     \end{example}
     
+
+    We can also use polar coordinates to compute limits of functions in two variables.  The key idea is the following proposition:
+
+\begin{proposition}
+
+If we set $x = r\cos(\theta)$, $y  = r\sin(\theta)$, then $(x,y)$ approaches $(0,0)$ if and only if $r$ approaches $0$.
+
+\end{proposition}
+
+So if we have a a limit of a function of two-variables $\lim_{(x,y) \to (0,0)} f(x,y)$, we can often use polar coordinates to \textbf{try} to reduce our limit to a single-variable limit, by considering the function $$g(r,\theta) = f(r\cos(\theta), r\sin(\theta))$$ and studying the limit 
+$$\lim_{r \to 0} g(r,\theta)$$
+
+\begin{example}
+    Consider the limit $$\lim_{(x,y) \to (0,0)} \frac{x^2y}{x^2+y^2}$$  
     
+    Upon converting to polar coordinates, we obtain 
+    \begin{align*}
+        \lim_{(x,y) \to (0,0)} \frac{x^2y}{x^2+y^2} &= \lim_{r \to 0} \frac{(r\cos(\theta))^2r\sin(\theta)}{(r\cos(\theta))^2 + (r\sin(\theta))^2} \\
+        &= \lim_{r \to 0} \frac{r^3\cos^2(\theta)\sin(\theta)}{r^2} \\
+        &= \lim_{r \to 0}r\cos^2(\theta)\sin(\theta) 
+    \end{align*}
+
+    Observe that since both $|\cos(\theta)| \leq 1$ and $|\sin(\theta)| \leq 1$, we can conclude that $|r\cos^2(\theta)\sin(\theta)| \leq |r|$.  Thus,
     
+    $$\lim_{(x,y) \to (0,0)} \left|\frac{x^2y}{x^2+y^2}\right| \leq \lim_{r \to 0} |r| = 0$$
+    
+    So by the squeeze theorem, we can conclude that $$\lim_{(x,y) \to (0,0)} \frac{x^2y}{x^2+y^2} = 0$$  
+\end{example}
+
+However, converting to polar coordinates will not always be successful, as you will see in the exercises below \fixthis{REFERENCE}.  A precise statement about limits in polar coordinates is as follows:
+
+    
+    \begin{theorem}[Limits using polar coordinates]\label{thm:polarlim}
+    Let $f(x,y) : \R^2 \to \R$ be a function of two variables, which we can express in polar coordinates as $g(r,\theta) := f(r\cos(\theta), r\sin(\theta))$.  Then $$\lim_{(x,y) \to (0,0)} f(x,y) = L$$ if and only if there exists $\delta > 0$ and a function $h : \R \to \R$ such that 
+    
+    \begin{itemize}
+        \item If $0 < r < \delta$, then $|g(r,\theta) - L| \leq h(r)$ for all $\theta$, AND
+        \item $\lim_{r\to0} h(r) = 0$
+    \end{itemize}
+
+    \end{theorem}
+
+\begin{corollary}
+    If $\lim_{r \to 0} g(r,\theta)$ depends on $\theta$, then the value of the limit will differ for different straight line paths.  Thus, $\lim_{(x,y) \to (0,0)} f(x,y)$ does not exist.
+\end{corollary}
     
     
     
@@ -1134,7 +1235,7 @@ Let $f(x,y) = \frac{x\sin(y)}{e^x+1}$.  Then $$\lim_{(x,y) \to (a,b)}f(x,y) = \f
     
     The key idea is the following theorem:
     
-    \begin{theorem}[Limits of general multivariable functions are determined componentwise]
+    \begin{theorem}[Limits of general multivariable functions are determined componentwise]\label{thm:genmultilimit}
     For any general multivariable function $f : \R^n \to \R^m$, defined by 
 $$f(x_1, \cdots, x_n) = \big\langle f_1(x_1, \cdots, x_n), f_2(x_1, \cdots, x_n), \cdots, f_m(x_1, \cdots, x_n) \big\rangle$$
 Then 
@@ -1201,14 +1302,43 @@ Consider the function $f(x,y) = \left\{
 		Compute $\lim_{(x,y) \to (0,0)} f(x,y)$ or show that it does not exist.	
 \end{problem}
 
+\begin{problem}{sequenceofpoints2}
+    Consider the function $$f(x,y) = \left\{
+		\begin{array}{ll}
+			1 & \text{ if } (x,y) \neq (0,0) \textnormal{ with } x+y \textnormal{ rational} \\
+			0 & \text{ if } (x,y) \neq (0,0) \textnormal{ with } x+y \textnormal{ irrational} \\
+			1 & \text{ if } (x,y) = (0,0)
+		\end{array}
+		\right.$$
+		
+		Compute $\lim_{(x,y) \to (0,0)} f(x,y)$ or show that it doesn't exist.
+\end{problem}
 
+\begin{problem}{polarpoint}
+    We can use polar coordinates to compute limits of functions in two variables approaching the point $(0,0)$.  How can we modify the polar coordinate method to compute limits of functions in two variables approaching the point $(a,b)$?
+\end{problem}
 
+\begin{problem}{polar1}
+    Use polar coordinates to show that the limit $\lim_{(x,y) \to (0,0)} \frac{x^2}{x^2+y^2}$ does not exist.
+\end{problem}
 
+\begin{problem}{polarvsreg1}
+    Convert the limit $\lim_{(x,y) \to (0,0)} \frac{x^2y}{x^4+y^2}$ to polar coordinates, and show that for all $\theta$, $\lim_{r\to0} g(r, \theta) = 0$.
+\end{problem}
+
+\begin{problem}{polarvsreg2}
+    Show that $\lim_{(x,y) \to (0,0)} \frac{x^2y}{x^4+y^2}$ doesn't exist by finding two paths $\bm{r_1}(t)$ and $\bm{r_2}(t)$, passing through the origin, such that the limit of $f(x,y)$ along these two paths have different values.  
+\end{problem}
+
+\begin{problem}{polarvsreg3}
+    Why do your answers in exercises \ref{problem:polarvsreg1} and \ref{problem:polarvsreg2} not contradict each other?  How do they relate to theorem \ref{thm:polarlim}?
+
+\end{problem}
 
 
 \section{Continuity}\label{sec:continuity}
 
-Let us now turn to continuity.  Let us first recall the notion of continuity fora single-variable functions:
+Let us now turn to continuity.  Let us first recall the notion of continuity for a single-variable function:
 
 
 \begin{definition}
@@ -1257,9 +1387,9 @@ Thus, all of our theorems about limits immediately yield theorems about continui
     \end{proposition}
 
 
-\subsection{Multivariable functions}
+    \subsection{Multivariable functions}
 
-\begin{theorem}[Properties of continuity of multivariable functions]
+\begin{theorem}[Properties of continuity of multivariable functions]\label{sumscalarmultcont}
      Let $f,g : \R^n \to \R$ be functions of $n$ variables. Suppose that $f(\bm{x})$ and $g(\bm{x})$ are continuous at $\bm{P}$.
     
     \begin{enumerate}

@@ -15,36 +15,68 @@ Let us first recall the notion of the derivative of a single-variable function:
     (sometimes written $\frac{df}{dx}(x_0) = L$)
     \end{definition}
 
+In other words, the derivative depends precisely on the local behavior of $f(x)$ near $x_0$.  That is, we look precisely at the behavior of $f(x)$ in a small neighborhood $B_\varepsilon(x_0)$.
+
+\fixthis{interior point}
+
+
 The notion of the derivative in single-variable calculus has many interpretations:
 
-The derivative $f'(a)$ tells us the slope of the tangent line to the graph $y=f(x)$ at the point $x=a$.
+\begin{itemize}
+    \item The derivative $f'(a)$ tells us the slope of the tangent line to the graph $y=f(x)$ at the point $x=a$.
+    \item The derivative $f'(a)$ tells us the instantaneous rate of change of $f(x)$ at the point $x=a$.
+    \item The derivative $\frac{d}{dx}$ is an operator, whose input is a differentiable function $f : \R \to \R$, and whose output is a function $f' : \R \to \R$.
+    \item The derivative is the linear approximation of $f(x)$ in a small neighborhood $B_\varepsilon(x_0)$.
+\end{itemize}
 
-The derivative $f'(a)$ tells us the instantaneous rate of change of $f(x)$ at the point $x=a$.
+We will see how all of these various notions generalize to the case of multivariable functions.
 
-The derivative $\frac{d}{dx}$ is an operator, whose input is a differentiable function $f : \R \to \R$, and whose output is a function $f' : \R \to \R$.
-
-
-The derivative depends precisely on the local behavior of $f(x)$ near $x_0$.  That is, we look precisely at the behavior of $f(x)$ on $B_\varepsilon(x_0)$.
 
 \section{The Multivariable Derivative}
 
-Bad definition: 
+It takes some thought to come up with the correct definition of the derivative of a multivariable function $f : \R^n \to \R$ at a point $\bm{x_0}$!  
 
-$$\lim_{\bm{h} \to \bm{0}} \frac{f(\bm{x_0+h})-f(\bm{x_0})}{||\bm{h}||}$$
+For instance, one might na\"ively define the multivariable derivative as the following limit:
+$$f'(\bm{x_0}) \ ``=" \ \lim_{\bm{h} \to \bm{0}} \frac{f(\bm{x_0+h})-f(\bm{x_0})}{||\bm{h}||}$$
 
-Bad example 1: $f(x,y) = x$.  Limit does not exist taking the sequences $(\frac{1}{n}, 0)$, $(-\frac{1}{n}, 0)$, and $(0, \frac{1}{n})$
+However, this definition \textbf{fails} for multiple reasons:
 
-Bad example 2: Set $k=1$.  Does this agree with the usual definition of the limit?
+\begin{example}\label{derivfail1}
+    Let $f : \R^2 \to \R$ be the function $f(x,y) = x$, and consider the point $\bm{x_0} = (0,0)$.  
+    
+    We see that $$\lim_{(x,y) \to (0,0) } \frac{f(x,y)-f(0,0)}{||\langle x,y\rangle||}$$
+    \textbf{does not exist} by considering the following sequences:
 
-$$\lim_{h \to 0} \frac{f(x_0+h)-f(x_0)}{|h|}$$
+    \begin{itemize}
+        \item Along the sequence $\bm{x_n} = \langle \frac{1}{n}, 0 \rangle$, we have that $$\lim_{n\to\infty} \frac{f(\frac{1}{n}, 0)}{||\langle \frac{1}{n}, 0\rangle||} = 1$$
+        \item Along the sequence $\bm{y_n} = \langle \frac{1}{n}, 0 \rangle$, we have that $$\lim_{n\to\infty} \frac{f(\frac{-1}{n}, 0)}{||\langle \frac{-1}{n}, 0\rangle||} = -1$$
+        \item Along the sequence $\bm{z_n} = \langle 0, \frac{1}{n}\rangle$, we have that $$\lim_{n\to\infty} \frac{f(0, \frac{1}{n})}{||\langle 0, \frac{1}{n}\rangle||} = 0$$
+    \end{itemize}
+    
+\end{example}
 
-consider the function $f(x) = |x|$
+Moreover, this definition also fails because it does not correctly generalize the notion of the single variable derivative:
 
+\begin{example}\label{derivfail2}
+    Specializing the na\"ive definition to $n=1$, we obtain $\lim_{x \to 0 } \frac{f(x)-f(0)}{|x|}$.
 
+    However, if we consider the function $f: \R \to \R$ defined by $f(x) = |x|$.  We know from single-variable calculus that this function is not differentiable at $x=0$.
+
+    Nevertheless, we see that $$\lim_{x \to 0 } \frac{f(x)-f(0)}{|x|} = 1$$
+    
+\end{example}
+
+\begin{remark}
+    One can correct for the issue in \ref{derivfail2} by instead considering $$\lim_{\bm{h} \to \bm{0}} \frac{|f(\bm{x_0+h})-f(\bm{x_0})|}{||\bm{h}||}$$
+
+    Nevertheless, the issue in \ref{derivfail1} continues to exist for the $f(x,y) = x$ at $(0,0)$ by considering the sequences $\bm{x_n} = \langle \frac{1}{n}, 0 \rangle$ and $\bm{z_n} = \langle 0, \frac{1}{n}\rangle$.
+\end{remark}
+
+Thus, we must make a paradigm shift in how we think of the multivariable derivative:
 
 
 \begin{motivating}
-    Paradigm shift:
+    How should we interpret the multivariable derivative?
 \end{motivating}
 
 
@@ -55,24 +87,26 @@ consider the function $f(x) = |x|$
     
     $$\lim_{h \to 0} \bigg|\frac{f(x_0+h)-f(x_0)-T(h)}{h}\bigg| = 0$$
     
-    Observe that by our characterization of linear transformations $T: \R \to \R$, $$T(x) = mx$$ for some $m$.  We define the derivative of $f$ at $x_0$ to be $m$. That is,    
+    Observe that by our characterization of linear transformations $T: \R \to \R$, correspond to scalars $m in \R$ via the correspondence    
+    $$T(x) = mx$$  
+    We define the derivative of $f$ at $x_0$ to be $m$. That is,    
     $$f'(x_0) := m$$
     \end{definition}
 
-
-
-Good definition:
+We can generalize this definition as follows:
 
 \begin{definition}
-    A multivariable function $f : A \subset R^m \to \R^n$ is \textbf{differentiable at} an interior point $\bm{x_0}$ of $A$  if there exists a linear transformation $T: \R^m \to \R^n$ such that 
+    A multivariable function $f : A \subset R^m \to \R^n$ is \textbf{differentiable at}\define{Multivariable derivative} an interior point $\bm{x_0}$ of $A$  if there exists a linear transformation $T: \R^m \to \R^n$ such that 
     
     $$\lim_{\bm{h} \to \bm{0}} \frac{||f(\bm{x_0+h})-f(\bm{x_0})-T(\bm{h})||}{||\bm{h}||} = 0$$
     
     The \textbf{derivative} of $f$ at $x_0$ is the linear transformation $$Df(\bm{x_0}) := T$$
+
+    By our characterization of linear transformations, $Df(\bm{x_0}) : \R^m \to \R^n$ corresponds to a matrix $[Df(\bm{x_0})] \in M_{n\times m}(\R)$
     \end{definition}
 
 \begin{remark}
-    The derivative of a function $f : \R^m \to \R^n$ at a point $x_0$ is the \textbf{approximation} of $f$ by a \textbf{linear transformation} at $x_0$.
+    The derivative of a function $f : \R^m \to \R^n$ at a point $x_0$ is the \textbf{approximation} of $f$ by a \textbf{linear transformation} $Df(\bm{x_0})$ at $x_0$.
     \end{remark}
 
     \begin{proposition}[Uniqueness]
@@ -86,7 +120,7 @@ Good definition:
 The constant map $c: \R^m \to \R^n$ defined by $c(\bm{x}) = \bm{a}$ is differentiable everywhere, and $Dc(\bm{x_0}) = 0$.
     \end{example}
 
-    \begin{example}
+    \begin{example}\label{derivlinearmap}
     A linear map $T: \R^m \to \R^n$ is differentiable everywhere, and $DT(\bm{x_0}) = T$.
     \end{example}
 
@@ -366,14 +400,14 @@ However, since we know that the derivative can be computed in terms of the Jacob
 
 We can spell this out in terms of coordinates:
 
-\begin{example}[The Chain rule in coordinates]
+\begin{example}
     Suppose that $f : \R^n \to \R^m$ is differentiable at $\bm{x_0} \in \R^n$, and $g: \R^m \to \R^k$ is differentiable at $f(\bm{x_0}) \in \R^m$. Then
-    \begin{equation*}
+\begin{multline}
         \begin{bmatrix}
 D_1(g \circ f)^1(\bm{x_0}) & \cdots & D_n(g \circ f)^1(\bm{x_0}) \\
 \vdots & \vdots & \vdots\\
 D_1(g \circ f)^k(\bm{x_0}) & \cdots & D_n(g \circ f)^k(\bm{x_0}) \\
-\end{bmatrix} = 
+\end{bmatrix} = \\
 \begin{bmatrix}
 D_1g^1(f(\bm{x_0})) & \cdots & D_mg^1(f(\bm{x_0})) \\
 \vdots & \vdots & \vdots\\
@@ -384,18 +418,18 @@ D_1f^1(\bm{x_0}) & \cdots & D_nf^1(\bm{x_0}) \\
 \vdots & \vdots & \vdots\\
 D_1f^m(\bm{x_0})  & \cdots & D_nf^m(\bm{x_0}) 
 \end{bmatrix}
-    \end{equation*}
+\end{multline}
     \end{example}
     
 \begin{motivating}
     How can we compute $D(g \circ f)(\bm{x_0})$?  Equivalently, what are the entries of the matrix $[J_{g\circ f}(\bm{x_0})]$?
 \end{motivating}
 
-To answer this question, let us look at the chain rule in a specific case:
+To answer this question, let us look at the chain rule for a special case: composites of the form $\R^n \to \R^m \to \R$
 
-\begin{example}[The Chain rule for $\R^n \to \R^m \to \R$]
+\begin{example}
     Suppose that $f : \R^n \to \R^m$ is differentiable at $\bm{x_0} \in \R^n$, and $g: \R^m \to \R$ is differentiable at $f(\bm{x_0}) \in \R^m$. Then
-    \begin{equation*}
+    \begin{multline}
         \begin{bmatrix}
 D_1(g \circ f)(\bm{x_0}) & \cdots & D_n(g \circ f)(\bm{x_0}) 
 \end{bmatrix} = \\
@@ -407,7 +441,7 @@ D_1f^1(\bm{x_0}) & \cdots & D_nf^1(\bm{x_0}) \\
 \vdots & \vdots & \vdots\\
 D_1f^m(\bm{x_0})  & \cdots & D_nf^m(\bm{x_0}) 
 \end{bmatrix}
-    \end{equation*}
+    \end{multline}
     Therefore,
     $$\D_i(g \circ f) = \sum_k  D_i f^k \ D_k g$$
     \end{example}
@@ -475,10 +509,10 @@ The directional derivative measures the rate of change of $f$ in the direction o
 \begin{definition}
     If $f(x_1,\cdots,x_n)$ is a function of $n$ variables, then the \textbf{gradient} of $f$ is the vector-valued function 
     $$\nabla f = \langle \frac{\partial f}{\partial x_1} , \cdots, \frac{\partial f}{\partial x_n} \rangle$$
-    That is, $$\nabla f = [Df(\bm{x_0})]^\top$$
+    That is, $$\nabla f = [Df(\bm{x_0})]^\intercal$$
+    where $[A]^\intercal$ indicates the transpose matrix (see definition \ref{transpose}).
     \end{definition}
 
-    \fixthis{transpose meaning}
 
     
     \begin{proposition}
@@ -613,12 +647,12 @@ This helps us geometrically interpret the gradient:
     Let $f(x,y) = \tan(xy^2)$, and consider the path $\bm{r}(t) = \langle t, e^t \rangle$.  Compute $\frac{d}{dt}f(\bm{r}(t))$ at the point $(2,e^2)$.
 \end{problem}
 
-\begin{problem}
+\begin{problem}{gradient1}
     Calculate the gradient of $g(x,y,z) = x\ln(y+z)$.
 \end{problem}
 
 
-\begin{problem}
+\begin{problem}{gradient2}
     Find the maximum rate of change of $f(x,y) = e^{xy-y^2}$at the point $(1,1)$.
 \end{problem}
 
@@ -650,15 +684,25 @@ Recall that in single-variable calculus, the derivative is also useful in optimi
     \end{definition}
 
     \begin{definition}
-    A function $f: \R \to \R$ has a \textbf{local mainmum} at $P \in \R$ if there exists some $r>0$ such that
+    A function $f: \R \to \R$ has a \textbf{local minimum} at $P \in \R$ if there exists some $r>0$ such that
     $$f(P) \leq f(Q)$$
     for all points $Q \in B_r(P)$.
     \end{definition}
 
-\fixthis{Global}
+\begin{definition}
+    A function $f: D \subset \R \to \R$ has a \textbf{global maximum on $D$} at $P \in \R$ if
+    $$f(P) \geq f(Q)$$
+    for all points $Q \in D$.
+    \end{definition}
+
+    \begin{definition}
+    A function $f: D \subset \R \to \R$ has a \textbf{global minimum on $D$} at $P \in \R$ if 
+    $$f(P) \leq f(Q)$$
+    for all points $Q \in D$.
+    \end{definition}
 
 \begin{motivating}
-    How can we find local maxima and minima?
+    How can we find and classify local maxima and minima?
 \end{motivating}
 
 \begin{definition}
@@ -675,7 +719,17 @@ Recall that in single-variable calculus, the derivative is also useful in optimi
         If $f(x)$ has a local maximum or minimum at $P$, then $P$ is a critical point of $f(x)$.
     \end{theorem}
 
-We will see how to generalize these ideas to multivariable calculus:
+    We can classify the critical points of $f(x)$ using the single-variable second derivative test (theorem \ref{single2ndderiv}).
+
+    We can also find global maxima and minima of $f(x)$ on an interval $D = [a,b]$:
+
+    \begin{theorem}
+    The global maxima and minima of $f(x)$ on $[a,b]$ either occur at the critical points of $f$ in $[a,b]$, or on the boundary of $[a,b]$.
+    \end{theorem}
+
+    To classify the global maxima and minima, we simply evaluate the function at these critical points.
+
+    In the following sections, we will see how to generalize these ideas to multivariable calculus:
 
 \subsection{Local optimization}
 
@@ -694,6 +748,18 @@ First, let us define the notion of a local extremum for a multivariable function
     \end{definition}
 
 \fixthis{Note: local extrema only make sense for functions $f: \R^n \to \R$.}
+
+\begin{definition}
+    A function $f : A \subset \R^n \to \R$ has a \textbf{global maximum} at $\bm{x_0} \in A$ if
+    $$f(\bm{x_0}) \geq f(\bm{x})$$ 
+    for all $\bm{x} \in A$.
+    \end{definition}
+    
+    \begin{definition}
+    A function $f : A \subset \R^n \to \R$ has a \textbf{global minimum} at $\bm{x_0} \in A$ if
+    $$f(\bm{x_0}) \leq f(\bm{x})$$ 
+    for all $\bm{x} \in A$.
+    \end{definition}
 
 \begin{remark}
     Observe that \textbf{local} maxima/minima are not necessarily \textbf{global} maxima/minima.
@@ -779,7 +845,7 @@ First, let us define the notion of a local extremum for a multivariable function
 
     \end{example}
 
-\subsection{The Hessian}
+\subsubsection{Classifying local extrema}
 
 \begin{motivating}
     How can we algebraically classify the behavior of critical points?
@@ -787,7 +853,7 @@ First, let us define the notion of a local extremum for a multivariable function
 
 Recall that in single-variable calculus, we can do so using the \textbf{second derivative test}:
 
-\begin{theorem}[The single-variable second derivative test]
+\begin{theorem}[The single-variable second derivative test]\label{single2ndderiv}
 
 Let $f : \R \to \R$ be a single variable function.
 
@@ -807,12 +873,12 @@ If $f''(P)$ does not exist, then the test is \textbf{inconclusive}.
 
 First, we need to figure out what we mean by the second derivative of a multivariable function.
 
-Recall from \fixthis{Reference} that the derivative of a linear transformation $T$ is $T$ itself. Thus, we can 
+Recall from example \ref{derivlinearmap} that the derivative of a linear transformation $T$ is $T$ itself. That is, 
+$$DT(\bm{x_0}) = T$$
+Thus, we cannot na\"ively define the second derifative of $f$ as $D(Df(\bm{x_0})$.
 
 \begin{remark}
     We have defined the derivative $Df(\bm{x_0})$ to be the linear approximation of $f$ \textnormal{at a point} $\bm{x_0} \in \R^n$.
-    
-    \vspace{1em}
     
     This is analogous to finding the slope of the tangent line of a single variable function \textnormal{at a point} $x \in \R$.
     
@@ -821,10 +887,10 @@ Recall from \fixthis{Reference} that the derivative of a linear transformation $
 Therefore, we wish to find the derivative of $Df$, not of $Df(\bm{x_0})$, where 
 $$Df : \R^n \to M_{1\times n}(\R)$$
 
-However, observe that we have not defined the derivative of a function that outputs matrices.  However, since we know that $$M_{1\times n}(\R) \cong \R^n$$ via the transpose map $(-)^\intercal$ 
+However, observe that we have only defined derivatives of functions $f : \R^m \to \R^n$.  We have not defined the derivative of a function that outputs matrices!  However, since we know that $$M_{1\times n}(\R) \cong \R^n$$ via the transpose map $(-)^\intercal$ 
 $$M \mapsto M^\intercal$$
 
-Let us consider the map $$(Df)^\intercal : \R^n \to M_{1\times n}(\R) \to \R^n$$
+We can then consider the map $$(Df)^\intercal : \R^n \cong M_{1\times n}(\R) \to \R^n$$
 which sends a vector 
 $$\bm{x_0} \mapsto \begin{bmatrix}
 D_1f(\bm{x_0}) \\
@@ -832,7 +898,8 @@ D_1f(\bm{x_0}) \\
 D_nf(\bm{x_0})
 \end{bmatrix}$$
 
-Observe that this is the same thing as the gradient of $f$!  Thus, we can make the following definition:
+Observe that $$(Df)^\intercal(\bm{x_0}) =  \nabla f(\bm{x_0})$$  
+Thus, we can make the following definition:
 
 \begin{definition}
 A multivariable function $f: \R^n \to \R$ is \textbf{twice-differentiable} if $f : \R^n \to \R$ and $\nabla f : \R^n \to \R^n$ are both differentiable.
@@ -890,7 +957,7 @@ In other words, the Hessian matrix is the $n \times n$ matrix of all second-orde
     
     \end{theorem}
 
-    Clairaut's theorem is more commonly stated as the following corollary:
+    Clairaut's theorem is more commonly stated (and easily proved) as the following corollary:
     \begin{corollary}
        Let $f \in C^2(U)$.  Then  $$D_iD_j = D_jD_i\ \textnormal{on the region} \ U$$
     \end{corollary}
@@ -898,9 +965,7 @@ In other words, the Hessian matrix is the $n \times n$ matrix of all second-orde
 \begin{example}
     We can use Clairaut's theorem to compute the partial derivative $g_{zzwx}$ for $$g(x,y,w,z) = x^2w^2z^2 + \sin\left(\frac{xy}{z^2}\right)$$
 
-    Note that as long as $z \neq 0$, we have that all partial derivatives of $g$ exist.
-
-    Thus, $g_{zzwx} = g_{wxzz}$ as long as $z \neq 0$.  
+    Note that as long as $z \neq 0$, we have that all partial derivatives of $g$ exist. Thus, $g_{zzwx} = g_{wxzz}$ as long as $z \neq 0$.  
     
     Observe that $g_w = 2x^2wz^2$.  Thus, $g_{zzwx} = g_{wxzz} = 8wx$, as long as $z\neq 0$
 \end{example}
@@ -992,33 +1057,6 @@ Suppose that $f \in C^2(U)$, and that the Hessian $[H_f(\bm{x_0})]$ is invertibl
 \end{theorem}
 
 
-
-\subsubsection{Exercises}
-
-\begin{problem}
-    Consider the function $$f(x,y,z,w) = \frac{3x^2 + e^yz + x}{3y^2+2e^{w^2}}$$ 
-
-Compute the fourth order partial derivative $f_{wyzx}$.
-\end{problem}
-
-\begin{problem}{opt1}
-    Consider the function $$f(x,y) = x^3 - xy +  y^3 $$
-    
-    Find the critical points of $f$, and use the second derivative test to classify the critical points of $f$.
-\end{problem}
-
-\begin{problem}{opt2}
-    Consider the function $$f(x,y) = x^2 + y^3 - 2x - 6y$$
-    
-    Find the critical points of $f$, and use the second derivative test to classify the critical points of $f$.
-\end{problem}
-
-\begin{problem}
-    Consider the function $$f(x,y) = \ln(x) + 2\ln(y) -x - 4y$$
-    
-    Find the critical points of $f$, and use the second derivative test to classify the critical points of $f$.
-\end{problem}
-
 \subsection{Global Optimization}
 
 We saw from the previous section that the gradient and the second derivative test allow us to find and classify \textbf{local} maxima and minima.
@@ -1047,23 +1085,32 @@ In single-variable calculus, we have the following theorem:
     \end{remark}
 
     \begin{example}
-        Consider the function $f(x) = x$ on the interval $A = [0,1)$.
+    The interval $A = [0,1)$ is bounded, but not closed.  
+    
+    The function $f(x) = x$ has no global maximum in $A$, but has a global minimum at $x=0$.
 
-        Observe that this has function has no global maximum on $A$, but has a global minimum at 0.
+    The function $f(x) = -x$ has a global maximum at $x=0$, but no global minimum in $A$.
     \end{example}
 
     \begin{example}
-        Consider the function $f(x) = x$ on the interval $A = \{x \ | x \geq 0 \}$.
+     The interval $A = \{x \ | \ x \geq 0 \}$ is closed, but not bounded.   
+        
+    The function $f(x) = x$ has no global maximum in $A$, but has a global minimum at $x=0$.
 
-        Observe that this has function has no global maximum on $A$, but has a global minimum at 0.
+    The function $f(x) = -x$ has a global maximum at $x=0$, but no global minimum in $A$.
+    \end{example}
+
+    
+    \begin{example}
+     The interval $A = \{x \ | \ x > 0 \}$ is neither closed nor bounded.   
+        
+    The function $f(x) = x$ has no global maximum or minimum in $A$.
+
+    The function $f(x) = \sin(x)$ has (infinitely many) global maxima and minima in $A$.
     \end{example}
 
 Thus, we have a few questions to consider:
 
-\begin{motivating}
-        How do we generalize the notion of global maxima/minima to multivariable functions?
-    \end{motivating}
-    
     \begin{motivating}
 How do we generalize the notion of a bounded and closed interval $[a,b] \subset \R$ to a subset $A \subset \R^n$?
 \end{motivating}
@@ -1072,28 +1119,14 @@ How do we generalize the notion of a bounded and closed interval $[a,b] \subset 
     Can we find the possible points where global maxima/minima occur?
 \end{motivating}
 
-The first question is not that difficult to answer:
+To answer the first question, we will need to define the notions of bounded and closed sets in $\R^n$.
 
 \begin{definition}
-    A function $f : A \subset \R^n \to \R$ has a \textbf{global maximum} at $\bm{x_0} \in A$ if
-    $$f(\bm{x_0}) \geq f(\bm{x})$$ 
-    for all $\bm{x} \in A$.
-    \end{definition}
-    
-    \begin{definition}
-    A function $f : A \subset \R^n \to \R$ has a \textbf{global minimum} at $\bm{x_0} \in A$ if
-    $$f(\bm{x_0}) \leq f(\bm{x})$$ 
-    for all $\bm{x} \in A$.
-    \end{definition}
-
-Let us now turn to the notions of closed and boundedness:
-
-\begin{definition}
-A subset $D \subset \R^n$ is \textbf{bounded} if there exists some $r > 0$ such that $D \subset B_r(\bm{0})$.
+A subset $D \subset \R^n$ is \textbf{bounded}\define{bounded set} if there exists some $r > 0$ such that $D \subset B_r(\bm{0})$.
 \end{definition}
 
 \begin{definition}
-A point $\bm{x_0} \in \R^n$ is a \textbf{boundary point} of $D \subset \R^n$ if: for all $\varepsilon > 0$,
+A point $\bm{x_0} \in \R^n$ is a \textbf{boundary point}\define{boundary point} of $D \subset \R^n$ if: for all $\varepsilon > 0$,
 
 \begin{enumerate}
     \item $B_\varepsilon(\bm{x_0}) \cap D$ is non-empty, \textbf{and}
@@ -1103,21 +1136,25 @@ A point $\bm{x_0} \in \R^n$ is a \textbf{boundary point} of $D \subset \R^n$ if:
 \end{definition}
 
 \begin{definition}
-    A subset $D \subset \R^n$ is \textbf{closed} if it contains all of its boundary points.
+    A subset $D \subset \R^n$ is \textbf{closed}\define{closed set} if it contains all of its boundary points.
         
     \end{definition}
 
 \begin{example}
-    The set $$D = \{(x,y) \in \R^2 \ | \ x \geq 0, y \geq 0\}$$ is closed, but not bounded.
+    Consider the set $$D = \{(x,y) \in \R^2 \ | \ x \geq 0, y \geq 0\}$$   
     
-    Its boundary is the set $\{(x,0) \in \R^2 \ | \ x \geq 0\} \bigcup \{(0,y) \in \R^2 \ | \ y \geq 0\}$
+    The boundary of $D$ is the set $$\{(x,0) \in \R^2 \ | \ x \geq 0\} \ \bigcup \ \{(0,y) \in \R^2 \ | \ y \geq 0\}$$
+    $D$ is closed, but not bounded.
 \end{example}
 
 \begin{example}
-    The set $$D = \{(x,y) \in \R^2 \ | \ 1 < (x-a)^2 + (y-b)^2  \leq 3 \}$$ is bounded, but not closed.
+    Consider the set $$D = \{(x,y) \in \R^2 \ | \ 1 < (x-a)^2 + (y-b)^2  \leq 3 \}$$ is bounded, but not closed.
     
-    Its boundary is the set $\{(x,y) \in \R^2 \ | \  (x-a)^2 + (y-b)^2 =1 \} \bigcup \{(x,y) \in \R^2 \ | \ (x-a)^2 + (y-b)^2 = 3 \}$
+    The boundary of $D$ is the set $$\{(x,y) \in \R^2 \ | \  (x-a)^2 + (y-b)^2 =1 \} \ \bigcup \ \{(x,y) \in \R^2 \ | \ (x-a)^2 + (y-b)^2 = 3 \}$$
+    $D$ is bounded, but not closed.
 \end{example}
+
+If a region $D$ is closed and bounded, then we can guarantee the existence of global maxima and minima for a continuous function on $D$:
 
 \begin{theorem}[Multivariable global minima and maxima]
     If $D$ is a closed and bounded subset of $\R^n$, and $f$ is a continuous function on $D$, then $f$ 
@@ -1127,13 +1164,12 @@ A point $\bm{x_0} \in \R^n$ is a \textbf{boundary point} of $D \subset \R^n$ if:
     
     That is, there exists an $\bm{M} \in D$ and an $\bm{m} \in D$ such that $f(\bm{m}) \leq f(\bm{x}) \leq f(\bm{M})$ for all $\bm{x} \in D$.
     \end{theorem}
-    
-    
+
     \begin{theorem}
     The global maxima and minima of $f$ on $D$ either occur at the critical points of $f$ in $D$, or on the boundary of $D$.
     \end{theorem}
 
-    We know how to use the gradient and the second derivative test allow us to find and classify \textbf{local} maxima and minima.  The question we turn to now is how to find maxima and minima on the boundary of a region $D$
+    We know how to use the gradient and the second derivative test allow us to find and classify \textbf{local} maxima and minima.  The question we turn to now is how to find maxima and minima on the boundary of a region $D$:
 
 \subsection{Constrained optimization}
 
@@ -1143,19 +1179,15 @@ A point $\bm{x_0} \in \R^n$ is a \textbf{boundary point} of $D \subset \R^n$ if:
 
 \begin{remark}
     The boundary of $D \subset \R^2$ can be thought of as:
-    \vspace{1em}
     
-    \begin{itemize}\setlength\itemsep{1em}
+    \begin{itemize}
         \item the parametric curve corresponding to $\bm{r}(t) = \langle x(t),y(t) \rangle$.
         \item The $z=0$ trace of a graph $z = g(x,y)$
     \end{itemize}
     
     \end{remark}
 
-    To find local maxima and minima of $f(x,y)$ on the boundary of $D$, we are trying to find the local maxima and minima of $f(x,y)$ subject to the condition $g(x,y) = 0$.
-    
-    \vspace{1em}
-    
+    To find local maxima and minima of $f(x,y)$ on the boundary of $D$, we are trying to find the local maxima and minima of $f(x,y)$ subject to the condition $g(x,y) = 0$.  
     In other words, we are trying to optimize $f(x,y)$ given the constraint $g(x,y) = 0$.  We can do so using the method of Lagrange multipliers:
     
     \begin{theorem}[The method of Lagrange Multipliers]
@@ -1191,20 +1223,93 @@ A point $\bm{x_0} \in \R^n$ is a \textbf{boundary point} of $D \subset \R^n$ if:
     Maximize $f(x,y) = xy$ subject to the constraint $4x^2 + 9y^2 = 32$.    
     \end{example}
 
+    \subsubsection{Classifying constrained extrema}
+
+    \begin{motivating}
+    How can we tell if the Lagrange multiplier method give us a local max? a local min?    
+    \end{motivating}
 
 
+    We need an analogue of the second-derivative test for constrained optimization:
+
+    \begin{definition}
+    Assume that $f, g : \R^2 \to \R$ are differentiable functions.  Suppose that we are trying to optimize $f(x,y)$ subject to the constraint $g(x,y) = 0$.
+
+    Then the \textbf{Lagrange function} is a function $\Lambda : \R^3 \to \R$ defined as 
+    $$\Lambda(x, y, \lambda) := f(x,y) + \lambda g(x,y)$$
+    
+    \end{definition}
+
+    \begin{definition}
+    The \textbf{bordered Hessian matrix} $[H_\Lambda]$ is the Hessian matrix of the Lagrange function $\Lambda(x, y, \lambda)= f(x,y) + \lambda g(x,y)$:
+
+    \begin{align*}
+        [H_\Lambda] &= \begin{bmatrix}
+D_xD_x \Lambda & D_yD_x \Lambda  & D_\lambda D_x \Lambda \\
+D_xD_y \Lambda & D_yD_y \Lambda  & D_\lambda D_y \Lambda \\
+D_xD_\lambda  \Lambda & D_yD_\lambda  \Lambda & D_\lambda D_\lambda \Lambda 
+\end{bmatrix} \\ 
+&= \left[\begin{array}{@{}cc|c@{}}
+f_{xx} + \lambda g_{xx} & f_{xy} + \lambda g_{xy}  & g_x \\
+f_{yx} + \lambda g_{yx} & f_{yy} + \lambda g_{yy}  & g_y \\
+\hline
+g_x & g_y  & 0
+\end{array}\right] \\
+&= \left[\begin{array}{@{}c|c@{}}
+ H_{\Lambda(x,y)}  & [J_{g(x,y)}]^\intercal \\
+\hline
+J_{g(x,y)} & 0 
+\end{array}\right]
+    \end{align*}
+    
+\end{definition}
+
+\begin{theorem}
+    Assume that $f, g : \R^2 \to \R$ are differentiable functions.  Suppose that we are trying to optimize $f(x,y)$ subject to the constraint $g(x,y) = 0$.
+
+    Let $\bm{x_0}$ be a constrained critical point, with associated Lagrange multiplier $\lambda_0$.  Let us write $|\overline{H}| = \textnormal{det}[H_\Lambda(\bm{x_0}, \lambda_0)]$.
+
+    \begin{enumerate}
+    \item If $|\overline{H}| > 0$ then there is a \textbf{local maximum} at $\bm{x_0}$.
+    \item If $|\overline{H}| < 0$, then $f$ has a \textbf{local minimum} at $\bm{x_0}$. 
+    \item If $|\overline{H}| = 0$, then the test is \textbf{inconclusive}. 
+\end{enumerate}
+    \end{theorem}
 
 
+\subsection{Exercises}
 
 
+\begin{problem}{clairaut1}
+    Consider the function $$f(x,y,z,w) = \frac{3x^2 + e^yz + x}{3y^2+2e^{w^2}}$$ 
 
+Compute the fourth order partial derivative $f_{wyzx}$.
+\end{problem}
 
+\begin{problem}{opt1}
+    Consider the function $$f(x,y) = x^3 - xy +  y^3 $$
+    
+    Find the critical points of $f$, and use the second derivative test to classify the critical points of $f$.
+\end{problem}
 
+\begin{problem}{opt2}
+    Consider the function $$f(x,y) = x^2 + y^3 - 2x - 6y$$
+    
+    Find the critical points of $f$, and use the second derivative test to classify the critical points of $f$.
+\end{problem}
 
-\subsubsection{Exercises}
+\begin{problem}{opt3}
+    Consider the function $$f(x,y) = \ln(x) + 2\ln(y) -x - 4y$$
+    
+    Find the critical points of $f$, and use the second derivative test to classify the critical points of $f$.
+\end{problem}
 
 \begin{problem}{closedbounded1}
     Is the set $$D = \{(x,y) \in \R^2 \ | \ 0 \leq x + y \leq 1 \}$$ closed? bounded? What is it's boundary?
+\end{problem}
+
+\begin{problem}{closedbounded2}
+    Is the set $A = \{(x,y) \ | \ -1 < x \leq 1, -1 \leq y < 1\}$ closed? bounded? What is it's boundary?
 \end{problem}
 
 
@@ -1232,7 +1337,7 @@ A point $\bm{x_0} \in \R^n$ is a \textbf{boundary point} of $D \subset \R^n$ if:
     Let $f(x,y) = (x^3 - 3x) + (y^3-3y)$.  Find the global maxima and minima of $f(x,y)$ on the region $S = \{(x,y) \ | -1 \leq x \leq 1, -1 \leq y \leq 1\}$
 \end{problem}
 
-\begin{problem}
+\begin{problem}{noglobalmax}
     Find a continuous function that does not have a global maximum on the domain $$D = \{(x,y) \in \R^2 \ | \ 0 \leq x + y \leq 1 \}$$
 \end{problem}
 
@@ -1249,6 +1354,6 @@ Find the point $(a,b)$ on the line $4x+9y=12$ that is closest to the origin.
 
 \begin{problem}{closesttoplane}
 
-Find the point $\bm{x}$ on the plane $ax + by + cz = d$ that is closest to the origin.  What is the distance from $\bm{x}$ to the origin?
+Find the point $\bm{x_0}=(x_0,y_0,z_0)$ on the plane $ax + by + cz = d$ that is closest to the origin.  What is the distance from $\bm{x_0}=(x_0,y_0,z_0)$ to the origin?
    
 \end{problem}

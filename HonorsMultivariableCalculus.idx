@@ -12,74 +12,83 @@
 \indexentry{parallel vectors|FancyIndexEntry}{7}
 \indexentry{direction vector|FancyIndexEntry}{8}
 \indexentry{direction vector|FancyIndexEntry}{8}
-\indexentry{skew lines|FancyIndexEntry}{10}
-\indexentry{vector space|FancyIndexEntry}{10}
-\indexentry{vector subspace|FancyIndexEntry}{12}
-\indexentry{linear combination|FancyIndexEntry}{13}
-\indexentry{linearly dependent|FancyIndexEntry}{15}
-\indexentry{linearly independent|FancyIndexEntry}{15}
-\indexentry{basis|FancyIndexEntry}{15}
-\indexentry{standard basis|FancyIndexEntry}{16}
-\indexentry{coordinate vector|FancyIndexEntry}{16}
-\indexentry{dimension|FancyIndexEntry}{17}
-\indexentry{linear map|FancyIndexEntry}{19}
-\indexentry{linear transformation|FancyIndexEntry}{19}
-\indexentry{injective|FancyIndexEntry}{20}
-\indexentry{one-to-one|FancyIndexEntry}{20}
-\indexentry{surjective|FancyIndexEntry}{20}
-\indexentry{onto|FancyIndexEntry}{20}
-\indexentry{bijective|FancyIndexEntry}{20}
-\indexentry{coordinates|hyperpage}{21}
-\indexentry{matrix|FancyIndexEntry}{23}
-\indexentry{standard matrix|FancyIndexEntry}{24}
-\indexentry{transpose matrix|FancyIndexEntry}{24}
-\indexentry{matrix multiplication|FancyIndexEntry}{24}
-\indexentry{identity matrix|FancyIndexEntry}{25}
-\indexentry{Kornecker delta|FancyIndexEntry}{25}
-\indexentry{invertible linear transformation|FancyIndexEntry}{26}
-\indexentry{isomorphism of vector spaces|FancyIndexEntry}{26}
-\indexentry{dimension|hyperpage}{26}
-\indexentry{determinant|FancyIndexEntry}{26}
-\indexentry{determinant|hyperpage}{26}
-\indexentry{transpose matrix|FancyIndexEntry}{27}
-\indexentry{convex subset|FancyIndexEntry}{28}
-\indexentry{multilinear|FancyIndexEntry}{29}
-\indexentry{bilinear|FancyIndexEntry}{29}
-\indexentry{alternating|FancyIndexEntry}{29}
-\indexentry{spanned by|FancyIndexEntry}{31}
-\indexentry{orthogonal|FancyIndexEntry}{31}
-\indexentry{orthonormal|FancyIndexEntry}{31}
-\indexentry{Kronecker delta|FancyIndexEntry}{32}
-\indexentry{coordinates|hyperpage}{32}
-\indexentry{vector projection|FancyIndexEntry}{32}
-\indexentry{scalar component|FancyIndexEntry}{32}
-\indexentry{Right Hand Rule|FancyIndexEntry}{35}
-\indexentry{cross product|FancyIndexEntry}{36}
-\indexentry{cross product|hyperpage}{37}
-\indexentry{cross product|hyperpage}{37}
-\indexentry{parallelpiped|FancyIndexEntry}{39}
-\indexentry{scalar triple product|FancyIndexEntry}{40}
-\indexentry{co-planar|FancyIndexEntry}{40}
-\indexentry{inner product|FancyIndexEntry}{40}
-\indexentry{vector-valued function|FancyIndexEntry}{43}
-\indexentry{parametrization|FancyIndexEntry}{43}
-\indexentry{parametric curve|FancyIndexEntry}{44}
-\indexentry{quadric surface|FancyIndexEntry}{45}
-\indexentry{trace|FancyIndexEntry}{46}
-\indexentry{multivariable function|FancyIndexEntry}{48}
-\indexentry{function of $n$ variables|FancyIndexEntry}{48}
-\indexentry{graph of a multivariable function|FancyIndexEntry}{48}
-\indexentry{trace|FancyIndexEntry}{49}
-\indexentry{level curves|FancyIndexEntry}{49}
-\indexentry{vanishing locus|FancyIndexEntry}{49}
-\indexentry{general multivariable function|FancyIndexEntry}{50}
-\indexentry{sequence divergence|FancyIndexEntry}{52}
-\indexentry{open ball|FancyIndexEntry}{54}
-\indexentry{upper bound|FancyIndexEntry}{56}
-\indexentry{least upper bound|FancyIndexEntry}{56}
-\indexentry{supremum|FancyIndexEntry}{56}
-\indexentry{lower bound|FancyIndexEntry}{56}
-\indexentry{greatest lower bound|FancyIndexEntry}{56}
-\indexentry{infimum|FancyIndexEntry}{56}
-\indexentry{uniformly continuous|FancyIndexEntry}{62}
-\indexentry{directional derivative|FancyIndexEntry}{69}
+\indexentry{skew lines|FancyIndexEntry}{11}
+\indexentry{vector space|FancyIndexEntry}{11}
+\indexentry{vector subspace|FancyIndexEntry}{13}
+\indexentry{linear combination|FancyIndexEntry}{14}
+\indexentry{linearly dependent|FancyIndexEntry}{16}
+\indexentry{linearly independent|FancyIndexEntry}{16}
+\indexentry{basis|FancyIndexEntry}{16}
+\indexentry{standard basis|FancyIndexEntry}{17}
+\indexentry{coordinate vector|FancyIndexEntry}{18}
+\indexentry{dimension|FancyIndexEntry}{18}
+\indexentry{linear map|FancyIndexEntry}{21}
+\indexentry{linear transformation|FancyIndexEntry}{21}
+\indexentry{injective|FancyIndexEntry}{22}
+\indexentry{one-to-one|FancyIndexEntry}{22}
+\indexentry{surjective|FancyIndexEntry}{22}
+\indexentry{onto|FancyIndexEntry}{22}
+\indexentry{bijective|FancyIndexEntry}{23}
+\indexentry{coordinates|hyperpage}{24}
+\indexentry{matrix|FancyIndexEntry}{25}
+\indexentry{standard matrix|FancyIndexEntry}{26}
+\indexentry{transpose matrix|FancyIndexEntry}{26}
+\indexentry{matrix multiplication|FancyIndexEntry}{27}
+\indexentry{identity matrix|FancyIndexEntry}{27}
+\indexentry{Kornecker delta|FancyIndexEntry}{27}
+\indexentry{invertible linear transformation|FancyIndexEntry}{28}
+\indexentry{isomorphism|FancyIndexEntry}{29}
+\indexentry{isomorphic|FancyIndexEntry}{29}
+\indexentry{dimension|hyperpage}{29}
+\indexentry{determinant|FancyIndexEntry}{29}
+\indexentry{determinant|hyperpage}{29}
+\indexentry{convex subset|FancyIndexEntry}{31}
+\indexentry{multilinear|FancyIndexEntry}{32}
+\indexentry{bilinear|FancyIndexEntry}{32}
+\indexentry{alternating|FancyIndexEntry}{33}
+\indexentry{spanned by|FancyIndexEntry}{34}
+\indexentry{orthogonal|FancyIndexEntry}{35}
+\indexentry{orthonormal|FancyIndexEntry}{35}
+\indexentry{Kronecker delta|FancyIndexEntry}{35}
+\indexentry{coordinates|hyperpage}{35}
+\indexentry{vector projection|FancyIndexEntry}{35}
+\indexentry{scalar component|FancyIndexEntry}{35}
+\indexentry{Right Hand Rule|FancyIndexEntry}{38}
+\indexentry{cross product|FancyIndexEntry}{39}
+\indexentry{cross product|hyperpage}{40}
+\indexentry{cross product|hyperpage}{40}
+\indexentry{parallelpiped|FancyIndexEntry}{42}
+\indexentry{scalar triple product|FancyIndexEntry}{43}
+\indexentry{co-planar|FancyIndexEntry}{43}
+\indexentry{inner product|FancyIndexEntry}{44}
+\indexentry{vector-valued function|FancyIndexEntry}{47}
+\indexentry{parametrization|FancyIndexEntry}{47}
+\indexentry{parametric curve|FancyIndexEntry}{49}
+\indexentry{quadric surface|FancyIndexEntry}{52}
+\indexentry{trace|FancyIndexEntry}{53}
+\indexentry{multivariable function|FancyIndexEntry}{55}
+\indexentry{function of $n$ variables|FancyIndexEntry}{55}
+\indexentry{graph of a multivariable function|FancyIndexEntry}{56}
+\indexentry{trace|FancyIndexEntry}{56}
+\indexentry{level curves|FancyIndexEntry}{57}
+\indexentry{vanishing locus|FancyIndexEntry}{57}
+\indexentry{general multivariable function|FancyIndexEntry}{58}
+\indexentry{sequence divergence|FancyIndexEntry}{59}
+\indexentry{open ball|FancyIndexEntry}{61}
+\indexentry{upper bound|FancyIndexEntry}{64}
+\indexentry{least upper bound|FancyIndexEntry}{64}
+\indexentry{supremum|FancyIndexEntry}{64}
+\indexentry{lower bound|FancyIndexEntry}{65}
+\indexentry{greatest lower bound|FancyIndexEntry}{65}
+\indexentry{infimum|FancyIndexEntry}{65}
+\indexentry{uniformly continuous|FancyIndexEntry}{72}
+\indexentry{Multivariable derivative|FancyIndexEntry}{76}
+\indexentry{directional derivative|FancyIndexEntry}{82}
+\indexentry{bounded set|FancyIndexEntry}{91}
+\indexentry{boundary point|FancyIndexEntry}{91}
+\indexentry{closed set|FancyIndexEntry}{91}
+\indexentry{bounded function|FancyIndexEntry}{95}
+\indexentry{support of a function|FancyIndexEntry}{96}
+\indexentry{bounded support|FancyIndexEntry}{96}
+\indexentry{Riemann sum|FancyIndexEntry}{97}
+\indexentry{integrable|FancyIndexEntry}{98}
