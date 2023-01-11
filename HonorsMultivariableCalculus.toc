@@ -60,15 +60,17 @@
 \contentsline {chapter}{\chapternumberline {4}Integration on $\mathbb {R}^n$}{95}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Defining the integral}{95}{section.4.1}%
 \contentsline {subsection}{Integration over $\mathbb {R}^n$}{96}{section*.49}%
-\contentsline {subsection}{Integration over subsets of $\mathbb {R}^n$}{99}{section*.50}%
-\contentsline {subsection}{Properties of the integral}{100}{section*.51}%
-\contentsline {subsection}{Exercises}{101}{section*.52}%
-\contentsline {section}{\numberline {4.2}Calculating multivariable integrals}{101}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Integrability}{102}{section.4.3}%
-\contentsline {subsection}{Exercises}{103}{section*.53}%
-\contentsline {section}{\numberline {4.4}Change of variables}{103}{section.4.4}%
-\contentsline {subsection}{Polar, cylindrcial, and spherical coordinate}{103}{section*.54}%
-\contentsline {subsection}{General Change of Variables}{103}{section*.55}%
-\contentsline {chapter}{\chapternumberline {5}Integration on manifolds}{105}{chapter.5}%
-\contentsline {chapter}{\chapternumberline {6}Divergence theorem}{106}{chapter.6}%
-\contentsline {chapter}{Hints and Solutions}{107}{chapter*.57}%
+\contentsline {subsection}{Integration over subsets of $\mathbb {R}^n$}{101}{section*.50}%
+\contentsline {subsection}{Properties of the integral}{104}{section*.51}%
+\contentsline {subsection}{Exercises}{105}{section*.52}%
+\contentsline {section}{\numberline {4.2}Calculating multivariable integrals}{106}{section.4.2}%
+\contentsline {subsection}{Exercises}{111}{section*.53}%
+\contentsline {section}{\numberline {4.3}Integrability}{111}{section.4.3}%
+\contentsline {subsection}{Exercises}{112}{section*.54}%
+\contentsline {section}{\numberline {4.4}Change of variables}{113}{section.4.4}%
+\contentsline {subsection}{Polar, cylindrcial, and spherical coordinate}{113}{section*.55}%
+\contentsline {subsection}{General Change of Variables}{113}{section*.56}%
+\contentsline {subsection}{Exercises}{114}{section*.57}%
+\contentsline {chapter}{\chapternumberline {5}Integration on manifolds}{115}{chapter.5}%
+\contentsline {chapter}{\chapternumberline {6}Divergence theorem}{116}{chapter.6}%
+\contentsline {chapter}{Hints and Solutions}{117}{chapter*.58}%

@@ -1,0 +1,195 @@
+\documentclass{article}
+
+\RequirePackage[svgnames]{xcolor}
+\definecolor{UTorange}{RGB}{207, 83, 0} 
+\definecolor{UTwhite}{RGB}{214, 210, 196}
+\definecolor{UTgray}{RGB}{51, 63, 72}
+
+\definecolor{UCLAblue}{RGB}{39, 116, 174} 
+\definecolor{UCLAdark}{RGB}{0, 59, 92}
+\definecolor{UCLAlight}{RGB}{218, 235, 254}
+\definecolor{UCLAgold}{RGB}{255, 209, 0}
+
+\definecolor{mered}{HTML}{882255}
+\definecolor{megreen}{HTML}{004953}
+\definecolor{mepink}{HTML}{AA4499}
+\definecolor{rosequartz}{HTML}{F7CAC9}
+\definecolor{serenity}{HTML}{92A8D1}
+
+\definecolor{dark-red}{rgb}{0.4,0.15,0.15}
+\definecolor{dark-blue}{rgb}{0.15,0.15,0.4}
+\definecolor{medium-blue}{rgb}{0,0,0.5}
+
+\usepackage{amsmath,amssymb, enumerate, tikz-cd,mathrsfs,hyperref,colortbl,bm}
+\usepackage{graphicx, animate,lmodern}
+\usepackage[export]{adjustbox}
+\usepackage{cleveref}
+
+\usepackage[outline]{contour}
+
+
+%\usepgfplotslibrary{external}
+ % \usetikzlibrary{external}
+ % \tikzexternalize[prefix=tikz/]
+
+\usepackage{float}
+\usepackage{caption}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{scopes, angles, quotes, arrows.meta, calc, positioning, decorations.markings, decorations.pathreplacing,bending,shapes}
+\usepgfplotslibrary{colormaps,fillbetween}
+
+\newcommand\fixthis[1]{\textcolor{red}{#1}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+
+%my macros
+\newcommand{\Sphere}{\mathbb{S}}
+\newcommand{\TatekG}{\mathsf{Tate}(kG)}
+\newcommand{\kGMod}{kG$-$\mathsf{Mod}}
+\newcommand{\StMod}{\mathsf{StMod}}
+\newcommand{\Mod}{\mathsf{Mod}}
+\newcommand{\Top}{\textnormal{Top}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\Ho}{\mathsf{Ho}}
+\newcommand{\Hom}{\textnormal{Hom}}
+\newcommand{\Ext}{\textnormal{Ext}}
+\newcommand{\Tor}{\textnormal{Tor}}
+\newcommand{\Cell}{\mathsf{Cell}}
+\newcommand{\End}{\mathsf{End}}
+\newcommand{\Spec}{\textnormal{Spec}}
+\newcommand{\holim}{\textnormal{holim}}
+\newcommand{\hocolim}{\textnormal{hocolim}}
+\newcommand{\1}{\mathds{1}}
+\newcommand{\Supp}{\textnormal{Supp}}
+\newcommand{\supp}{\textnormal{supp}}
+\newcommand{\Pic}{\textnormal{Pic}}
+\newcommand{\pic}{\mathfrak{pic}}
+\newcommand{\gl}{\mathfrak{gl}}
+\newcommand{\Tot}{\textnormal{Tot}}
+\newcommand{\CAlg}{\textnormal{CAlg}}
+\newcommand{\Res}{\textnormal{Res}}
+\newcommand{\CoInd}{\textnormal{CoInd}}
+
+
+\tikzstyle{vector}=[-Latex,very thick, mered,line cap=round]
+\tikzstyle{xline}=[UCLAblue,very thick]
+\tikzstyle{yzp}=[canvas is zy plane at x=0]
+\tikzstyle{xzp}=[canvas is xz plane at y=-1]
+\tikzstyle{xyp}=[canvas is xy plane at z=1]
+\def\tick#1#2{\draw[thick] (#1) ++ (#2:0.12) --++ (#2-180:0.24)}
+\def\N{100}
+
+
+\makeatletter %for the smooth/tension example
+\tikzset{
+	on each segment/.style={
+		decorate,
+		decoration={
+			show path construction,
+			moveto code={},
+			lineto code={
+				\path [#1]
+				(\tikzinputsegmentfirst) -- (\tikzinputsegmentlast);
+			},
+			curveto code={
+				\path [#1] (\tikzinputsegmentfirst)
+				.. controls
+				(\tikzinputsegmentsupporta) and (\tikzinputsegmentsupportb)
+				..
+				(\tikzinputsegmentlast);
+			},
+			closepath code={
+				\path [#1]
+				(\tikzinputsegmentfirst) -- (\tikzinputsegmentlast);
+			},
+		},
+	},
+}
+\makeatother
+
+\pgfplotsset{
+	colormap={mesvtcolor}{
+		rgb255=(145,168,209) 
+		rgb255=(247,202,201)
+	}%,
+%	colormap/mesvtcolor,
+}
+
+
+\pgfplotsset{
+	integral segments/.code={\pgfmathsetmacro\integralsegments{#1}},
+	integral segments=3,
+	integral samples/.code={\edef\integralsamples{#1}},
+	integral samples = 10,
+	integral min/.style args={#1:#2}{
+		ybar interval,
+		domain=#1:#2,
+		samples=\integralsegments+1,
+		x filter/.code={
+			\edef\lastx{\pgfmathresult}
+			\pgfmathresult
+		},%
+		y filter/.code={%
+			\pgfmathparse{(#2/(\integralsegments))/\integralsamples}%
+			\edef\tempstep{\pgfmathresult}%
+			\pgfmathparse{f(\lastx)}%
+			\edef\tempa{\pgfmathresult}%
+			\edef\tempb{\pgfmathresult}%
+			\foreach \x in {0,1,...,\integralsamples}%
+			{%
+				\pgfmathparse{f(\lastx+\x*\tempstep)}%
+				\xdef\tempb{\tempb,\pgfmathresult}%
+			}%
+			\pgfmathmin{\tempb}{\tempb}
+		},
+	},
+	integral max/.style args={#1:#2}{
+		ybar interval,
+		domain=#1:#2,
+		samples=\integralsegments+1,
+		x filter/.code={
+			\edef\lastx{\pgfmathresult}
+			\pgfmathresult
+		},%
+		y filter/.code={%
+			\pgfmathparse{(#2/(\integralsegments))/\integralsamples}%
+			\edef\tempstep{\pgfmathresult}%
+			\pgfmathparse{f(\lastx)}%
+			\edef\tempa{\pgfmathresult}%
+			\edef\tempb{\pgfmathresult}%
+			\foreach \x in {0,1,...,\integralsamples}%
+			{%
+				\pgfmathparse{f(\lastx+\x*\tempstep)}%
+				\xdef\tempb{\tempb,\pgfmathresult}%
+			}%
+			\pgfmathmax{\tempb}{\tempb}
+		},
+	},   
+}
+\makeatletter
+%see https://tex.stackexchange.com/questions/9722/why-am-i-getting-the-pgf-math-error-unknown-function-getargs
+\def\pgfmathmax#1#2{%
+	%   \pgfmathparse{getargs(#1,#2)}%
+	\pgfmathparse{#1,#2}%
+	\expandafter\pgfmathmax@\expandafter{\pgfmathresult}%
+}
+\def\pgfmathmin#1#2{%
+	\pgfmathparse{#1,#2}%
+	\expandafter\pgfmathmin@\expandafter{\pgfmathresult}%
+}
+%see https://tex.stackexchange.com/questions/15435/how-do-i-use-pgfmathdeclarefunction-to-create-define-a-new-pgf-function
+\makeatother
+
+\begin{document}
+
+
+ 
+\end{document}

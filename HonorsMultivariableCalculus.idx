@@ -75,12 +75,12 @@
 \indexentry{general multivariable function|FancyIndexEntry}{58}
 \indexentry{sequence divergence|FancyIndexEntry}{59}
 \indexentry{open ball|FancyIndexEntry}{61}
-\indexentry{upper bound|FancyIndexEntry}{64}
-\indexentry{least upper bound|FancyIndexEntry}{64}
-\indexentry{supremum|FancyIndexEntry}{64}
-\indexentry{lower bound|FancyIndexEntry}{65}
-\indexentry{greatest lower bound|FancyIndexEntry}{65}
-\indexentry{infimum|FancyIndexEntry}{65}
+\indexentry{upper bound|hyperpage}{64}
+\indexentry{least upper bound|hyperpage}{64}
+\indexentry{supremum|hyperpage}{64}
+\indexentry{lower bound|hyperpage}{65}
+\indexentry{greatest lower bound|hyperpage}{65}
+\indexentry{infimum|hyperpage}{65}
 \indexentry{uniformly continuous|FancyIndexEntry}{72}
 \indexentry{Multivariable derivative|FancyIndexEntry}{76}
 \indexentry{directional derivative|FancyIndexEntry}{82}
@@ -91,4 +91,14 @@
 \indexentry{support of a function|FancyIndexEntry}{96}
 \indexentry{bounded support|FancyIndexEntry}{96}
 \indexentry{Riemann sum|FancyIndexEntry}{97}
-\indexentry{integrable|FancyIndexEntry}{98}
+\indexentry{upper bound|FancyIndexEntry}{97}
+\indexentry{supremum|FancyIndexEntry}{97}
+\indexentry{least upper bound|FancyIndexEntry}{97}
+\indexentry{lower bound|FancyIndexEntry}{97}
+\indexentry{infimum|FancyIndexEntry}{97}
+\indexentry{greatest lower bound|FancyIndexEntry}{97}
+\indexentry{integrable|FancyIndexEntry}{99}
+\indexentry{Riemann sum|FancyIndexEntry}{100}
+\indexentry{n-dimensional volume|FancyIndexEntry}{102}
+\indexentry{vertically simple|FancyIndexEntry}{110}
+\indexentry{horizontally simple|FancyIndexEntry}{110}

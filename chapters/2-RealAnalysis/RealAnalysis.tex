@@ -327,7 +327,7 @@ How should we geometrically interpret multivariable functions?
 
 Recall that given a single variable function $f: \R \to \R$, we can draw its graph as the set of points $$\{(x, f(x)) \} \subseteq \R^2$$  We can generalize this to graph multivariable functions $f : \R^n \to \R$:
 
-\begin{definition}
+\begin{definition}\label{def:graph}
 Given a function $f: \R^n \to \R$, its \textbf{graph}\define{graph of a multivariable function} is the following subset of $\R^{n+1}$:
 $$\Gamma_f := \{(x_1,\cdots, x_n,f(x_1, \cdots, x_n)) \} \subset \R^{n+1}$$ 
 
@@ -924,11 +924,11 @@ Prove that if $\lim_{n \to \infty} a_n = 0$, then the sequence of averages $\{b_
 \end{problem}
 
 \begin{definition}
-Let $S$ be a non-empty subset of $\R$.  A real number $x$ is called an \textbf{upper bound}\define{upper bound} of $S$ if $x \geq s$ for all $s \in S$.
+Let $S$ be a non-empty subset of $\R$.  A real number $x$ is called an \textbf{upper bound}\SubIndex{upper bound} of $S$ if $x \geq s$ for all $s \in S$.
 \end{definition}
 
 \begin{definition}
-Let $S$ be a non-empty subset of $\R$.  A real number $x$ is called the \textbf{least upper bound}\define{least upper bound} (alternatively, \textbf{supremum}\define{supremum}) of $S$ if
+Let $S$ be a non-empty subset of $\R$.  A real number $x$ is called the \textbf{least upper bound}\SubIndex{least upper bound} (alternatively, \textbf{supremum}\SubIndex{supremum}) of $S$ if
 \begin{enumerate}
     \item $x$ is an upper bound for $S$
     \item If $y$ is an upper bound for $S$, then $x \leq y$
@@ -937,14 +937,14 @@ Let $S$ be a non-empty subset of $\R$.  A real number $x$ is called the \textbf{
 We often write the least upper bound as $\textnormal{sup}(S)$
 \end{definition}
 
-It turns out that if $S$ is a non-empty subset of $\R$, then if $S$ has an upper bound, then S has a least upper bound.
+It turns out that if $S$ is a non-empty subset of $\R$, then if $S$ has an upper bound, then S has a least upper bound. (see theorem \cref{thm:completness})
 
 \begin{definition}
-Let $S$ be a non-empty subset of $\R$.  A real number $x$ is called a \textbf{lower bound}\define{lower bound} of $S$ if $x \leq s$ for all $s \in S$.
+Let $S$ be a non-empty subset of $\R$.  A real number $x$ is called a \textbf{lower bound}\SubIndex{lower bound} of $S$ if $x \leq s$ for all $s \in S$.
 \end{definition}
 
 \begin{definition}
-Let $S$ be a non-empty subset of $\R$.  A real number $x$ is called the \textbf{greatest lower bound}\define{greatest lower  bound} (alternatively, \textbf{infimum}\define{infimum}) of $S$ if
+Let $S$ be a non-empty subset of $\R$.  A real number $x$ is called the \textbf{greatest lower bound}\SubIndex{greatest lower  bound} (alternatively, \textbf{infimum}\SubIndex{infimum}) of $S$ if
 \begin{enumerate}
     \item $x$ is a lower bound for $S$
     \item If $y$ is a lower bound for $S$, then $x \geq y$

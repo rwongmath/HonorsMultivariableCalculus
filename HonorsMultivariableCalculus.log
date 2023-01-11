@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.20)  30 DEC 2022 11:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.20)  10 JAN 2023 19:56
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1793,14 +1793,20 @@ LaTeX Font Info:    Trying to load font information for T1+clm2j on input line
 (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/cfr-lm\t1clm2j.fd
 File: t1clm2j.fd 2010/05/25 Fontinst v1.933 font definitions for T1/clm2j.
 )
-(HonorsMultivariableCalculus.aux)
+(HonorsMultivariableCalculus.aux
+
+LaTeX Warning: Label `problem:polar1' multiply defined.
+
+
+LaTeX Warning: Label `problem:polar1@cref' multiply defined.
+
+)
 \openout1 = `HonorsMultivariableCalculus.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/lmm/m/it on input line 12.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
 2.
-
-(C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+ (C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    ... okay on input line 12.
@@ -1968,18 +1974,18 @@ Overfull \hbox (0.27798pt too wide) detected at line 60
  []
 
 
-Overfull \hbox (4.07597pt too wide) detected at line 72
- \T1/clm2j/m/n/9 105
+Overfull \hbox (2.53696pt too wide) detected at line 74
+ \T1/clm2j/m/n/9 115
  []
 
 
-Overfull \hbox (4.21999pt too wide) detected at line 73
- \T1/clm2j/m/n/9 106
+Overfull \hbox (2.68097pt too wide) detected at line 75
+ \T1/clm2j/m/n/9 116
  []
 
 
-Overfull \hbox (3.67097pt too wide) detected at line 74
- \T1/clm2j/m/n/9 107
+Overfull \hbox (2.13196pt too wide) detected at line 76
+ \T1/clm2j/m/n/9 117
  []
 
 ) [4
@@ -2862,87 +2868,248 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
  []
 
 [97]
+<chapters/4-IntegrationRn/figures/figures-upperdarboux.pdf, id=1859, 212.4226pt
+ x 177.4901pt>
+File: chapters/4-IntegrationRn/figures/figures-upperdarboux.pdf Graphic file (t
+ype pdf)
+<use chapters/4-IntegrationRn/figures/figures-upperdarboux.pdf>
+Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-upperdarboux.
+pdf  used on input line 202.
+(pdftex.def)             Requested size: 212.42207pt x 177.48964pt.
+<chapters/4-IntegrationRn/figures/figures-lowerdarboux.pdf, id=1860, 212.4226pt
+ x 177.4901pt>
+File: chapters/4-IntegrationRn/figures/figures-lowerdarboux.pdf Graphic file (t
+ype pdf)
+<use chapters/4-IntegrationRn/figures/figures-lowerdarboux.pdf>
+Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-lowerdarboux.
+pdf  used on input line 203.
+(pdftex.def)             Requested size: 212.42207pt x 177.48964pt.
+File: chapters/4-IntegrationRn/figures/figures-upperdarboux.pdf Graphic file (t
+ype pdf)
+<use chapters/4-IntegrationRn/figures/figures-upperdarboux.pdf>
+Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-upperdarboux.
+pdf  used on input line 215.
+(pdftex.def)             Requested size: 212.42207pt x 177.48964pt.
+File: chapters/4-IntegrationRn/figures/figures-lowerdarboux.pdf Graphic file (t
+ype pdf)
+<use chapters/4-IntegrationRn/figures/figures-lowerdarboux.pdf>
+Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-lowerdarboux.
+pdf  used on input line 216.
+(pdftex.def)             Requested size: 212.42207pt x 177.48964pt.
+
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[98]
+[98 <./chapters/4-IntegrationRn/figures/figures-upperdarboux.pdf> <./chapters/4
+-IntegrationRn/figures/figures-lowerdarboux.pdf>]
+<chapters/4-IntegrationRn/figures/figures-upper2.pdf, id=1880, 212.4226pt x 177
+.4901pt>
+File: chapters/4-IntegrationRn/figures/figures-upper2.pdf Graphic file (type pd
+f)
+<use chapters/4-IntegrationRn/figures/figures-upper2.pdf>
+Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-upper2.pdf  u
+sed on input line 220.
+(pdftex.def)             Requested size: 148.6948pt x 124.2422pt.
+<chapters/4-IntegrationRn/figures/figures-lower2.pdf, id=1881, 212.4226pt x 177
+.4901pt>
+File: chapters/4-IntegrationRn/figures/figures-lower2.pdf Graphic file (type pd
+f)
+<use chapters/4-IntegrationRn/figures/figures-lower2.pdf>
+Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-lower2.pdf  u
+sed on input line 221.
+(pdftex.def)             Requested size: 148.6948pt x 124.2422pt.
+<chapters/4-IntegrationRn/figures/figures-signedvolume.pdf, id=1883, 204.40366p
+t x 175.37921pt>
+File: chapters/4-IntegrationRn/figures/figures-signedvolume.pdf Graphic file (t
+ype pdf)
+<use chapters/4-IntegrationRn/figures/figures-signedvolume.pdf>
+Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-signedvolume.
+pdf  used on input line 260.
+(pdftex.def)             Requested size: 204.40315pt x 175.37878pt.
+
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[99]
+[99 <./chapters/4-IntegrationRn/figures/figures-upper2.pdf> <./chapters/4-Integ
+rationRn/figures/figures-lower2.pdf>]
+<chapters/4-IntegrationRn/figures/figures-riemannmidpoint.pdf, id=1906, 212.422
+6pt x 177.4901pt>
+File: chapters/4-IntegrationRn/figures/figures-riemannmidpoint.pdf Graphic file
+ (type pdf)
+<use chapters/4-IntegrationRn/figures/figures-riemannmidpoint.pdf>
+Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-riemannmidpoi
+nt.pdf  used on input line 316.
+(pdftex.def)             Requested size: 212.42207pt x 177.48964pt.
+
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[100]
+[100 <./chapters/4-IntegrationRn/figures/figures-signedvolume.pdf>]
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[101]
-
-Package tcolorbox Warning: Using nobreak failed. Try to enlarge `lines before b
-reak' or set page breaks manually on input line 449.
-
+[101 <./chapters/4-IntegrationRn/figures/figures-riemannmidpoint.pdf>]
+<chapters/4-IntegrationRn/figures/figures-undefinedonr.pdf, id=1964, 210.55263p
+t x 175.37921pt>
+File: chapters/4-IntegrationRn/figures/figures-undefinedonr.pdf Graphic file (t
+ype pdf)
+<use chapters/4-IntegrationRn/figures/figures-undefinedonr.pdf>
+Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-undefinedonr.
+pdf  used on input line 413.
+(pdftex.def)             Requested size: 210.5521pt x 175.37878pt.
 
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
 [102]
-
-LaTeX Warning: File `pictures/map.png' not found on input line 620.
-
-
-! Package pdftex.def Error: File `pictures/map.png' not found: using draft sett
-ing.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.620 ...udegraphics[scale=0.45]{pictures/map.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 62
-0.
-(C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/inconsolata\t1zi4.fd
-File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
-)
-LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 7.0pt on input line 620.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `zi4' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[103])
+[103 <./chapters/4-IntegrationRn/figures/figures-undefinedonr.pdf>]
+<chapters/4-IntegrationRn/figures/figures-fplus.pdf, id=2016, 210.55263pt x 162
+.3937pt>
+File: chapters/4-IntegrationRn/figures/figures-fplus.pdf Graphic file (type pdf
+)
+<use chapters/4-IntegrationRn/figures/figures-fplus.pdf>
+Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-fplus.pdf  us
+ed on input line 525.
+(pdftex.def)             Requested size: 168.4423pt x 129.91513pt.
+<chapters/4-IntegrationRn/figures/figures-fminus.pdf, id=2017, 210.55263pt x 16
+2.3937pt>
+File: chapters/4-IntegrationRn/figures/figures-fminus.pdf Graphic file (type pd
+f)
+<use chapters/4-IntegrationRn/figures/figures-fminus.pdf>
+Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-fminus.pdf  u
+sed on input line 526.
+(pdftex.def)             Requested size: 168.4423pt x 129.91513pt.
+
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
 [104]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[105 <./chapters/4-IntegrationRn/figures/figures-fplus.pdf> <./chapters/4-Integ
+rationRn/figures/figures-fminus.pdf>]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[106]
+<chapters/4-IntegrationRn/figures/figures-1-xsquaredregion.pdf, id=2100, 218.33
+067pt x 175.38022pt>
+File: chapters/4-IntegrationRn/figures/figures-1-xsquaredregion.pdf Graphic fil
+e (type pdf)
+<use chapters/4-IntegrationRn/figures/figures-1-xsquaredregion.pdf>
+Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-1-xsquaredreg
+ion.pdf  used on input line 662.
+(pdftex.def)             Requested size: 152.83041pt x 122.7653pt.
+
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[107 <./chapters/4-IntegrationRn/figures/figures-1-xsquaredregion.pdf>]
+<chapters/4-IntegrationRn/figures/figures-intersectfubini.pdf, id=2124, 230.386
+72pt x 175.37921pt>
+File: chapters/4-IntegrationRn/figures/figures-intersectfubini.pdf Graphic file
+ (type pdf)
+<use chapters/4-IntegrationRn/figures/figures-intersectfubini.pdf>
+Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-intersectfubi
+ni.pdf  used on input line 685.
+(pdftex.def)             Requested size: 230.38615pt x 175.37878pt.
+<chapters/4-IntegrationRn/figures/figures-decomposek.pdf, id=2127, 210.55263pt 
+x 175.3752pt>
+File: chapters/4-IntegrationRn/figures/figures-decomposek.pdf Graphic file (typ
+e pdf)
+<use chapters/4-IntegrationRn/figures/figures-decomposek.pdf>
+Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-decomposek.pd
+f  used on input line 702.
+(pdftex.def)             Requested size: 210.5521pt x 175.37477pt.
+<chapters/4-IntegrationRn/figures/figures-decomposek1.pdf, id=2128, 210.55263pt
+ x 175.3752pt>
+File: chapters/4-IntegrationRn/figures/figures-decomposek1.pdf Graphic file (ty
+pe pdf)
+<use chapters/4-IntegrationRn/figures/figures-decomposek1.pdf>
+Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-decomposek1.p
+df  used on input line 710.
+(pdftex.def)             Requested size: 210.5521pt x 175.37477pt.
+<chapters/4-IntegrationRn/figures/figures-decomposek2.pdf, id=2129, 210.55263pt
+ x 175.3752pt>
+File: chapters/4-IntegrationRn/figures/figures-decomposek2.pdf Graphic file (ty
+pe pdf)
+<use chapters/4-IntegrationRn/figures/figures-decomposek2.pdf>
+Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-decomposek2.p
+df  used on input line 712.
+(pdftex.def)             Requested size: 210.5521pt x 175.37477pt.
+
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[108 <./chapters/4-IntegrationRn/figures/figures-intersectfubini.pdf>]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[109 <./chapters/4-IntegrationRn/figures/figures-decomposek.pdf> <./chapters/4-
+IntegrationRn/figures/figures-decomposek1.pdf>]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[110 <./chapters/4-IntegrationRn/figures/figures-decomposek2.pdf>]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[111]
+<chapters/4-IntegrationRn/figures/figures-integraloscillation.pdf, id=2216, 212
+.4226pt x 177.4901pt>
+File: chapters/4-IntegrationRn/figures/figures-integraloscillation.pdf Graphic 
+file (type pdf)
+<use chapters/4-IntegrationRn/figures/figures-integraloscillation.pdf>
+Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-integraloscil
+lation.pdf  used on input line 836.
+(pdftex.def)             Requested size: 212.42207pt x 177.48964pt.
+
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[112 <./chapters/4-IntegrationRn/figures/figures-integraloscillation.pdf>]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[113])
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[114]
 \mycount=\count438
- [105
+ [115
 
 ]
 \mycount=\count439
- [106
+ [116
 
 ]
 \mycount=\count440
  (HonorsMultivariableCalculus.ans)
 No file HonorsMultivariableCalculus.bbl.
 No file HonorsMultivariableCalculus.ind.
-[107
+[117
 
 
 ]
@@ -2950,72 +3117,74 @@ No file HonorsMultivariableCalculus.ind.
 \openout10 = `HonorsMultivariableCalculus.toc'.
 
  (HonorsMultivariableCalculus.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `HonorsMultivariableCalculus.out' has not cha
 nged.
-(rerunfilecheck)             Checksum: CD92ABF6CC847C4B73FA03E142618A8A;1202.
+(rerunfilecheck)             Checksum: 21A63B4E6F99E057B0BB3BE3F7912634;1202.
  ) 
 Here is how much of TeX's memory you used:
- 53548 strings out of 475389
- 1211801 string characters out of 2776056
- 257934331 words of memory out of 259000000
- 72531 multiletter control sequences out of 15000+600000
- 646823 words of font info for 504 fonts, out of 8000000 for 9000
+ 53702 strings out of 475389
+ 1218691 string characters out of 2776056
+ 257936783 words of memory out of 259000000
+ 72644 multiletter control sequences out of 15000+600000
+ 646823 words of font info for 506 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  114i,16n,120p,1026b,2488s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i
-4-t1-0.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/l
-m-rm.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-
-mathit.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cfr-
-lm/t1-clm.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/l
-m/lm-mathsy.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
-/cfr-lm/dotdigits-clm.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts
-/enc/dvips/lm/lm-ts1.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/
-enc/dvips/lm/lm-mathex.enc}<C:/Users/Richard/AppData/Local/Programs/MiKTeX/font
-s/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/Richard/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Users/Richard/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/User
-s/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.
-pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbsy
-10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
-bsy7.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
-lmbx10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
-m/lmbx7.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-lm/lmbx8.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/lm/lmbxi10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/lm/lmex10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/lm/lmmi10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/lm/lmmi5.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/lm/lmmi6.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/lm/lmmi7.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/lm/lmmi8.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/lm/lmmib10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/font
-s/type1/public/lm/lmmib5.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/lm/lmmib7.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/lm/lmr10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/lm/lmr12.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/lm/lmr5.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/lm/lmr6.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/lm/lmr7.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/lm/lmr8.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/lm/lmr9.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/lm/lmri10.pfb><C:/Users/Richard/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/lm/lmri7.pfb><C:/Users/Richard/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/Richard/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Richard/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Richard/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/lm/lmss9.pfb><C:/Users/Richard/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Richard/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/Richard/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Richard/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam7.pfb><C:/Users/Richard
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><
-C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symb
-ols/msbm7.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/rsfs/rsfs10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/rsfs/rsfs7.pfb>
-Output written on HonorsMultivariableCalculus.pdf (111 pages, 1620415 bytes).
+{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.
+enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.en
+c}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.
+enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cfr-lm/t1-c
+lm.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cfr-lm/d
+otdigits-clm.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvip
+s/lm/lm-ts1.enc}{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
+/lm/lm-mathex.enc}<C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmbsy10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Richard/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/Richard/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/lm/lmbsy10.pfb><C:/Users/Richard/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbsy7.pfb><C:/Users/Richard/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Richard/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx7.pfb><C:/Users/Richard/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/Users/Richard
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/Rich
+ard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Ri
+chard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/
+Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users
+/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/User
+s/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Use
+rs/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Us
+ers/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmib10.pfb><C:
+/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmib5.pfb><
+C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmib7.pfb
+><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pf
+b><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.p
+fb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.p
+fb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.p
+fb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.p
+fb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.p
+fb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.p
+fb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10
+.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri
+7.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lms
+s10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
+mss12.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+/lmss17.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+lm/lmss9.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/lm/lmsy10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/lm/lmsy5.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/lm/lmsy6.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/lm/lmsy7.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/lm/lmsy8.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/symbols/msam7.pfb><C:/Users/Richard/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Richard/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb><C:/Users/Rich
+ard/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/
+Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.pfb>
+Output written on HonorsMultivariableCalculus.pdf (121 pages, 1782144 bytes).
 PDF statistics:
- 2353 PDF objects out of 2487 (max. 8388607)
- 885 named destinations out of 1000 (max. 500000)
- 131836 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 2659 PDF objects out of 2984 (max. 8388607)
+ 926 named destinations out of 1000 (max. 500000)
+ 131399 words of extra memory for PDF output out of 154059 (max. 10000000)
 
