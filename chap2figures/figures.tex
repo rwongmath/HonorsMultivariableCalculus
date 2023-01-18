@@ -542,35 +542,55 @@
 %	\end{tikzpicture}  
 	
 	
-	\begin{tikzpicture}[scale = 2]
-		\begin{axis}[
-			view={50}{30},
-			xlabel={$x$},
-			ylabel={$y$},
-			zlabel={$z$},zlabel style={rotate=-90},
-			xtick distance=2,
-			ytick distance=2,
-			xmin=0, xmax=10,
-			ymin=0, ymax=10, 
-			zmin=0, zmax=10,
-			% restrict z to domain=-3:3,
-			enlargelimits={upper=0.1}]
-			\coordinate (P) at (5,5,8);
-			\shade[ball color = lightgray,
-			opacity = 0.5
-			] (P) circle (1cm);
-			\draw[dashed, black] (P) -- node[below, black]{$\varepsilon$} (4,2.8,8);
-			\draw[mered,fill = mered] (P) circle (0.5pt) node[below,mered]{$\bm{L}$};
-			\draw[megreen,fill = megreen] (4,6,9) circle (0.5pt) node[above,megreen]{$\bm{a_{M+1}}$};
-			\draw[megreen,fill = megreen] (4,5.5,8.5) circle (0.5pt);
-			\draw[megreen,fill = megreen] (4.5,5,8) circle (0.5pt);
-			\draw[fill = black] (4,10,9) circle (0.5pt) node[above]{$\bm{a_{1}}$};
-			\draw[fill = black] (1,3,4) circle (0.5pt) node[above]{$\bm{a_{M}}$};
-			\draw[fill = black] (10,3,4) circle (0.5pt) node[above]{$\bm{a_{2}}$};
-			\draw[fill = black] (5,3,4) circle (0.5pt);
-			\draw[fill = black] (7,6,4) circle (0.5pt);
-			\draw[fill = black] (1,3,9) circle (0.5pt);
-		\end{axis}
-	\end{tikzpicture}  
+%	\begin{tikzpicture}[scale = 2]
+%		\begin{axis}[
+%			view={50}{30},
+%			xlabel={$x$},
+%			ylabel={$y$},
+%			zlabel={$z$},zlabel style={rotate=-90},
+%			xtick distance=2,
+%			ytick distance=2,
+%			xmin=0, xmax=10,
+%			ymin=0, ymax=10, 
+%			zmin=0, zmax=10,
+%			% restrict z to domain=-3:3,
+%			enlargelimits={upper=0.1}]
+%			\coordinate (P) at (5,5,8);
+%			\shade[ball color = lightgray,
+%			opacity = 0.5
+%			] (P) circle (1cm);
+%			\draw[dashed, black] (P) -- node[below, black]{$\varepsilon$} (4,2.8,8);
+%			\draw[mered,fill = mered] (P) circle (0.5pt) node[below,mered]{$\bm{L}$};
+%			\draw[megreen,fill = megreen] (4,6,9) circle (0.5pt) node[above,megreen]{$\bm{a_{M+1}}$};
+%			\draw[megreen,fill = megreen] (4,5.5,8.5) circle (0.5pt);
+%			\draw[megreen,fill = megreen] (4.5,5,8) circle (0.5pt);
+%			\draw[fill = black] (4,10,9) circle (0.5pt) node[above]{$\bm{a_{1}}$};
+%			\draw[fill = black] (1,3,4) circle (0.5pt) node[above]{$\bm{a_{M}}$};
+%			\draw[fill = black] (10,3,4) circle (0.5pt) node[above]{$\bm{a_{2}}$};
+%			\draw[fill = black] (5,3,4) circle (0.5pt);
+%			\draw[fill = black] (7,6,4) circle (0.5pt);
+%			\draw[fill = black] (1,3,9) circle (0.5pt);
+%		\end{axis}
+%	\end{tikzpicture}  
+
+
+\begin{tikzpicture}
+	\draw[help lines, color=gray!30, dashed] (-4.9,-3.9) grid (4.9,3.9);
+	\draw[Latex-Latex] (-5,0)--(5,0) node[right]{$x$};
+	\draw[Latex-Latex] (0,-4)--(0,4) node[above]{$y$};
+	\draw[color=UCLAblue, ultra thick]  plot[smooth, tension=.7] coordinates {(-4,0) (-3,-3) (-2,0) (-1,2) (0,2) (1,3) (2,-1) (3.1,0) (4,2) (4.5,0)};
+	\draw[color=UCLAblue, ultra thick]  plot[smooth] coordinates {(-5,0) (-3.97,0)};
+	\draw[color=UCLAblue, ultra thick]  plot[smooth] coordinates {(4.47,0) (5,0)};
+	\draw[color=UCLAblue, ultra thick] (2,3) node[above]{$y = f(x)$};
+	\draw[color=mered, ultra thick, (-)] (-4,-5) -- (-2,-5);
+	\draw[color=mered, ultra thick, (-)] (-2,-5) -- (1.6,-5);
+	\draw[color=mered, ultra thick, (-)] (1.6,-5) -- (3.1,-5);
+	\draw[color=mered, ultra thick, (-)] (3.1,-5) -- (4.5,-5);
+	\draw[color=mered, ultra thick] (0,-4.5) node{$\{x \ | f(x) \neq 0 \}$};
+	\draw[color=megreen, ultra thick, {[-]}] (-4,-5.75) -- (4.5,-5.75);
+	\draw[color=megreen, ultra thick] (0,-6.25) node{$\textnormal{supp}(f)$};
+	\node 
+	\node
+\end{tikzpicture}  
 	
 \end{document}

@@ -90,15 +90,17 @@
 \indexentry{bounded function|FancyIndexEntry}{95}
 \indexentry{support of a function|FancyIndexEntry}{96}
 \indexentry{bounded support|FancyIndexEntry}{96}
-\indexentry{Riemann sum|FancyIndexEntry}{97}
-\indexentry{upper bound|FancyIndexEntry}{97}
-\indexentry{supremum|FancyIndexEntry}{97}
-\indexentry{least upper bound|FancyIndexEntry}{97}
-\indexentry{lower bound|FancyIndexEntry}{97}
-\indexentry{infimum|FancyIndexEntry}{97}
-\indexentry{greatest lower bound|FancyIndexEntry}{97}
-\indexentry{integrable|FancyIndexEntry}{99}
-\indexentry{Riemann sum|FancyIndexEntry}{100}
-\indexentry{n-dimensional volume|FancyIndexEntry}{102}
-\indexentry{vertically simple|FancyIndexEntry}{110}
-\indexentry{horizontally simple|FancyIndexEntry}{110}
+\indexentry{Riemann sum|FancyIndexEntry}{98}
+\indexentry{upper bound|FancyIndexEntry}{98}
+\indexentry{supremum|FancyIndexEntry}{98}
+\indexentry{least upper bound|FancyIndexEntry}{98}
+\indexentry{lower bound|FancyIndexEntry}{98}
+\indexentry{infimum|FancyIndexEntry}{98}
+\indexentry{greatest lower bound|FancyIndexEntry}{98}
+\indexentry{integrable|FancyIndexEntry}{100}
+\indexentry{Riemann sum|FancyIndexEntry}{101}
+\indexentry{n-dimensional volume|FancyIndexEntry}{103}
+\indexentry{vertically simple|FancyIndexEntry}{112}
+\indexentry{horizontally simple|FancyIndexEntry}{112}
+\indexentry{oscillation|FancyIndexEntry}{114}
+\indexentry{meaure zero|FancyIndexEntry}{118}

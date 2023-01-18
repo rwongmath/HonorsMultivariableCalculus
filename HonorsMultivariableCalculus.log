@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.20)  10 JAN 2023 19:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.20)  17 JAN 2023 17:15
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2858,265 +2858,389 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (chapters/4-IntegrationRn/integration.tex [95
 
 ]
+<chapters/4-IntegrationRn/figures/figures-supportpic.pdf, id=1826, 297.90898pt 
+x 313.0897pt>
+File: chapters/4-IntegrationRn/figures/figures-supportpic.pdf Graphic file (typ
+e pdf)
+<use chapters/4-IntegrationRn/figures/figures-supportpic.pdf>
+Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-supportpic.pd
+f  used on input line 63.
+(pdftex.def)             Requested size: 297.90825pt x 313.08894pt.
+
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[96]
+[96 <./chapters/4-IntegrationRn/figures/figures-supportpic.pdf>]
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
 [97]
-<chapters/4-IntegrationRn/figures/figures-upperdarboux.pdf, id=1859, 212.4226pt
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[98]
+<chapters/4-IntegrationRn/figures/figures-upperdarboux.pdf, id=1879, 212.4226pt
  x 177.4901pt>
 File: chapters/4-IntegrationRn/figures/figures-upperdarboux.pdf Graphic file (t
 ype pdf)
 <use chapters/4-IntegrationRn/figures/figures-upperdarboux.pdf>
 Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-upperdarboux.
-pdf  used on input line 202.
+pdf  used on input line 231.
 (pdftex.def)             Requested size: 212.42207pt x 177.48964pt.
-<chapters/4-IntegrationRn/figures/figures-lowerdarboux.pdf, id=1860, 212.4226pt
+<chapters/4-IntegrationRn/figures/figures-lowerdarboux.pdf, id=1880, 212.4226pt
  x 177.4901pt>
 File: chapters/4-IntegrationRn/figures/figures-lowerdarboux.pdf Graphic file (t
 ype pdf)
 <use chapters/4-IntegrationRn/figures/figures-lowerdarboux.pdf>
 Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-lowerdarboux.
-pdf  used on input line 203.
+pdf  used on input line 232.
 (pdftex.def)             Requested size: 212.42207pt x 177.48964pt.
 File: chapters/4-IntegrationRn/figures/figures-upperdarboux.pdf Graphic file (t
 ype pdf)
 <use chapters/4-IntegrationRn/figures/figures-upperdarboux.pdf>
 Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-upperdarboux.
-pdf  used on input line 215.
+pdf  used on input line 244.
 (pdftex.def)             Requested size: 212.42207pt x 177.48964pt.
 File: chapters/4-IntegrationRn/figures/figures-lowerdarboux.pdf Graphic file (t
 ype pdf)
 <use chapters/4-IntegrationRn/figures/figures-lowerdarboux.pdf>
 Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-lowerdarboux.
-pdf  used on input line 216.
+pdf  used on input line 245.
 (pdftex.def)             Requested size: 212.42207pt x 177.48964pt.
 
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[98 <./chapters/4-IntegrationRn/figures/figures-upperdarboux.pdf> <./chapters/4
+[99 <./chapters/4-IntegrationRn/figures/figures-upperdarboux.pdf> <./chapters/4
 -IntegrationRn/figures/figures-lowerdarboux.pdf>]
-<chapters/4-IntegrationRn/figures/figures-upper2.pdf, id=1880, 212.4226pt x 177
+<chapters/4-IntegrationRn/figures/figures-upper2.pdf, id=1901, 212.4226pt x 177
 .4901pt>
 File: chapters/4-IntegrationRn/figures/figures-upper2.pdf Graphic file (type pd
 f)
 <use chapters/4-IntegrationRn/figures/figures-upper2.pdf>
 Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-upper2.pdf  u
-sed on input line 220.
-(pdftex.def)             Requested size: 148.6948pt x 124.2422pt.
-<chapters/4-IntegrationRn/figures/figures-lower2.pdf, id=1881, 212.4226pt x 177
+sed on input line 249.
+(pdftex.def)             Requested size: 212.42207pt x 177.48964pt.
+<chapters/4-IntegrationRn/figures/figures-lower2.pdf, id=1902, 212.4226pt x 177
 .4901pt>
 File: chapters/4-IntegrationRn/figures/figures-lower2.pdf Graphic file (type pd
 f)
 <use chapters/4-IntegrationRn/figures/figures-lower2.pdf>
 Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-lower2.pdf  u
-sed on input line 221.
-(pdftex.def)             Requested size: 148.6948pt x 124.2422pt.
-<chapters/4-IntegrationRn/figures/figures-signedvolume.pdf, id=1883, 204.40366p
+sed on input line 250.
+(pdftex.def)             Requested size: 212.42207pt x 177.48964pt.
+
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[100 <./chapters/4-IntegrationRn/figures/figures-upper2.pdf> <./chapters/4-Inte
+grationRn/figures/figures-lower2.pdf>]
+<chapters/4-IntegrationRn/figures/figures-signedvolume.pdf, id=1924, 204.40366p
 t x 175.37921pt>
 File: chapters/4-IntegrationRn/figures/figures-signedvolume.pdf Graphic file (t
 ype pdf)
 <use chapters/4-IntegrationRn/figures/figures-signedvolume.pdf>
 Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-signedvolume.
-pdf  used on input line 260.
+pdf  used on input line 289.
 (pdftex.def)             Requested size: 204.40315pt x 175.37878pt.
 
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[99 <./chapters/4-IntegrationRn/figures/figures-upper2.pdf> <./chapters/4-Integ
-rationRn/figures/figures-lower2.pdf>]
-<chapters/4-IntegrationRn/figures/figures-riemannmidpoint.pdf, id=1906, 212.422
+[101 <./chapters/4-IntegrationRn/figures/figures-signedvolume.pdf>]
+<chapters/4-IntegrationRn/figures/figures-riemannmidpoint.pdf, id=1968, 212.422
 6pt x 177.4901pt>
 File: chapters/4-IntegrationRn/figures/figures-riemannmidpoint.pdf Graphic file
  (type pdf)
 <use chapters/4-IntegrationRn/figures/figures-riemannmidpoint.pdf>
 Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-riemannmidpoi
-nt.pdf  used on input line 316.
+nt.pdf  used on input line 346.
 (pdftex.def)             Requested size: 212.42207pt x 177.48964pt.
 
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[100 <./chapters/4-IntegrationRn/figures/figures-signedvolume.pdf>]
+[102 <./chapters/4-IntegrationRn/figures/figures-riemannmidpoint.pdf>]
+<chapters/4-IntegrationRn/figures/figures-integraloscillation.pdf, id=1982, 212
+.4226pt x 177.4901pt>
+File: chapters/4-IntegrationRn/figures/figures-integraloscillation.pdf Graphic 
+file (type pdf)
+<use chapters/4-IntegrationRn/figures/figures-integraloscillation.pdf>
+Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-integraloscil
+lation.pdf  used on input line 441.
+(pdftex.def)             Requested size: 212.42207pt x 177.48964pt.
+<chapters/4-IntegrationRn/figures/figures-integraloscillation2.pdf, id=1983, 21
+2.4226pt x 177.4901pt>
+File: chapters/4-IntegrationRn/figures/figures-integraloscillation2.pdf Graphic
+ file (type pdf)
+<use chapters/4-IntegrationRn/figures/figures-integraloscillation2.pdf>
+Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-integraloscil
+lation2.pdf  used on input line 442.
+(pdftex.def)             Requested size: 212.42207pt x 177.48964pt.
+
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[101 <./chapters/4-IntegrationRn/figures/figures-riemannmidpoint.pdf>]
-<chapters/4-IntegrationRn/figures/figures-undefinedonr.pdf, id=1964, 210.55263p
+[103]
+<chapters/4-IntegrationRn/figures/figures-undefinedonr.pdf, id=1995, 210.55263p
 t x 175.37921pt>
 File: chapters/4-IntegrationRn/figures/figures-undefinedonr.pdf Graphic file (t
 ype pdf)
 <use chapters/4-IntegrationRn/figures/figures-undefinedonr.pdf>
 Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-undefinedonr.
-pdf  used on input line 413.
+pdf  used on input line 458.
 (pdftex.def)             Requested size: 210.5521pt x 175.37878pt.
 
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[102]
+[104 <./chapters/4-IntegrationRn/figures/figures-integraloscillation.pdf> <./ch
+apters/4-IntegrationRn/figures/figures-integraloscillation2.pdf>]
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[103 <./chapters/4-IntegrationRn/figures/figures-undefinedonr.pdf>]
-<chapters/4-IntegrationRn/figures/figures-fplus.pdf, id=2016, 210.55263pt x 162
+[105 <./chapters/4-IntegrationRn/figures/figures-undefinedonr.pdf>]
+<chapters/4-IntegrationRn/figures/figures-fplus.pdf, id=2055, 210.55263pt x 162
 .3937pt>
 File: chapters/4-IntegrationRn/figures/figures-fplus.pdf Graphic file (type pdf
 )
 <use chapters/4-IntegrationRn/figures/figures-fplus.pdf>
 Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-fplus.pdf  us
-ed on input line 525.
+ed on input line 572.
 (pdftex.def)             Requested size: 168.4423pt x 129.91513pt.
-<chapters/4-IntegrationRn/figures/figures-fminus.pdf, id=2017, 210.55263pt x 16
+<chapters/4-IntegrationRn/figures/figures-fminus.pdf, id=2056, 210.55263pt x 16
 2.3937pt>
 File: chapters/4-IntegrationRn/figures/figures-fminus.pdf Graphic file (type pd
 f)
 <use chapters/4-IntegrationRn/figures/figures-fminus.pdf>
 Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-fminus.pdf  u
-sed on input line 526.
+sed on input line 573.
 (pdftex.def)             Requested size: 168.4423pt x 129.91513pt.
 
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[104]
+[106]
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[105 <./chapters/4-IntegrationRn/figures/figures-fplus.pdf> <./chapters/4-Integ
+[107 <./chapters/4-IntegrationRn/figures/figures-fplus.pdf> <./chapters/4-Integ
 rationRn/figures/figures-fminus.pdf>]
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[106]
-<chapters/4-IntegrationRn/figures/figures-1-xsquaredregion.pdf, id=2100, 218.33
+[108]
+<chapters/4-IntegrationRn/figures/figures-1-xsquaredregion.pdf, id=2139, 218.33
 067pt x 175.38022pt>
 File: chapters/4-IntegrationRn/figures/figures-1-xsquaredregion.pdf Graphic fil
 e (type pdf)
 <use chapters/4-IntegrationRn/figures/figures-1-xsquaredregion.pdf>
 Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-1-xsquaredreg
-ion.pdf  used on input line 662.
+ion.pdf  used on input line 714.
 (pdftex.def)             Requested size: 152.83041pt x 122.7653pt.
 
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[107 <./chapters/4-IntegrationRn/figures/figures-1-xsquaredregion.pdf>]
-<chapters/4-IntegrationRn/figures/figures-intersectfubini.pdf, id=2124, 230.386
+[109 <./chapters/4-IntegrationRn/figures/figures-1-xsquaredregion.pdf>]
+<chapters/4-IntegrationRn/figures/figures-intersectfubini.pdf, id=2163, 230.386
 72pt x 175.37921pt>
 File: chapters/4-IntegrationRn/figures/figures-intersectfubini.pdf Graphic file
  (type pdf)
 <use chapters/4-IntegrationRn/figures/figures-intersectfubini.pdf>
 Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-intersectfubi
-ni.pdf  used on input line 685.
+ni.pdf  used on input line 738.
 (pdftex.def)             Requested size: 230.38615pt x 175.37878pt.
-<chapters/4-IntegrationRn/figures/figures-decomposek.pdf, id=2127, 210.55263pt 
+<chapters/4-IntegrationRn/figures/figures-decomposek.pdf, id=2166, 210.55263pt 
 x 175.3752pt>
 File: chapters/4-IntegrationRn/figures/figures-decomposek.pdf Graphic file (typ
 e pdf)
 <use chapters/4-IntegrationRn/figures/figures-decomposek.pdf>
 Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-decomposek.pd
-f  used on input line 702.
+f  used on input line 755.
 (pdftex.def)             Requested size: 210.5521pt x 175.37477pt.
-<chapters/4-IntegrationRn/figures/figures-decomposek1.pdf, id=2128, 210.55263pt
+<chapters/4-IntegrationRn/figures/figures-decomposek1.pdf, id=2167, 210.55263pt
  x 175.3752pt>
 File: chapters/4-IntegrationRn/figures/figures-decomposek1.pdf Graphic file (ty
 pe pdf)
 <use chapters/4-IntegrationRn/figures/figures-decomposek1.pdf>
 Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-decomposek1.p
-df  used on input line 710.
+df  used on input line 763.
 (pdftex.def)             Requested size: 210.5521pt x 175.37477pt.
-<chapters/4-IntegrationRn/figures/figures-decomposek2.pdf, id=2129, 210.55263pt
+<chapters/4-IntegrationRn/figures/figures-decomposek2.pdf, id=2168, 210.55263pt
  x 175.3752pt>
 File: chapters/4-IntegrationRn/figures/figures-decomposek2.pdf Graphic file (ty
 pe pdf)
 <use chapters/4-IntegrationRn/figures/figures-decomposek2.pdf>
 Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-decomposek2.p
-df  used on input line 712.
+df  used on input line 765.
 (pdftex.def)             Requested size: 210.5521pt x 175.37477pt.
 
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[108 <./chapters/4-IntegrationRn/figures/figures-intersectfubini.pdf>]
+[110 <./chapters/4-IntegrationRn/figures/figures-intersectfubini.pdf>]
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[109 <./chapters/4-IntegrationRn/figures/figures-decomposek.pdf> <./chapters/4-
+[111 <./chapters/4-IntegrationRn/figures/figures-decomposek.pdf> <./chapters/4-
 IntegrationRn/figures/figures-decomposek1.pdf>]
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[110 <./chapters/4-IntegrationRn/figures/figures-decomposek2.pdf>]
+[112 <./chapters/4-IntegrationRn/figures/figures-decomposek2.pdf>]
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[111]
-<chapters/4-IntegrationRn/figures/figures-integraloscillation.pdf, id=2216, 212
-.4226pt x 177.4901pt>
+[113]
+
+LaTeX Warning: Reference `darbouxmonotone' on page 114 undefined on input line 
+893.
+
 File: chapters/4-IntegrationRn/figures/figures-integraloscillation.pdf Graphic 
 file (type pdf)
 <use chapters/4-IntegrationRn/figures/figures-integraloscillation.pdf>
 Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-integraloscil
-lation.pdf  used on input line 836.
+lation.pdf  used on input line 910.
 (pdftex.def)             Requested size: 212.42207pt x 177.48964pt.
 
 Overfull \hbox (78.0pt too wide) has occurred while \output is active
 []
  []
 
-[112 <./chapters/4-IntegrationRn/figures/figures-integraloscillation.pdf>]
-Overfull \hbox (78.0pt too wide) has occurred while \output is active
-[]
- []
-
-[113])
-Overfull \hbox (78.0pt too wide) has occurred while \output is active
-[]
- []
-
 [114]
+
+LaTeX Warning: Reference `IntegrabilityI' on page 115 undefined on input line 9
+67.
+
+<chapters/4-IntegrationRn/figures/figures-sin1x.pdf, id=2270, 539.609pt x 97.66
+086pt>
+File: chapters/4-IntegrationRn/figures/figures-sin1x.pdf Graphic file (type pdf
+)
+<use chapters/4-IntegrationRn/figures/figures-sin1x.pdf>
+Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-sin1x.pdf  us
+ed on input line 980.
+(pdftex.def)             Requested size: 377.72371pt x 68.36212pt.
+<chapters/4-IntegrationRn/figures/figures-sin1xzoom.pdf, id=2271, 557.47371pt x
+ 97.66086pt>
+File: chapters/4-IntegrationRn/figures/figures-sin1xzoom.pdf Graphic file (type
+ pdf)
+<use chapters/4-IntegrationRn/figures/figures-sin1xzoom.pdf>
+Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-sin1xzoom.pdf
+  used on input line 996.
+(pdftex.def)             Requested size: 390.22893pt x 68.36212pt.
+
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[115]
+
+LaTeX Warning: Reference `Thomae' on page 116 undefined on input line 1028.
+
+
+LaTeX Warning: Reference `integrabilityIII' on page 116 undefined on input line
+ 1030.
+
+
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[116 <./chapters/4-IntegrationRn/figures/figures-sin1x.pdf> <./chapters/4-Integ
+rationRn/figures/figures-sin1xzoom.pdf>]
+
+LaTeX Warning: Reference `IntegrabilityII' on page 117 undefined on input line 
+1049.
+
+<chapters/4-IntegrationRn/figures/figures-thomaesfunction.pdf, id=2330, 239.405
+41pt x 142.4492pt>
+File: chapters/4-IntegrationRn/figures/figures-thomaesfunction.pdf Graphic file
+ (type pdf)
+<use chapters/4-IntegrationRn/figures/figures-thomaesfunction.pdf>
+Package pdftex.def Info: chapters/4-IntegrationRn/figures/figures-thomaesfuncti
+on.pdf  used on input line 1082.
+(pdftex.def)             Requested size: 239.40482pt x 142.44884pt.
+
+LaTeX Warning: Reference `IntegrabilityI' on page 117 undefined on input line 1
+088.
+
+
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[117 <./chapters/4-IntegrationRn/figures/figures-thomaesfunction.pdf>]
+
+LaTeX Warning: Reference `IntegrabilityII' on page 118 undefined on input line 
+1092.
+
+
+LaTeX Warning: Reference `nonintegable' on page 118 undefined on input line 111
+3.
+
+
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[118]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[119])
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[120]
 \mycount=\count438
- [115
+ [121
 
 ]
 \mycount=\count439
- [116
+ [122
 
 ]
 \mycount=\count440
  (HonorsMultivariableCalculus.ans)
 No file HonorsMultivariableCalculus.bbl.
 No file HonorsMultivariableCalculus.ind.
-[117
+[123
 
 
 ]
 \tf@toc=\write10
 \openout10 = `HonorsMultivariableCalculus.toc'.
 
- (HonorsMultivariableCalculus.aux)
+
+
+LaTeX Warning: Hook 'shipout/lastpage' executed on wrong page (121 not 127).
+               Rerun to correct this.
+
+(HonorsMultivariableCalculus.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -3125,10 +3249,10 @@ nged.
 (rerunfilecheck)             Checksum: 21A63B4E6F99E057B0BB3BE3F7912634;1202.
  ) 
 Here is how much of TeX's memory you used:
- 53702 strings out of 475389
- 1218691 string characters out of 2776056
- 257936783 words of memory out of 259000000
- 72644 multiletter control sequences out of 15000+600000
+ 53818 strings out of 475389
+ 1222096 string characters out of 2776056
+ 101936783 words of memory out of 103000000
+ 72717 multiletter control sequences out of 15000+600000
  646823 words of font info for 506 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  114i,16n,120p,1026b,2488s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -3182,9 +3306,9 @@ eX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Richard/AppData/Loc
 al/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb><C:/Users/Rich
 ard/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/
 Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.pfb>
-Output written on HonorsMultivariableCalculus.pdf (121 pages, 1782144 bytes).
+Output written on HonorsMultivariableCalculus.pdf (127 pages, 2014503 bytes).
 PDF statistics:
- 2659 PDF objects out of 2984 (max. 8388607)
- 926 named destinations out of 1000 (max. 500000)
- 131399 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 2795 PDF objects out of 2984 (max. 8388607)
+ 964 named destinations out of 1000 (max. 500000)
+ 131424 words of extra memory for PDF output out of 154059 (max. 10000000)
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.20)  14 DEC 2022 21:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.20)  13 JAN 2023 18:53
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1178,23 +1178,63 @@ A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 \openout4 = `tikz/figures-figure1.dpth'.
 
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5
+78.
+(C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+578.
+(C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+578.
+(C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 578.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 578.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 578.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 578
+.
+(C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 578
+.
+(C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 57
+8.
+(C:\Users\Richard\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+) [1
 
-! Package pgfkeys Error: I do not know the key '/tikz/tdplot_main_coords' and I
- am going to ignore it. Perhaps you misspelled it.
-
-See the pgfkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.545 ...kzpicture}[tdplot_main_coords, scale = 2]
-                                                   
+\providecommand \oddpage@label [2]{}
+{C:/Users/Richard/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] ) 
 Here is how much of TeX's memory you used:
- 39940 strings out of 475389
- 964969 string characters out of 2776056
- 1485770 words of memory out of 3000000
- 60660 multiletter control sequences out of 15000+600000
- 474950 words of font info for 30 fonts, out of 8000000 for 9000
+ 40116 strings out of 475389
+ 968583 string characters out of 2776056
+ 1488770 words of memory out of 3000000
+ 60789 multiletter control sequences out of 15000+600000
+ 490460 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 118i,3n,121p,765b,609s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 118i,8n,121p,765b,713s stack positions out of 10000i,1000n,20000p,200000b,80000s
+{C:/U
+sers/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Use
+rs/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}<C:/U
+sers/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:
+/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><
+C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb>
+<C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb>
+Output written on tikz/figures-figure1.pdf (2 pages, 76899 bytes).
+PDF statistics:
+ 39 PDF objects out of 1000 (max. 8388607)
+ 1 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-!  ==> Fatal error occurred, no output PDF file produced!

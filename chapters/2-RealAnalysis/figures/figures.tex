@@ -630,5 +630,193 @@
 % \end{tikzpicture}
 
 
+
+%\begin{center}
+%	\begin{tikzpicture}[scale=2, even odd rule]
+%		\begin{axis}[view={60}{15},
+%			no marks,axis equal,
+%			xmin=-2,xmax=2,ymin=-2,ymax=2,zmin=-1,zmax=1,
+%			enlargelimits={upper=0.1},
+%			xlabel={$x$},
+%			ylabel={$y$},
+%			zlabel={$z$},
+%			zlabel style={rotate=-90}
+%			]                
+%			\addplot3[thick,
+%			UCLAblue,samples=100,
+%			domain=0:1,
+%			y domain=0:0,
+%			decoration={
+%				markings,
+%				mark=between positions 0.25 and .6 step 20mm with {\arrow{stealth}}
+%			}, postaction=decorate
+%			]
+%			({cos(deg(2*pi*x))},{sin(deg(2*pi*x))},{sin(deg(12*pi*x))});
+%			
+%			\addplot3[line width = 2.5pt,
+%			white,samples=100,
+%			domain=-.4:0.25,
+%			y domain=0:0,
+%			]
+%			({cos(deg(2*pi*x))},{sin(deg(2*pi*x))},{sin(deg(12*pi*x))});
+%			
+%			\addplot3[thick,
+%			UCLAblue,samples=100,
+%			domain=-.4:0.25,
+%			y domain=0:0,
+%			decoration={
+%				markings,
+%				mark=between positions 0.1 and 2 step 20mm with {\arrow{stealth}}
+%			}, postaction=decorate
+%			]
+%			({cos(deg(2*pi*x))},{sin(deg(2*pi*x))},{sin(deg(12*pi*x))});
+%		\end{axis}
+%	\end{tikzpicture}    
+%\end{center}
+%
+%\begin{center}
+%	\begin{tikzpicture}[scale=2, even odd rule]
+%		\begin{axis}[view={60}{15},
+%			no marks,axis equal,
+%			xmin=-5,xmax=5,ymin=-5,ymax=5,zmin=-1,zmax=5,
+%			enlargelimits={upper=0.1},
+%			xlabel={$x$},
+%			ylabel={$y$},
+%			zlabel={$z$},
+%			zlabel style={rotate=-90}
+%			]                
+%			\addplot3[thick,
+%			UCLAblue,samples=300,
+%			domain=0:5.2,
+%			y domain=0:0,
+%			decoration={
+%				markings,
+%				mark=between positions 0.1 and 2 step 20mm with {\arrow{stealth}}
+%			}, postaction=decorate
+%			]
+%			({x*cos(deg(2*pi*x))},{x*sin(deg(2*pi*x))},{x});
+%			
+%			
+%			
+%			% \def\NORM{sqrt((2*t)^2 + (4*t^3)^2)}
+%			% \addplot3[thick, mered,-stealth,samples=8,variable=\t, domain=0:2,quiver={
+%			%         u=-1*sin(deg(2*pi*t)), v=-1*cos(deg(2*pi*t)), w = 1,
+%			%         scale arrows=0.2,
+%			%     }]
+%			%     ({cos(deg(2*pi*t))},{-1*sin(deg(2*pi*t))},{t});
+%		\end{axis}
+%	\end{tikzpicture}    
+%\end{center}
+%
+%\begin{center}
+%	\begin{tikzpicture}[scale=2, even odd rule]
+%		\begin{axis}[view={50}{15},
+%			no marks,axis equal,
+%			xmin=-2,xmax=2,ymin=-2,ymax=2,zmin=-2,zmax=2,
+%			enlargelimits={upper=0.1},
+%			xlabel={$x$},
+%			ylabel={$y$},
+%			zlabel={$z$},
+%			zlabel style={rotate=-90}
+%			]                
+%			\addplot3[thick,
+%			UCLAblue,samples=300,
+%			domain=0:1,
+%			y domain=0:0,
+%			decoration={
+%				markings,
+%				mark=between positions 0 and 1 step 10mm with {\arrow{stealth}}
+%			}, postaction=decorate
+%			]
+%			({cos(deg(2*pi*x))*sin(deg(2*pi*x))},{sin(deg(2*pi*x))*sin(deg(2*pi*x))},{sin(deg(2*pi*x))});
+%			
+%			
+%			% \def\NORM{sqrt((2*t)^2 + (4*t^3)^2)}
+%			% \addplot3[thick, mered,-stealth,samples=8,variable=\t, domain=0:2,quiver={
+%			%         u=-1*sin(deg(2*pi*t)), v=-1*cos(deg(2*pi*t)), w = 1,
+%			%         scale arrows=0.2,
+%			%     }]
+%			%     ({cos(deg(2*pi*t))},{-1*sin(deg(2*pi*t))},{t});
+%		\end{axis}
+%	\end{tikzpicture}    
+%\end{center}
+%
+%\begin{center}
+%	\begin{tikzpicture}[scale=2, even odd rule]
+%		\begin{axis}[view={60}{15},
+%			no marks,axis equal,
+%			xmin=-5,xmax=5,ymin=-5,ymax=5,zmin=-5,zmax=5,
+%			enlargelimits={upper=0.1},
+%			xlabel={$x$},
+%			ylabel={$y$},
+%			zlabel={$z$},
+%			zlabel style={rotate=-90}
+%			]                
+%			\addplot3[thick,
+%			UCLAblue,samples=300,
+%			domain=-5:5,
+%			y domain=0:0,
+%			decoration={
+%				markings,
+%				mark=between positions 0.1 and 2 step 20mm with {\arrow{stealth}}
+%			}, postaction=decorate
+%			]
+%			({x},{x},{(5*x)/(1+x^2)});
+%			
+%			
+%			
+%			% \def\NORM{sqrt((2*t)^2 + (4*t^3)^2)}
+%			% \addplot3[thick, mered,-stealth,samples=8,variable=\t, domain=0:2,quiver={
+%			%         u=-1*sin(deg(2*pi*t)), v=-1*cos(deg(2*pi*t)), w = 1,
+%			%         scale arrows=0.2,
+%			%     }]
+%			%     ({cos(deg(2*pi*t))},{-1*sin(deg(2*pi*t))},{t});
+%		\end{axis}
+%	\end{tikzpicture}    
+%\end{center}
+%
+%\begin{center}
+%	\begin{tikzpicture}[scale=2, even odd rule]
+%		\begin{axis}[view={30}{15},
+%			no marks,axis equal,
+%			xmin=-2,xmax=2,ymin=-2,ymax=2,zmin=-1,zmax=1,
+%			enlargelimits={upper=0.1},
+%			xlabel={$x$},
+%			ylabel={$y$},
+%			zlabel={$z$},
+%			zlabel style={rotate=-90}
+%			]                
+%			\addplot3[thick,
+%			UCLAblue,samples=200,
+%			domain=0:1,
+%			y domain=0:0,
+%			decoration={
+%				markings,
+%				mark=between positions 0.15 and .6 step 10mm with {\arrow{stealth}}
+%			}, postaction=decorate
+%			]
+%			({cos(deg(2*pi*x))},{sin(deg(2*pi*x))},{cos(deg(2*pi*x))*sin(deg(24*pi*x))});
+%			
+%			\addplot3[line width = 2.5pt,
+%			white,samples=200,
+%			domain=-.4:0.1,
+%			y domain=0:0,
+%			]
+%			({cos(deg(2*pi*x))},{sin(deg(2*pi*x))},{cos(deg(2*pi*x))*sin(deg(24*pi*x))});
+%			
+%			\addplot3[thick,
+%			UCLAblue,samples=200,
+%			domain=-.4:0.1,
+%			y domain=0:0,
+%			decoration={
+%				markings,
+%				mark=between positions -.4 and 0.2 step 10mm with {\arrow{stealth}}
+%			}, postaction=decorate
+%			]
+%			({cos(deg(2*pi*x))},{sin(deg(2*pi*x))},{cos(deg(2*pi*x))*sin(deg(24*pi*x))});
+%		\end{axis}
+%	\end{tikzpicture}    
+%\end{center}
+
  
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.20)  14 DEC 2022 21:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.20)  13 JAN 2023 20:50
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1218,35 +1218,8 @@ xecuted.
 \openout3 = `figures.auxlock'.
 
 
-Overfull \hbox (125.80487pt too wide) in paragraph at lines 545--575
-[][] 
- []
-
-[1
-
-{C:/Users/Richard/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./tikz/fig
-ures-figure0.pdf>] (figures.aux)
-Package rerunfilecheck Info: File `figures.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
- ) 
-Here is how much of TeX's memory you used:
- 39941 strings out of 475389
- 964898 string characters out of 2776056
- 257484580 words of memory out of 259000000
- 60651 multiletter control sequences out of 15000+600000
- 472202 words of font info for 29 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 114i,5n,118p,730b,609s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}
-<C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmmib10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-lm/lmbx7.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/lm/lmmi10.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/lm/lmmib7.pfb><C:/Users/Richard/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/lm/lmr10.pfb>
-Output written on figures.pdf (1 page, 75991 bytes).
-PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
- 2 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+! Package tikz Error: Sorry, the system call 'pdflatex -shell-escape -halt-on-e
+rror -interaction=batchmode -jobname "tikz/figures-figure0" "\def\tikzexternalr
+ealjob{figures}\input{figures}"' did NOT result in a usable output file 'tikz/f
+igures-figure0' (expected one of .pdf:.jpg:.jpeg:.png:). Please verify that you
+ have enabled system calls. For pdflatex, this is 'pdflatex -shell-escape'. Som

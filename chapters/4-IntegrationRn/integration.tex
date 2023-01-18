@@ -52,7 +52,17 @@ A point $\bm{x} \in \R^n$ is a \textbf{boundary point} of $D \subset \R^n$ if: f
 \end{proposition}
 
 \begin{definition}
-    The \textbf{support}\define{support of a function} of a function $f : A \subset \R^n \to \R$ is the \textbf{closure} of the set $$\{\bm{x} \in A \ | \ f(\bm{x}) \neq 0\}$$
+    The \textbf{set of non-zero values of a function} $f : A \subset \R^n$ is the set $$\{\bm{x} \in A \ | \ f(\bm{x}) \neq 0\}$$
+\end{definition}
+
+\begin{definition}
+    The \textbf{support}\define{support of a function} of a function $f : A \subset \R^n \to \R$ is the \textbf{closure} of the set of non-zero values of a function:
+    $$\textnormal{supp}(f) := \overline{\{\bm{x} \in A \ | \ f(\bm{x}) \neq 0\}}$$
+
+\begin{center}
+    \includegraphics{chapters/4-IntegrationRn/figures/figures-supportpic.pdf}
+\end{center}
+
 \end{definition}
 
 \begin{definition}
@@ -60,6 +70,25 @@ A point $\bm{x} \in \R^n$ is a \textbf{boundary point} of $D \subset \R^n$ if: f
 
     Equivalently, there exists $R>0$ such that $f(\bm{x}) = 0$ for all $||\bm{x}|| > R$.
     \end{definition}
+
+\begin{example}
+    The function $f(x) = \sin(x)$ does not have bounded support.  In fact, the set of non-zero points of $\sin(x)$ is the set
+    $$\{x \in \R \ | \ x \neq n\pi \}$$
+    This set is already unbounded, and when we take the closure, $\textnormal{supp}(f) = \R$.  
+    
+    However, the function $$g(x) = \left\{
+		\begin{array}{ll}
+			\sin(x) & \text{ if } -\pi \leq x \leq \pi \\
+			0 & \text{ otherwise}
+		\end{array}
+		\right.$$
+  has bounded support.  The set of non-zero points of $g(x)$ is the set
+    $$(-\pi,0) \cup (0,\pi)$$
+  When we take the closure, $\textnormal{supp}(f) = [-\pi,\pi]$, which is bounded.  
+    
+
+  
+\end{example}
 
 We can now define the notion of multivariable integral for bounded functions with bounded support.  
 
@@ -207,7 +236,7 @@ Thus, we will use Darboux sums to define the multivariable integral - this will 
     $$U_N(f) := \frac{1}{2^{Nn}} \sum_{C \in D_N(\R^n)} M_C(f)  \qquad L_N(f) := \frac{1}{2^{Nn}}\sum_{C \in D_N(\R^n)} m_C(f)$$
     \end{proposition}
     
-    \begin{proposition}
+    \begin{proposition}\label{darbouxmonotone}
     As $N$ increases, $U_N(f)$ decreases and $L_N(f)$ increases.
     \end{proposition}
 
@@ -217,8 +246,8 @@ Thus, we will use Darboux sums to define the multivariable integral - this will 
     \end{center}
 
     \begin{center}
-        \includegraphics[scale=0.7]{chapters/4-IntegrationRn/figures/figures-upper2.pdf}
-        \includegraphics[scale=0.7]{chapters/4-IntegrationRn/figures/figures-lower2.pdf}
+        \includegraphics{chapters/4-IntegrationRn/figures/figures-upper2.pdf}
+        \includegraphics{chapters/4-IntegrationRn/figures/figures-lower2.pdf}
     \end{center}
     
     
@@ -269,6 +298,8 @@ Thus, we will use Darboux sums to define the multivariable integral - this will 
     \begin{theorem}
      If $f : \R^n \to \R$ is a continuous function that is bounded with bounded support, then $f$ is integrable.   
     \end{theorem}
+
+    \fixthis{PICTURE}
     \end{example}
 
     
@@ -300,14 +331,13 @@ Note that if the integral $\int_{\R^n} f \ dV$ exists, then these two boundednes
     Using the Darboux formulation, it follows that if $f$ is integrable, then any choice of sampling  \fixthis{will result in the same value for the integral}
 \end{remark}
 
-\begin{proposition}\label{prop:riemannisintegrable}
-    If $f: \R^n \to \R$ is integrable, then the integral is the limit of the Riemann sum.  
-
+\begin{definition}
     Recall that given a choice of $\bm{x_{k,N}} \in C_{\bm{k},N}$ for every cube, the $N$-th \textbf{Riemann sum}\define{Riemann sum} is defined as 
     $$R_N(f) := \sum_{C \in D_N(\R^n)} f(\bm{x_{k,N}}) \ \textnormal{vol(C)}$$
     This yields the \textbf{Riemann integral}
     $$\lim_{N \to \infty} R_N(f) = \int_{\R^n} f(\bm{x}) \ dV$$
-    \end{proposition}
+\end{definition}
+
 
     \begin{example}
         For example, we can choose the \textbf{midpoint rule} by choosing $$\bm{x_{k,N}} = \langle \frac{2k_1 + 1}{2^{N+1}}, \cdots, \frac{2k_n + 1}{2^{N+1}} \rangle $$
@@ -316,6 +346,7 @@ Note that if the integral $\int_{\R^n} f \ dV$ exists, then these two boundednes
             \includegraphics{chapters/4-IntegrationRn/figures/figures-riemannmidpoint.pdf}
         \end{center}
     \end{example}
+
 
     
     \begin{example}
@@ -327,6 +358,15 @@ Note that if the integral $\int_{\R^n} f \ dV$ exists, then these two boundednes
 		\right.$$   
     \end{example}
 
+\begin{proposition}\label{prop:riemannisintegrable}
+    If $f: \R^n \to \R$ is integrable, then the integral is the limit of the Riemann sum.  
+    \end{proposition}
+
+    \begin{proof}
+        Observe that for all cubes $C$, $$M_C(f) \geq f(\bm{x_{k,N}}) \geq m_C(f)$$
+        Thus, $$U_N(f) \geq R_N(f) \geq L_N(f)$$
+        If $f: \R^n \to \R$ is integrable, by the squeeze theorem, $\lim_{N \to \infty} R_N(f) = \int_{\R^n} f(\bm{x}) \ dV$
+    \end{proof}
 
 \subsection{Integration over subsets of $\R^n$}
 
@@ -397,8 +437,13 @@ In other words, the graph is given by the equation $$x_{n+1} = f(x_1, \cdots, x_
 If $X \subset \R^n$ is a closed and bounded (compact) region, and $f : X \to \R$ be a continuous function, then the ($n+1$)-dimensional volume of the graph $\Gamma_f$ is 0.
 \end{theorem}
 
+\begin{center}
+    \includegraphics{chapters/4-IntegrationRn/figures/figures-integraloscillation.pdf}
+    \includegraphics{chapters/4-IntegrationRn/figures/figures-integraloscillation2.pdf}
+\end{center}
 
     \end{example}
+
 
     Moreover, we can also use indicator functions to integrate functions that are not defined on all of $\R^n$!  
 
@@ -487,6 +532,8 @@ In this section, we will prove some properties about the multivariable integral.
     
     \end{theorem}
 
+    Note that these properties follow immediately from the properties of limits.
+
     \begin{corollary}
     We can reduce to studying integrals of non-negative functions.
     \end{corollary}
@@ -553,10 +600,14 @@ In this section, we will prove some properties about the multivariable integral.
 \begin{problem}{examplesboundedboundedsupport}
 Come up with examples of
        \begin{enumerate}
-           \item a multivariable function that is not bounded
-           \item a multivariable function that does not have bounded support
+           \item a multivariable function that is not bounded.
+           \item a multivariable function that does not have bounded support.
            \item A multivariable function that is neither bounded nor has bounded support.
        \end{enumerate}
+\end{problem}
+
+\begin{problem}{supportnoninterval}
+    Come up with an example of a function $f(x) : \R \to \R$ with bounded support, but $\textnormal{supp}(f)$ is not an interval $[a.b]$.
 \end{problem}
 
 \begin{problem}{boundedboundedsupportvspace}
@@ -571,7 +622,7 @@ Come up with examples of
     Explicitly describe and sketch the dyadic cube $C_{\langle1,1,1\rangle,1}$ in $\R^3$.
 \end{problem}
 
-\begin{problem}
+\begin{problem}{estimate}
     Consider the subset $C_{\langle1,1\rangle,2}$ in $\R^2$, and let $f(x,y) = x^2 + y^2$.  Calculate $M_{C_{\langle1,1\rangle,2}}(f)$ and $m_{C_{\langle1,1\rangle,2}}(f)$.
 \end{problem}
 
@@ -607,12 +658,12 @@ Come up with examples of
 \end{problem}
 
 \begin{problem}{supfg}
-    Let $f,g : \R^n \to \R$ be integrable functions, and consder the function $\sup(f,g)$ defined by $$\sup(f,g)(\bm{x}) := \sup(f(\bm{x},g(\bm{x})$$ Show that $\sup(f,g)$ is integrable.
+    Let $f,g : \R^n \to \R$ be integrable functions, and consider the function $\sup(f,g)$ defined by $$\sup(f,g)(\bm{x}) := \sup(f(\bm{x}),g(\bm{x}))$$ Show that $\sup(f,g)$ is integrable.
     (\textbf{Hint:} Write $\sup(f,g)$ in terms of $f^+,f^-,g^+,g^-$).
 \end{problem}
 
 \begin{problem}{inffg}
-    Let $f,g : \R^n \to \R$ be integrable functions, and consder the function $\inf(f,g)$ defined by $$\inf(f,g)(\bm{x}) := \inf(f(\bm{x},g(\bm{x})$$ Show that $\inf(f,g)$ is integrable.
+    Let $f,g : \R^n \to \R$ be integrable functions, and consider the function $\inf(f,g)$ defined by $$\inf(f,g)(\bm{x}) := \inf(f(\bm{x}),g(\bm{x}))$$ Show that $\inf(f,g)$ is integrable.
     (\textbf{Hint:} Write $\inf(f,g)$ in terms of $f^+,f^-,g^+,g^-$).
 \end{problem}
 
@@ -659,7 +710,9 @@ Come up with examples of
         Compute the volume of the solid region enclosed between the graph of  $f(x,y) = y$ and the $xy$-plane, over the region below:
 
         \begin{example}
+    \begin{center}
             \includegraphics[scale=.7]{chapters/4-IntegrationRn/figures/figures-1-xsquaredregion.pdf}
+    \end{center}
         \end{example}
         
     \end{example}
@@ -726,6 +779,9 @@ Come up with examples of
     
 \end{example}
 
+
+
+
 \begin{definition}
     A subset $D \subset \R^2$ is \textbf{vertically simple}\define{vertically simple} if it is the region between graphs of two continuous functions $y = g_1(x)$ and $y = g_2(x)$ over a fixed interval of $x$-values $[a,b]$.
 \end{definition}
@@ -783,7 +839,8 @@ Come up with examples of
 \end{problem}
 
 \begin{problem}{symmetry}
-    The volume of a sphere of radius 2 is $\frac{32\pi}{3}$.  What is the value of the following integral?$$\int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}\int_0^\pi\int_0^2 \rho^2 \sin(\phi) \ d\rho \ d\phi \ d\theta$$
+    The volume contained in a sphere of radius 2 in $\R^3$ is $\frac{32\pi}{3}$.  What is the value of the following integral?  $$\int_{-2}^0\int^{0}_{-\sqrt{4-x^2}}\int_{0}^{\sqrt{4-x^2-y^2}} 1 \ dz \ dy \ dx$$
+    
 \end{problem}
 
 \begin{problem}{3dint1}
@@ -816,10 +873,27 @@ In the previous sections, we have defined the notion of integrability, which we 
     We say that $f$ is \textbf{integrable} if $U(f) = L(f)$.
     
     The \textbf{integral} of $f$ is $$\int_{\R^n} f(\bm{x}) \ dV := U(f) = L(f)$$
-
-    Equivalently \fixthis{ref}, for any $\varepsilon > 0$,
-    there exists $N$ such that $|U_N(f) - L_N(f)| < \varepsilon$
     \end{definition}
+
+\begin{proposition}
+    Let $f: \R^n \to \R$ be a bounded function with bounded support.  Then the following are equivalent:
+
+    \begin{enumerate}
+        \item $f$ is integrable.
+        \item For any $\varepsilon > 0$, there exists $N$ such that for all $n > N$, $$U_n(f) - L_n(f) < \varepsilon$$
+        \item For any $\varepsilon > 0$, there exists $N$ such that, $$U_N(f) - L_N(f) < \varepsilon$$
+    \end{enumerate}
+    
+\end{proposition}
+
+    \begin{proof}
+        To see that (1) is equivalent to (2), we expand out the definitions.  That is, $f$ is integrable if and only if $$\lim_{N \to \infty} \left(U_N(f) - L_N(f)\right) = 0$$  
+        However, this is equivalent to (2) by proposition \ref{epsilonenough} and exercise \ref{problem:boundsdarboux} (which tells us that $U_N(f) - L_N(f) \geq 0$).
+
+        To see that (2) is equivalent to (3), observe from proposition \ref{darbouxmonotone} that $U_N(f) - L_N(f) \leq U_{N+1}(f) - L_{N+1}(f)$
+    \end{proof}
+
+
 
 The examples we've had so far are the following:
         
@@ -829,7 +903,7 @@ The examples we've had so far are the following:
 
 
     \begin{definition}
-    Let $f: \R^n \to \R$ be a function, and let $A \subset \R^n$.  The \textbf{oscillation} of $f$ over $A$ is defined as $$\text{osc}_A(f) := M_A(f) - m_A(f)$$
+    Let $f: \R^n \to \R$ be a function, and let $A \subset \R^n$.  The \textbf{oscillation}\define{oscillation} of $f$ over $A$ is defined as $$\text{osc}_A(f) := M_A(f) - m_A(f)$$
     \end{definition}
 
     \begin{center}
@@ -848,31 +922,215 @@ The examples we've had so far are the following:
     fixthis
 \end{proof}
 
+\begin{proposition}
+        If $f: \R^n \to \R$ has bounded support, then there are finitely many cubes $C_{\bm{k},N}$ where $\textnormal{osc}_{C_{\bm{k},N}}(f) \neq 0$.
+    \end{proposition}
+
 \begin{example}
-    The indicator function on the unit disk
+    \begin{theorem}
+        If $f: \R^n \to \R$ is a continuous function that is bounded with bounded support, then $f$ is integrable.
+    \end{theorem}
+
+\begin{proof}
+    Let $\varepsilon > 0$.  For a fixed vector $\bm{k}$, we can always find $M_{\bm{k}}$ such that for $m > M_{\bm{k}}$, 
+    $$\textnormal{osc}_{C_{\bm{k},m}}(f) < \varepsilon$$
+    since $f$ is continuous.
+
+    There are finitely many cubes to consider, so we can take $M = \textnormal{max}\{M_{\bm{k}}\}$. So
+
+    $$\sum_{C \in D_M(\R^n)} \textnormal{osc}_C(f) \textnormal{vol}(C) < \sum_{C \in D_M(\R^n)} \varepsilon \frac{1}{2^{Mn}}$$
+\end{proof}
+
+    That is, there are \textbf{no cubes} where $\textnormal{osc}_C(f) > \varepsilon$.
 \end{example}
 
 \begin{example}
 
-The function $\sin(\frac{1}{x})$
+    \begin{proposition}
+        The function: $g(x) := \left\{
+		\begin{array}{ll}
+			1 & \text{ if } x \in [0,1] \text{ and }  x \notin \Q \\
+			0 & \text{ otherwise}
+		\end{array}
+		\right.$ is \textbf{not} integrable.
+    \end{proposition}
+
+    \begin{proof}
+    For all $m$, $\textnormal{osc}_{C_{\bm{k,m}}}(g) = 1$ for \textbf{every cube} contained in the region $[0,1]$.  Thus, $$\sum_{C \subset [0,1]} \textnormal{osc}_C(g) \textnormal{vol(C)} = \sum_{C \subset [0,1]} \textnormal{vol(C)} = 1$$
     
-%     \begin{center}
+    But $$\sum_{C \subset [0,1]} \textnormal{osc}_C(g) \textnormal{vol(C)} < \sum_{C \in D_m(\R)} \textnormal{osc}_C(g) \textnormal{vol(C)}$$
+    So $f$ is \textbf{not integrable}.        
+    \end{proof}
+
+\end{example}
+
+From these examples, it is tempting to conclude if you cannot bound the oscillation of a function $f$, then $f$ is not integrable. However, this is not the case (see theorem \ref{IntegrabilityI}).
+
+\begin{example}
+
+    \begin{proposition}
+      Consider the function: $$h(x) := \left\{
+		\begin{array}{ll}
+			\sin(\frac{1}{x}) & \text{ if } x \neq 0 \\
+			0 & \text{ otherwise}
+		\end{array}
+		\right.$$
+
+    \begin{center}
+        \includegraphics[scale=.7]{chapters/4-IntegrationRn/figures/figures-sin1x.pdf}
+    \end{center}
+
+    Observe that as $x$ approaches 0, $h(x)$ oscillates between $-1$ and $1$.  However, $h(x)$ \textbf{IS} integrable on any interval $[a,b] \subset \R^n$.  
+    \end{proposition}
     
-%     \begin{tikzpicture}[x=8cm]
-%     \draw[xstep=.2,ystep=.5,lightgray,ultra thin] (-0.1,-1.5) grid (1.1,1.5);
-%     \draw[->] (0,0) -- (1.1,0) node[right] {$x$};
-%     \draw[->] (0,-1) -- (0,1.1) node[above] {$y$};
-%   \draw[blue,domain=0.01:1,samples=5000] plot (\x, {sin((1/\x)r)});
-% \end{tikzpicture}    
-%     \end{center}
+    \begin{proof}
+     Observe that $h(x) := \left\{
+		\begin{array}{ll}
+			\sin(\frac{1}{x}) & \text{ if } x \neq 0 \\
+			0 & \text{ otherwise}
+		\end{array}
+		\right.$  
+is continuous everywhere except at $x=0$.  
+
+    \begin{center}
+        \includegraphics[scale=.7]{chapters/4-IntegrationRn/figures/figures-sin1xzoom.pdf}
+    \end{center}
+
+    Thus, if $D = C_{0,N}$ or $D=C_{-1,N}$, then $\textnormal{osc}_D(f) = 2$.
+
+    However, for all other $C_{k,N}$, we can choose $M$ large enough so that $\textnormal{osc}_C(f) < \varepsilon$ for all $C$.  So
+    \begin{align*}
+    \sum_{C \in D_M(\R^n)} \textnormal{osc}_C(f) \textnormal{vol}(C) &= 4\textnormal{vol}(C) + \sum_{\substack{C \in D_M(\R^n) \\ C \neq D}} \textnormal{osc}_C(f) \textnormal{vol}(C)\\
+    &= \frac{4}{2^{Mn}} + \sum_{\substack{C \in D_M(\R^n) \\ C \neq D}} \varepsilon \frac{1}{2^{Mn}}
+    \end{align*}
+
+    \end{proof}
+
+\end{example}
+
+The correct statement is as follows: a bounded function with bounded support $f: \R^n \to \R$ is integrable if you can bound the volumes of the cubes where $f$ oscillates too much.
+
+\begin{theorem}[Integrability Criterion I]\label{IntegrabilityI}
+    A function $f: \R^n \to \R$ is integrable if and only if
+    \begin{enumerate}
+        \item $f$ is bounded with bounded support
+        \item For all $\varepsilon > 0$, there exists $N$ such that $$\sum_{\{C \in D_N(\R^n) \ | \ \text{osc}_C(f) > \varepsilon \}} \textnormal{vol}_n C < \varepsilon$$
+    \end{enumerate}
+    \end{theorem}
+
+This is a useful theorem to have, but it is difficult to use in practice.  Here is another integrability theorem:
+
+\begin{theorem}[Integrability Criterion II]\label{IntegrabilityII}
+    Let $f: \R^n \to \R$ be a bounded function with bounded support.  If $f$ is continuous except on a set of volume zero, then $f$ is integrable.  
+\end{theorem}
+
+\begin{remark}
+This is \textbf{not} an if and only if statement! We will see an example of a function that is integrable, but is discontinuous on a set whose volume is not defined\footnote{see example \ref{Thomae}}.
+
+We will refine this integrability theorem to an if and only if statement in theorem \ref{integrabilityIII}
+\end{remark}
+
+\begin{proposition}
+    A bounded set $X \subset \R^n$ has $n$-dimensional volume 0 if and only if for every $\varepsilon > 0$, there exists $M$ such that
+    $$\sum_{\substack{C \in D_M(\R^n) \\ C \cap X \neq \varnothing}} \textnormal{vol}_n(C) < \varepsilon$$
+\end{proposition}
+
+\begin{example}
+If $X \subset \R^n$ is a closed and bounded (compact) region, and $f : X \to \R$ is a continuous function, then $$\textnormal{vol}_{n+1}(\Gamma_f) = 0$$ \fixthis{ref}
+\end{example}
+
+\begin{example}
+    The unit circle in $\R^2$, $S := \{(x,y) \ | \ x^2 + y^2 = 1\}$ has 2-dimensional volume 0.
+\end{example}
+
+\begin{example}
+        Let $D$ be the unit disk in $\R^2$.  That is, $D := \{(x,y) \ | \ x^2 + y^2 \leq 1\}$.
+
+        Then the indicator function $1_D(\bm{x}) : \R^2 \to \R$ is integrable by theorem \ref{IntegrabilityII}, as it not continuous on a subset of 2-dimensional volume 0.
+    \end{example}
+
+\begin{corollary}
+        Let $f: \R^n \to \R$ be integrable, and let $g : \R^n \to \R$ be a bounded function.  If $f=g$ except on a set of volume 0, then $g$ is integrable, and
+        $$\int_{\R^n} f \ dV = \int_{\R^n} g \ dV$$
+\end{corollary}
+
+
+Let us now turn to some pathological functions:
+
+We first describe a set that does not have $n$-dimensional volume.
+
+\begin{example}\label{nonintegable}
+    Consider the set $A \subset \R$ defined by 
+    $$A := \{ x \in \R \ | \ x \in (0,1) \text{ and }  x \in \Q \}$$
+    $A$ does not have volume, since the indicator function $1_A(x) : \R \to \R$ is not integrable \fixthis{example}
     
+    ($\text{osc}(1_A) = 1$ on the interval $(0,1)$)
+ 
 \end{example}
 
 
+    \begin{example}\label{Thomae}
+    Consider Thomae's function, which is defined as the function $$g(x) := \left\{
+		\begin{array}{ll}
+			\frac{1}{q} & \text{ if } x \in (0,1) \text{ and }  x =\frac{p}{q} \text{ is rational, written in lowest terms, with } p \in \Z, q \in \N \\
+			0 & \text{ otherwise}
+		\end{array}
+		\right.$$
 
 
+\begin{center}
+\includegraphics{chapters/4-IntegrationRn/figures/figures-thomaesfunction.pdf}
+\end{center}
+  
 
+    We see that $f$ is discontinuous precisely on the set $A := \{ x \in \R \ | \ x \in (0,1) \text{ and }  x \in \Q \}$
 
+    However, by theorem \ref{IntegrabilityI}, we see that we can bound the volumes of the cubes where $f$ oscillates too much, and hence Thomae's function is integrable.
+    
+    \end{example}
+
+So let us now turn to generalzing theorem \ref{IntegrabilityII}.
+
+\begin{definition}
+        An open ball $B \subset \R^n$ of radius $\delta > 0$, centered on $\bm{x}$, is the set
+        $$B = \left\{ \bm{v} \in \R^n \ | \ ||\bm{x} - \bm{v}|| < \delta \right\}$$
+    \end{definition}
+
+\begin{definition}
+        A set $X \subset \R^n$ has \textbf{measure zero}\define{meaure zero} if for every $\varepsilon > 0$, there exists an infinite sequence of open balls $B_i$ such that 
+    $$X \subset \bigcup B_i \qquad \textnormal{and} \qquad \sum \text{vol}_n(B_i) < \varepsilon$$
+    \end{definition}
+
+\begin{proposition}
+    A set of volume $0$ has measure zero.
+    \end{proposition}
+
+    \begin{remark}
+    On the other hand, it is possible that $X$ has measure zero, but $\text{vol}(X)$ is undefined.
+    \end{remark}
+
+\begin{example}
+        The set $$A = \Q \cap [0,1]$$ that is, the set of rational numbers in the interval $[0,1]$, has undefined volume\footnote{see example \ref{nonintegable}}.  However, the set $$A = \Q \cap [0,1]$$ has measure zero!
+
+        We can enumerate the elements of $A$ as $$\{F_n\} := \{0,1, \frac{1}{2}, \frac{1}{3}, \frac{2}{3}, \frac{1}{4}, \frac{2}{4}, \frac{3}{4}, \frac{1}{5} \cdots \}$$
+
+        To each element in the sequence, we can associate $B_n$ as the open ball of radius $\frac{1}{2^{n+1}}$, centered at $F_n$.
+
+        We can then see that $$A \subset \bigcup B_n \qquad \textnormal{and} \qquad \sum \text{vol}_n(B_n) < \varepsilon$$
+    \end{example}
+
+\begin{theorem}[Integrability Criterion III]\label{integrabilityIII}
+    A function $f: \R^n \to \R$ is integrable if and only if
+    \begin{enumerate}
+        \item $f$ is bounded with bounded support
+        \item $f$ is continuous except on a set of measure 0.
+    \end{enumerate}
+    \end{theorem}
+
+    \begin{example}
+        Thomae's function is bounded with bounded support, and is continuous except on a set of measure 0.
+    \end{example}
+    
 
 
 
@@ -887,7 +1145,7 @@ The function $\sin(\frac{1}{x})$
 \subsection{Exercises}
 
 \begin{problem}{integrabilitycounterexamples1}
-Come up with (and prove) an example of a function that is not integrable.
+Come up with (and prove) an example of a multivariable function that is not integrable.
 \end{problem}
 
 \begin{problem}{integrabilitycounterexamples2}
@@ -930,7 +1188,7 @@ Come up with (and prove) an example of a function where $|f|$ is integrable, but
     \end{remark}
     
     %     \begin{center}
-    %     \includegraphics[scale=0.45]{pictures/map.png}
+    %     \includegraphics[scale=0.45]{figures/map.png}
     % \end{center}
     
     \begin{theorem}
@@ -960,6 +1218,26 @@ Come up with (and prove) an example of a function where $|f|$ is integrable, but
     \fixthis{examples that show necessity}
 
     \subsection{Exercises}
+
+    \begin{problem}{polargraph1}
+    Sketch a graph of and find the area enclosed by the polar equation $r = \sin(2\theta)$.
+    \end{problem}
+
+    \begin{problem}{polargraph2}
+    Sketch a graph of and find the area enclosed by the polar equation $r = 4\cos(\theta)$.
+    \end{problem}
+
+    \begin{problem}{polargraph3}
+    Sketch a graph of and find the area enclosed by the polar equation $r = 1+\sin(\theta)$.
+    \end{problem}
+
+    \begin{problem}{polargraph4}
+    Sketch a graph of and find the area enclosed by the polar equation $r = 2\cos(\theta) -1$.
+    \end{problem}
+
+    \begin{problem}{spherical}
+        The volume of a sphere of radius 2 is $\frac{32\pi}{3}$.  What is the value of the following integral?$$\int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}\int_0^\pi\int_0^2 \rho^2 \sin(\phi) \ d\rho \ d\phi \ d\theta$$
+    \end{problem}
 
     \begin{problem}{polar1}
     Compute the integral $$\int_0^3\int_0^{\sqrt{9-y^2}}\int_0^1 z\sqrt{x^2 + y^2} \ dz \ dx \ dy$$
