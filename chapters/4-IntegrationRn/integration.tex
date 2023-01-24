@@ -626,6 +626,79 @@ Come up with examples of
     Consider the subset $C_{\langle1,1\rangle,2}$ in $\R^2$, and let $f(x,y) = x^2 + y^2$.  Calculate $M_{C_{\langle1,1\rangle,2}}(f)$ and $m_{C_{\langle1,1\rangle,2}}(f)$.
 \end{problem}
 
+\begin{problem}{estimate2}
+
+Consider the subset $C_{\langle1,1\rangle,2}$ in $\R^2$, and let $f(x,y) = \frac{1}{x^2 + y^2}$.  Calculate $M_{C_{\langle1,1\rangle,2}}(f)$ and $m_{C_{\langle1,1\rangle,2}}(f)$.
+    
+\end{problem}
+
+
+\begin{problem}{sup1}
+     Consider the subset $C_{0,2}$ in $\R^1$, and let $f(x) = x^2$.  Calculate $M_{C_{0,2}}(f)$ and $m_{C_{0,2}}(f)$.
+\end{problem}
+
+\begin{problem}{sup2}
+     Consider the subset $C_{0,2}$ in $\R^1$, and let $f(x) = \frac{1}{x}$.  Calculate $M_{C_{0,2}}(f)$ and $m_{C_{0,2}}(f)$.
+\end{problem}
+
+\begin{problem}{supnoinequality}
+    Show that if $f(x) < g(x)$ for all $x$, then it is not necessarily the case that $\sup(f(x)) < \sup(g(x))$ for all $x$. (\textbf{Hint}: consider the function $f(x) := \left\{
+		\begin{array}{ll}
+			x & \text{ if } 0 \leq x < 1 \\
+			0 & \text{ otherwise}
+		\end{array}
+		\right.$)
+\end{problem}
+
+\begin{problem}{supinfsum}
+    Let $A, B \subset \R$ be nonempty sets.  Define the subset $A+ B$ by 
+    $$A + B := \{ z \in \R \ | \ \text{there exist } x\in X, y \in Y \text{ such that } z = x+y\}$$
+
+    \begin{subproblems}
+        \item Show that $\sup(A+B) = \sup(A) + \sup(B)$.
+        \item Show that $\inf(A+B) = \inf(A) + \inf(B)$.
+    \end{subproblems}
+
+\end{problem}
+
+\begin{problem}{supinfdiff}
+    Let $A, B \subset \R$ be nonempty sets.  Define the subset $A- B$ by 
+    $$A + B := \{ z \in \R \ | \ \text{there exist } x\in X, y \in Y \text{ such that } z = x-y\}$$
+
+
+    \begin{subproblems}
+        \item Show that $\sup(A-B) = \sup(A) - \inf(B)$.
+        \item Show that $\inf(A-B) = \inf(A) - \sup(B)$.
+    \end{subproblems}
+
+    
+\end{problem}
+
+
+\begin{problem}{supincomplete}
+
+    Consider the set $A = \{x \in \Q \ | \ x^2 < 2 \}$.  
+    
+    \begin{subproblems}
+        \item Do $\text{max}(A)$ or $\text{min}(A)$ exist?
+        \item Find $\sup(A)$ and $\inf(A)$.  
+    \end{subproblems}
+    
+    
+    
+\end{problem}
+
+\begin{problem}{supinfexample}
+
+    Consider the set $A = \{ \frac{n}{n+1} \ | \ n \in \N \}$.  
+
+    
+    \begin{subproblems}
+        \item Do $\text{max}(A)$ or $\text{min}(A)$ exist?
+        \item Find $\sup(A)$ and $\inf(A)$.  
+    \end{subproblems}
+\end{problem}
+
 
 \begin{problem}{boundsdarboux}
     Prove that $U_N(f) \geq L_N(f)$.
@@ -1154,68 +1227,599 @@ Come up with (and prove) an example of a function where $|f|$ is integrable, but
 
 \section{Change of variables}
 
-\subsection{Polar, cylindrcial, and spherical coordinate}
+\begin{motivating}
+    Consider the unit ball (that is, the solid region bounded by the unit sphere) in $\R^3$, denoted
+    $$B := \{(x,y,z) \ | x^2 + y^2 + z^2 \leq 1\}$$
+    
+    Observe that it is difficult to compute $\int_B 1 \ dV$ as an iterated integral.  
+\end{motivating}
+
+In this section, we will see that changing coordinate systems will make integration easier.
+
+\subsection{Polar coordinates}
+
+Recall that we've studied vectors in $\R^2$ primarily in terms of their components.  However, we have seen that it is equivalent to describe a position vector in terms of its magnitude and direction.  Polar coordinates is a way to describe vectors in $\R^2$ using this perspective:
+
+\begin{definition}
+Given a point $(x,y)$ in rectangular coordinates, we can convert it to a point $(r,\theta)$ in polar coordinates by setting 
+    $$r = \sqrt{x^2 + y^2} \qquad \textnormal{and} \qquad \tan(\theta) = \frac{y}{x} \ (\textnormal{assuming} \ x \neq 0)$$
+\end{definition}
+
+We can also convert from polar coordinates back to the standard rectangular coordinates:     
+\begin{definition}
+Given a point $(r,\theta)$ in polar coordinates, we can convert it to a point $(x,y)$ in rectangular coordinates by setting 
+    $$x = r\cos(\theta) \qquad \textnormal{and} \qquad y = r\sin(\theta)$$
+\end{definition}
+
+    \begin{center}
+        \includegraphics{chapters/4-IntegrationRn/figures/figures-polaraxes.pdf}
+    \end{center}
+
+\begin{example}
+    The line $y=mx$ corresponds to the polar equation $$\theta = \tan^{-1}(m)$$  \fixthis{explain more}
+\end{example}
+
+\begin{example}
+    The disk of radius $R$, centered at the origin, can be described in polar coordinates as the set of points $$\{(r,\theta) \ | \ r \leq R\}$$
+\end{example}
+
+Moreover, polar coordinates allows us to describe certain curves in $\R^2$ much more easily than in rectangular coordinates, such as the three-petaled rose described by $r = \cos(3\theta)$.
+
+% \begin{center}
+%     \begin{tikzpicture}[scale=.7]
+%   \begin{polaraxis}[  xtick distance = deg(pi/4),
+%   xtick = {0,0,deg((pi)/4),deg((pi)/2),deg((3*pi)/4),deg(pi),deg((5*pi)/4), deg((3*pi)/2), deg((7*pi)/4)},
+%   xticklabels={,0,$\frac{\pi}{4}$,$\frac{\pi}{2}$,$\frac{3\pi}{4}$,$\pi$,$\frac{5\pi}{4}$, $\frac{3\pi}{2}$, $\frac{7\pi}{4}$,}
+%  ]
+% \addplot+ [
+% color=UCLAdark,
+% mark=none,
+% domain=0:360,
+% samples=600,
+% ]
+% {cos(3*x)};
+% % equivalent to (x,{sin(..)cos(..)}), i.e.
+% % the expression is the RADIUS
+%   \end{polaraxis}
+
+%   \end{tikzpicture}
+%   \begin{tikzpicture}[scale=.65, >=latex]
+
+% % Draw the lines at multiples of pi/12
+% \foreach \ang in {0,...,31} {
+%   \draw [lightgray] (0,0) -- (\ang * 180 / 16:4);
+% }
+
+% % Concentric circles and radius labels
+% \foreach \s in {0, 1, 2, 3} {
+%   \draw [lightgray] (0,0) circle (\s + 0.5);
+%   \draw (0,0) circle (\s);
+%   \node [fill=white] at (\s, 0) [below] {\scriptsize $\s$};
+% }
+
+% % Add the labels at multiples of pi/4
+% \foreach \ang/\lab/\dir in {
+%   0/0/right,
+%   1/{\pi/4}/{above right},
+%   2/{\pi/2}/above,
+%   3/{3\pi/4}/{above left},
+%   4/{\pi}/left,
+%   5/{5\pi/4}/{below left},
+%   7/{7\pi/4}/{below right},
+%   6/{3\pi/2}/below} {
+%   \draw (0,0) -- (\ang * 180 / 4:4.1);
+%   \node [fill=white] at (\ang * 180 / 4:4.2) [\dir] {\scriptsize $\lab$};
+% }
+
+% % The double-lined circle around the whole diagram
+
+% \fill [fill=red!50!black, opacity=0.5] plot [domain=0:2*pi]
+%   (xy polar cs:angle=\x r, radius= {1});
+% \draw [thick, color=red, domain=0:2*pi, samples=200, smooth]
+%   plot (xy polar cs:angle=\x r, radius={1});
+% \node [fill=white] at (2,1) {$r\leq 1$};
+
+% \end{tikzpicture} 
+% \end{center}
+
+Polar coordinates are convenient when the domain of integration $R$ is an angular sector, or a \textbf{polar rectangle}.  That is, if we can describe $R$ in the form: 
+    $$R = \{ (r, \theta) \ | \ {\theta_1} \leq \theta \leq {\theta_2}, r_1 \leq r \leq r_2\}$$
+    
+
+    
+\begin{center}
+        \includegraphics{chapters/4-IntegrationRn/figures/figures-polarrectangle.pdf}
+    \end{center}
+
+\begin{definition}
+A region $R$ is called \textbf{radially simple} if it is the region between graphs of two continuous functions $r_1(\theta)$ and $r_2(\theta)$ over a fixed interval of $\theta$-values.  That is, 
+$$R = \{ (r, \theta) \ | \ \alpha \leq \theta \leq \beta, r_1(\theta) \leq r \leq r_2(\theta)\}$$
+\end{definition}
+
+\begin{example}
+\begin{center}
+        \includegraphics{chapters/4-IntegrationRn/figures/figures-radiallysimple.pdf}
+\end{center}
+\end{example}
+
+\begin{theorem}[Double integral in polar coordinates]
+If $f(x,y)$ is a continuous function on a radially simple domain $R$, then $$\iint_R f(x,y) \ dA = \int_\alpha^\beta \int_{r= r_1(\theta)}^{r= r_2(\theta)} f(r\cos(\theta), r\sin(\theta)) \ r \ dr \ d\theta$$
+\end{theorem}
+
+\begin{remark}
+    Observe that there is an extra $r$ term in the integral - we will see why when we consider the general change of variables formula.
+\end{remark}
+
+\begin{example}
+    Find the area of the region enclosed by the cardioid $r = 2 - 2\sin(\theta)$.
+
+\begin{center}
+        \includegraphics{chapters/4-IntegrationRn/figures/figures-cardioid.pdf}
+    \end{center}
+\end{example}
+
+\subsection{Cylindrical coordinates}
+
+We can extend polar coordinates in $\R^2$ to cylindrical coordinates in $\R^3$ in the following way:
+
+\begin{definition}
+Given a point $(x,y,z)$ in Euclidean coordinates, we can convert it to a point $(r,\theta,z)$ in cylindrical coordinates by setting 
+    $$z = z \qquad \textnormal{and} \qquad r = \sqrt{x^2 + y^2} \qquad \textnormal{and} \qquad \tan(\theta) = \frac{y}{x} \ (\textnormal{assuming} \ x \neq 0)$$
+\end{definition}
+
+We can also convert from cylindrical coordinates back to the standard Euclidean coordinates:     
+\begin{definition}
+Given a point $(r,\theta,z)$ in polar coordinates, we can convert it to a point $(x,y,z)$ in rectangular coordinates by setting 
+    $$x = r\cos(\theta) \qquad \textnormal{and} \qquad y = r\sin(\theta)\qquad \textnormal{and} \qquad z=z$$
+\end{definition}
+
+\begin{example}
+    Let $B$ denote the unit ball (that is, the solid region bounded by the unit sphere) in $\R^3$.  Write $\int_B 1 \ dV$ as an iterated integral in cylindrical coordinates.
+\end{example}
+
+\subsection{Spherical coordinates}
+
+Another coordinate system for $\R^3$ can be defined in terms of spherical coordinates:
+
+    \begin{center}
+        \includegraphics{chapters/4-IntegrationRn/figures/figures-spherical.pdf}
+    \end{center}
+    
+\begin{proposition}
+    Given a point $(\rho,\theta,\phi)$ in spherical coordinates, we can convert it to the standard Euclidean coordinates by setting 
+    $$x = \rho\sin(\phi)\cos(\theta) \qquad y = \rho\sin(\phi)\sin(\theta) \qquad z=\rho\cos(\phi)$$
+    \end{proposition}
+    
+    \begin{proposition}
+    Given a point $(x,y,z)$ in standard Euclidean coordinates, we can convert it to spherical coordinates by setting 
+    $$\rho = \sqrt{x^2 + y^2 +z^2} \qquad \tan(\theta) = \frac{y}{x} \qquad \cos(\phi) = \frac{z}{\rho}$$
+    \end{proposition}
+
+\begin{definition}
+A solid region $R \subset \R^3$ is called \textbf{centrally simple} if $R$ is of the form
+$$R = \{ (\rho, \theta, \phi) \ | \ \theta_1 \leq \theta \leq \theta_2, \phi_1 \leq \phi \leq \phi_2, \rho_1(\theta,\phi) \leq \rho \leq \rho_2(\theta,\phi)\}$$
+\end{definition}
+
+\begin{example}
+    PICTURE
+\end{example}
+
+\begin{theorem}[Triple integrals in spherical coordinates]
+Let $f(x,y,z)$ be a continuous function on a centrally simple region $R$. Write $$f(\rho\sin(\phi)\cos(\theta),\rho\sin(\phi)\sin(\theta),\rho\cos(\phi)) = g(\theta, \phi, \rho)$$  Then $\iiint_R f(x,y,z) \ dV$ equals
+$$\int_{\theta_1}^{\theta_2} \int_{\phi_1}^{\phi_2}\int_{\rho = \rho_1(\theta,\phi)}^{\rho = \rho_2(\theta,\phi)} g(\theta, \phi, \rho) \ \rho^2 \sin(\phi) \ d\rho \ d\phi \ d\theta$$
+\end{theorem}
+
+\begin{remark}
+    Observe that there is an extra $\rho^2 \sin(\phi)$ term in the integral - we will see why when we consider the general change of variables formula.
+\end{remark}
+
+\begin{example}
+    Let $B$ denote the unit ball (that is, the solid region bounded by the unit sphere) in $\R^3$.  Write $\int_B 1 \ dV$ as an iterated integral in spherical coordinates. 
+\end{example}
+
+
+
 
 \subsection{General Change of Variables}
 
-\fixthis{recall Jacobian}
+\begin{motivating}
+    Why do we need to add extra terms when changing coordinates?
+\end{motivating}
 
+\subsubsection{Linear change of variables}
 
+We will first study what happens for linear change of variable maps:
 
+\fixthis{references}
 
-\begin{theorem}[The change of variables formula in $\R^2$]
-    Let  $G(u,v) = \left(x(u,v), y(u,v)\right)$ be a map such that
+\begin{proposition}
+     A function $T : \R^n \to \R^m$ is a \textbf{linear map} if  for all $\bm{u}, \bm{v} \in \R^n$ and for all $\lambda \in \R$,
+     
+     \begin{itemize}
+        \item $T(\bm{u} + \bm{v}) = T(\bm{u}) + T(\bm{v})$.
+        \item $T(\lambda \bm{u}) = \lambda T(\bm{u}))$.
+    \end{itemize}
+    \end{proposition}
+
+\begin{theorem}
+    A map $T: \R^n \to \R^m$ is linear if and only if there is a matrix $A \in M_{m \times n}(\R)$ such that $$T(\bm{x}) = A\bm{x}$$  
+    We call $A$ the \textbf{standard matrix} of $T$.
+    \end{theorem}
     
-    \begin{enumerate}
-        \item $G$ sends a region $D_0$ to $D$.  
-        \item $G$ is a $C^1$ mapping.
-        \item $G$ is one-to-one on the interior of $D_0$.  
-    \end{enumerate}
+\begin{definition}
+    The \textbf{standard matrix} $A$ of a linear map $T: \R^n \to \R^m$ is given by
+    \begin{equation*}
+A = 
+\begin{bmatrix}
+\vert & \vert & & \vert \\
+    T(\bm{e_1})   & T(\bm{e_2}) & \cdots & T(\bm{e_n})  \\
+    \vert & \vert & & \vert
+\end{bmatrix} \in M_{m \times n}(\R)
+\end{equation*}
+\end{definition}
 
-    
-    If $f(x,y)$ is continuous, then
-    $$\iint_D f(x,y) \ dx \ dy = \iint_{D_0} f(x(u,v), y(u,v)) \left|\textnormal{Jac}(G)\right| \ du \ dv$$
-    
-\end{theorem}
+% \begin{center}\begin{tikzpicture}[scale=.65]
+
+% \begin{scope}
+% \clip (-3,-3) rectangle (3,3);
+ 
+% %grid
+% \draw[step=0.5cm, gray!20!white, very thin] (-3,-3) grid (3,3);
+% \draw[step=1cm, gray!60!white, thin] (-3,-3) grid (3,3);
+% % Axes
+%     \draw [latex-latex] (-3,0) -- (3,0) node [below left] {$x$};
+%     \draw [latex-latex] (0,-3) -- (0,3) node [below right] {$y$};
+% \draw[color=UCLAdark, line width=1.10pt, -Latex] (0, 0) -- (1,0);
+% \draw[color=red!80!black, line width=1.10pt, -Latex] (0, 0) -- (0,1);
+
+% \end{scope}
+
+% \begin{scope}[xshift=9cm]
+% %all you need to change are the entries in the matrix using the following 4 macros
+% \pgfmathsetmacro{\entrya}{2}
+% \pgfmathsetmacro{\entryb}{1}
+% \pgfmathsetmacro{\entryc}{1}
+% \pgfmathsetmacro{\entryd}{1.5}
+
+
+% \clip (-3,-3) rectangle (3,3);
+% %grid
+% \draw[step=0.5cm, gray!20!white, very thin] (-3,-3) grid (3,3);
+% \draw[step=1cm, gray!60!white, thin] (-3,-3) grid (3,3);
+% % Axes
+%     \draw [latex-latex] (-3,0) -- (3,0) node [below left] {$x$};
+%     \draw [latex-latex] (0,-3) -- (0,3) node [below right] {$y$};
+% \foreach \x in {-5,...,5} {
+% \draw[domain=-3:3,smooth,variable=\t,color=UCLAblue!60!white, thick]plot (\entrya*\t+\x*\entryb,\entryc*\t+\x*\entryd);
+% }
+
+% \foreach \y in {-5,...,5} {
+% \draw[domain=-3:3,smooth,variable=\t,color=mered!60!white, thick]plot (\entryb*\t+\y*\entrya,\entryd*\t+\y*\entryc);
+% }
+
+
+% \draw[color=UCLAdark, line width=1.10pt, -Latex] (0, 0) -- (\entrya, \entryc);
+% \draw[color=red!80!black, line width=1.10pt, -Latex] (0, 0) -- (\entryb, \entryd);
+% \end{scope}
+
+
+
+% \draw[thick,-latex] (4,0) to[out=60,in=120] node[midway,font=\scriptsize,above] {$T_B$} (5,0);
+
+% \end{tikzpicture}
+%     \end{center}
+
 
 \begin{example}
-    Polar coordinates map defined by $$G(r,\theta) = (r\cos(\theta), r\sin(\theta))$$
+    Consider the linear map $T(x,y) = (Ax + By, Cx + Dy)$.  What is the image of the unit square $R = [0,1] \times [0,1]$ under $G$?
+    \end{example}
+
+\begin{proposition}
+    Let $P$ be the parallelogram spanned by $\bm{u} = \langle A, B \rangle$ and $\bm{v} = \langle C, D \rangle$ in $\R^2$.
+    \begin{equation*}
+        \Big|\textnormal{det}\begin{bmatrix}
+A & B \\
+C & D
+\end{bmatrix}\Big| = \textnormal{area}(P)
+    \end{equation*}
+    
+       That is, the absolute value of a $2 \times 2$
+determinant equals the area of the parallelograms spanned by the rows.
+    \end{proposition}
+
+
+\begin{theorem}[Expansion along the $i$-th row]
+    Let $A$ be an $n \times n$ matrix, and let $A_{ij}$ denote the $(n-1) \times (n-1)$ matrix obtained by deleting row $i$ and column $j$ from $A$.
+    $$\textnormal{det}(A) = (-1)^{i+1}a_{i,1}\textnormal{det}(A_{i1}) + \cdots +  (-1)^{i+n}a_{i,n}\textnormal{det}(A_{in})$$
+    
+    \end{theorem}
+    
+    \begin{example}
+    The \textbf{determinant} of a $3 \times 3$ matrix is denoted and defined as follows:
+\begin{equation*}
+\textnormal{det} 
+\begin{bmatrix}
+a_1 & b_1 & c_1 \\
+a_2 & b_2 & c_2 \\
+a_3 & b_3 & c_3 \\
+\end{bmatrix} = a_1\begin{vmatrix}
+b_2 & c_2 \\
+b_3 & c_3
+\end{vmatrix} - b_1\begin{vmatrix}
+a_2 &  c_2 \\
+a_3 &  c_3
+\end{vmatrix} + c_1\begin{vmatrix}
+a_2 & b_2 \\
+a_3 & b_3 \\
+\end{vmatrix}
+\end{equation*}
+
+    \end{example}
+
+
+\begin{theorem}
+    Let $D$ be the parallelpiped spanned by $\bm{u}$, $\bm{v}$, and $\bm{w}$ in $\R^3$.  Then
+    \begin{equation*}
+\textnormal{volume}(D) = |\bm{u} \cdot (\bm{v \times w})| = | \textnormal{det}
+\begin{bmatrix}
+\bm{u} \\
+\bm{v} \\
+\bm{w} \\
+\end{bmatrix}|
+\end{equation*}
+
+    
+    \end{theorem}
+
+\begin{theorem}
+    Let $D$ be the parallelpiped spanned by $\bm{v_1}, \bm{v_2}, \cdots \bm{v_n}$ in $\R^n$.  Then
+    \begin{equation*}
+\textnormal{vol}_n(D) = | \textnormal{det}
+\begin{bmatrix}
+\bm{v_1} \\
+\vdots \\
+\bm{v_n} \\
+\end{bmatrix}|
+\end{equation*}
+
+    
+    \end{theorem}
+
+\begin{corollary}
+Let $T(\bm{x}) = A\bm{x}$ be a linear transformation from $\R^n \to \R^n$.  Then the volume of the image of the unit cube in $\R^n$ is $|\textnormal{det}A|$.
+
+
+\end{corollary}
+    
+    \begin{theorem}
+    The $n$-dimensional volume of a region $D \subset \R^n$ under a linear transformation $T(\bm{x}) = A\bm{x}$ is given by 
+    $$\textnormal{vol}_n(T(D)) = |\textnormal{det}A|\textnormal{vol}_n(D)$$
+    \end{theorem}
+
+
+
+\subsubsection{Nonlinear change of variables}
+
+\begin{motivating}
+     What happens if $G : \R^n \to \R^n$ is a \textbf{non-linear} change of coordinates map?
+\end{motivating}
+
+If $G$ is differentiable, we can approximate $G$ with its \textbf{derivative} (aka its linear approximation).
+
+\begin{definition}
+    Let $f : A \subset \R^m \to \R^n$ be a multivariable function defined by $f_i  : A \subset \R^m \to \R$:
+    \begin{equation*}
+        f(\bm{x}) = \begin{bmatrix}
+f^1(\bm{x}) \\
+\vdots \\
+f^n(\bm{x})
+\end{bmatrix}
+    \end{equation*}
+    
+    The \textbf{Jacobian matrix} of $f$ at $\bm{x_0}$ is 
+    
+    \begin{equation*}
+        [J_f(\bm{x_0})] = \begin{bmatrix}
+D_1f^1(\bm{x_0}) & D_2f^1(\bm{x_0}) & \cdots & D_mf^1(\bm{x_0}) \\
+D_1f^2(\bm{x_0}) & D_2f^2(\bm{x_0}) & \cdots & D_mf^2(\bm{x_0}) \\
+\vdots & \vdots & \vdots & \vdots\\
+D_1f^n(\bm{x_0}) & D_2f^n(\bm{x_0}) & \cdots & D_mf^n\bm{x_0}) 
+\end{bmatrix}
+    \end{equation*}
+    
+    if the partial derivatives exist.
+    
+    \end{definition}
+
+    \begin{theorem}[The derivative in coordinates]
+    Let  $f : A \subset \R^m \to \R^n$ be a multivariable function.  If $f$ is \textbf{differentiable at} $\bm{x_0}$, then all the partial derivatives $D_if^j\bm{x_0})$ exist, and the standard matrix of $Df(\bm{x_0})$ is $[J_f(\bm{x_0})]$.  That is,
+    $$Df(\bm{x_0})(\bm{h}) = [J_f(\bm{x_0})]\bm{h}$$
+    
+    \end{theorem}
+    
+    
+    
+    \begin{remark}
+    The derivative of a function $f : \R^m \to \R^n$ at a point $x_0$ is the \textbf{approximation} of $f$ by a \textbf{linear transformation} at $x_0$.
+    \end{remark}
+
+
+    \begin{example}
+    Given a differentiable map $G(u,v) = \left(x(u,v), y(u,v)\right)$, we can define its \textbf{Jacobian matrix}, $[J_G]$, as the matrix of partial derivatives:
+    
+    \begin{equation*}
+        [J_G] = \begin{bmatrix}
+\frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\[1em]
+\frac{\partial y}{\partial u} & \frac{\partial y}{\partial v}
+\end{bmatrix}
+    \end{equation*}
+    
+    The determinant of the Jacobian matrix is denoted $\textnormal{Jac}(G)$.
+    $$\det([J_G]) = \textnormal{Jac}(G) = \frac{\partial x}{\partial u} \frac{\partial y}{\partial v} - \frac{\partial x}{\partial v}\frac{\partial y}{\partial u}$$
+       
+    \end{example}
+
+
+\begin{proposition}
+    Let $D \subset \R^n$ be a region such that $\textnormal{vol}_n(D)$ is small, and let $p \in D$.  Let $G: \R^n \to \R^n$ be differentiable map. Then
+
+    $$\textnormal{vol}_n(G(D)) \approx |\det([J_G](\bm{p}))|\textnormal{vol}_n(D)$$
+
+    That is, the the $n$-dimensional volume of $G(D)$ can be approximated by the $n$-dimensional volume of $[J_G](\bm{p})(D)$.
+    \end{proposition}
+
+\begin{motivating}
+    When is $\textnormal{vol}_n(G(D)) = \textnormal{vol}_n(D)$?
+\end{motivating}
+
+There are a few problems that can occur:
+
+    \begin{enumerate}
+        \item $G$ might not be differentiable
+        \item $\det([J_G](\bm{p})) = 0$.  That is, $J_G$ is not invertible.
+        \item $G : \R^n \to \R^n$ is \textbf{not injective} on $D$.  That is, there exist points $\bm{x} \neq \bm{y} \in 
+        D$ such that $G(\bm{x}) = G(\bm{y})$
+    \end{enumerate}
+
+
+\begin{example}
+    Consider the linear map $T: \R^2 \to \R^2$ defined by $$T(x,y) = (x+y, 2x+2y)$$
+
+    Note that $\textnormal{det} 
+\begin{bmatrix}
+1 & 1 \\
+2 & 2 \\
+\end{bmatrix} = 0$.
+
+    
+    
+%         \begin{center}\begin{tikzpicture}[scale=.65]
+
+% \begin{scope}
+% \clip (-3,-3) rectangle (3,3);
+ 
+% %grid
+% \draw[step=0.5cm, gray!20!white, very thin] (-3,-3) grid (3,3);
+% \draw[step=1cm, gray!60!white, thin] (-3,-3) grid (3,3);
+% % Axes
+%     \draw [latex-latex] (-3,0) -- (3,0) node [below left] {$x$};
+%     \draw [latex-latex] (0,-3) -- (0,3) node [below right] {$y$};
+% \draw[color=UCLAdark, line width=1.10pt, -Latex] (0, 0) -- (1,0);
+% \draw[color=red!80!black, line width=1.10pt, -Latex] (0, 0) -- (0,1);
+
+% \end{scope}
+
+% \begin{scope}[xshift=9cm]
+% %all you need to change are the entries in the matrix using the following 4 macros
+% \pgfmathsetmacro{\entrya}{1}
+% \pgfmathsetmacro{\entryb}{1}
+% \pgfmathsetmacro{\entryc}{2}
+% \pgfmathsetmacro{\entryd}{2}
+
+
+% \clip (-3,-3) rectangle (3,3);
+% %grid
+% \draw[step=0.5cm, gray!20!white, very thin] (-3,-3) grid (3,3);
+% \draw[step=1cm, gray!60!white, thin] (-3,-3) grid (3,3);
+% % Axes
+%     \draw [latex-latex] (-3,0) -- (3,0) node [below left] {$x$};
+%     \draw [latex-latex] (0,-3) -- (0,3) node [below right] {$y$};
+% \foreach \x in {-5,...,5} {
+% \draw[domain=-3:3,smooth,variable=\t,color=UCLAblue!60!white, thick]plot (\entrya*\t+\x*\entryb,\entryc*\t+\x*\entryd);
+% }
+
+% \foreach \y in {-5,...,5} {
+% \draw[domain=-3:3,smooth,variable=\t,color=mered!60!white, thick]plot (\entryb*\t+\y*\entrya,\entryd*\t+\y*\entryc);
+% }
+
+
+% \draw[color=UCLAdark, line width=1.10pt, -Latex] (0, 0) -- (\entrya, \entryc);
+% \draw[color=red!80!black, line width=1.10pt, -Latex] (0, 0) -- (\entryb, \entryd);
+% \end{scope}
+
+
+
+% \draw[thick,-latex] (4,0) to[out=60,in=120] node[midway,font=\scriptsize,above] {$T$} (5,0);
+
+% \end{tikzpicture}
+%     \end{center}
+
 \end{example}
+
+
+
+\begin{example}
+     Consider the polar coordinates map defined by $$G(r,\theta) = (r\cos(\theta), r\sin(\theta))$$
+
+    $G$ is \textbf{not injective} on the region 
+    $$R = \{ (r, \theta) \ | \ 0 \leq \theta \leq 3\pi, 0 \leq r \leq 2\}$$
+
+    \fixthis{PICTURE}
+
+    \end{example}
+
+    \begin{example}
+     Consider the polar coordinates map defined by $$G(r,\theta) = (r\cos(\theta), r\sin(\theta))$$
+
+    $G$ \textbf{IS injective} on the region 
+    $$R = \{ (r, \theta) \ | \ 0 < \theta < 2\pi, 0 < r < 2\}$$
+
+    \end{example}
+
+
+\begin{theorem}[Change of variables for volume]
+    Let $K \subset \R^n$ be a compact set such that $\text{vol}_n(\partial K) = 0$.  Let $U \subset \R^n$ be an open set containing $K$. Let $$G : U \to \R^n$$ be a map such that 
+    \begin{enumerate}
+        \item $G$ is differentiable.
+        \item $G$ is injective on the interior of $K$.  
+        \item $\det [J_G] \neq 0$ on the interior of $K$.  
+    \end{enumerate}
+    Then
+    $$\int_{G(K)} 1 \  dV = \int_K |\det [J_G]| \ dV$$
+    \end{theorem}
+
+\begin{theorem}[Change of variables]
+    Let $K \subset \R^n$ be a compact set such that $\text{vol}_n(\partial K) = 0$.  Let $U \subset \R^n$ be an open set containing $K$. Let $$G : U \to \R^n$$ be a map such that 
+    \begin{enumerate}
+        \item $G$ is differentiable.
+        \item $G$ is injective on the interior of $K$.  
+        \item $\det [J_G] \neq 0$ on the interior of $K$.  
+    \end{enumerate}
+   
+    Then if $f: G(K) \to \R$ is a continuous function, then 
+    $$\int_{G(K)} f \  dV = \int_K (f \circ G) \ |\det [J_G]| \ dV$$
+    \end{theorem}
+
+    \begin{example}
+    Consider the polar coordinates map defined by $$G(r,\theta) = (r\cos(\theta), r\sin(\theta))$$
+
+    \begin{corollary}[Double integral in polar coordinates]
+If $f(x,y)$ is a continuous function on a polar rectangle $G(R)$, then $$\iint_{G(R)} f(x,y) \ dA = \int_{\theta_1}^{\theta_2} \int_{r= r_1}^{r= r_2} f(r\cos(\theta), r\sin(\theta)) \ r \ dr \ d\theta$$
+\end{corollary}
+    \end{example}
+
+    \begin{example}
+        Let $D$ be the region in the first quadrant defined by $$D = \{ (x,y) \ | \ 1 \leq xy \leq 4, 1 \leq y/x \leq 4 \}$$
+    Compute $\iint_D (x^2 + y^2) \ dx \ dy$.
+    \end{example}
 
 \begin{remark}
     Sometimes, it is easier to find a map going in the \textit{wrong direction}, $$F(x,y) = (u(x,y),v(x,y))$$
     Then $G = F^{-1}$.
     \end{remark}
     
-    %     \begin{center}
-    %     \includegraphics[scale=0.45]{figures/map.png}
-    % \end{center}
+    %     \begin{figure}
+    %     \centering
+    %     \includegraphics[scale=0.45]{pictures/map.png}
+    % \end{figure}
     
     \begin{theorem}
-    If $G = F^{-1}$, and $\textnormal{Jac}(F) \neq 0$, then $\textnormal{Jac}(G) = \frac{1}{\textnormal{Jac}(F)}$
+    If $G = F^{-1}$, and $\det [J_F] \neq 0$, then $\det [J_G] = \frac{1}{\det [J_F]}$
     \end{theorem}
 
 
 
 
-
-
-
-
-
-
-    \begin{theorem}[Change of variables]
-    Let $K \subset \R^n$ be a compact set such that $\text{vol}_n(\partial K) = 0$.  Let $U \subset \R^n$ be an open set containing $K$. Let $$\Phi : U \to \R^n$$ be a map such that 
-    \begin{enumerate}
-        \item $\Phi$ is a $C^1$ mapping.
-        \item $\Phi$ is injective on the interior of $K$.  
-        \item $\det [D(\Phi)] \neq 0$ on the interior of $K$.  
-    \end{enumerate}
-    Then if $f: \Phi(K) \to \R$ is a continuous function, then 
-    $$\int_{\Phi(K)} f \  dV = \int_K(f \circ \Phi) \cdot |\det [D(\Phi)]| \ dV$$
-    \end{theorem}
-
-    \fixthis{examples that show necessity}
 
     \subsection{Exercises}
 
@@ -1249,8 +1853,9 @@ Come up with (and prove) an example of a function where $|f|$ is integrable, but
 \end{problem}
 
 \begin{problem}{change2}
+ Consider the parallelogram $P$ with vertices $A = (0,0)$, $B = (3,1)$, $C = (2,3)$, $D = (5,4)$.  
     \begin{subproblems}
-    \item Consider the parallelogram $P$ with vertices $A = (0,0)$, $B = (3,1)$, $C = (2,3)$, $D = (5,4)$.  Find a change of variables $G(u,v) = (x(u,v), y(u,v))$ that transforms the unit square to $P$.  Compute the determinant of the Jacobian of $G$.
+    \item Find a change of variables $G(u,v) = (x(u,v), y(u,v))$ that transforms the unit square to $P$.  Compute the determinant of the Jacobian of $G$.
     \item Use your work from the previous problem to compute the integral $$\iint_P e^{3x-y} \ dA$$.
     \end{subproblems}
     

@@ -95,7 +95,6 @@
 		\end{tikzpicture}
 	\end{center}
 	
-	as well as $\R^2$ (often described as the Euclidean plane), which has the $x$ and $y$ axes.
 	
 	\begin{center}
 		\begin{center}\begin{tikzpicture}[scale=.65]
@@ -137,6 +136,22 @@
 			
 		\end{tikzpicture}
 	\end{center}
+
+%  \tdplotsetmaincoords{60}{110}
+% \begin{tikzpicture}[scale=3, tdplot_main_coords]
+%     \coordinate (O) at (0,0,0);
+%     \draw[thick,->] (0,0,0) -- (1,0,0) node[anchor=north east]{$x$};
+%     \draw[thick,->] (0,0,0) -- (0,1,0) node[anchor=north west]{$y$};
+%     \draw[thick,->] (0,0,0) -- (0,0,1) node[anchor=south]{$z$};
+%     \tdplotsetcoord{P}{1}{30}{60}
+%     \draw plot [mark=*, mark size=0.2] (P) node [right] {\scriptsize$(x,y,z)$}; 
+%     \draw[dashed] (O) -- (P);
+%     \draw[dashed, color=black] (O) -- (Pxy);
+%     \draw[dashed, color=black] (P) -- (Pxy);
+%     \draw[dashed, color=black] (P) -- (Pz) node [below left] {$z$};
+%     \draw[dashed, color=black] (Pxy) -- (Px) node [left] {$x$};
+%     \draw[dashed, color=black] (Pxy) -- (Py) node [above] {$y$};
+% \end{tikzpicture}
 	
 	\begin{center}
 		\begin{tikzpicture}[x=1cm, y=1cm, z=-0.6cm, scale=0.5]

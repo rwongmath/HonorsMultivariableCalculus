@@ -63,14 +63,18 @@
 \contentsline {subsection}{Integration over subsets of $\mathbb {R}^n$}{102}{section*.50}%
 \contentsline {subsection}{Properties of the integral}{106}{section*.51}%
 \contentsline {subsection}{Exercises}{107}{section*.52}%
-\contentsline {section}{\numberline {4.2}Calculating multivariable integrals}{108}{section.4.2}%
-\contentsline {subsection}{Exercises}{113}{section*.53}%
-\contentsline {section}{\numberline {4.3}Integrability}{113}{section.4.3}%
-\contentsline {subsection}{Exercises}{118}{section*.54}%
-\contentsline {section}{\numberline {4.4}Change of variables}{119}{section.4.4}%
-\contentsline {subsection}{Polar, cylindrcial, and spherical coordinate}{119}{section*.55}%
-\contentsline {subsection}{General Change of Variables}{119}{section*.56}%
-\contentsline {subsection}{Exercises}{120}{section*.57}%
-\contentsline {chapter}{\chapternumberline {5}Integration on manifolds}{121}{chapter.5}%
-\contentsline {chapter}{\chapternumberline {6}Divergence theorem}{122}{chapter.6}%
-\contentsline {chapter}{Hints and Solutions}{123}{chapter*.58}%
+\contentsline {section}{\numberline {4.2}Calculating multivariable integrals}{109}{section.4.2}%
+\contentsline {subsection}{Exercises}{114}{section*.53}%
+\contentsline {section}{\numberline {4.3}Integrability}{114}{section.4.3}%
+\contentsline {subsection}{Exercises}{119}{section*.54}%
+\contentsline {section}{\numberline {4.4}Change of variables}{120}{section.4.4}%
+\contentsline {subsection}{Polar coordinates}{120}{section*.55}%
+\contentsline {subsection}{Cylindrical coordinates}{122}{section*.56}%
+\contentsline {subsection}{Spherical coordinates}{123}{section*.57}%
+\contentsline {subsection}{General Change of Variables}{124}{section*.58}%
+\contentsline {subsubsection}{Linear change of variables}{124}{section*.59}%
+\contentsline {subsubsection}{Nonlinear change of variables}{125}{section*.60}%
+\contentsline {subsection}{Exercises}{128}{section*.61}%
+\contentsline {chapter}{\chapternumberline {5}Integration on manifolds}{129}{chapter.5}%
+\contentsline {chapter}{\chapternumberline {6}Divergence theorem}{130}{chapter.6}%
+\contentsline {chapter}{Hints and Solutions}{131}{chapter*.62}%
