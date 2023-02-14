@@ -39,6 +39,7 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
 \usetikzlibrary{scopes, angles, quotes, arrows.meta, calc, positioning, decorations.markings, decorations.pathreplacing,bending,shapes}
+\usetikzlibrary{plotmarks}
 \usepgfplotslibrary{colormaps}
 
 \newcommand\fixthis[1]{\textcolor{red}{#1}}
@@ -228,19 +229,96 @@
 %     \end{axis}
 % \end{tikzpicture}
 
-\begin{tikzpicture}[/pgf/declare function={f=-15*(x-5)+(x-5)^3+50;}]
-\begin{axis}[
-    domain=0:10,
-    samples=100,
-    axis lines=middle
-]
-\addplot [thick] {f};
-\addplot [
-    red,
-    integral=2:6
-] {f};
-\end{axis}
-\end{tikzpicture}
+	\begin{center}
+		\begin{tikzpicture}[scale=2, even odd rule]
+			\begin{axis}[view={65}{25},
+				hide axis,
+				%axis on top,
+				no marks,axis equal,
+				xmin=-3,xmax=3,ymin=-3,ymax=3,zmin=-1,zmax=2,
+				enlargelimits={upper=0.1},
+				xlabel={$x$},
+				ylabel={$y$},
+				zlabel={$z$}]
+				\addplot3[thick,
+				UCLAblue,samples=100,
+				domain=0.5:2,
+				y domain=0:0,
+				decoration={
+					markings,
+					mark=between positions 0.1 and 2 step 10mm with {\arrow{Bar}}
+				}, postaction=decorate
+				]
+				({cos(deg(2*pi*x))*e^x-1},{-sin(deg(pi*x))*e^x},{cos(deg(2*pi*x))});
+				
+				\addplot3[line width = 2.5pt,
+				white,samples=100,
+				domain=-.5:0.5,
+				y domain=0:0,
+				]
+				({cos(deg(2*pi*x))*e^x-1},{-sin(deg(pi*x))*e^x},{cos(deg(2*pi*x))});
+				
+				\addplot3[thick,
+				UCLAblue,samples=100,
+				domain=-.5:0.5,
+				y domain=0:0,
+				decoration={
+					markings,
+					mark=between positions 0.05 and 2 step 10mm with {\arrow{Bar}}
+				}, postaction=decorate
+				]
+				({cos(deg(2*pi*x))*e^x-1},{-sin(deg(pi*x))*e^x},{cos(deg(2*pi*x))});
+				
+				
+			\end{axis}
+		\end{tikzpicture}    
+	\end{center}
+
+ 
+		\begin{center}
+	\begin{tikzpicture}[scale=2, even odd rule]
+		\begin{axis}[view={65}{25},
+			hide axis,
+			%axis on top,
+			no marks,axis equal,
+			xmin=-3,xmax=3,ymin=-3,ymax=3,zmin=-1,zmax=2,
+			enlargelimits={upper=0.1},
+			xlabel={$x$},
+			ylabel={$y$},
+			zlabel={$z$}]
+			\addplot3[thick,
+			UCLAblue,samples=100,
+			domain=0.5:2,
+			y domain=0:0,
+			decoration={
+				markings,
+				mark=between positions 0.1 and 2 step 10mm with {\arrow{stealth}}
+			}, postaction=decorate
+			]
+			({cos(deg(2*pi*x))*e^x-1},{-sin(deg(pi*x))*e^x},{cos(deg(2*pi*x))});
+			
+			\addplot3[line width = 2.5pt,
+			white,samples=100,
+			domain=-.5:0.5,
+			y domain=0:0,
+			]
+			({cos(deg(2*pi*x))*e^x-1},{-sin(deg(pi*x))*e^x},{cos(deg(2*pi*x))});
+			
+			\addplot3[thick,
+			UCLAblue,samples=100,
+			domain=-.5:0.5,
+			y domain=0:0,
+			decoration={
+				markings,
+				mark=between positions 0.05 and 2 step 10mm with {\arrow{stealth}}
+			}, postaction=decorate
+			]
+			({cos(deg(2*pi*x))*e^x-1},{-sin(deg(pi*x))*e^x},{cos(deg(2*pi*x))});
+			
+			
+		\end{axis}
+	\end{tikzpicture}    
+\end{center}
 
  
 \end{document}

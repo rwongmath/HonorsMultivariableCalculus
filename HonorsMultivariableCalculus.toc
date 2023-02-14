@@ -76,5 +76,13 @@
 \contentsline {subsubsection}{Nonlinear change of variables}{125}{section*.60}%
 \contentsline {subsection}{Exercises}{128}{section*.61}%
 \contentsline {chapter}{\chapternumberline {5}Integration on manifolds}{129}{chapter.5}%
-\contentsline {chapter}{\chapternumberline {6}Divergence theorem}{130}{chapter.6}%
-\contentsline {chapter}{Hints and Solutions}{131}{chapter*.62}%
+\contentsline {section}{\numberline {5.1}Integrals on curves and surfaces}{129}{section.5.1}%
+\contentsline {subsection}{Integrals on curves}{129}{section*.62}%
+\contentsline {subsection}{Integrals on Surfaces in $\mathbb {R}^3$}{132}{section*.63}%
+\contentsline {subsection}{Exercises}{135}{section*.64}%
+\contentsline {section}{\numberline {5.2}Manifolds}{136}{section.5.2}%
+\contentsline {subsection}{Integration on Manifolds}{137}{section*.65}%
+\contentsline {subsection}{Identifying manifolds}{138}{section*.66}%
+\contentsline {subsection}{Exercises}{140}{section*.67}%
+\contentsline {chapter}{\chapternumberline {6}Divergence theorem}{141}{chapter.6}%
+\contentsline {chapter}{Hints and Solutions}{142}{chapter*.68}%
