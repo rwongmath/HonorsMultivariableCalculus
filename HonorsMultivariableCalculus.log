@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.20)  14 FEB 2023 13:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.20)  12 MAR 2023 12:54
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1800,6 +1800,18 @@ LaTeX Warning: Label `problem:polar1' multiply defined.
 
 LaTeX Warning: Label `problem:polar1@cref' multiply defined.
 
+
+LaTeX Warning: Label `problem:C' multiply defined.
+
+
+LaTeX Warning: Label `problem:C@cref' multiply defined.
+
+
+LaTeX Warning: Label `problem:C' multiply defined.
+
+
+LaTeX Warning: Label `problem:C@cref' multiply defined.
+
 )
 \openout1 = `HonorsMultivariableCalculus.aux'.
 
@@ -1984,8 +1996,8 @@ Overfull \hbox (2.24896pt too wide) detected at line 87
  []
 
 
-Overfull \hbox (3.63498pt too wide) detected at line 88
- \T1/clm2j/m/n/9 142
+Overfull \hbox (4.01297pt too wide) detected at line 104
+ \T1/clm2j/m/n/9 159
  []
 
 ) [4
@@ -3352,14 +3364,142 @@ Overfull \hbox (78.0pt too wide) has occurred while \output is active
 
 [140]
 \mycount=\count439
- [141
+ (chapters/6-DivergenceTheorem/DivergenceTheorem.tex
+
+Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
+ng it (it is [1.0000000000:1.0000000000]) on input line 35.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+
+Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
+ng it (it is [1.0000000000:1.0000000000]) on input line 54.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+[141
 
 ]
+
+Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
+ng it (it is [1.0000000000:1.0000000000]) on input line 73.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+
+Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
+ng it (it is [1.0000000000:1.0000000000]) on input line 102.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+
+Package tcolorbox Warning: Discard zero height first box part due to break prob
+lems (possible loss of zero height content) on input line 105.
+
+
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[142]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[143]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[144]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[145]
+
+Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
+ng it (it is [1.0000000000:1.0000000000]) on input line 393.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[146]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[147]
+
+Package pgfplots Warning: Axis range for axis z is approximately empty; enlargi
+ng it (it is [1.0000000000:1.0000000000]) on input line 484.
+
+ [warning /pgfplots/warning/approx empty range enlarged]
+
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[148]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[149]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[150]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[151]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[152]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[153]
+
+Package tcolorbox Warning: Using nobreak failed. Try to enlarge `lines before b
+reak' or set page breaks manually on input line 802.
+
+
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[154]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[155]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[156])
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[157]
+Overfull \hbox (78.0pt too wide) has occurred while \output is active
+[]
+ []
+
+[158]
 \mycount=\count440
  (HonorsMultivariableCalculus.ans)
 No file HonorsMultivariableCalculus.bbl.
 No file HonorsMultivariableCalculus.ind.
-[142
+[159
 
 
 ]
@@ -3375,13 +3515,13 @@ LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `HonorsMultivariableCalculus.out' has not cha
 nged.
-(rerunfilecheck)             Checksum: B80241CFF20765FC0D088C58EB607DEC;1202.
+(rerunfilecheck)             Checksum: 792D81767DC22A92B2D73C2FBAB83EF4;1202.
  ) 
 Here is how much of TeX's memory you used:
- 54240 strings out of 475389
- 1231313 string characters out of 2776056
- 101942352 words of memory out of 103000000
- 72935 multiletter control sequences out of 15000+600000
+ 55891 strings out of 475389
+ 1264882 string characters out of 2776056
+ 257993086 words of memory out of 259000000
+ 74447 multiletter control sequences out of 15000+600000
  646823 words of font info for 506 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  114i,16n,120p,1026b,2488s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -3435,9 +3575,9 @@ eX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Richard/AppData/Loc
 al/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb><C:/Users/Rich
 ard/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/
 Richard/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.pfb>
-Output written on HonorsMultivariableCalculus.pdf (146 pages, 2204183 bytes).
+Output written on HonorsMultivariableCalculus.pdf (163 pages, 2381436 bytes).
 PDF statistics:
- 3210 PDF objects out of 3580 (max. 8388607)
- 1155 named destinations out of 1200 (max. 500000)
+ 3440 PDF objects out of 3580 (max. 8388607)
+ 1289 named destinations out of 1440 (max. 500000)
  131459 words of extra memory for PDF output out of 154059 (max. 10000000)
 

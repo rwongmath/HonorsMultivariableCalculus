@@ -85,4 +85,20 @@
 \contentsline {subsection}{Identifying manifolds}{138}{section*.66}%
 \contentsline {subsection}{Exercises}{140}{section*.67}%
 \contentsline {chapter}{\chapternumberline {6}Divergence theorem}{141}{chapter.6}%
-\contentsline {chapter}{Hints and Solutions}{142}{chapter*.68}%
+\contentsline {section}{\numberline {6.1}Vector fields}{141}{section.6.1}%
+\contentsline {subsection}{Operations on vector fields}{143}{section*.68}%
+\contentsline {subsection}{Exercises}{145}{section*.69}%
+\contentsline {section}{\numberline {6.2}Vector line integrals}{145}{section.6.2}%
+\contentsline {subsection}{Vector flow line integrals}{146}{section*.70}%
+\contentsline {subsubsection}{Integrating Conservative Vector Fields}{147}{section*.71}%
+\contentsline {subsection}{Vector flux line integrals}{149}{section*.72}%
+\contentsline {subsection}{Exercises}{150}{section*.73}%
+\contentsline {section}{\numberline {6.3}Vector surface integrals}{151}{section.6.3}%
+\contentsline {subsection}{Exercises}{152}{section*.74}%
+\contentsline {section}{\numberline {6.4}Green's theorem, Stokes' theorem, and the divergence theorem}{152}{section.6.4}%
+\contentsline {subsection}{Green's theorem}{152}{section*.75}%
+\contentsline {subsection}{Stokes' theorem}{153}{section*.76}%
+\contentsline {subsection}{Divergence theorem}{156}{section*.77}%
+\contentsline {subsection}{Cohomology}{157}{section*.78}%
+\contentsline {subsection}{Exercises}{157}{section*.79}%
+\contentsline {chapter}{Hints and Solutions}{159}{chapter*.80}%
